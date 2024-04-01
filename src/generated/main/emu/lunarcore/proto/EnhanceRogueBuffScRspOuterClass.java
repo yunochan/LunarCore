@@ -24,12 +24,12 @@ public final class EnhanceRogueBuffScRspOuterClass {
     private int retcode;
 
     /**
-     * <code>optional bool is_success = 12;</code>
+     * <code>optional bool is_success = 7;</code>
      */
     private boolean isSuccess;
 
     /**
-     * <code>optional .RogueBuff rogue_buff = 6;</code>
+     * <code>optional .RogueBuff rogue_buff = 3;</code>
      */
     private final RogueBuffOuterClass.RogueBuff rogueBuff = RogueBuffOuterClass.RogueBuff.newInstance();
 
@@ -81,7 +81,7 @@ public final class EnhanceRogueBuffScRspOuterClass {
     }
 
     /**
-     * <code>optional bool is_success = 12;</code>
+     * <code>optional bool is_success = 7;</code>
      * @return whether the isSuccess field is set
      */
     public boolean hasIsSuccess() {
@@ -89,7 +89,7 @@ public final class EnhanceRogueBuffScRspOuterClass {
     }
 
     /**
-     * <code>optional bool is_success = 12;</code>
+     * <code>optional bool is_success = 7;</code>
      * @return this
      */
     public EnhanceRogueBuffScRsp clearIsSuccess() {
@@ -99,7 +99,7 @@ public final class EnhanceRogueBuffScRspOuterClass {
     }
 
     /**
-     * <code>optional bool is_success = 12;</code>
+     * <code>optional bool is_success = 7;</code>
      * @return the isSuccess
      */
     public boolean getIsSuccess() {
@@ -107,7 +107,7 @@ public final class EnhanceRogueBuffScRspOuterClass {
     }
 
     /**
-     * <code>optional bool is_success = 12;</code>
+     * <code>optional bool is_success = 7;</code>
      * @param value the isSuccess to set
      * @return this
      */
@@ -118,7 +118,7 @@ public final class EnhanceRogueBuffScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuff rogue_buff = 6;</code>
+     * <code>optional .RogueBuff rogue_buff = 3;</code>
      * @return whether the rogueBuff field is set
      */
     public boolean hasRogueBuff() {
@@ -126,7 +126,7 @@ public final class EnhanceRogueBuffScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuff rogue_buff = 6;</code>
+     * <code>optional .RogueBuff rogue_buff = 3;</code>
      * @return this
      */
     public EnhanceRogueBuffScRsp clearRogueBuff() {
@@ -136,7 +136,7 @@ public final class EnhanceRogueBuffScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuff rogue_buff = 6;</code>
+     * <code>optional .RogueBuff rogue_buff = 3;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -150,7 +150,7 @@ public final class EnhanceRogueBuffScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuff rogue_buff = 6;</code>
+     * <code>optional .RogueBuff rogue_buff = 3;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -164,7 +164,7 @@ public final class EnhanceRogueBuffScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuff rogue_buff = 6;</code>
+     * <code>optional .RogueBuff rogue_buff = 3;</code>
      * @param value the rogueBuff to set
      * @return this
      */
@@ -250,11 +250,11 @@ public final class EnhanceRogueBuffScRspOuterClass {
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 56);
         output.writeBoolNoTag(isSuccess);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 50);
+        output.writeRawByte((byte) 26);
         output.writeMessageNoTag(rogueBuff);
       }
     }
@@ -286,20 +286,20 @@ public final class EnhanceRogueBuffScRspOuterClass {
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 96) {
+            if (tag != 56) {
               break;
             }
           }
-          case 96: {
+          case 56: {
             // isSuccess
             isSuccess = input.readBool();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 26) {
               break;
             }
           }
-          case 50: {
+          case 26: {
             // rogueBuff
             input.readMessage(rogueBuff);
             bitField0_ |= 0x00000004;
