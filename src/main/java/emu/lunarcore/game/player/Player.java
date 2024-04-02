@@ -838,6 +838,13 @@ public class Player implements Tickable {
             this.enterScene(GameConstants.START_ENTRY_ID, 0, false);
         }
         
+        // Sanity check lineup to prevent the player from getting stuck in a loading screen if they loaded into the game with an avatar that had 0 hp
+        var leader = this.getCurrentLeaderAvatar();
+        if (leader != null && leader.getCurrentHp(this.getCurrentLineup()) <= 0) {
+            leader.setCurrentHp(this.getCurrentLineup(), 2000);
+            leader.save();
+        }
+        
         // Send welcome mail after we load managers from the database
         if (this.isNew) {
             this.getMailbox().sendWelcomeMail();
