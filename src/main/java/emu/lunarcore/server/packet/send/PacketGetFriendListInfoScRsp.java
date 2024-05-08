@@ -8,6 +8,7 @@ import emu.lunarcore.proto.FriendListInfoOuterClass.FriendListInfo;
 import emu.lunarcore.proto.FriendOnlineStatusOuterClass.FriendOnlineStatus;
 import emu.lunarcore.proto.GetFriendListInfoScRspOuterClass.GetFriendListInfoScRsp;
 import emu.lunarcore.proto.PlatformTypeOuterClass.PlatformType;
+import emu.lunarcore.proto.PlayingStateOuterClass.PlayingState;
 import emu.lunarcore.proto.SimpleInfoOuterClass.SimpleInfo;
 import emu.lunarcore.server.packet.BasePacket;
 import emu.lunarcore.server.packet.CmdId;
@@ -39,8 +40,20 @@ public class PacketGetFriendListInfoScRsp extends BasePacket {
             var friend = friendList.getServer().getPlayerByUid(friendship.getFriendUid(), true);
             if (friend == null) continue;
             
+            // Create friend info
             var friendInfo = FriendListInfo.newInstance()
                     .setSimpleInfo(friend.toSimpleInfo());
+            
+            // Set playing state
+            if (friend.isOnline()) {
+                if (friend.getChallengeInstance() != null && friend.getChallengeInstance().isStory()) {
+                    friendInfo.setPlayingState(PlayingState.PLAYING_CHALLENGE_STORY);
+                } else if (friend.getChallengeInstance() != null) {
+                    friendInfo.setPlayingState(PlayingState.PLAYING_CHALLENGE_MEMORY);
+                } else if (friend.getRogueInstance() != null) {
+                    friendInfo.setPlayingState(PlayingState.PLAYING_ROGUE_COSMOS);
+                }
+            }
             
             data.addFriendList(friendInfo);
         }

@@ -47,7 +47,6 @@ import emu.lunarcore.game.scene.Scene;
 import emu.lunarcore.game.scene.SceneBuff;
 import emu.lunarcore.game.scene.entity.EntityProp;
 import emu.lunarcore.game.scene.entity.GameEntity;
-import emu.lunarcore.proto.AssistSimpleInfoOuterClass.AssistSimpleInfo;
 import emu.lunarcore.proto.BoardDataSyncOuterClass.BoardDataSync;
 import emu.lunarcore.proto.FriendOnlineStatusOuterClass.FriendOnlineStatus;
 import emu.lunarcore.proto.HeadIconOuterClass.HeadIcon;
@@ -950,7 +949,6 @@ public class Player implements Tickable {
                 .setOnlineStatus(this.isOnline() ? FriendOnlineStatus.FRIEND_ONLINE_STATUS_ONLINE : FriendOnlineStatus.FRIEND_ONLINE_STATUS_OFFLINE)
                 .setPlatformType(PlatformType.PC)
                 .setLastActiveTime(this.getLastActiveTime())
-                .addAssistSimpleInfo(AssistSimpleInfo.newInstance().setAvatarId(GameConstants.TRAILBLAZER_AVATAR_ID).setLevel(1)) // TODO
                 .setHeadIcon(this.getHeadIcon());
         
         return proto;
