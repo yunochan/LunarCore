@@ -349,10 +349,8 @@ public class GameAvatar implements GameEntity {
                 .setWorldLevel(this.getOwner().getWorldLevel());
 
         // Skill tree
-        if (!this.isHero()) {
-            for (var skill : getSkills().entrySet()) {
-                proto.addSkilltreeList(AvatarSkillTree.newInstance().setPointId(skill.getKey()).setLevel(skill.getValue()));
-            }
+        for (var skill : getSkills().entrySet()) {
+            proto.addSkilltreeList(AvatarSkillTree.newInstance().setPointId(skill.getKey()).setLevel(skill.getValue()));
         }
 
         // Build equips
