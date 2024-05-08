@@ -280,6 +280,7 @@ public class GameItem {
                 .setIsProtected(this.isLocked())
                 .setIsDiscarded(this.isDiscarded())
                 .setBaseAvatarId(this.getEquipAvatar())
+                .setEquipAvatarId(this.getEquipAvatar())
                 .setMainAffixId(this.mainAffix);
 
         if (this.subAffixes != null) {
@@ -300,7 +301,8 @@ public class GameItem {
                 .setIsProtected(this.isLocked())
                 .setPromotion(this.getPromotion())
                 .setRank(this.getRank())
-                .setBaseAvatarId(this.getEquipAvatar());
+                .setBaseAvatarId(this.getEquipAvatar())
+                .setEquipAvatarId(this.getEquipAvatar());
         
         return proto;
     }

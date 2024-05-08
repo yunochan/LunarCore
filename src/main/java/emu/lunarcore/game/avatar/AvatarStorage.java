@@ -32,6 +32,10 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
     }
 
     public GameAvatar getAvatarById(int id) {
+        if (this.getHeroPaths().containsKey(id)) {
+            id = GameConstants.TRAILBLAZER_AVATAR_ID;
+        }
+        
         return getAvatars().get(id);
     }
 
