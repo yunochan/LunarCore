@@ -20,12 +20,12 @@ public final class ChessRogueAvatarInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .RogueAvatarReviveCost revive_cost = 15;</code>
+     * <code>optional .RogueAvatarReviveCost revive_cost = 3;</code>
      */
     private final RogueAvatarReviveCostOuterClass.RogueAvatarReviveCost reviveCost = RogueAvatarReviveCostOuterClass.RogueAvatarReviveCost.newInstance();
 
     /**
-     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 3;</code>
+     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 5;</code>
      */
     private final RepeatedMessage<ChessRogueAvatarOuterClass.ChessRogueAvatar> chessRogueAvatar = RepeatedMessage.newEmptyInstance(ChessRogueAvatarOuterClass.ChessRogueAvatar.getFactory());
 
@@ -40,7 +40,7 @@ public final class ChessRogueAvatarInfoOuterClass {
     }
 
     /**
-     * <code>optional .RogueAvatarReviveCost revive_cost = 15;</code>
+     * <code>optional .RogueAvatarReviveCost revive_cost = 3;</code>
      * @return whether the reviveCost field is set
      */
     public boolean hasReviveCost() {
@@ -48,7 +48,7 @@ public final class ChessRogueAvatarInfoOuterClass {
     }
 
     /**
-     * <code>optional .RogueAvatarReviveCost revive_cost = 15;</code>
+     * <code>optional .RogueAvatarReviveCost revive_cost = 3;</code>
      * @return this
      */
     public ChessRogueAvatarInfo clearReviveCost() {
@@ -58,7 +58,7 @@ public final class ChessRogueAvatarInfoOuterClass {
     }
 
     /**
-     * <code>optional .RogueAvatarReviveCost revive_cost = 15;</code>
+     * <code>optional .RogueAvatarReviveCost revive_cost = 3;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -72,7 +72,7 @@ public final class ChessRogueAvatarInfoOuterClass {
     }
 
     /**
-     * <code>optional .RogueAvatarReviveCost revive_cost = 15;</code>
+     * <code>optional .RogueAvatarReviveCost revive_cost = 3;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -86,7 +86,7 @@ public final class ChessRogueAvatarInfoOuterClass {
     }
 
     /**
-     * <code>optional .RogueAvatarReviveCost revive_cost = 15;</code>
+     * <code>optional .RogueAvatarReviveCost revive_cost = 3;</code>
      * @param value the reviveCost to set
      * @return this
      */
@@ -98,7 +98,7 @@ public final class ChessRogueAvatarInfoOuterClass {
     }
 
     /**
-     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 3;</code>
+     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 5;</code>
      * @return whether the chessRogueAvatar field is set
      */
     public boolean hasChessRogueAvatar() {
@@ -106,7 +106,7 @@ public final class ChessRogueAvatarInfoOuterClass {
     }
 
     /**
-     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 3;</code>
+     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 5;</code>
      * @return this
      */
     public ChessRogueAvatarInfo clearChessRogueAvatar() {
@@ -116,7 +116,7 @@ public final class ChessRogueAvatarInfoOuterClass {
     }
 
     /**
-     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 3;</code>
+     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 5;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -130,7 +130,7 @@ public final class ChessRogueAvatarInfoOuterClass {
     }
 
     /**
-     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 3;</code>
+     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 5;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -145,7 +145,7 @@ public final class ChessRogueAvatarInfoOuterClass {
     }
 
     /**
-     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 3;</code>
+     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 5;</code>
      * @param value the chessRogueAvatar to add
      * @return this
      */
@@ -157,7 +157,7 @@ public final class ChessRogueAvatarInfoOuterClass {
     }
 
     /**
-     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 3;</code>
+     * <code>repeated .ChessRogueAvatar chess_rogue_avatar = 5;</code>
      * @param values the chessRogueAvatar to add
      * @return this
      */
@@ -235,12 +235,12 @@ public final class ChessRogueAvatarInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 122);
+        output.writeRawByte((byte) 26);
         output.writeMessageNoTag(reviveCost);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < chessRogueAvatar.length(); i++) {
-          output.writeRawByte((byte) 26);
+          output.writeRawByte((byte) 42);
           output.writeMessageNoTag(chessRogueAvatar.get(i));
         }
       }
@@ -265,16 +265,16 @@ public final class ChessRogueAvatarInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 122: {
+          case 26: {
             // reviveCost
             input.readMessage(reviveCost);
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 26) {
+            if (tag != 42) {
               break;
             }
           }
-          case 26: {
+          case 42: {
             // chessRogueAvatar
             tag = input.readRepeatedMessage(chessRogueAvatar, tag);
             bitField0_ |= 0x00000002;

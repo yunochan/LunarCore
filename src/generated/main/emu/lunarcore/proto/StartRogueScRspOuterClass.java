@@ -19,22 +19,26 @@ public final class StartRogueScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <pre>
+     *  PDBKKNJFBAJ FDAJEIDNMAK = 9;
+     * </pre>
+     *
+     * <code>optional uint32 retcode = 3;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional .SceneInfo scene = 6;</code>
+     * <code>optional .SceneInfo scene = 5;</code>
      */
     private final SceneInfoOuterClass.SceneInfo scene = SceneInfoOuterClass.SceneInfo.newInstance();
 
     /**
-     * <code>optional .LineupInfo lineup = 7;</code>
+     * <code>optional .LineupInfo lineup = 10;</code>
      */
     private final LineupInfoOuterClass.LineupInfo lineup = LineupInfoOuterClass.LineupInfo.newInstance();
 
     /**
-     * <code>optional .RogueInfo rogue_info = 11;</code>
+     * <code>optional .RogueInfo rogue_info = 14;</code>
      */
     private final RogueInfoOuterClass.RogueInfo rogueInfo = RogueInfoOuterClass.RogueInfo.newInstance();
 
@@ -49,7 +53,11 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <pre>
+     *  PDBKKNJFBAJ FDAJEIDNMAK = 9;
+     * </pre>
+     *
+     * <code>optional uint32 retcode = 3;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -57,7 +65,11 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <pre>
+     *  PDBKKNJFBAJ FDAJEIDNMAK = 9;
+     * </pre>
+     *
+     * <code>optional uint32 retcode = 3;</code>
      * @return this
      */
     public StartRogueScRsp clearRetcode() {
@@ -67,7 +79,11 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <pre>
+     *  PDBKKNJFBAJ FDAJEIDNMAK = 9;
+     * </pre>
+     *
+     * <code>optional uint32 retcode = 3;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -75,7 +91,11 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <pre>
+     *  PDBKKNJFBAJ FDAJEIDNMAK = 9;
+     * </pre>
+     *
+     * <code>optional uint32 retcode = 3;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -86,7 +106,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .SceneInfo scene = 6;</code>
+     * <code>optional .SceneInfo scene = 5;</code>
      * @return whether the scene field is set
      */
     public boolean hasScene() {
@@ -94,7 +114,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .SceneInfo scene = 6;</code>
+     * <code>optional .SceneInfo scene = 5;</code>
      * @return this
      */
     public StartRogueScRsp clearScene() {
@@ -104,7 +124,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .SceneInfo scene = 6;</code>
+     * <code>optional .SceneInfo scene = 5;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -118,7 +138,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .SceneInfo scene = 6;</code>
+     * <code>optional .SceneInfo scene = 5;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -132,7 +152,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .SceneInfo scene = 6;</code>
+     * <code>optional .SceneInfo scene = 5;</code>
      * @param value the scene to set
      * @return this
      */
@@ -143,7 +163,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 7;</code>
+     * <code>optional .LineupInfo lineup = 10;</code>
      * @return whether the lineup field is set
      */
     public boolean hasLineup() {
@@ -151,7 +171,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 7;</code>
+     * <code>optional .LineupInfo lineup = 10;</code>
      * @return this
      */
     public StartRogueScRsp clearLineup() {
@@ -161,7 +181,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 7;</code>
+     * <code>optional .LineupInfo lineup = 10;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -175,7 +195,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 7;</code>
+     * <code>optional .LineupInfo lineup = 10;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -189,7 +209,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 7;</code>
+     * <code>optional .LineupInfo lineup = 10;</code>
      * @param value the lineup to set
      * @return this
      */
@@ -200,7 +220,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueInfo rogue_info = 11;</code>
+     * <code>optional .RogueInfo rogue_info = 14;</code>
      * @return whether the rogueInfo field is set
      */
     public boolean hasRogueInfo() {
@@ -208,7 +228,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueInfo rogue_info = 11;</code>
+     * <code>optional .RogueInfo rogue_info = 14;</code>
      * @return this
      */
     public StartRogueScRsp clearRogueInfo() {
@@ -218,7 +238,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueInfo rogue_info = 11;</code>
+     * <code>optional .RogueInfo rogue_info = 14;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -232,7 +252,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueInfo rogue_info = 11;</code>
+     * <code>optional .RogueInfo rogue_info = 14;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -246,7 +266,7 @@ public final class StartRogueScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueInfo rogue_info = 11;</code>
+     * <code>optional .RogueInfo rogue_info = 14;</code>
      * @param value the rogueInfo to set
      * @return this
      */
@@ -336,19 +356,19 @@ public final class StartRogueScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 50);
+        output.writeRawByte((byte) 42);
         output.writeMessageNoTag(scene);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 58);
+        output.writeRawByte((byte) 82);
         output.writeMessageNoTag(lineup);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 90);
+        output.writeRawByte((byte) 114);
         output.writeMessageNoTag(rogueInfo);
       }
     }
@@ -378,34 +398,34 @@ public final class StartRogueScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
+          case 24: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 42) {
               break;
             }
           }
-          case 50: {
+          case 42: {
             // scene
             input.readMessage(scene);
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 82) {
               break;
             }
           }
-          case 58: {
+          case 82: {
             // lineup
             input.readMessage(lineup);
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 90) {
+            if (tag != 114) {
               break;
             }
           }
-          case 90: {
+          case 114: {
             // rogueInfo
             input.readMessage(rogueInfo);
             bitField0_ |= 0x00000008;

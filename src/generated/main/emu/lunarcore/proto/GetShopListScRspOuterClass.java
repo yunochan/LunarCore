@@ -20,17 +20,17 @@ public final class GetShopListScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 5;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 shop_type = 11;</code>
+     * <code>optional uint32 shop_type = 7;</code>
      */
     private int shopType;
 
     /**
-     * <code>repeated .Shop shop_list = 7;</code>
+     * <code>repeated .Shop shop_list = 8;</code>
      */
     private final RepeatedMessage<ShopOuterClass.Shop> shopList = RepeatedMessage.newEmptyInstance(ShopOuterClass.Shop.getFactory());
 
@@ -45,7 +45,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -53,7 +53,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @return this
      */
     public GetShopListScRsp clearRetcode() {
@@ -63,7 +63,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -71,7 +71,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -82,7 +82,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 shop_type = 11;</code>
+     * <code>optional uint32 shop_type = 7;</code>
      * @return whether the shopType field is set
      */
     public boolean hasShopType() {
@@ -90,7 +90,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 shop_type = 11;</code>
+     * <code>optional uint32 shop_type = 7;</code>
      * @return this
      */
     public GetShopListScRsp clearShopType() {
@@ -100,7 +100,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 shop_type = 11;</code>
+     * <code>optional uint32 shop_type = 7;</code>
      * @return the shopType
      */
     public int getShopType() {
@@ -108,7 +108,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 shop_type = 11;</code>
+     * <code>optional uint32 shop_type = 7;</code>
      * @param value the shopType to set
      * @return this
      */
@@ -119,7 +119,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>repeated .Shop shop_list = 7;</code>
+     * <code>repeated .Shop shop_list = 8;</code>
      * @return whether the shopList field is set
      */
     public boolean hasShopList() {
@@ -127,7 +127,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>repeated .Shop shop_list = 7;</code>
+     * <code>repeated .Shop shop_list = 8;</code>
      * @return this
      */
     public GetShopListScRsp clearShopList() {
@@ -137,7 +137,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>repeated .Shop shop_list = 7;</code>
+     * <code>repeated .Shop shop_list = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -151,7 +151,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>repeated .Shop shop_list = 7;</code>
+     * <code>repeated .Shop shop_list = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -165,7 +165,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>repeated .Shop shop_list = 7;</code>
+     * <code>repeated .Shop shop_list = 8;</code>
      * @param value the shopList to add
      * @return this
      */
@@ -176,7 +176,7 @@ public final class GetShopListScRspOuterClass {
     }
 
     /**
-     * <code>repeated .Shop shop_list = 7;</code>
+     * <code>repeated .Shop shop_list = 8;</code>
      * @param values the shopList to add
      * @return this
      */
@@ -258,16 +258,16 @@ public final class GetShopListScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(shopType);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < shopList.length(); i++) {
-          output.writeRawByte((byte) 58);
+          output.writeRawByte((byte) 66);
           output.writeMessageNoTag(shopList.get(i));
         }
       }
@@ -295,25 +295,25 @@ public final class GetShopListScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 40: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 56) {
               break;
             }
           }
-          case 88: {
+          case 56: {
             // shopType
             shopType = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 66) {
               break;
             }
           }
-          case 58: {
+          case 66: {
             // shopList
             tag = input.readRepeatedMessage(shopList, tag);
             bitField0_ |= 0x00000004;

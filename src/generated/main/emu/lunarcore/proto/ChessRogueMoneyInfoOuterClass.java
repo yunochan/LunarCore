@@ -19,7 +19,7 @@ public final class ChessRogueMoneyInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 money = 15;</code>
+     * <code>optional uint32 money = 14;</code>
      */
     private int money;
 
@@ -34,7 +34,7 @@ public final class ChessRogueMoneyInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 money = 15;</code>
+     * <code>optional uint32 money = 14;</code>
      * @return whether the money field is set
      */
     public boolean hasMoney() {
@@ -42,7 +42,7 @@ public final class ChessRogueMoneyInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 money = 15;</code>
+     * <code>optional uint32 money = 14;</code>
      * @return this
      */
     public ChessRogueMoneyInfo clearMoney() {
@@ -52,7 +52,7 @@ public final class ChessRogueMoneyInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 money = 15;</code>
+     * <code>optional uint32 money = 14;</code>
      * @return the money
      */
     public int getMoney() {
@@ -60,7 +60,7 @@ public final class ChessRogueMoneyInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 money = 15;</code>
+     * <code>optional uint32 money = 14;</code>
      * @param value the money to set
      * @return this
      */
@@ -129,7 +129,7 @@ public final class ChessRogueMoneyInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(money);
       }
     }
@@ -150,7 +150,7 @@ public final class ChessRogueMoneyInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 120: {
+          case 112: {
             // money
             money = input.readUInt32();
             bitField0_ |= 0x00000001;

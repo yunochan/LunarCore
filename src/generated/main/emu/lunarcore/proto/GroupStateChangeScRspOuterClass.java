@@ -19,14 +19,14 @@ public final class GroupStateChangeScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 15;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional .GroupStateInfo group_state_info = 1;</code>
+     * <code>optional .GroupStateInfo group_info = 8;</code>
      */
-    private final GroupStateInfoOuterClass.GroupStateInfo groupStateInfo = GroupStateInfoOuterClass.GroupStateInfo.newInstance();
+    private final GroupStateInfoOuterClass.GroupStateInfo groupInfo = GroupStateInfoOuterClass.GroupStateInfo.newInstance();
 
     private GroupStateChangeScRsp() {
     }
@@ -39,7 +39,7 @@ public final class GroupStateChangeScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -47,7 +47,7 @@ public final class GroupStateChangeScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return this
      */
     public GroupStateChangeScRsp clearRetcode() {
@@ -57,7 +57,7 @@ public final class GroupStateChangeScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -65,7 +65,7 @@ public final class GroupStateChangeScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -76,39 +76,39 @@ public final class GroupStateChangeScRspOuterClass {
     }
 
     /**
-     * <code>optional .GroupStateInfo group_state_info = 1;</code>
-     * @return whether the groupStateInfo field is set
+     * <code>optional .GroupStateInfo group_info = 8;</code>
+     * @return whether the groupInfo field is set
      */
-    public boolean hasGroupStateInfo() {
+    public boolean hasGroupInfo() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional .GroupStateInfo group_state_info = 1;</code>
+     * <code>optional .GroupStateInfo group_info = 8;</code>
      * @return this
      */
-    public GroupStateChangeScRsp clearGroupStateInfo() {
+    public GroupStateChangeScRsp clearGroupInfo() {
       bitField0_ &= ~0x00000002;
-      groupStateInfo.clear();
+      groupInfo.clear();
       return this;
     }
 
     /**
-     * <code>optional .GroupStateInfo group_state_info = 1;</code>
+     * <code>optional .GroupStateInfo group_info = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
      *
-     * Use {@link #getMutableGroupStateInfo()} if you want to modify it.
+     * Use {@link #getMutableGroupInfo()} if you want to modify it.
      *
      * @return internal storage object for reading
      */
-    public GroupStateInfoOuterClass.GroupStateInfo getGroupStateInfo() {
-      return groupStateInfo;
+    public GroupStateInfoOuterClass.GroupStateInfo getGroupInfo() {
+      return groupInfo;
     }
 
     /**
-     * <code>optional .GroupStateInfo group_state_info = 1;</code>
+     * <code>optional .GroupStateInfo group_info = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -116,20 +116,19 @@ public final class GroupStateChangeScRspOuterClass {
      *
      * @return internal storage object for modifications
      */
-    public GroupStateInfoOuterClass.GroupStateInfo getMutableGroupStateInfo() {
+    public GroupStateInfoOuterClass.GroupStateInfo getMutableGroupInfo() {
       bitField0_ |= 0x00000002;
-      return groupStateInfo;
+      return groupInfo;
     }
 
     /**
-     * <code>optional .GroupStateInfo group_state_info = 1;</code>
-     * @param value the groupStateInfo to set
+     * <code>optional .GroupStateInfo group_info = 8;</code>
+     * @param value the groupInfo to set
      * @return this
      */
-    public GroupStateChangeScRsp setGroupStateInfo(
-        final GroupStateInfoOuterClass.GroupStateInfo value) {
+    public GroupStateChangeScRsp setGroupInfo(final GroupStateInfoOuterClass.GroupStateInfo value) {
       bitField0_ |= 0x00000002;
-      groupStateInfo.copyFrom(value);
+      groupInfo.copyFrom(value);
       return this;
     }
 
@@ -139,7 +138,7 @@ public final class GroupStateChangeScRspOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         retcode = other.retcode;
-        groupStateInfo.copyFrom(other.groupStateInfo);
+        groupInfo.copyFrom(other.groupInfo);
       }
       return this;
     }
@@ -153,8 +152,8 @@ public final class GroupStateChangeScRspOuterClass {
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
       }
-      if (other.hasGroupStateInfo()) {
-        getMutableGroupStateInfo().mergeFrom(other.groupStateInfo);
+      if (other.hasGroupInfo()) {
+        getMutableGroupInfo().mergeFrom(other.groupInfo);
       }
       return this;
     }
@@ -167,7 +166,7 @@ public final class GroupStateChangeScRspOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       retcode = 0;
-      groupStateInfo.clear();
+      groupInfo.clear();
       return this;
     }
 
@@ -178,7 +177,7 @@ public final class GroupStateChangeScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      groupStateInfo.clearQuick();
+      groupInfo.clearQuick();
       return this;
     }
 
@@ -193,18 +192,18 @@ public final class GroupStateChangeScRspOuterClass {
       GroupStateChangeScRsp other = (GroupStateChangeScRsp) o;
       return bitField0_ == other.bitField0_
         && (!hasRetcode() || retcode == other.retcode)
-        && (!hasGroupStateInfo() || groupStateInfo.equals(other.groupStateInfo));
+        && (!hasGroupInfo() || groupInfo.equals(other.groupInfo));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 10);
-        output.writeMessageNoTag(groupStateInfo);
+        output.writeRawByte((byte) 66);
+        output.writeMessageNoTag(groupInfo);
       }
     }
 
@@ -215,7 +214,7 @@ public final class GroupStateChangeScRspOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(groupStateInfo);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(groupInfo);
       }
       return size;
     }
@@ -227,18 +226,18 @@ public final class GroupStateChangeScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
+          case 120: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 10) {
+            if (tag != 66) {
               break;
             }
           }
-          case 10: {
-            // groupStateInfo
-            input.readMessage(groupStateInfo);
+          case 66: {
+            // groupInfo
+            input.readMessage(groupInfo);
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
@@ -266,7 +265,7 @@ public final class GroupStateChangeScRspOuterClass {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeMessage(FieldNames.groupStateInfo, groupStateInfo);
+        output.writeMessage(FieldNames.groupInfo, groupInfo);
       }
       output.endObject();
     }
@@ -289,11 +288,11 @@ public final class GroupStateChangeScRspOuterClass {
             }
             break;
           }
-          case 1415312672:
-          case 1198732636: {
-            if (input.isAtField(FieldNames.groupStateInfo)) {
+          case -1483311155:
+          case 1282170478: {
+            if (input.isAtField(FieldNames.groupInfo)) {
               if (!input.trySkipNullValue()) {
-                input.readMessage(groupStateInfo);
+                input.readMessage(groupInfo);
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -356,7 +355,7 @@ public final class GroupStateChangeScRspOuterClass {
     static class FieldNames {
       static final FieldName retcode = FieldName.forField("retcode");
 
-      static final FieldName groupStateInfo = FieldName.forField("groupStateInfo", "group_state_info");
+      static final FieldName groupInfo = FieldName.forField("groupInfo", "group_info");
     }
   }
 }

@@ -24,12 +24,12 @@ public final class ChessRogueCellInfoOuterClass {
      *  61
      * </pre>
      *
-     * <code>optional uint32 BIEJGDGAOBL = 1;</code>
+     * <code>optional uint32 BIEJGDGAOBL = 8;</code>
      */
     private int bIEJGDGAOBL;
 
     /**
-     * <code>repeated .ChessRogueCell query = 7;</code>
+     * <code>repeated .ChessRogueCell query = 1;</code>
      */
     private final RepeatedMessage<ChessRogueCellOuterClass.ChessRogueCell> query = RepeatedMessage.newEmptyInstance(ChessRogueCellOuterClass.ChessRogueCell.getFactory());
 
@@ -48,7 +48,7 @@ public final class ChessRogueCellInfoOuterClass {
      *  61
      * </pre>
      *
-     * <code>optional uint32 BIEJGDGAOBL = 1;</code>
+     * <code>optional uint32 BIEJGDGAOBL = 8;</code>
      * @return whether the bIEJGDGAOBL field is set
      */
     public boolean hasBIEJGDGAOBL() {
@@ -60,7 +60,7 @@ public final class ChessRogueCellInfoOuterClass {
      *  61
      * </pre>
      *
-     * <code>optional uint32 BIEJGDGAOBL = 1;</code>
+     * <code>optional uint32 BIEJGDGAOBL = 8;</code>
      * @return this
      */
     public ChessRogueCellInfo clearBIEJGDGAOBL() {
@@ -74,7 +74,7 @@ public final class ChessRogueCellInfoOuterClass {
      *  61
      * </pre>
      *
-     * <code>optional uint32 BIEJGDGAOBL = 1;</code>
+     * <code>optional uint32 BIEJGDGAOBL = 8;</code>
      * @return the bIEJGDGAOBL
      */
     public int getBIEJGDGAOBL() {
@@ -86,7 +86,7 @@ public final class ChessRogueCellInfoOuterClass {
      *  61
      * </pre>
      *
-     * <code>optional uint32 BIEJGDGAOBL = 1;</code>
+     * <code>optional uint32 BIEJGDGAOBL = 8;</code>
      * @param value the bIEJGDGAOBL to set
      * @return this
      */
@@ -97,7 +97,7 @@ public final class ChessRogueCellInfoOuterClass {
     }
 
     /**
-     * <code>repeated .ChessRogueCell query = 7;</code>
+     * <code>repeated .ChessRogueCell query = 1;</code>
      * @return whether the query field is set
      */
     public boolean hasQuery() {
@@ -105,7 +105,7 @@ public final class ChessRogueCellInfoOuterClass {
     }
 
     /**
-     * <code>repeated .ChessRogueCell query = 7;</code>
+     * <code>repeated .ChessRogueCell query = 1;</code>
      * @return this
      */
     public ChessRogueCellInfo clearQuery() {
@@ -115,7 +115,7 @@ public final class ChessRogueCellInfoOuterClass {
     }
 
     /**
-     * <code>repeated .ChessRogueCell query = 7;</code>
+     * <code>repeated .ChessRogueCell query = 1;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -129,7 +129,7 @@ public final class ChessRogueCellInfoOuterClass {
     }
 
     /**
-     * <code>repeated .ChessRogueCell query = 7;</code>
+     * <code>repeated .ChessRogueCell query = 1;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -143,7 +143,7 @@ public final class ChessRogueCellInfoOuterClass {
     }
 
     /**
-     * <code>repeated .ChessRogueCell query = 7;</code>
+     * <code>repeated .ChessRogueCell query = 1;</code>
      * @param value the query to add
      * @return this
      */
@@ -154,7 +154,7 @@ public final class ChessRogueCellInfoOuterClass {
     }
 
     /**
-     * <code>repeated .ChessRogueCell query = 7;</code>
+     * <code>repeated .ChessRogueCell query = 1;</code>
      * @param values the query to add
      * @return this
      */
@@ -230,12 +230,12 @@ public final class ChessRogueCellInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 64);
         output.writeUInt32NoTag(bIEJGDGAOBL);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < query.length(); i++) {
-          output.writeRawByte((byte) 58);
+          output.writeRawByte((byte) 10);
           output.writeMessageNoTag(query.get(i));
         }
       }
@@ -260,16 +260,16 @@ public final class ChessRogueCellInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 64: {
             // bIEJGDGAOBL
             bIEJGDGAOBL = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 10) {
               break;
             }
           }
-          case 58: {
+          case 10: {
             // query
             tag = input.readRepeatedMessage(query, tag);
             bitField0_ |= 0x00000002;

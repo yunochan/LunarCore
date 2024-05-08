@@ -50,6 +50,7 @@ public class GameAvatar implements GameEntity {
     @Setter private int level;
     @Setter private int exp;
     @Setter private int promotion;
+    @Setter private boolean marked;
     
     private int rewards; // Previously known as "taken rewards"
     private long timestamp;
@@ -290,6 +291,7 @@ public class GameAvatar implements GameEntity {
                 .setExp(this.getExp())
                 .setPromotion(this.getPromotion())
                 .setRank(this.getRank())
+                .setIsMarked(this.isMarked())
                 .setFirstMetTimestamp(this.getTimestamp());
 
         for (var equip : this.getEquips().values()) {

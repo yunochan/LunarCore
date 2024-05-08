@@ -58,8 +58,10 @@ public class HandlerSceneCastSkillCsReq extends PacketHandler {
             }
             
             IntSet assistMonsters = new IntLinkedOpenHashSet();
-            for (int i = 0; i < req.getAssistMonsterEntityIdList().length(); i++) {
-                assistMonsters.add(req.getAssistMonsterEntityIdList().get(i));
+            for (var assistWave : req.getAssistMonsterWaveList()) {
+                for (int id : assistWave.getEntityIdList()) {
+                    assistMonsters.add(id);
+                }
             }
             
             // Start battle

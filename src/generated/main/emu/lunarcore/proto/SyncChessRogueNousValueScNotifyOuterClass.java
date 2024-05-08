@@ -19,7 +19,7 @@ public final class SyncChessRogueNousValueScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .ChessRogueNousValue value = 12;</code>
+     * <code>optional .ChessRogueNousValue value = 8;</code>
      */
     private final ChessRogueNousValueOuterClass.ChessRogueNousValue value_ = ChessRogueNousValueOuterClass.ChessRogueNousValue.newInstance();
 
@@ -34,7 +34,7 @@ public final class SyncChessRogueNousValueScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueNousValue value = 12;</code>
+     * <code>optional .ChessRogueNousValue value = 8;</code>
      * @return whether the value_ field is set
      */
     public boolean hasValue() {
@@ -42,7 +42,7 @@ public final class SyncChessRogueNousValueScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueNousValue value = 12;</code>
+     * <code>optional .ChessRogueNousValue value = 8;</code>
      * @return this
      */
     public SyncChessRogueNousValueScNotify clearValue() {
@@ -52,7 +52,7 @@ public final class SyncChessRogueNousValueScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueNousValue value = 12;</code>
+     * <code>optional .ChessRogueNousValue value = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -66,7 +66,7 @@ public final class SyncChessRogueNousValueScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueNousValue value = 12;</code>
+     * <code>optional .ChessRogueNousValue value = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -80,7 +80,7 @@ public final class SyncChessRogueNousValueScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueNousValue value = 12;</code>
+     * <code>optional .ChessRogueNousValue value = 8;</code>
      * @param value the value_ to set
      * @return this
      */
@@ -151,7 +151,7 @@ public final class SyncChessRogueNousValueScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 98);
+        output.writeRawByte((byte) 66);
         output.writeMessageNoTag(value_);
       }
     }
@@ -172,7 +172,7 @@ public final class SyncChessRogueNousValueScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 98: {
+          case 66: {
             // value_
             input.readMessage(value_);
             bitField0_ |= 0x00000001;

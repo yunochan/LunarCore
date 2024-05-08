@@ -13,18 +13,22 @@ import us.hebi.quickbuf.ProtoSource;
 
 public final class RogueVirtualItemDataOuterClass {
   /**
+   * <pre>
+   *  pure guess
+   * </pre>
+   *
    * Protobuf type {@code RogueVirtualItemData}
    */
   public static final class RogueVirtualItemData extends ProtoMessage<RogueVirtualItemData> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 num = 5;</code>
+     * <code>optional uint32 num = 13;</code>
      */
     private int num;
 
     /**
-     * <code>optional uint32 MDBPDPDDHBC = 6;</code>
+     * <code>optional uint32 MDBPDPDDHBC = 14;</code>
      */
     private int mDBPDPDDHBC;
 
@@ -32,6 +36,10 @@ public final class RogueVirtualItemDataOuterClass {
     }
 
     /**
+     * <pre>
+     *  pure guess
+     * </pre>
+     *
      * @return a new empty instance of {@code RogueVirtualItemData}
      */
     public static RogueVirtualItemData newInstance() {
@@ -39,7 +47,7 @@ public final class RogueVirtualItemDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 num = 5;</code>
+     * <code>optional uint32 num = 13;</code>
      * @return whether the num field is set
      */
     public boolean hasNum() {
@@ -47,7 +55,7 @@ public final class RogueVirtualItemDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 num = 5;</code>
+     * <code>optional uint32 num = 13;</code>
      * @return this
      */
     public RogueVirtualItemData clearNum() {
@@ -57,7 +65,7 @@ public final class RogueVirtualItemDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 num = 5;</code>
+     * <code>optional uint32 num = 13;</code>
      * @return the num
      */
     public int getNum() {
@@ -65,7 +73,7 @@ public final class RogueVirtualItemDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 num = 5;</code>
+     * <code>optional uint32 num = 13;</code>
      * @param value the num to set
      * @return this
      */
@@ -76,7 +84,7 @@ public final class RogueVirtualItemDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 MDBPDPDDHBC = 6;</code>
+     * <code>optional uint32 MDBPDPDDHBC = 14;</code>
      * @return whether the mDBPDPDDHBC field is set
      */
     public boolean hasMDBPDPDDHBC() {
@@ -84,7 +92,7 @@ public final class RogueVirtualItemDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 MDBPDPDDHBC = 6;</code>
+     * <code>optional uint32 MDBPDPDDHBC = 14;</code>
      * @return this
      */
     public RogueVirtualItemData clearMDBPDPDDHBC() {
@@ -94,7 +102,7 @@ public final class RogueVirtualItemDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 MDBPDPDDHBC = 6;</code>
+     * <code>optional uint32 MDBPDPDDHBC = 14;</code>
      * @return the mDBPDPDDHBC
      */
     public int getMDBPDPDDHBC() {
@@ -102,7 +110,7 @@ public final class RogueVirtualItemDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 MDBPDPDDHBC = 6;</code>
+     * <code>optional uint32 MDBPDPDDHBC = 14;</code>
      * @param value the mDBPDPDDHBC to set
      * @return this
      */
@@ -177,11 +185,11 @@ public final class RogueVirtualItemDataOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(num);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(mDBPDPDDHBC);
       }
     }
@@ -205,16 +213,16 @@ public final class RogueVirtualItemDataOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
+          case 104: {
             // num
             num = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 48) {
+            if (tag != 112) {
               break;
             }
           }
-          case 48: {
+          case 112: {
             // mDBPDPDDHBC
             mDBPDPDDHBC = input.readUInt32();
             bitField0_ |= 0x00000002;

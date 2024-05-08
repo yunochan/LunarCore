@@ -20,7 +20,7 @@ public final class ChessRogueBuffDataOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>repeated .RogueBuffData buff_list = 13;</code>
+     * <code>repeated .RogueBuffData buff_list = 12;</code>
      */
     private final RepeatedMessage<RogueBuffDataOuterClass.RogueBuffData> buffList = RepeatedMessage.newEmptyInstance(RogueBuffDataOuterClass.RogueBuffData.getFactory());
 
@@ -35,7 +35,7 @@ public final class ChessRogueBuffDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueBuffData buff_list = 13;</code>
+     * <code>repeated .RogueBuffData buff_list = 12;</code>
      * @return whether the buffList field is set
      */
     public boolean hasBuffList() {
@@ -43,7 +43,7 @@ public final class ChessRogueBuffDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueBuffData buff_list = 13;</code>
+     * <code>repeated .RogueBuffData buff_list = 12;</code>
      * @return this
      */
     public ChessRogueBuffData clearBuffList() {
@@ -53,7 +53,7 @@ public final class ChessRogueBuffDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueBuffData buff_list = 13;</code>
+     * <code>repeated .RogueBuffData buff_list = 12;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -67,7 +67,7 @@ public final class ChessRogueBuffDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueBuffData buff_list = 13;</code>
+     * <code>repeated .RogueBuffData buff_list = 12;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -81,7 +81,7 @@ public final class ChessRogueBuffDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueBuffData buff_list = 13;</code>
+     * <code>repeated .RogueBuffData buff_list = 12;</code>
      * @param value the buffList to add
      * @return this
      */
@@ -92,7 +92,7 @@ public final class ChessRogueBuffDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueBuffData buff_list = 13;</code>
+     * <code>repeated .RogueBuffData buff_list = 12;</code>
      * @param values the buffList to add
      * @return this
      */
@@ -164,7 +164,7 @@ public final class ChessRogueBuffDataOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         for (int i = 0; i < buffList.length(); i++) {
-          output.writeRawByte((byte) 106);
+          output.writeRawByte((byte) 98);
           output.writeMessageNoTag(buffList.get(i));
         }
       }
@@ -186,7 +186,7 @@ public final class ChessRogueBuffDataOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 106: {
+          case 98: {
             // buffList
             tag = input.readRepeatedMessage(buffList, tag);
             bitField0_ |= 0x00000001;

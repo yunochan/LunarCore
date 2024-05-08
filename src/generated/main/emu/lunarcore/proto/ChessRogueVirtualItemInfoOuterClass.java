@@ -19,24 +19,24 @@ public final class ChessRogueVirtualItemInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     * LNGAAJMILOC CKJPPDKJIOH = 8;
-     * NNGLIKCIBCA JNAGMIALOII = 14;
-     * </pre>
-     *
-     * <code>optional .ChessRogueItemInfo item_info = 6;</code>
-     */
-    private final ChessRogueItemInfoOuterClass.ChessRogueItemInfo itemInfo = ChessRogueItemInfoOuterClass.ChessRogueItemInfo.newInstance();
-
-    /**
-     * <code>optional .ChessRogueBuffInfo buff_info = 9;</code>
+     * <code>optional .ChessRogueBuffInfo buff_info = 6;</code>
      */
     private final ChessRogueBuffInfoOuterClass.ChessRogueBuffInfo buffInfo = ChessRogueBuffInfoOuterClass.ChessRogueBuffInfo.newInstance();
 
     /**
-     * <code>optional .ChessRogueMiracleInfo miracle_info = 13;</code>
+     * <code>optional .ChessRogueMiracleInfo miracle_info = 10;</code>
      */
     private final ChessRogueMiracleInfoOuterClass.ChessRogueMiracleInfo miracleInfo = ChessRogueMiracleInfoOuterClass.ChessRogueMiracleInfo.newInstance();
+
+    /**
+     * <pre>
+     *  HMLCJCGOEHI rogue_aeon_info = 3;
+     *  MBGNHFBIIHJ GEOIJKDCIOI = 12;
+     * </pre>
+     *
+     * <code>optional .ChessRogueItemInfo item_info = 11;</code>
+     */
+    private final ChessRogueItemInfoOuterClass.ChessRogueItemInfo itemInfo = ChessRogueItemInfoOuterClass.ChessRogueItemInfo.newInstance();
 
     private ChessRogueVirtualItemInfo() {
     }
@@ -49,40 +49,156 @@ public final class ChessRogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * LNGAAJMILOC CKJPPDKJIOH = 8;
-     * NNGLIKCIBCA JNAGMIALOII = 14;
-     * </pre>
-     *
-     * <code>optional .ChessRogueItemInfo item_info = 6;</code>
-     * @return whether the itemInfo field is set
+     * <code>optional .ChessRogueBuffInfo buff_info = 6;</code>
+     * @return whether the buffInfo field is set
      */
-    public boolean hasItemInfo() {
+    public boolean hasBuffInfo() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
+     * <code>optional .ChessRogueBuffInfo buff_info = 6;</code>
+     * @return this
+     */
+    public ChessRogueVirtualItemInfo clearBuffInfo() {
+      bitField0_ &= ~0x00000001;
+      buffInfo.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional .ChessRogueBuffInfo buff_info = 6;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableBuffInfo()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public ChessRogueBuffInfoOuterClass.ChessRogueBuffInfo getBuffInfo() {
+      return buffInfo;
+    }
+
+    /**
+     * <code>optional .ChessRogueBuffInfo buff_info = 6;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public ChessRogueBuffInfoOuterClass.ChessRogueBuffInfo getMutableBuffInfo() {
+      bitField0_ |= 0x00000001;
+      return buffInfo;
+    }
+
+    /**
+     * <code>optional .ChessRogueBuffInfo buff_info = 6;</code>
+     * @param value the buffInfo to set
+     * @return this
+     */
+    public ChessRogueVirtualItemInfo setBuffInfo(
+        final ChessRogueBuffInfoOuterClass.ChessRogueBuffInfo value) {
+      bitField0_ |= 0x00000001;
+      buffInfo.copyFrom(value);
+      return this;
+    }
+
+    /**
+     * <code>optional .ChessRogueMiracleInfo miracle_info = 10;</code>
+     * @return whether the miracleInfo field is set
+     */
+    public boolean hasMiracleInfo() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional .ChessRogueMiracleInfo miracle_info = 10;</code>
+     * @return this
+     */
+    public ChessRogueVirtualItemInfo clearMiracleInfo() {
+      bitField0_ &= ~0x00000002;
+      miracleInfo.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional .ChessRogueMiracleInfo miracle_info = 10;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableMiracleInfo()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public ChessRogueMiracleInfoOuterClass.ChessRogueMiracleInfo getMiracleInfo() {
+      return miracleInfo;
+    }
+
+    /**
+     * <code>optional .ChessRogueMiracleInfo miracle_info = 10;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public ChessRogueMiracleInfoOuterClass.ChessRogueMiracleInfo getMutableMiracleInfo() {
+      bitField0_ |= 0x00000002;
+      return miracleInfo;
+    }
+
+    /**
+     * <code>optional .ChessRogueMiracleInfo miracle_info = 10;</code>
+     * @param value the miracleInfo to set
+     * @return this
+     */
+    public ChessRogueVirtualItemInfo setMiracleInfo(
+        final ChessRogueMiracleInfoOuterClass.ChessRogueMiracleInfo value) {
+      bitField0_ |= 0x00000002;
+      miracleInfo.copyFrom(value);
+      return this;
+    }
+
+    /**
      * <pre>
-     * LNGAAJMILOC CKJPPDKJIOH = 8;
-     * NNGLIKCIBCA JNAGMIALOII = 14;
+     *  HMLCJCGOEHI rogue_aeon_info = 3;
+     *  MBGNHFBIIHJ GEOIJKDCIOI = 12;
      * </pre>
      *
-     * <code>optional .ChessRogueItemInfo item_info = 6;</code>
+     * <code>optional .ChessRogueItemInfo item_info = 11;</code>
+     * @return whether the itemInfo field is set
+     */
+    public boolean hasItemInfo() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <pre>
+     *  HMLCJCGOEHI rogue_aeon_info = 3;
+     *  MBGNHFBIIHJ GEOIJKDCIOI = 12;
+     * </pre>
+     *
+     * <code>optional .ChessRogueItemInfo item_info = 11;</code>
      * @return this
      */
     public ChessRogueVirtualItemInfo clearItemInfo() {
-      bitField0_ &= ~0x00000001;
+      bitField0_ &= ~0x00000004;
       itemInfo.clear();
       return this;
     }
 
     /**
      * <pre>
-     * LNGAAJMILOC CKJPPDKJIOH = 8;
-     * NNGLIKCIBCA JNAGMIALOII = 14;
+     *  HMLCJCGOEHI rogue_aeon_info = 3;
+     *  MBGNHFBIIHJ GEOIJKDCIOI = 12;
      * </pre>
      *
-     * <code>optional .ChessRogueItemInfo item_info = 6;</code>
+     * <code>optional .ChessRogueItemInfo item_info = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -97,11 +213,11 @@ public final class ChessRogueVirtualItemInfoOuterClass {
 
     /**
      * <pre>
-     * LNGAAJMILOC CKJPPDKJIOH = 8;
-     * NNGLIKCIBCA JNAGMIALOII = 14;
+     *  HMLCJCGOEHI rogue_aeon_info = 3;
+     *  MBGNHFBIIHJ GEOIJKDCIOI = 12;
      * </pre>
      *
-     * <code>optional .ChessRogueItemInfo item_info = 6;</code>
+     * <code>optional .ChessRogueItemInfo item_info = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -110,140 +226,24 @@ public final class ChessRogueVirtualItemInfoOuterClass {
      * @return internal storage object for modifications
      */
     public ChessRogueItemInfoOuterClass.ChessRogueItemInfo getMutableItemInfo() {
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000004;
       return itemInfo;
     }
 
     /**
      * <pre>
-     * LNGAAJMILOC CKJPPDKJIOH = 8;
-     * NNGLIKCIBCA JNAGMIALOII = 14;
+     *  HMLCJCGOEHI rogue_aeon_info = 3;
+     *  MBGNHFBIIHJ GEOIJKDCIOI = 12;
      * </pre>
      *
-     * <code>optional .ChessRogueItemInfo item_info = 6;</code>
+     * <code>optional .ChessRogueItemInfo item_info = 11;</code>
      * @param value the itemInfo to set
      * @return this
      */
     public ChessRogueVirtualItemInfo setItemInfo(
         final ChessRogueItemInfoOuterClass.ChessRogueItemInfo value) {
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000004;
       itemInfo.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional .ChessRogueBuffInfo buff_info = 9;</code>
-     * @return whether the buffInfo field is set
-     */
-    public boolean hasBuffInfo() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional .ChessRogueBuffInfo buff_info = 9;</code>
-     * @return this
-     */
-    public ChessRogueVirtualItemInfo clearBuffInfo() {
-      bitField0_ &= ~0x00000002;
-      buffInfo.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional .ChessRogueBuffInfo buff_info = 9;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableBuffInfo()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public ChessRogueBuffInfoOuterClass.ChessRogueBuffInfo getBuffInfo() {
-      return buffInfo;
-    }
-
-    /**
-     * <code>optional .ChessRogueBuffInfo buff_info = 9;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public ChessRogueBuffInfoOuterClass.ChessRogueBuffInfo getMutableBuffInfo() {
-      bitField0_ |= 0x00000002;
-      return buffInfo;
-    }
-
-    /**
-     * <code>optional .ChessRogueBuffInfo buff_info = 9;</code>
-     * @param value the buffInfo to set
-     * @return this
-     */
-    public ChessRogueVirtualItemInfo setBuffInfo(
-        final ChessRogueBuffInfoOuterClass.ChessRogueBuffInfo value) {
-      bitField0_ |= 0x00000002;
-      buffInfo.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional .ChessRogueMiracleInfo miracle_info = 13;</code>
-     * @return whether the miracleInfo field is set
-     */
-    public boolean hasMiracleInfo() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional .ChessRogueMiracleInfo miracle_info = 13;</code>
-     * @return this
-     */
-    public ChessRogueVirtualItemInfo clearMiracleInfo() {
-      bitField0_ &= ~0x00000004;
-      miracleInfo.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional .ChessRogueMiracleInfo miracle_info = 13;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableMiracleInfo()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public ChessRogueMiracleInfoOuterClass.ChessRogueMiracleInfo getMiracleInfo() {
-      return miracleInfo;
-    }
-
-    /**
-     * <code>optional .ChessRogueMiracleInfo miracle_info = 13;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public ChessRogueMiracleInfoOuterClass.ChessRogueMiracleInfo getMutableMiracleInfo() {
-      bitField0_ |= 0x00000004;
-      return miracleInfo;
-    }
-
-    /**
-     * <code>optional .ChessRogueMiracleInfo miracle_info = 13;</code>
-     * @param value the miracleInfo to set
-     * @return this
-     */
-    public ChessRogueVirtualItemInfo setMiracleInfo(
-        final ChessRogueMiracleInfoOuterClass.ChessRogueMiracleInfo value) {
-      bitField0_ |= 0x00000004;
-      miracleInfo.copyFrom(value);
       return this;
     }
 
@@ -252,9 +252,9 @@ public final class ChessRogueVirtualItemInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        itemInfo.copyFrom(other.itemInfo);
         buffInfo.copyFrom(other.buffInfo);
         miracleInfo.copyFrom(other.miracleInfo);
+        itemInfo.copyFrom(other.itemInfo);
       }
       return this;
     }
@@ -265,14 +265,14 @@ public final class ChessRogueVirtualItemInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasItemInfo()) {
-        getMutableItemInfo().mergeFrom(other.itemInfo);
-      }
       if (other.hasBuffInfo()) {
         getMutableBuffInfo().mergeFrom(other.buffInfo);
       }
       if (other.hasMiracleInfo()) {
         getMutableMiracleInfo().mergeFrom(other.miracleInfo);
+      }
+      if (other.hasItemInfo()) {
+        getMutableItemInfo().mergeFrom(other.itemInfo);
       }
       return this;
     }
@@ -284,9 +284,9 @@ public final class ChessRogueVirtualItemInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      itemInfo.clear();
       buffInfo.clear();
       miracleInfo.clear();
+      itemInfo.clear();
       return this;
     }
 
@@ -297,9 +297,9 @@ public final class ChessRogueVirtualItemInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      itemInfo.clearQuick();
       buffInfo.clearQuick();
       miracleInfo.clearQuick();
+      itemInfo.clearQuick();
       return this;
     }
 
@@ -313,24 +313,24 @@ public final class ChessRogueVirtualItemInfoOuterClass {
       }
       ChessRogueVirtualItemInfo other = (ChessRogueVirtualItemInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasItemInfo() || itemInfo.equals(other.itemInfo))
         && (!hasBuffInfo() || buffInfo.equals(other.buffInfo))
-        && (!hasMiracleInfo() || miracleInfo.equals(other.miracleInfo));
+        && (!hasMiracleInfo() || miracleInfo.equals(other.miracleInfo))
+        && (!hasItemInfo() || itemInfo.equals(other.itemInfo));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         output.writeRawByte((byte) 50);
-        output.writeMessageNoTag(itemInfo);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 74);
         output.writeMessageNoTag(buffInfo);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 106);
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 82);
         output.writeMessageNoTag(miracleInfo);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 90);
+        output.writeMessageNoTag(itemInfo);
       }
     }
 
@@ -338,13 +338,13 @@ public final class ChessRogueVirtualItemInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(itemInfo);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeMessageSizeNoTag(buffInfo);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeMessageSizeNoTag(miracleInfo);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        size += 1 + ProtoSink.computeMessageSizeNoTag(itemInfo);
       }
       return size;
     }
@@ -357,26 +357,26 @@ public final class ChessRogueVirtualItemInfoOuterClass {
       while (true) {
         switch (tag) {
           case 50: {
-            // itemInfo
-            input.readMessage(itemInfo);
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 74) {
-              break;
-            }
-          }
-          case 74: {
             // buffInfo
             input.readMessage(buffInfo);
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 106) {
+            if (tag != 82) {
               break;
             }
           }
-          case 106: {
+          case 82: {
             // miracleInfo
             input.readMessage(miracleInfo);
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 90) {
+              break;
+            }
+          }
+          case 90: {
+            // itemInfo
+            input.readMessage(itemInfo);
             bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 0) {
@@ -401,13 +401,13 @@ public final class ChessRogueVirtualItemInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeMessage(FieldNames.itemInfo, itemInfo);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeMessage(FieldNames.buffInfo, buffInfo);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
         output.writeMessage(FieldNames.miracleInfo, miracleInfo);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeMessage(FieldNames.itemInfo, itemInfo);
       }
       output.endObject();
     }
@@ -419,24 +419,12 @@ public final class ChessRogueVirtualItemInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 1177195105:
-          case -2141481382: {
-            if (input.isAtField(FieldNames.itemInfo)) {
-              if (!input.trySkipNullValue()) {
-                input.readMessage(itemInfo);
-                bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case -1522874463:
           case 55707930: {
             if (input.isAtField(FieldNames.buffInfo)) {
               if (!input.trySkipNullValue()) {
                 input.readMessage(buffInfo);
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000001;
               }
             } else {
               input.skipUnknownField();
@@ -448,6 +436,18 @@ public final class ChessRogueVirtualItemInfoOuterClass {
             if (input.isAtField(FieldNames.miracleInfo)) {
               if (!input.trySkipNullValue()) {
                 input.readMessage(miracleInfo);
+                bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 1177195105:
+          case -2141481382: {
+            if (input.isAtField(FieldNames.itemInfo)) {
+              if (!input.trySkipNullValue()) {
+                input.readMessage(itemInfo);
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -508,11 +508,11 @@ public final class ChessRogueVirtualItemInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName itemInfo = FieldName.forField("itemInfo", "item_info");
-
       static final FieldName buffInfo = FieldName.forField("buffInfo", "buff_info");
 
       static final FieldName miracleInfo = FieldName.forField("miracleInfo", "miracle_info");
+
+      static final FieldName itemInfo = FieldName.forField("itemInfo", "item_info");
     }
   }
 }

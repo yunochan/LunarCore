@@ -24,33 +24,33 @@ public final class ChessRogueStartScRspOuterClass {
     private int retcode;
 
     /**
-     * <code>optional .LineupInfo lineup = 1;</code>
-     */
-    private final LineupInfoOuterClass.LineupInfo lineup = LineupInfoOuterClass.LineupInfo.newInstance();
-
-    /**
-     * <code>optional .SceneInfo scene = 4;</code>
-     */
-    private final SceneInfoOuterClass.SceneInfo scene = SceneInfoOuterClass.SceneInfo.newInstance();
-
-    /**
-     * <code>optional .ChessRogueCellInfo cell_info = 7;</code>
-     */
-    private final ChessRogueCellInfoOuterClass.ChessRogueCellInfo cellInfo = ChessRogueCellInfoOuterClass.ChessRogueCellInfo.newInstance();
-
-    /**
-     * <code>optional .ChessRogueCurrentInfo current_info = 10;</code>
+     * <code>optional .ChessRogueCurrentInfo current_info = 1;</code>
      */
     private final ChessRogueCurrentInfoOuterClass.ChessRogueCurrentInfo currentInfo = ChessRogueCurrentInfoOuterClass.ChessRogueCurrentInfo.newInstance();
 
     /**
+     * <code>optional .LineupInfo lineup = 8;</code>
+     */
+    private final LineupInfoOuterClass.LineupInfo lineup = LineupInfoOuterClass.LineupInfo.newInstance();
+
+    /**
+     * <code>optional .ChessRogueCellInfo cell_info = 13;</code>
+     */
+    private final ChessRogueCellInfoOuterClass.ChessRogueCellInfo cellInfo = ChessRogueCellInfoOuterClass.ChessRogueCellInfo.newInstance();
+
+    /**
      * <pre>
-     * HLODEEONDBF OBGFEMEOJCE = 13;
+     * PEEHMMLEDMP build_query = 3;
      * </pre>
      *
-     * <code>optional .ChessRogueInfo chess_rogue_info = 11;</code>
+     * <code>optional .ChessRogueInfo chess_rogue_info = 14;</code>
      */
     private final ChessRogueInfoOuterClass.ChessRogueInfo chessRogueInfo = ChessRogueInfoOuterClass.ChessRogueInfo.newInstance();
+
+    /**
+     * <code>optional .SceneInfo scene = 15;</code>
+     */
+    private final SceneInfoOuterClass.SceneInfo scene = SceneInfoOuterClass.SceneInfo.newInstance();
 
     private ChessRogueStartScRsp() {
     }
@@ -100,197 +100,25 @@ public final class ChessRogueStartScRspOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 1;</code>
-     * @return whether the lineup field is set
+     * <code>optional .ChessRogueCurrentInfo current_info = 1;</code>
+     * @return whether the currentInfo field is set
      */
-    public boolean hasLineup() {
+    public boolean hasCurrentInfo() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 1;</code>
-     * @return this
-     */
-    public ChessRogueStartScRsp clearLineup() {
-      bitField0_ &= ~0x00000002;
-      lineup.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional .LineupInfo lineup = 1;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableLineup()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public LineupInfoOuterClass.LineupInfo getLineup() {
-      return lineup;
-    }
-
-    /**
-     * <code>optional .LineupInfo lineup = 1;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public LineupInfoOuterClass.LineupInfo getMutableLineup() {
-      bitField0_ |= 0x00000002;
-      return lineup;
-    }
-
-    /**
-     * <code>optional .LineupInfo lineup = 1;</code>
-     * @param value the lineup to set
-     * @return this
-     */
-    public ChessRogueStartScRsp setLineup(final LineupInfoOuterClass.LineupInfo value) {
-      bitField0_ |= 0x00000002;
-      lineup.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional .SceneInfo scene = 4;</code>
-     * @return whether the scene field is set
-     */
-    public boolean hasScene() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional .SceneInfo scene = 4;</code>
-     * @return this
-     */
-    public ChessRogueStartScRsp clearScene() {
-      bitField0_ &= ~0x00000004;
-      scene.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional .SceneInfo scene = 4;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableScene()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public SceneInfoOuterClass.SceneInfo getScene() {
-      return scene;
-    }
-
-    /**
-     * <code>optional .SceneInfo scene = 4;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public SceneInfoOuterClass.SceneInfo getMutableScene() {
-      bitField0_ |= 0x00000004;
-      return scene;
-    }
-
-    /**
-     * <code>optional .SceneInfo scene = 4;</code>
-     * @param value the scene to set
-     * @return this
-     */
-    public ChessRogueStartScRsp setScene(final SceneInfoOuterClass.SceneInfo value) {
-      bitField0_ |= 0x00000004;
-      scene.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional .ChessRogueCellInfo cell_info = 7;</code>
-     * @return whether the cellInfo field is set
-     */
-    public boolean hasCellInfo() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional .ChessRogueCellInfo cell_info = 7;</code>
-     * @return this
-     */
-    public ChessRogueStartScRsp clearCellInfo() {
-      bitField0_ &= ~0x00000008;
-      cellInfo.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional .ChessRogueCellInfo cell_info = 7;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableCellInfo()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public ChessRogueCellInfoOuterClass.ChessRogueCellInfo getCellInfo() {
-      return cellInfo;
-    }
-
-    /**
-     * <code>optional .ChessRogueCellInfo cell_info = 7;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public ChessRogueCellInfoOuterClass.ChessRogueCellInfo getMutableCellInfo() {
-      bitField0_ |= 0x00000008;
-      return cellInfo;
-    }
-
-    /**
-     * <code>optional .ChessRogueCellInfo cell_info = 7;</code>
-     * @param value the cellInfo to set
-     * @return this
-     */
-    public ChessRogueStartScRsp setCellInfo(
-        final ChessRogueCellInfoOuterClass.ChessRogueCellInfo value) {
-      bitField0_ |= 0x00000008;
-      cellInfo.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional .ChessRogueCurrentInfo current_info = 10;</code>
-     * @return whether the currentInfo field is set
-     */
-    public boolean hasCurrentInfo() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>optional .ChessRogueCurrentInfo current_info = 10;</code>
+     * <code>optional .ChessRogueCurrentInfo current_info = 1;</code>
      * @return this
      */
     public ChessRogueStartScRsp clearCurrentInfo() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000002;
       currentInfo.clear();
       return this;
     }
 
     /**
-     * <code>optional .ChessRogueCurrentInfo current_info = 10;</code>
+     * <code>optional .ChessRogueCurrentInfo current_info = 1;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -304,7 +132,7 @@ public final class ChessRogueStartScRspOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueCurrentInfo current_info = 10;</code>
+     * <code>optional .ChessRogueCurrentInfo current_info = 1;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -313,54 +141,169 @@ public final class ChessRogueStartScRspOuterClass {
      * @return internal storage object for modifications
      */
     public ChessRogueCurrentInfoOuterClass.ChessRogueCurrentInfo getMutableCurrentInfo() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000002;
       return currentInfo;
     }
 
     /**
-     * <code>optional .ChessRogueCurrentInfo current_info = 10;</code>
+     * <code>optional .ChessRogueCurrentInfo current_info = 1;</code>
      * @param value the currentInfo to set
      * @return this
      */
     public ChessRogueStartScRsp setCurrentInfo(
         final ChessRogueCurrentInfoOuterClass.ChessRogueCurrentInfo value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000002;
       currentInfo.copyFrom(value);
       return this;
     }
 
     /**
-     * <pre>
-     * HLODEEONDBF OBGFEMEOJCE = 13;
-     * </pre>
-     *
-     * <code>optional .ChessRogueInfo chess_rogue_info = 11;</code>
-     * @return whether the chessRogueInfo field is set
+     * <code>optional .LineupInfo lineup = 8;</code>
+     * @return whether the lineup field is set
      */
-    public boolean hasChessRogueInfo() {
-      return (bitField0_ & 0x00000020) != 0;
+    public boolean hasLineup() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 8;</code>
+     * @return this
+     */
+    public ChessRogueStartScRsp clearLineup() {
+      bitField0_ &= ~0x00000004;
+      lineup.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 8;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableLineup()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public LineupInfoOuterClass.LineupInfo getLineup() {
+      return lineup;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 8;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public LineupInfoOuterClass.LineupInfo getMutableLineup() {
+      bitField0_ |= 0x00000004;
+      return lineup;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 8;</code>
+     * @param value the lineup to set
+     * @return this
+     */
+    public ChessRogueStartScRsp setLineup(final LineupInfoOuterClass.LineupInfo value) {
+      bitField0_ |= 0x00000004;
+      lineup.copyFrom(value);
+      return this;
+    }
+
+    /**
+     * <code>optional .ChessRogueCellInfo cell_info = 13;</code>
+     * @return whether the cellInfo field is set
+     */
+    public boolean hasCellInfo() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>optional .ChessRogueCellInfo cell_info = 13;</code>
+     * @return this
+     */
+    public ChessRogueStartScRsp clearCellInfo() {
+      bitField0_ &= ~0x00000008;
+      cellInfo.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional .ChessRogueCellInfo cell_info = 13;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableCellInfo()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public ChessRogueCellInfoOuterClass.ChessRogueCellInfo getCellInfo() {
+      return cellInfo;
+    }
+
+    /**
+     * <code>optional .ChessRogueCellInfo cell_info = 13;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public ChessRogueCellInfoOuterClass.ChessRogueCellInfo getMutableCellInfo() {
+      bitField0_ |= 0x00000008;
+      return cellInfo;
+    }
+
+    /**
+     * <code>optional .ChessRogueCellInfo cell_info = 13;</code>
+     * @param value the cellInfo to set
+     * @return this
+     */
+    public ChessRogueStartScRsp setCellInfo(
+        final ChessRogueCellInfoOuterClass.ChessRogueCellInfo value) {
+      bitField0_ |= 0x00000008;
+      cellInfo.copyFrom(value);
+      return this;
     }
 
     /**
      * <pre>
-     * HLODEEONDBF OBGFEMEOJCE = 13;
+     * PEEHMMLEDMP build_query = 3;
      * </pre>
      *
-     * <code>optional .ChessRogueInfo chess_rogue_info = 11;</code>
+     * <code>optional .ChessRogueInfo chess_rogue_info = 14;</code>
+     * @return whether the chessRogueInfo field is set
+     */
+    public boolean hasChessRogueInfo() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <pre>
+     * PEEHMMLEDMP build_query = 3;
+     * </pre>
+     *
+     * <code>optional .ChessRogueInfo chess_rogue_info = 14;</code>
      * @return this
      */
     public ChessRogueStartScRsp clearChessRogueInfo() {
-      bitField0_ &= ~0x00000020;
+      bitField0_ &= ~0x00000010;
       chessRogueInfo.clear();
       return this;
     }
 
     /**
      * <pre>
-     * HLODEEONDBF OBGFEMEOJCE = 13;
+     * PEEHMMLEDMP build_query = 3;
      * </pre>
      *
-     * <code>optional .ChessRogueInfo chess_rogue_info = 11;</code>
+     * <code>optional .ChessRogueInfo chess_rogue_info = 14;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -375,10 +318,10 @@ public final class ChessRogueStartScRspOuterClass {
 
     /**
      * <pre>
-     * HLODEEONDBF OBGFEMEOJCE = 13;
+     * PEEHMMLEDMP build_query = 3;
      * </pre>
      *
-     * <code>optional .ChessRogueInfo chess_rogue_info = 11;</code>
+     * <code>optional .ChessRogueInfo chess_rogue_info = 14;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -387,23 +330,80 @@ public final class ChessRogueStartScRspOuterClass {
      * @return internal storage object for modifications
      */
     public ChessRogueInfoOuterClass.ChessRogueInfo getMutableChessRogueInfo() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       return chessRogueInfo;
     }
 
     /**
      * <pre>
-     * HLODEEONDBF OBGFEMEOJCE = 13;
+     * PEEHMMLEDMP build_query = 3;
      * </pre>
      *
-     * <code>optional .ChessRogueInfo chess_rogue_info = 11;</code>
+     * <code>optional .ChessRogueInfo chess_rogue_info = 14;</code>
      * @param value the chessRogueInfo to set
      * @return this
      */
     public ChessRogueStartScRsp setChessRogueInfo(
         final ChessRogueInfoOuterClass.ChessRogueInfo value) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       chessRogueInfo.copyFrom(value);
+      return this;
+    }
+
+    /**
+     * <code>optional .SceneInfo scene = 15;</code>
+     * @return whether the scene field is set
+     */
+    public boolean hasScene() {
+      return (bitField0_ & 0x00000020) != 0;
+    }
+
+    /**
+     * <code>optional .SceneInfo scene = 15;</code>
+     * @return this
+     */
+    public ChessRogueStartScRsp clearScene() {
+      bitField0_ &= ~0x00000020;
+      scene.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional .SceneInfo scene = 15;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableScene()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public SceneInfoOuterClass.SceneInfo getScene() {
+      return scene;
+    }
+
+    /**
+     * <code>optional .SceneInfo scene = 15;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public SceneInfoOuterClass.SceneInfo getMutableScene() {
+      bitField0_ |= 0x00000020;
+      return scene;
+    }
+
+    /**
+     * <code>optional .SceneInfo scene = 15;</code>
+     * @param value the scene to set
+     * @return this
+     */
+    public ChessRogueStartScRsp setScene(final SceneInfoOuterClass.SceneInfo value) {
+      bitField0_ |= 0x00000020;
+      scene.copyFrom(value);
       return this;
     }
 
@@ -413,11 +413,11 @@ public final class ChessRogueStartScRspOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         retcode = other.retcode;
-        lineup.copyFrom(other.lineup);
-        scene.copyFrom(other.scene);
-        cellInfo.copyFrom(other.cellInfo);
         currentInfo.copyFrom(other.currentInfo);
+        lineup.copyFrom(other.lineup);
+        cellInfo.copyFrom(other.cellInfo);
         chessRogueInfo.copyFrom(other.chessRogueInfo);
+        scene.copyFrom(other.scene);
       }
       return this;
     }
@@ -431,20 +431,20 @@ public final class ChessRogueStartScRspOuterClass {
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
       }
+      if (other.hasCurrentInfo()) {
+        getMutableCurrentInfo().mergeFrom(other.currentInfo);
+      }
       if (other.hasLineup()) {
         getMutableLineup().mergeFrom(other.lineup);
-      }
-      if (other.hasScene()) {
-        getMutableScene().mergeFrom(other.scene);
       }
       if (other.hasCellInfo()) {
         getMutableCellInfo().mergeFrom(other.cellInfo);
       }
-      if (other.hasCurrentInfo()) {
-        getMutableCurrentInfo().mergeFrom(other.currentInfo);
-      }
       if (other.hasChessRogueInfo()) {
         getMutableChessRogueInfo().mergeFrom(other.chessRogueInfo);
+      }
+      if (other.hasScene()) {
+        getMutableScene().mergeFrom(other.scene);
       }
       return this;
     }
@@ -457,11 +457,11 @@ public final class ChessRogueStartScRspOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       retcode = 0;
-      lineup.clear();
-      scene.clear();
-      cellInfo.clear();
       currentInfo.clear();
+      lineup.clear();
+      cellInfo.clear();
       chessRogueInfo.clear();
+      scene.clear();
       return this;
     }
 
@@ -472,11 +472,11 @@ public final class ChessRogueStartScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      lineup.clearQuick();
-      scene.clearQuick();
-      cellInfo.clearQuick();
       currentInfo.clearQuick();
+      lineup.clearQuick();
+      cellInfo.clearQuick();
       chessRogueInfo.clearQuick();
+      scene.clearQuick();
       return this;
     }
 
@@ -491,11 +491,11 @@ public final class ChessRogueStartScRspOuterClass {
       ChessRogueStartScRsp other = (ChessRogueStartScRsp) o;
       return bitField0_ == other.bitField0_
         && (!hasRetcode() || retcode == other.retcode)
-        && (!hasLineup() || lineup.equals(other.lineup))
-        && (!hasScene() || scene.equals(other.scene))
-        && (!hasCellInfo() || cellInfo.equals(other.cellInfo))
         && (!hasCurrentInfo() || currentInfo.equals(other.currentInfo))
-        && (!hasChessRogueInfo() || chessRogueInfo.equals(other.chessRogueInfo));
+        && (!hasLineup() || lineup.equals(other.lineup))
+        && (!hasCellInfo() || cellInfo.equals(other.cellInfo))
+        && (!hasChessRogueInfo() || chessRogueInfo.equals(other.chessRogueInfo))
+        && (!hasScene() || scene.equals(other.scene));
     }
 
     @Override
@@ -506,23 +506,23 @@ public final class ChessRogueStartScRspOuterClass {
       }
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeRawByte((byte) 10);
-        output.writeMessageNoTag(lineup);
+        output.writeMessageNoTag(currentInfo);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 34);
-        output.writeMessageNoTag(scene);
+        output.writeRawByte((byte) 66);
+        output.writeMessageNoTag(lineup);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 58);
+        output.writeRawByte((byte) 106);
         output.writeMessageNoTag(cellInfo);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 82);
-        output.writeMessageNoTag(currentInfo);
+        output.writeRawByte((byte) 114);
+        output.writeMessageNoTag(chessRogueInfo);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRawByte((byte) 90);
-        output.writeMessageNoTag(chessRogueInfo);
+        output.writeRawByte((byte) 122);
+        output.writeMessageNoTag(scene);
       }
     }
 
@@ -533,19 +533,19 @@ public final class ChessRogueStartScRspOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(lineup);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(currentInfo);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(scene);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(lineup);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         size += 1 + ProtoSink.computeMessageSizeNoTag(cellInfo);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(currentInfo);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(chessRogueInfo);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(chessRogueInfo);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(scene);
       }
       return size;
     }
@@ -567,44 +567,44 @@ public final class ChessRogueStartScRspOuterClass {
             }
           }
           case 10: {
-            // lineup
-            input.readMessage(lineup);
+            // currentInfo
+            input.readMessage(currentInfo);
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 34) {
+            if (tag != 66) {
               break;
             }
           }
-          case 34: {
-            // scene
-            input.readMessage(scene);
+          case 66: {
+            // lineup
+            input.readMessage(lineup);
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 106) {
               break;
             }
           }
-          case 58: {
+          case 106: {
             // cellInfo
             input.readMessage(cellInfo);
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 82) {
+            if (tag != 114) {
               break;
             }
           }
-          case 82: {
-            // currentInfo
-            input.readMessage(currentInfo);
-            bitField0_ |= 0x00000010;
-            tag = input.readTag();
-            if (tag != 90) {
-              break;
-            }
-          }
-          case 90: {
+          case 114: {
             // chessRogueInfo
             input.readMessage(chessRogueInfo);
+            bitField0_ |= 0x00000010;
+            tag = input.readTag();
+            if (tag != 122) {
+              break;
+            }
+          }
+          case 122: {
+            // scene
+            input.readMessage(scene);
             bitField0_ |= 0x00000020;
             tag = input.readTag();
             if (tag != 0) {
@@ -632,19 +632,19 @@ public final class ChessRogueStartScRspOuterClass {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeMessage(FieldNames.lineup, lineup);
+        output.writeMessage(FieldNames.currentInfo, currentInfo);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeMessage(FieldNames.scene, scene);
+        output.writeMessage(FieldNames.lineup, lineup);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeMessage(FieldNames.cellInfo, cellInfo);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeMessage(FieldNames.currentInfo, currentInfo);
+        output.writeMessage(FieldNames.chessRogueInfo, chessRogueInfo);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeMessage(FieldNames.chessRogueInfo, chessRogueInfo);
+        output.writeMessage(FieldNames.scene, scene);
       }
       output.endObject();
     }
@@ -667,10 +667,11 @@ public final class ChessRogueStartScRspOuterClass {
             }
             break;
           }
-          case -1102671473: {
-            if (input.isAtField(FieldNames.lineup)) {
+          case 600912327:
+          case 1468588980: {
+            if (input.isAtField(FieldNames.currentInfo)) {
               if (!input.trySkipNullValue()) {
-                input.readMessage(lineup);
+                input.readMessage(currentInfo);
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -678,10 +679,10 @@ public final class ChessRogueStartScRspOuterClass {
             }
             break;
           }
-          case 109254796: {
-            if (input.isAtField(FieldNames.scene)) {
+          case -1102671473: {
+            if (input.isAtField(FieldNames.lineup)) {
               if (!input.trySkipNullValue()) {
-                input.readMessage(scene);
+                input.readMessage(lineup);
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -701,11 +702,11 @@ public final class ChessRogueStartScRspOuterClass {
             }
             break;
           }
-          case 600912327:
-          case 1468588980: {
-            if (input.isAtField(FieldNames.currentInfo)) {
+          case -2057768312:
+          case 1888241298: {
+            if (input.isAtField(FieldNames.chessRogueInfo)) {
               if (!input.trySkipNullValue()) {
-                input.readMessage(currentInfo);
+                input.readMessage(chessRogueInfo);
                 bitField0_ |= 0x00000010;
               }
             } else {
@@ -713,11 +714,10 @@ public final class ChessRogueStartScRspOuterClass {
             }
             break;
           }
-          case -2057768312:
-          case 1888241298: {
-            if (input.isAtField(FieldNames.chessRogueInfo)) {
+          case 109254796: {
+            if (input.isAtField(FieldNames.scene)) {
               if (!input.trySkipNullValue()) {
-                input.readMessage(chessRogueInfo);
+                input.readMessage(scene);
                 bitField0_ |= 0x00000020;
               }
             } else {
@@ -780,15 +780,15 @@ public final class ChessRogueStartScRspOuterClass {
     static class FieldNames {
       static final FieldName retcode = FieldName.forField("retcode");
 
-      static final FieldName lineup = FieldName.forField("lineup");
+      static final FieldName currentInfo = FieldName.forField("currentInfo", "current_info");
 
-      static final FieldName scene = FieldName.forField("scene");
+      static final FieldName lineup = FieldName.forField("lineup");
 
       static final FieldName cellInfo = FieldName.forField("cellInfo", "cell_info");
 
-      static final FieldName currentInfo = FieldName.forField("currentInfo", "current_info");
-
       static final FieldName chessRogueInfo = FieldName.forField("chessRogueInfo", "chess_rogue_info");
+
+      static final FieldName scene = FieldName.forField("scene");
     }
   }
 }

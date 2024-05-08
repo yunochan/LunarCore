@@ -19,7 +19,7 @@ public final class ChessRogueNousValueOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 value = 13;</code>
+     * <code>optional uint32 value = 6;</code>
      */
     private int value_;
 
@@ -34,7 +34,7 @@ public final class ChessRogueNousValueOuterClass {
     }
 
     /**
-     * <code>optional uint32 value = 13;</code>
+     * <code>optional uint32 value = 6;</code>
      * @return whether the value_ field is set
      */
     public boolean hasValue() {
@@ -42,7 +42,7 @@ public final class ChessRogueNousValueOuterClass {
     }
 
     /**
-     * <code>optional uint32 value = 13;</code>
+     * <code>optional uint32 value = 6;</code>
      * @return this
      */
     public ChessRogueNousValue clearValue() {
@@ -52,7 +52,7 @@ public final class ChessRogueNousValueOuterClass {
     }
 
     /**
-     * <code>optional uint32 value = 13;</code>
+     * <code>optional uint32 value = 6;</code>
      * @return the value_
      */
     public int getValue() {
@@ -60,7 +60,7 @@ public final class ChessRogueNousValueOuterClass {
     }
 
     /**
-     * <code>optional uint32 value = 13;</code>
+     * <code>optional uint32 value = 6;</code>
      * @param value the value_ to set
      * @return this
      */
@@ -129,7 +129,7 @@ public final class ChessRogueNousValueOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 104);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(value_);
       }
     }
@@ -150,7 +150,7 @@ public final class ChessRogueNousValueOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 104: {
+          case 48: {
             // value_
             value_ = input.readUInt32();
             bitField0_ |= 0x00000001;

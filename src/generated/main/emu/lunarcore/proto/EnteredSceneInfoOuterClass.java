@@ -19,12 +19,12 @@ public final class EnteredSceneInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 plane_id = 9;</code>
+     * <code>optional uint32 plane_id = 7;</code>
      */
     private int planeId;
 
     /**
-     * <code>optional uint32 floor_id = 12;</code>
+     * <code>optional uint32 floor_id = 13;</code>
      */
     private int floorId;
 
@@ -39,7 +39,7 @@ public final class EnteredSceneInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 plane_id = 9;</code>
+     * <code>optional uint32 plane_id = 7;</code>
      * @return whether the planeId field is set
      */
     public boolean hasPlaneId() {
@@ -47,7 +47,7 @@ public final class EnteredSceneInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 plane_id = 9;</code>
+     * <code>optional uint32 plane_id = 7;</code>
      * @return this
      */
     public EnteredSceneInfo clearPlaneId() {
@@ -57,7 +57,7 @@ public final class EnteredSceneInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 plane_id = 9;</code>
+     * <code>optional uint32 plane_id = 7;</code>
      * @return the planeId
      */
     public int getPlaneId() {
@@ -65,7 +65,7 @@ public final class EnteredSceneInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 plane_id = 9;</code>
+     * <code>optional uint32 plane_id = 7;</code>
      * @param value the planeId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class EnteredSceneInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 12;</code>
+     * <code>optional uint32 floor_id = 13;</code>
      * @return whether the floorId field is set
      */
     public boolean hasFloorId() {
@@ -84,7 +84,7 @@ public final class EnteredSceneInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 12;</code>
+     * <code>optional uint32 floor_id = 13;</code>
      * @return this
      */
     public EnteredSceneInfo clearFloorId() {
@@ -94,7 +94,7 @@ public final class EnteredSceneInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 12;</code>
+     * <code>optional uint32 floor_id = 13;</code>
      * @return the floorId
      */
     public int getFloorId() {
@@ -102,7 +102,7 @@ public final class EnteredSceneInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 12;</code>
+     * <code>optional uint32 floor_id = 13;</code>
      * @param value the floorId to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class EnteredSceneInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(planeId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(floorId);
       }
     }
@@ -205,16 +205,16 @@ public final class EnteredSceneInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
+          case 56: {
             // planeId
             planeId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 96) {
+            if (tag != 104) {
               break;
             }
           }
-          case 96: {
+          case 104: {
             // floorId
             floorId = input.readUInt32();
             bitField0_ |= 0x00000002;

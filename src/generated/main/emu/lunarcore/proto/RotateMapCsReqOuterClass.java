@@ -20,24 +20,24 @@ public final class RotateMapCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 group_id = 4;</code>
+     * <code>optional uint32 group_id = 5;</code>
      */
     private int groupId;
 
     /**
-     * <code>optional uint32 unk_int = 13;</code>
+     * <code>optional uint32 unk_int = 7;</code>
      */
     private int unkInt;
 
     /**
-     * <code>optional .MotionInfo motion = 10;</code>
-     */
-    private final MotionInfoOuterClass.MotionInfo motion = MotionInfoOuterClass.MotionInfo.newInstance();
-
-    /**
-     * <code>optional .RotateMapCsReq.NewMapRot rogue_map = 11;</code>
+     * <code>optional .RotateMapCsReq.NewMapRot rogue_map = 6;</code>
      */
     private final NewMapRot rogueMap = NewMapRot.newInstance();
+
+    /**
+     * <code>optional .MotionInfo motion = 12;</code>
+     */
+    private final MotionInfoOuterClass.MotionInfo motion = MotionInfoOuterClass.MotionInfo.newInstance();
 
     private RotateMapCsReq() {
     }
@@ -50,7 +50,7 @@ public final class RotateMapCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 4;</code>
+     * <code>optional uint32 group_id = 5;</code>
      * @return whether the groupId field is set
      */
     public boolean hasGroupId() {
@@ -58,7 +58,7 @@ public final class RotateMapCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 4;</code>
+     * <code>optional uint32 group_id = 5;</code>
      * @return this
      */
     public RotateMapCsReq clearGroupId() {
@@ -68,7 +68,7 @@ public final class RotateMapCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 4;</code>
+     * <code>optional uint32 group_id = 5;</code>
      * @return the groupId
      */
     public int getGroupId() {
@@ -76,7 +76,7 @@ public final class RotateMapCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 4;</code>
+     * <code>optional uint32 group_id = 5;</code>
      * @param value the groupId to set
      * @return this
      */
@@ -87,7 +87,7 @@ public final class RotateMapCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 unk_int = 13;</code>
+     * <code>optional uint32 unk_int = 7;</code>
      * @return whether the unkInt field is set
      */
     public boolean hasUnkInt() {
@@ -95,7 +95,7 @@ public final class RotateMapCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 unk_int = 13;</code>
+     * <code>optional uint32 unk_int = 7;</code>
      * @return this
      */
     public RotateMapCsReq clearUnkInt() {
@@ -105,7 +105,7 @@ public final class RotateMapCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 unk_int = 13;</code>
+     * <code>optional uint32 unk_int = 7;</code>
      * @return the unkInt
      */
     public int getUnkInt() {
@@ -113,7 +113,7 @@ public final class RotateMapCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 unk_int = 13;</code>
+     * <code>optional uint32 unk_int = 7;</code>
      * @param value the unkInt to set
      * @return this
      */
@@ -124,82 +124,25 @@ public final class RotateMapCsReqOuterClass {
     }
 
     /**
-     * <code>optional .MotionInfo motion = 10;</code>
-     * @return whether the motion field is set
+     * <code>optional .RotateMapCsReq.NewMapRot rogue_map = 6;</code>
+     * @return whether the rogueMap field is set
      */
-    public boolean hasMotion() {
+    public boolean hasRogueMap() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional .MotionInfo motion = 10;</code>
-     * @return this
-     */
-    public RotateMapCsReq clearMotion() {
-      bitField0_ &= ~0x00000004;
-      motion.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional .MotionInfo motion = 10;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableMotion()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public MotionInfoOuterClass.MotionInfo getMotion() {
-      return motion;
-    }
-
-    /**
-     * <code>optional .MotionInfo motion = 10;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public MotionInfoOuterClass.MotionInfo getMutableMotion() {
-      bitField0_ |= 0x00000004;
-      return motion;
-    }
-
-    /**
-     * <code>optional .MotionInfo motion = 10;</code>
-     * @param value the motion to set
-     * @return this
-     */
-    public RotateMapCsReq setMotion(final MotionInfoOuterClass.MotionInfo value) {
-      bitField0_ |= 0x00000004;
-      motion.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional .RotateMapCsReq.NewMapRot rogue_map = 11;</code>
-     * @return whether the rogueMap field is set
-     */
-    public boolean hasRogueMap() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional .RotateMapCsReq.NewMapRot rogue_map = 11;</code>
+     * <code>optional .RotateMapCsReq.NewMapRot rogue_map = 6;</code>
      * @return this
      */
     public RotateMapCsReq clearRogueMap() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000004;
       rogueMap.clear();
       return this;
     }
 
     /**
-     * <code>optional .RotateMapCsReq.NewMapRot rogue_map = 11;</code>
+     * <code>optional .RotateMapCsReq.NewMapRot rogue_map = 6;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -213,7 +156,7 @@ public final class RotateMapCsReqOuterClass {
     }
 
     /**
-     * <code>optional .RotateMapCsReq.NewMapRot rogue_map = 11;</code>
+     * <code>optional .RotateMapCsReq.NewMapRot rogue_map = 6;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -222,18 +165,75 @@ public final class RotateMapCsReqOuterClass {
      * @return internal storage object for modifications
      */
     public NewMapRot getMutableRogueMap() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       return rogueMap;
     }
 
     /**
-     * <code>optional .RotateMapCsReq.NewMapRot rogue_map = 11;</code>
+     * <code>optional .RotateMapCsReq.NewMapRot rogue_map = 6;</code>
      * @param value the rogueMap to set
      * @return this
      */
     public RotateMapCsReq setRogueMap(final NewMapRot value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       rogueMap.copyFrom(value);
+      return this;
+    }
+
+    /**
+     * <code>optional .MotionInfo motion = 12;</code>
+     * @return whether the motion field is set
+     */
+    public boolean hasMotion() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>optional .MotionInfo motion = 12;</code>
+     * @return this
+     */
+    public RotateMapCsReq clearMotion() {
+      bitField0_ &= ~0x00000008;
+      motion.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional .MotionInfo motion = 12;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableMotion()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public MotionInfoOuterClass.MotionInfo getMotion() {
+      return motion;
+    }
+
+    /**
+     * <code>optional .MotionInfo motion = 12;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public MotionInfoOuterClass.MotionInfo getMutableMotion() {
+      bitField0_ |= 0x00000008;
+      return motion;
+    }
+
+    /**
+     * <code>optional .MotionInfo motion = 12;</code>
+     * @param value the motion to set
+     * @return this
+     */
+    public RotateMapCsReq setMotion(final MotionInfoOuterClass.MotionInfo value) {
+      bitField0_ |= 0x00000008;
+      motion.copyFrom(value);
       return this;
     }
 
@@ -244,8 +244,8 @@ public final class RotateMapCsReqOuterClass {
         bitField0_ = other.bitField0_;
         groupId = other.groupId;
         unkInt = other.unkInt;
-        motion.copyFrom(other.motion);
         rogueMap.copyFrom(other.rogueMap);
+        motion.copyFrom(other.motion);
       }
       return this;
     }
@@ -262,11 +262,11 @@ public final class RotateMapCsReqOuterClass {
       if (other.hasUnkInt()) {
         setUnkInt(other.unkInt);
       }
-      if (other.hasMotion()) {
-        getMutableMotion().mergeFrom(other.motion);
-      }
       if (other.hasRogueMap()) {
         getMutableRogueMap().mergeFrom(other.rogueMap);
+      }
+      if (other.hasMotion()) {
+        getMutableMotion().mergeFrom(other.motion);
       }
       return this;
     }
@@ -280,8 +280,8 @@ public final class RotateMapCsReqOuterClass {
       bitField0_ = 0;
       groupId = 0;
       unkInt = 0;
-      motion.clear();
       rogueMap.clear();
+      motion.clear();
       return this;
     }
 
@@ -292,8 +292,8 @@ public final class RotateMapCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      motion.clearQuick();
       rogueMap.clearQuick();
+      motion.clearQuick();
       return this;
     }
 
@@ -309,27 +309,27 @@ public final class RotateMapCsReqOuterClass {
       return bitField0_ == other.bitField0_
         && (!hasGroupId() || groupId == other.groupId)
         && (!hasUnkInt() || unkInt == other.unkInt)
-        && (!hasMotion() || motion.equals(other.motion))
-        && (!hasRogueMap() || rogueMap.equals(other.rogueMap));
+        && (!hasRogueMap() || rogueMap.equals(other.rogueMap))
+        && (!hasMotion() || motion.equals(other.motion));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(groupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 104);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(unkInt);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 82);
-        output.writeMessageNoTag(motion);
+        output.writeRawByte((byte) 50);
+        output.writeMessageNoTag(rogueMap);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 90);
-        output.writeMessageNoTag(rogueMap);
+        output.writeRawByte((byte) 98);
+        output.writeMessageNoTag(motion);
       }
     }
 
@@ -343,10 +343,10 @@ public final class RotateMapCsReqOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(unkInt);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(motion);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(rogueMap);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(rogueMap);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(motion);
       }
       return size;
     }
@@ -358,36 +358,36 @@ public final class RotateMapCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 32: {
+          case 40: {
             // groupId
             groupId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 104) {
+            if (tag != 56) {
               break;
             }
           }
-          case 104: {
+          case 56: {
             // unkInt
             unkInt = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 82) {
+            if (tag != 50) {
               break;
             }
           }
-          case 82: {
-            // motion
-            input.readMessage(motion);
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 90) {
-              break;
-            }
-          }
-          case 90: {
+          case 50: {
             // rogueMap
             input.readMessage(rogueMap);
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 98) {
+              break;
+            }
+          }
+          case 98: {
+            // motion
+            input.readMessage(motion);
             bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 0) {
@@ -418,10 +418,10 @@ public final class RotateMapCsReqOuterClass {
         output.writeUInt32(FieldNames.unkInt, unkInt);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeMessage(FieldNames.motion, motion);
+        output.writeMessage(FieldNames.rogueMap, rogueMap);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeMessage(FieldNames.rogueMap, rogueMap);
+        output.writeMessage(FieldNames.motion, motion);
       }
       output.endObject();
     }
@@ -457,10 +457,11 @@ public final class RotateMapCsReqOuterClass {
             }
             break;
           }
-          case -1068318794: {
-            if (input.isAtField(FieldNames.motion)) {
+          case -394483422:
+          case 656463223: {
+            if (input.isAtField(FieldNames.rogueMap)) {
               if (!input.trySkipNullValue()) {
-                input.readMessage(motion);
+                input.readMessage(rogueMap);
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -468,11 +469,10 @@ public final class RotateMapCsReqOuterClass {
             }
             break;
           }
-          case -394483422:
-          case 656463223: {
-            if (input.isAtField(FieldNames.rogueMap)) {
+          case -1068318794: {
+            if (input.isAtField(FieldNames.motion)) {
               if (!input.trySkipNullValue()) {
-                input.readMessage(rogueMap);
+                input.readMessage(motion);
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -527,22 +527,22 @@ public final class RotateMapCsReqOuterClass {
       private static final long serialVersionUID = 0L;
 
       /**
-       * <code>optional float z = 1;</code>
-       */
-      private float z;
-
-      /**
-       * <code>optional float y = 3;</code>
-       */
-      private float y;
-
-      /**
-       * <code>optional float x = 6;</code>
+       * <code>optional float x = 8;</code>
        */
       private float x;
 
       /**
-       * <code>optional float w = 9;</code>
+       * <code>optional float z = 10;</code>
+       */
+      private float z;
+
+      /**
+       * <code>optional float y = 11;</code>
+       */
+      private float y;
+
+      /**
+       * <code>optional float w = 12;</code>
        */
       private float w;
 
@@ -557,99 +557,25 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional float z = 1;</code>
-       * @return whether the z field is set
+       * <code>optional float x = 8;</code>
+       * @return whether the x field is set
        */
-      public boolean hasZ() {
+      public boolean hasX() {
         return (bitField0_ & 0x00000001) != 0;
       }
 
       /**
-       * <code>optional float z = 1;</code>
-       * @return this
-       */
-      public Vector4 clearZ() {
-        bitField0_ &= ~0x00000001;
-        z = 0F;
-        return this;
-      }
-
-      /**
-       * <code>optional float z = 1;</code>
-       * @return the z
-       */
-      public float getZ() {
-        return z;
-      }
-
-      /**
-       * <code>optional float z = 1;</code>
-       * @param value the z to set
-       * @return this
-       */
-      public Vector4 setZ(final float value) {
-        bitField0_ |= 0x00000001;
-        z = value;
-        return this;
-      }
-
-      /**
-       * <code>optional float y = 3;</code>
-       * @return whether the y field is set
-       */
-      public boolean hasY() {
-        return (bitField0_ & 0x00000002) != 0;
-      }
-
-      /**
-       * <code>optional float y = 3;</code>
-       * @return this
-       */
-      public Vector4 clearY() {
-        bitField0_ &= ~0x00000002;
-        y = 0F;
-        return this;
-      }
-
-      /**
-       * <code>optional float y = 3;</code>
-       * @return the y
-       */
-      public float getY() {
-        return y;
-      }
-
-      /**
-       * <code>optional float y = 3;</code>
-       * @param value the y to set
-       * @return this
-       */
-      public Vector4 setY(final float value) {
-        bitField0_ |= 0x00000002;
-        y = value;
-        return this;
-      }
-
-      /**
-       * <code>optional float x = 6;</code>
-       * @return whether the x field is set
-       */
-      public boolean hasX() {
-        return (bitField0_ & 0x00000004) != 0;
-      }
-
-      /**
-       * <code>optional float x = 6;</code>
+       * <code>optional float x = 8;</code>
        * @return this
        */
       public Vector4 clearX() {
-        bitField0_ &= ~0x00000004;
+        bitField0_ &= ~0x00000001;
         x = 0F;
         return this;
       }
 
       /**
-       * <code>optional float x = 6;</code>
+       * <code>optional float x = 8;</code>
        * @return the x
        */
       public float getX() {
@@ -657,18 +583,92 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional float x = 6;</code>
+       * <code>optional float x = 8;</code>
        * @param value the x to set
        * @return this
        */
       public Vector4 setX(final float value) {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
         x = value;
         return this;
       }
 
       /**
-       * <code>optional float w = 9;</code>
+       * <code>optional float z = 10;</code>
+       * @return whether the z field is set
+       */
+      public boolean hasZ() {
+        return (bitField0_ & 0x00000002) != 0;
+      }
+
+      /**
+       * <code>optional float z = 10;</code>
+       * @return this
+       */
+      public Vector4 clearZ() {
+        bitField0_ &= ~0x00000002;
+        z = 0F;
+        return this;
+      }
+
+      /**
+       * <code>optional float z = 10;</code>
+       * @return the z
+       */
+      public float getZ() {
+        return z;
+      }
+
+      /**
+       * <code>optional float z = 10;</code>
+       * @param value the z to set
+       * @return this
+       */
+      public Vector4 setZ(final float value) {
+        bitField0_ |= 0x00000002;
+        z = value;
+        return this;
+      }
+
+      /**
+       * <code>optional float y = 11;</code>
+       * @return whether the y field is set
+       */
+      public boolean hasY() {
+        return (bitField0_ & 0x00000004) != 0;
+      }
+
+      /**
+       * <code>optional float y = 11;</code>
+       * @return this
+       */
+      public Vector4 clearY() {
+        bitField0_ &= ~0x00000004;
+        y = 0F;
+        return this;
+      }
+
+      /**
+       * <code>optional float y = 11;</code>
+       * @return the y
+       */
+      public float getY() {
+        return y;
+      }
+
+      /**
+       * <code>optional float y = 11;</code>
+       * @param value the y to set
+       * @return this
+       */
+      public Vector4 setY(final float value) {
+        bitField0_ |= 0x00000004;
+        y = value;
+        return this;
+      }
+
+      /**
+       * <code>optional float w = 12;</code>
        * @return whether the w field is set
        */
       public boolean hasW() {
@@ -676,7 +676,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional float w = 9;</code>
+       * <code>optional float w = 12;</code>
        * @return this
        */
       public Vector4 clearW() {
@@ -686,7 +686,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional float w = 9;</code>
+       * <code>optional float w = 12;</code>
        * @return the w
        */
       public float getW() {
@@ -694,7 +694,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional float w = 9;</code>
+       * <code>optional float w = 12;</code>
        * @param value the w to set
        * @return this
        */
@@ -709,9 +709,9 @@ public final class RotateMapCsReqOuterClass {
         cachedSize = other.cachedSize;
         if ((bitField0_ | other.bitField0_) != 0) {
           bitField0_ = other.bitField0_;
+          x = other.x;
           z = other.z;
           y = other.y;
-          x = other.x;
           w = other.w;
         }
         return this;
@@ -723,14 +723,14 @@ public final class RotateMapCsReqOuterClass {
           return this;
         }
         cachedSize = -1;
+        if (other.hasX()) {
+          setX(other.x);
+        }
         if (other.hasZ()) {
           setZ(other.z);
         }
         if (other.hasY()) {
           setY(other.y);
-        }
-        if (other.hasX()) {
-          setX(other.x);
         }
         if (other.hasW()) {
           setW(other.w);
@@ -745,9 +745,9 @@ public final class RotateMapCsReqOuterClass {
         }
         cachedSize = -1;
         bitField0_ = 0;
+        x = 0F;
         z = 0F;
         y = 0F;
-        x = 0F;
         w = 0F;
         return this;
       }
@@ -772,28 +772,28 @@ public final class RotateMapCsReqOuterClass {
         }
         Vector4 other = (Vector4) o;
         return bitField0_ == other.bitField0_
+          && (!hasX() || ProtoUtil.isEqual(x, other.x))
           && (!hasZ() || ProtoUtil.isEqual(z, other.z))
           && (!hasY() || ProtoUtil.isEqual(y, other.y))
-          && (!hasX() || ProtoUtil.isEqual(x, other.x))
           && (!hasW() || ProtoUtil.isEqual(w, other.w));
       }
 
       @Override
       public void writeTo(final ProtoSink output) throws IOException {
         if ((bitField0_ & 0x00000001) != 0) {
-          output.writeRawByte((byte) 13);
-          output.writeFloatNoTag(z);
-        }
-        if ((bitField0_ & 0x00000002) != 0) {
-          output.writeRawByte((byte) 29);
-          output.writeFloatNoTag(y);
-        }
-        if ((bitField0_ & 0x00000004) != 0) {
-          output.writeRawByte((byte) 53);
+          output.writeRawByte((byte) 69);
           output.writeFloatNoTag(x);
         }
+        if ((bitField0_ & 0x00000002) != 0) {
+          output.writeRawByte((byte) 85);
+          output.writeFloatNoTag(z);
+        }
+        if ((bitField0_ & 0x00000004) != 0) {
+          output.writeRawByte((byte) 93);
+          output.writeFloatNoTag(y);
+        }
         if ((bitField0_ & 0x00000008) != 0) {
-          output.writeRawByte((byte) 77);
+          output.writeRawByte((byte) 101);
           output.writeFloatNoTag(w);
         }
       }
@@ -823,34 +823,34 @@ public final class RotateMapCsReqOuterClass {
         int tag = input.readTag();
         while (true) {
           switch (tag) {
-            case 13: {
-              // z
-              z = input.readFloat();
-              bitField0_ |= 0x00000001;
-              tag = input.readTag();
-              if (tag != 29) {
-                break;
-              }
-            }
-            case 29: {
-              // y
-              y = input.readFloat();
-              bitField0_ |= 0x00000002;
-              tag = input.readTag();
-              if (tag != 53) {
-                break;
-              }
-            }
-            case 53: {
+            case 69: {
               // x
               x = input.readFloat();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000001;
               tag = input.readTag();
-              if (tag != 77) {
+              if (tag != 85) {
                 break;
               }
             }
-            case 77: {
+            case 85: {
+              // z
+              z = input.readFloat();
+              bitField0_ |= 0x00000002;
+              tag = input.readTag();
+              if (tag != 93) {
+                break;
+              }
+            }
+            case 93: {
+              // y
+              y = input.readFloat();
+              bitField0_ |= 0x00000004;
+              tag = input.readTag();
+              if (tag != 101) {
+                break;
+              }
+            }
+            case 101: {
               // w
               w = input.readFloat();
               bitField0_ |= 0x00000008;
@@ -877,13 +877,13 @@ public final class RotateMapCsReqOuterClass {
       public void writeTo(final JsonSink output) throws IOException {
         output.beginObject();
         if ((bitField0_ & 0x00000001) != 0) {
-          output.writeFloat(FieldNames.z, z);
+          output.writeFloat(FieldNames.x, x);
         }
         if ((bitField0_ & 0x00000002) != 0) {
-          output.writeFloat(FieldNames.y, y);
+          output.writeFloat(FieldNames.z, z);
         }
         if ((bitField0_ & 0x00000004) != 0) {
-          output.writeFloat(FieldNames.x, x);
+          output.writeFloat(FieldNames.y, y);
         }
         if ((bitField0_ & 0x00000008) != 0) {
           output.writeFloat(FieldNames.w, w);
@@ -898,11 +898,22 @@ public final class RotateMapCsReqOuterClass {
         }
         while (!input.isAtEnd()) {
           switch (input.readFieldHash()) {
+            case 120: {
+              if (input.isAtField(FieldNames.x)) {
+                if (!input.trySkipNullValue()) {
+                  x = input.readFloat();
+                  bitField0_ |= 0x00000001;
+                }
+              } else {
+                input.skipUnknownField();
+              }
+              break;
+            }
             case 122: {
               if (input.isAtField(FieldNames.z)) {
                 if (!input.trySkipNullValue()) {
                   z = input.readFloat();
-                  bitField0_ |= 0x00000001;
+                  bitField0_ |= 0x00000002;
                 }
               } else {
                 input.skipUnknownField();
@@ -913,17 +924,6 @@ public final class RotateMapCsReqOuterClass {
               if (input.isAtField(FieldNames.y)) {
                 if (!input.trySkipNullValue()) {
                   y = input.readFloat();
-                  bitField0_ |= 0x00000002;
-                }
-              } else {
-                input.skipUnknownField();
-              }
-              break;
-            }
-            case 120: {
-              if (input.isAtField(FieldNames.x)) {
-                if (!input.trySkipNullValue()) {
-                  x = input.readFloat();
                   bitField0_ |= 0x00000004;
                 }
               } else {
@@ -994,11 +994,11 @@ public final class RotateMapCsReqOuterClass {
        * Contains name constants used for serializing JSON
        */
       static class FieldNames {
+        static final FieldName x = FieldName.forField("x");
+
         static final FieldName z = FieldName.forField("z");
 
         static final FieldName y = FieldName.forField("y");
-
-        static final FieldName x = FieldName.forField("x");
 
         static final FieldName w = FieldName.forField("w");
       }
@@ -1011,12 +1011,12 @@ public final class RotateMapCsReqOuterClass {
       private static final long serialVersionUID = 0L;
 
       /**
-       * <code>optional .Vector vector3 = 1;</code>
+       * <code>optional .Vector vector3 = 2;</code>
        */
       private final VectorOuterClass.Vector vector3 = VectorOuterClass.Vector.newInstance();
 
       /**
-       * <code>optional .RotateMapCsReq.Vector4 vector4 = 9;</code>
+       * <code>optional .RotateMapCsReq.Vector4 vector4 = 10;</code>
        */
       private final Vector4 vector4 = Vector4.newInstance();
 
@@ -1031,7 +1031,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional .Vector vector3 = 1;</code>
+       * <code>optional .Vector vector3 = 2;</code>
        * @return whether the vector3 field is set
        */
       public boolean hasVector3() {
@@ -1039,7 +1039,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional .Vector vector3 = 1;</code>
+       * <code>optional .Vector vector3 = 2;</code>
        * @return this
        */
       public NewMapRot clearVector3() {
@@ -1049,7 +1049,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional .Vector vector3 = 1;</code>
+       * <code>optional .Vector vector3 = 2;</code>
        *
        * This method returns the internal storage object without modifying any has state.
        * The returned object should not be modified and be treated as read-only.
@@ -1063,7 +1063,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional .Vector vector3 = 1;</code>
+       * <code>optional .Vector vector3 = 2;</code>
        *
        * This method returns the internal storage object and sets the corresponding
        * has state. The returned object will become part of this message and its
@@ -1077,7 +1077,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional .Vector vector3 = 1;</code>
+       * <code>optional .Vector vector3 = 2;</code>
        * @param value the vector3 to set
        * @return this
        */
@@ -1088,7 +1088,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional .RotateMapCsReq.Vector4 vector4 = 9;</code>
+       * <code>optional .RotateMapCsReq.Vector4 vector4 = 10;</code>
        * @return whether the vector4 field is set
        */
       public boolean hasVector4() {
@@ -1096,7 +1096,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional .RotateMapCsReq.Vector4 vector4 = 9;</code>
+       * <code>optional .RotateMapCsReq.Vector4 vector4 = 10;</code>
        * @return this
        */
       public NewMapRot clearVector4() {
@@ -1106,7 +1106,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional .RotateMapCsReq.Vector4 vector4 = 9;</code>
+       * <code>optional .RotateMapCsReq.Vector4 vector4 = 10;</code>
        *
        * This method returns the internal storage object without modifying any has state.
        * The returned object should not be modified and be treated as read-only.
@@ -1120,7 +1120,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional .RotateMapCsReq.Vector4 vector4 = 9;</code>
+       * <code>optional .RotateMapCsReq.Vector4 vector4 = 10;</code>
        *
        * This method returns the internal storage object and sets the corresponding
        * has state. The returned object will become part of this message and its
@@ -1134,7 +1134,7 @@ public final class RotateMapCsReqOuterClass {
       }
 
       /**
-       * <code>optional .RotateMapCsReq.Vector4 vector4 = 9;</code>
+       * <code>optional .RotateMapCsReq.Vector4 vector4 = 10;</code>
        * @param value the vector4 to set
        * @return this
        */
@@ -1211,11 +1211,11 @@ public final class RotateMapCsReqOuterClass {
       @Override
       public void writeTo(final ProtoSink output) throws IOException {
         if ((bitField0_ & 0x00000001) != 0) {
-          output.writeRawByte((byte) 10);
+          output.writeRawByte((byte) 18);
           output.writeMessageNoTag(vector3);
         }
         if ((bitField0_ & 0x00000002) != 0) {
-          output.writeRawByte((byte) 74);
+          output.writeRawByte((byte) 82);
           output.writeMessageNoTag(vector4);
         }
       }
@@ -1239,16 +1239,16 @@ public final class RotateMapCsReqOuterClass {
         int tag = input.readTag();
         while (true) {
           switch (tag) {
-            case 10: {
+            case 18: {
               // vector3
               input.readMessage(vector3);
               bitField0_ |= 0x00000001;
               tag = input.readTag();
-              if (tag != 74) {
+              if (tag != 82) {
                 break;
               }
             }
-            case 74: {
+            case 82: {
               // vector4
               input.readMessage(vector4);
               bitField0_ |= 0x00000002;
@@ -1387,9 +1387,9 @@ public final class RotateMapCsReqOuterClass {
 
       static final FieldName unkInt = FieldName.forField("unkInt", "unk_int");
 
-      static final FieldName motion = FieldName.forField("motion");
-
       static final FieldName rogueMap = FieldName.forField("rogueMap", "rogue_map");
+
+      static final FieldName motion = FieldName.forField("motion");
     }
   }
 }

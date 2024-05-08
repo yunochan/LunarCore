@@ -24,7 +24,7 @@ public final class DiscardRelicCsReqOuterClass {
     private int relicUniqueId;
 
     /**
-     * <code>optional bool is_discard = 3;</code>
+     * <code>optional bool is_discard = 4;</code>
      */
     private boolean isDiscard;
 
@@ -76,7 +76,7 @@ public final class DiscardRelicCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool is_discard = 3;</code>
+     * <code>optional bool is_discard = 4;</code>
      * @return whether the isDiscard field is set
      */
     public boolean hasIsDiscard() {
@@ -84,7 +84,7 @@ public final class DiscardRelicCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool is_discard = 3;</code>
+     * <code>optional bool is_discard = 4;</code>
      * @return this
      */
     public DiscardRelicCsReq clearIsDiscard() {
@@ -94,7 +94,7 @@ public final class DiscardRelicCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool is_discard = 3;</code>
+     * <code>optional bool is_discard = 4;</code>
      * @return the isDiscard
      */
     public boolean getIsDiscard() {
@@ -102,7 +102,7 @@ public final class DiscardRelicCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool is_discard = 3;</code>
+     * <code>optional bool is_discard = 4;</code>
      * @param value the isDiscard to set
      * @return this
      */
@@ -181,7 +181,7 @@ public final class DiscardRelicCsReqOuterClass {
         output.writeUInt32NoTag(relicUniqueId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 32);
         output.writeBoolNoTag(isDiscard);
       }
     }
@@ -210,11 +210,11 @@ public final class DiscardRelicCsReqOuterClass {
             relicUniqueId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 24) {
+            if (tag != 32) {
               break;
             }
           }
-          case 24: {
+          case 32: {
             // isDiscard
             isDiscard = input.readBool();
             bitField0_ |= 0x00000002;

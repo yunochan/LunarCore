@@ -19,7 +19,7 @@ public final class MazeGroupOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional int64 modify_time = 3;</code>
+     * <code>optional int64 modify_time = 14;</code>
      */
     private long modifyTime;
 
@@ -39,7 +39,7 @@ public final class MazeGroupOuterClass {
     }
 
     /**
-     * <code>optional int64 modify_time = 3;</code>
+     * <code>optional int64 modify_time = 14;</code>
      * @return whether the modifyTime field is set
      */
     public boolean hasModifyTime() {
@@ -47,7 +47,7 @@ public final class MazeGroupOuterClass {
     }
 
     /**
-     * <code>optional int64 modify_time = 3;</code>
+     * <code>optional int64 modify_time = 14;</code>
      * @return this
      */
     public MazeGroup clearModifyTime() {
@@ -57,7 +57,7 @@ public final class MazeGroupOuterClass {
     }
 
     /**
-     * <code>optional int64 modify_time = 3;</code>
+     * <code>optional int64 modify_time = 14;</code>
      * @return the modifyTime
      */
     public long getModifyTime() {
@@ -65,7 +65,7 @@ public final class MazeGroupOuterClass {
     }
 
     /**
-     * <code>optional int64 modify_time = 3;</code>
+     * <code>optional int64 modify_time = 14;</code>
      * @param value the modifyTime to set
      * @return this
      */
@@ -177,7 +177,7 @@ public final class MazeGroupOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 112);
         output.writeInt64NoTag(modifyTime);
       }
       if ((bitField0_ & 0x00000002) != 0) {
@@ -205,7 +205,7 @@ public final class MazeGroupOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 112: {
             // modifyTime
             modifyTime = input.readInt64();
             bitField0_ |= 0x00000001;

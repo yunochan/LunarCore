@@ -536,8 +536,9 @@ public class RogueInstance {
         // Send packet if we are not entering the rogue instance for the first time
         if (prevRoom != null) {
             getPlayer().sendPacket(new PacketSyncRogueMapRoomScNotify(this, prevRoom));
-            getPlayer().sendPacket(new PacketSyncRogueMapRoomScNotify(this, nextRoom));
         }
+        
+        getPlayer().sendPacket(new PacketSyncRogueMapRoomScNotify(this, nextRoom));
         
         return nextRoom;
     }

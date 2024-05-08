@@ -19,12 +19,12 @@ public final class DisplayAvatarOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 pos = 2;</code>
+     * <code>optional uint32 pos = 7;</code>
      */
     private int pos;
 
     /**
-     * <code>optional uint32 avatar_id = 13;</code>
+     * <code>optional uint32 avatar_id = 15;</code>
      */
     private int avatarId;
 
@@ -39,7 +39,7 @@ public final class DisplayAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 pos = 2;</code>
+     * <code>optional uint32 pos = 7;</code>
      * @return whether the pos field is set
      */
     public boolean hasPos() {
@@ -47,7 +47,7 @@ public final class DisplayAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 pos = 2;</code>
+     * <code>optional uint32 pos = 7;</code>
      * @return this
      */
     public DisplayAvatar clearPos() {
@@ -57,7 +57,7 @@ public final class DisplayAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 pos = 2;</code>
+     * <code>optional uint32 pos = 7;</code>
      * @return the pos
      */
     public int getPos() {
@@ -65,7 +65,7 @@ public final class DisplayAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 pos = 2;</code>
+     * <code>optional uint32 pos = 7;</code>
      * @param value the pos to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class DisplayAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 13;</code>
+     * <code>optional uint32 avatar_id = 15;</code>
      * @return whether the avatarId field is set
      */
     public boolean hasAvatarId() {
@@ -84,7 +84,7 @@ public final class DisplayAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 13;</code>
+     * <code>optional uint32 avatar_id = 15;</code>
      * @return this
      */
     public DisplayAvatar clearAvatarId() {
@@ -94,7 +94,7 @@ public final class DisplayAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 13;</code>
+     * <code>optional uint32 avatar_id = 15;</code>
      * @return the avatarId
      */
     public int getAvatarId() {
@@ -102,7 +102,7 @@ public final class DisplayAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 13;</code>
+     * <code>optional uint32 avatar_id = 15;</code>
      * @param value the avatarId to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class DisplayAvatarOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(pos);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 104);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(avatarId);
       }
     }
@@ -205,16 +205,16 @@ public final class DisplayAvatarOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
+          case 56: {
             // pos
             pos = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 104) {
+            if (tag != 120) {
               break;
             }
           }
-          case 104: {
+          case 120: {
             // avatarId
             avatarId = input.readUInt32();
             bitField0_ |= 0x00000002;

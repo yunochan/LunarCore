@@ -25,7 +25,7 @@ public final class GetFriendRecommendListInfoScRspOuterClass {
     private int retcode;
 
     /**
-     * <code>repeated .FriendRecommendInfo friend_recommend_list = 12;</code>
+     * <code>repeated .FriendRecommendInfo friend_recommend_list = 9;</code>
      */
     private final RepeatedMessage<FriendRecommendInfoOuterClass.FriendRecommendInfo> friendRecommendList = RepeatedMessage.newEmptyInstance(FriendRecommendInfoOuterClass.FriendRecommendInfo.getFactory());
 
@@ -77,7 +77,7 @@ public final class GetFriendRecommendListInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .FriendRecommendInfo friend_recommend_list = 12;</code>
+     * <code>repeated .FriendRecommendInfo friend_recommend_list = 9;</code>
      * @return whether the friendRecommendList field is set
      */
     public boolean hasFriendRecommendList() {
@@ -85,7 +85,7 @@ public final class GetFriendRecommendListInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .FriendRecommendInfo friend_recommend_list = 12;</code>
+     * <code>repeated .FriendRecommendInfo friend_recommend_list = 9;</code>
      * @return this
      */
     public GetFriendRecommendListInfoScRsp clearFriendRecommendList() {
@@ -95,7 +95,7 @@ public final class GetFriendRecommendListInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .FriendRecommendInfo friend_recommend_list = 12;</code>
+     * <code>repeated .FriendRecommendInfo friend_recommend_list = 9;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -110,7 +110,7 @@ public final class GetFriendRecommendListInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .FriendRecommendInfo friend_recommend_list = 12;</code>
+     * <code>repeated .FriendRecommendInfo friend_recommend_list = 9;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -125,7 +125,7 @@ public final class GetFriendRecommendListInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .FriendRecommendInfo friend_recommend_list = 12;</code>
+     * <code>repeated .FriendRecommendInfo friend_recommend_list = 9;</code>
      * @param value the friendRecommendList to add
      * @return this
      */
@@ -137,7 +137,7 @@ public final class GetFriendRecommendListInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .FriendRecommendInfo friend_recommend_list = 12;</code>
+     * <code>repeated .FriendRecommendInfo friend_recommend_list = 9;</code>
      * @param values the friendRecommendList to add
      * @return this
      */
@@ -219,7 +219,7 @@ public final class GetFriendRecommendListInfoScRspOuterClass {
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < friendRecommendList.length(); i++) {
-          output.writeRawByte((byte) 98);
+          output.writeRawByte((byte) 74);
           output.writeMessageNoTag(friendRecommendList.get(i));
         }
       }
@@ -249,11 +249,11 @@ public final class GetFriendRecommendListInfoScRspOuterClass {
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 98) {
+            if (tag != 74) {
               break;
             }
           }
-          case 98: {
+          case 74: {
             // friendRecommendList
             tag = input.readRepeatedMessage(friendRecommendList, tag);
             bitField0_ |= 0x00000002;

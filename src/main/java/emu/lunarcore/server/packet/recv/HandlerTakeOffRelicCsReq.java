@@ -14,7 +14,7 @@ public class HandlerTakeOffRelicCsReq extends PacketHandler {
         var req = TakeOffRelicCsReq.parseFrom(data);
 
         for (int slot : req.getSlotList()) {
-            session.getPlayer().getInventory().unequipItem(req.getBaseAvatarId(), slot);
+            session.getPlayer().getInventory().unequipItem(req.getEquipAvatarId(), slot);
         }
 
         session.send(CmdId.TakeOffRelicScRsp);

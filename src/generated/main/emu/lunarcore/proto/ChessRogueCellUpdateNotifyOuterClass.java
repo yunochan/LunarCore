@@ -21,19 +21,19 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
 
     /**
      * <pre>
-     * EOKIACEIBBD IFMNJMMMJCM = 8;
+     * LCMLACLKNDI HFBFDNEMJED = 6;
      * </pre>
      *
-     * <code>optional uint32 cell_room_id = 4;</code>
+     * <code>optional uint32 cell_room_id = 15;</code>
      */
     private int cellRoomId;
 
     /**
      * <pre>
-     * MMKEKJCAHGP reason = 1;
+     * JGJCJHMAKKA reason = 11;
      * </pre>
      *
-     * <code>repeated .ChessRogueCell cell_info = 6;</code>
+     * <code>repeated .ChessRogueCell cell_info = 3;</code>
      */
     private final RepeatedMessage<ChessRogueCellOuterClass.ChessRogueCell> cellInfo = RepeatedMessage.newEmptyInstance(ChessRogueCellOuterClass.ChessRogueCell.getFactory());
 
@@ -49,10 +49,10 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
 
     /**
      * <pre>
-     * EOKIACEIBBD IFMNJMMMJCM = 8;
+     * LCMLACLKNDI HFBFDNEMJED = 6;
      * </pre>
      *
-     * <code>optional uint32 cell_room_id = 4;</code>
+     * <code>optional uint32 cell_room_id = 15;</code>
      * @return whether the cellRoomId field is set
      */
     public boolean hasCellRoomId() {
@@ -61,10 +61,10 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
 
     /**
      * <pre>
-     * EOKIACEIBBD IFMNJMMMJCM = 8;
+     * LCMLACLKNDI HFBFDNEMJED = 6;
      * </pre>
      *
-     * <code>optional uint32 cell_room_id = 4;</code>
+     * <code>optional uint32 cell_room_id = 15;</code>
      * @return this
      */
     public ChessRogueCellUpdateNotify clearCellRoomId() {
@@ -75,10 +75,10 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
 
     /**
      * <pre>
-     * EOKIACEIBBD IFMNJMMMJCM = 8;
+     * LCMLACLKNDI HFBFDNEMJED = 6;
      * </pre>
      *
-     * <code>optional uint32 cell_room_id = 4;</code>
+     * <code>optional uint32 cell_room_id = 15;</code>
      * @return the cellRoomId
      */
     public int getCellRoomId() {
@@ -87,10 +87,10 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
 
     /**
      * <pre>
-     * EOKIACEIBBD IFMNJMMMJCM = 8;
+     * LCMLACLKNDI HFBFDNEMJED = 6;
      * </pre>
      *
-     * <code>optional uint32 cell_room_id = 4;</code>
+     * <code>optional uint32 cell_room_id = 15;</code>
      * @param value the cellRoomId to set
      * @return this
      */
@@ -102,10 +102,10 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
 
     /**
      * <pre>
-     * MMKEKJCAHGP reason = 1;
+     * JGJCJHMAKKA reason = 11;
      * </pre>
      *
-     * <code>repeated .ChessRogueCell cell_info = 6;</code>
+     * <code>repeated .ChessRogueCell cell_info = 3;</code>
      * @return whether the cellInfo field is set
      */
     public boolean hasCellInfo() {
@@ -114,10 +114,10 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
 
     /**
      * <pre>
-     * MMKEKJCAHGP reason = 1;
+     * JGJCJHMAKKA reason = 11;
      * </pre>
      *
-     * <code>repeated .ChessRogueCell cell_info = 6;</code>
+     * <code>repeated .ChessRogueCell cell_info = 3;</code>
      * @return this
      */
     public ChessRogueCellUpdateNotify clearCellInfo() {
@@ -128,10 +128,10 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
 
     /**
      * <pre>
-     * MMKEKJCAHGP reason = 1;
+     * JGJCJHMAKKA reason = 11;
      * </pre>
      *
-     * <code>repeated .ChessRogueCell cell_info = 6;</code>
+     * <code>repeated .ChessRogueCell cell_info = 3;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -146,10 +146,10 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
 
     /**
      * <pre>
-     * MMKEKJCAHGP reason = 1;
+     * JGJCJHMAKKA reason = 11;
      * </pre>
      *
-     * <code>repeated .ChessRogueCell cell_info = 6;</code>
+     * <code>repeated .ChessRogueCell cell_info = 3;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -164,10 +164,10 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
 
     /**
      * <pre>
-     * MMKEKJCAHGP reason = 1;
+     * JGJCJHMAKKA reason = 11;
      * </pre>
      *
-     * <code>repeated .ChessRogueCell cell_info = 6;</code>
+     * <code>repeated .ChessRogueCell cell_info = 3;</code>
      * @param value the cellInfo to add
      * @return this
      */
@@ -180,10 +180,10 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
 
     /**
      * <pre>
-     * MMKEKJCAHGP reason = 1;
+     * JGJCJHMAKKA reason = 11;
      * </pre>
      *
-     * <code>repeated .ChessRogueCell cell_info = 6;</code>
+     * <code>repeated .ChessRogueCell cell_info = 3;</code>
      * @param values the cellInfo to add
      * @return this
      */
@@ -260,12 +260,12 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(cellRoomId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < cellInfo.length(); i++) {
-          output.writeRawByte((byte) 50);
+          output.writeRawByte((byte) 26);
           output.writeMessageNoTag(cellInfo.get(i));
         }
       }
@@ -290,16 +290,16 @@ public final class ChessRogueCellUpdateNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 32: {
+          case 120: {
             // cellRoomId
             cellRoomId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 26) {
               break;
             }
           }
-          case 50: {
+          case 26: {
             // cellInfo
             tag = input.readRepeatedMessage(cellInfo, tag);
             bitField0_ |= 0x00000002;

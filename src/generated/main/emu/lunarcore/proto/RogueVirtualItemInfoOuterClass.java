@@ -19,26 +19,22 @@ public final class RogueVirtualItemInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 JLGAKDGCBOH = 1;</code>
+     * <code>optional uint32 JLGAKDGCBOH = 4;</code>
      */
     private int jLGAKDGCBOH;
 
     /**
-     * <code>optional uint32 FGHILCKHDDO = 4;</code>
+     * <code>optional uint32 FGHILCKHDDO = 5;</code>
      */
     private int fGHILCKHDDO;
 
     /**
-     * <code>optional uint32 LGFMKJAOICA = 8;</code>
+     * <code>optional uint32 LGFMKJAOICA = 11;</code>
      */
     private int lGFMKJAOICA;
 
     /**
-     * <pre>
-     *  IACPIFFPEFP
-     * </pre>
-     *
-     * <code>optional uint32 rogue_coin = 15;</code>
+     * <code>optional uint32 rogue_coin = 14;</code>
      */
     private int rogueCoin;
 
@@ -53,7 +49,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 JLGAKDGCBOH = 1;</code>
+     * <code>optional uint32 JLGAKDGCBOH = 4;</code>
      * @return whether the jLGAKDGCBOH field is set
      */
     public boolean hasJLGAKDGCBOH() {
@@ -61,7 +57,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 JLGAKDGCBOH = 1;</code>
+     * <code>optional uint32 JLGAKDGCBOH = 4;</code>
      * @return this
      */
     public RogueVirtualItemInfo clearJLGAKDGCBOH() {
@@ -71,7 +67,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 JLGAKDGCBOH = 1;</code>
+     * <code>optional uint32 JLGAKDGCBOH = 4;</code>
      * @return the jLGAKDGCBOH
      */
     public int getJLGAKDGCBOH() {
@@ -79,7 +75,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 JLGAKDGCBOH = 1;</code>
+     * <code>optional uint32 JLGAKDGCBOH = 4;</code>
      * @param value the jLGAKDGCBOH to set
      * @return this
      */
@@ -90,7 +86,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 FGHILCKHDDO = 4;</code>
+     * <code>optional uint32 FGHILCKHDDO = 5;</code>
      * @return whether the fGHILCKHDDO field is set
      */
     public boolean hasFGHILCKHDDO() {
@@ -98,7 +94,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 FGHILCKHDDO = 4;</code>
+     * <code>optional uint32 FGHILCKHDDO = 5;</code>
      * @return this
      */
     public RogueVirtualItemInfo clearFGHILCKHDDO() {
@@ -108,7 +104,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 FGHILCKHDDO = 4;</code>
+     * <code>optional uint32 FGHILCKHDDO = 5;</code>
      * @return the fGHILCKHDDO
      */
     public int getFGHILCKHDDO() {
@@ -116,7 +112,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 FGHILCKHDDO = 4;</code>
+     * <code>optional uint32 FGHILCKHDDO = 5;</code>
      * @param value the fGHILCKHDDO to set
      * @return this
      */
@@ -127,7 +123,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 LGFMKJAOICA = 8;</code>
+     * <code>optional uint32 LGFMKJAOICA = 11;</code>
      * @return whether the lGFMKJAOICA field is set
      */
     public boolean hasLGFMKJAOICA() {
@@ -135,7 +131,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 LGFMKJAOICA = 8;</code>
+     * <code>optional uint32 LGFMKJAOICA = 11;</code>
      * @return this
      */
     public RogueVirtualItemInfo clearLGFMKJAOICA() {
@@ -145,7 +141,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 LGFMKJAOICA = 8;</code>
+     * <code>optional uint32 LGFMKJAOICA = 11;</code>
      * @return the lGFMKJAOICA
      */
     public int getLGFMKJAOICA() {
@@ -153,7 +149,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 LGFMKJAOICA = 8;</code>
+     * <code>optional uint32 LGFMKJAOICA = 11;</code>
      * @param value the lGFMKJAOICA to set
      * @return this
      */
@@ -164,11 +160,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  IACPIFFPEFP
-     * </pre>
-     *
-     * <code>optional uint32 rogue_coin = 15;</code>
+     * <code>optional uint32 rogue_coin = 14;</code>
      * @return whether the rogueCoin field is set
      */
     public boolean hasRogueCoin() {
@@ -176,11 +168,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  IACPIFFPEFP
-     * </pre>
-     *
-     * <code>optional uint32 rogue_coin = 15;</code>
+     * <code>optional uint32 rogue_coin = 14;</code>
      * @return this
      */
     public RogueVirtualItemInfo clearRogueCoin() {
@@ -190,11 +178,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  IACPIFFPEFP
-     * </pre>
-     *
-     * <code>optional uint32 rogue_coin = 15;</code>
+     * <code>optional uint32 rogue_coin = 14;</code>
      * @return the rogueCoin
      */
     public int getRogueCoin() {
@@ -202,11 +186,7 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  IACPIFFPEFP
-     * </pre>
-     *
-     * <code>optional uint32 rogue_coin = 15;</code>
+     * <code>optional uint32 rogue_coin = 14;</code>
      * @param value the rogueCoin to set
      * @return this
      */
@@ -293,19 +273,19 @@ public final class RogueVirtualItemInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(jLGAKDGCBOH);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(fGHILCKHDDO);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(lGFMKJAOICA);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(rogueCoin);
       }
     }
@@ -335,34 +315,34 @@ public final class RogueVirtualItemInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 32: {
             // jLGAKDGCBOH
             jLGAKDGCBOH = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 32) {
+            if (tag != 40) {
               break;
             }
           }
-          case 32: {
+          case 40: {
             // fGHILCKHDDO
             fGHILCKHDDO = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 88) {
               break;
             }
           }
-          case 64: {
+          case 88: {
             // lGFMKJAOICA
             lGFMKJAOICA = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 112) {
               break;
             }
           }
-          case 120: {
+          case 112: {
             // rogueCoin
             rogueCoin = input.readUInt32();
             bitField0_ |= 0x00000008;

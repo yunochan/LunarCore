@@ -19,19 +19,9 @@ public final class SceneMonsterWaveParamOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 hard_level_group = 4;</code>
-     */
-    private int hardLevelGroup;
-
-    /**
-     * <code>optional uint32 level = 6;</code>
+     * <code>optional uint32 level = 7;</code>
      */
     private int level;
-
-    /**
-     * <code>optional uint32 elite_group = 10;</code>
-     */
-    private int eliteGroup;
 
     private SceneMonsterWaveParam() {
     }
@@ -44,62 +34,25 @@ public final class SceneMonsterWaveParamOuterClass {
     }
 
     /**
-     * <code>optional uint32 hard_level_group = 4;</code>
-     * @return whether the hardLevelGroup field is set
+     * <code>optional uint32 level = 7;</code>
+     * @return whether the level field is set
      */
-    public boolean hasHardLevelGroup() {
+    public boolean hasLevel() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 hard_level_group = 4;</code>
-     * @return this
-     */
-    public SceneMonsterWaveParam clearHardLevelGroup() {
-      bitField0_ &= ~0x00000001;
-      hardLevelGroup = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 hard_level_group = 4;</code>
-     * @return the hardLevelGroup
-     */
-    public int getHardLevelGroup() {
-      return hardLevelGroup;
-    }
-
-    /**
-     * <code>optional uint32 hard_level_group = 4;</code>
-     * @param value the hardLevelGroup to set
-     * @return this
-     */
-    public SceneMonsterWaveParam setHardLevelGroup(final int value) {
-      bitField0_ |= 0x00000001;
-      hardLevelGroup = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 level = 6;</code>
-     * @return whether the level field is set
-     */
-    public boolean hasLevel() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 level = 6;</code>
+     * <code>optional uint32 level = 7;</code>
      * @return this
      */
     public SceneMonsterWaveParam clearLevel() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       level = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 level = 6;</code>
+     * <code>optional uint32 level = 7;</code>
      * @return the level
      */
     public int getLevel() {
@@ -107,50 +60,13 @@ public final class SceneMonsterWaveParamOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 6;</code>
+     * <code>optional uint32 level = 7;</code>
      * @param value the level to set
      * @return this
      */
     public SceneMonsterWaveParam setLevel(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       level = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 elite_group = 10;</code>
-     * @return whether the eliteGroup field is set
-     */
-    public boolean hasEliteGroup() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 elite_group = 10;</code>
-     * @return this
-     */
-    public SceneMonsterWaveParam clearEliteGroup() {
-      bitField0_ &= ~0x00000004;
-      eliteGroup = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 elite_group = 10;</code>
-     * @return the eliteGroup
-     */
-    public int getEliteGroup() {
-      return eliteGroup;
-    }
-
-    /**
-     * <code>optional uint32 elite_group = 10;</code>
-     * @param value the eliteGroup to set
-     * @return this
-     */
-    public SceneMonsterWaveParam setEliteGroup(final int value) {
-      bitField0_ |= 0x00000004;
-      eliteGroup = value;
       return this;
     }
 
@@ -159,9 +75,7 @@ public final class SceneMonsterWaveParamOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        hardLevelGroup = other.hardLevelGroup;
         level = other.level;
-        eliteGroup = other.eliteGroup;
       }
       return this;
     }
@@ -172,14 +86,8 @@ public final class SceneMonsterWaveParamOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasHardLevelGroup()) {
-        setHardLevelGroup(other.hardLevelGroup);
-      }
       if (other.hasLevel()) {
         setLevel(other.level);
-      }
-      if (other.hasEliteGroup()) {
-        setEliteGroup(other.eliteGroup);
       }
       return this;
     }
@@ -191,9 +99,7 @@ public final class SceneMonsterWaveParamOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      hardLevelGroup = 0;
       level = 0;
-      eliteGroup = 0;
       return this;
     }
 
@@ -217,24 +123,14 @@ public final class SceneMonsterWaveParamOuterClass {
       }
       SceneMonsterWaveParam other = (SceneMonsterWaveParam) o;
       return bitField0_ == other.bitField0_
-        && (!hasHardLevelGroup() || hardLevelGroup == other.hardLevelGroup)
-        && (!hasLevel() || level == other.level)
-        && (!hasEliteGroup() || eliteGroup == other.eliteGroup);
+        && (!hasLevel() || level == other.level);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 32);
-        output.writeUInt32NoTag(hardLevelGroup);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(level);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 80);
-        output.writeUInt32NoTag(eliteGroup);
       }
     }
 
@@ -242,13 +138,7 @@ public final class SceneMonsterWaveParamOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(hardLevelGroup);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(level);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(eliteGroup);
       }
       return size;
     }
@@ -260,28 +150,10 @@ public final class SceneMonsterWaveParamOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 32: {
-            // hardLevelGroup
-            hardLevelGroup = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 48) {
-              break;
-            }
-          }
-          case 48: {
+          case 56: {
             // level
             level = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 80) {
-              break;
-            }
-          }
-          case 80: {
-            // eliteGroup
-            eliteGroup = input.readUInt32();
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -305,13 +177,7 @@ public final class SceneMonsterWaveParamOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.hardLevelGroup, hardLevelGroup);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.level, level);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.eliteGroup, eliteGroup);
       }
       output.endObject();
     }
@@ -323,35 +189,11 @@ public final class SceneMonsterWaveParamOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 973582502:
-          case -935765840: {
-            if (input.isAtField(FieldNames.hardLevelGroup)) {
-              if (!input.trySkipNullValue()) {
-                hardLevelGroup = input.readUInt32();
-                bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 102865796: {
             if (input.isAtField(FieldNames.level)) {
               if (!input.trySkipNullValue()) {
                 level = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 838742956:
-          case 908252627: {
-            if (input.isAtField(FieldNames.eliteGroup)) {
-              if (!input.trySkipNullValue()) {
-                eliteGroup = input.readUInt32();
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000001;
               }
             } else {
               input.skipUnknownField();
@@ -411,11 +253,7 @@ public final class SceneMonsterWaveParamOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName hardLevelGroup = FieldName.forField("hardLevelGroup", "hard_level_group");
-
       static final FieldName level = FieldName.forField("level");
-
-      static final FieldName eliteGroup = FieldName.forField("eliteGroup", "elite_group");
     }
   }
 }

@@ -19,12 +19,12 @@ public final class EnterMapRotationRegionScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 5;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 14;</code>
      */
     private int clientPosVersion;
 
@@ -44,7 +44,7 @@ public final class EnterMapRotationRegionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -52,7 +52,7 @@ public final class EnterMapRotationRegionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @return this
      */
     public EnterMapRotationRegionScRsp clearRetcode() {
@@ -62,7 +62,7 @@ public final class EnterMapRotationRegionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -70,7 +70,7 @@ public final class EnterMapRotationRegionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -81,7 +81,7 @@ public final class EnterMapRotationRegionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 14;</code>
      * @return whether the clientPosVersion field is set
      */
     public boolean hasClientPosVersion() {
@@ -89,7 +89,7 @@ public final class EnterMapRotationRegionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 14;</code>
      * @return this
      */
     public EnterMapRotationRegionScRsp clearClientPosVersion() {
@@ -99,7 +99,7 @@ public final class EnterMapRotationRegionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 14;</code>
      * @return the clientPosVersion
      */
     public int getClientPosVersion() {
@@ -107,7 +107,7 @@ public final class EnterMapRotationRegionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 14;</code>
      * @param value the clientPosVersion to set
      * @return this
      */
@@ -246,11 +246,11 @@ public final class EnterMapRotationRegionScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(clientPosVersion);
       }
       if ((bitField0_ & 0x00000004) != 0) {
@@ -281,16 +281,16 @@ public final class EnterMapRotationRegionScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
+          case 40: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 112) {
               break;
             }
           }
-          case 120: {
+          case 112: {
             // clientPosVersion
             clientPosVersion = input.readUInt32();
             bitField0_ |= 0x00000002;

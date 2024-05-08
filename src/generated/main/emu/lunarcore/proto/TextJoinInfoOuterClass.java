@@ -19,12 +19,12 @@ public final class TextJoinInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 text_item_id = 1;</code>
+     * <code>optional uint32 text_item_id = 7;</code>
      */
     private int textItemId;
 
     /**
-     * <code>optional uint32 text_item_config_id = 6;</code>
+     * <code>optional uint32 text_item_config_id = 10;</code>
      */
     private int textItemConfigId;
 
@@ -39,7 +39,7 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 text_item_id = 1;</code>
+     * <code>optional uint32 text_item_id = 7;</code>
      * @return whether the textItemId field is set
      */
     public boolean hasTextItemId() {
@@ -47,7 +47,7 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 text_item_id = 1;</code>
+     * <code>optional uint32 text_item_id = 7;</code>
      * @return this
      */
     public TextJoinInfo clearTextItemId() {
@@ -57,7 +57,7 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 text_item_id = 1;</code>
+     * <code>optional uint32 text_item_id = 7;</code>
      * @return the textItemId
      */
     public int getTextItemId() {
@@ -65,7 +65,7 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 text_item_id = 1;</code>
+     * <code>optional uint32 text_item_id = 7;</code>
      * @param value the textItemId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 text_item_config_id = 6;</code>
+     * <code>optional uint32 text_item_config_id = 10;</code>
      * @return whether the textItemConfigId field is set
      */
     public boolean hasTextItemConfigId() {
@@ -84,7 +84,7 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 text_item_config_id = 6;</code>
+     * <code>optional uint32 text_item_config_id = 10;</code>
      * @return this
      */
     public TextJoinInfo clearTextItemConfigId() {
@@ -94,7 +94,7 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 text_item_config_id = 6;</code>
+     * <code>optional uint32 text_item_config_id = 10;</code>
      * @return the textItemConfigId
      */
     public int getTextItemConfigId() {
@@ -102,7 +102,7 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 text_item_config_id = 6;</code>
+     * <code>optional uint32 text_item_config_id = 10;</code>
      * @param value the textItemConfigId to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class TextJoinInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(textItemId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(textItemConfigId);
       }
     }
@@ -205,16 +205,16 @@ public final class TextJoinInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 56: {
             // textItemId
             textItemId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 48) {
+            if (tag != 80) {
               break;
             }
           }
-          case 48: {
+          case 80: {
             // textItemConfigId
             textItemConfigId = input.readUInt32();
             bitField0_ |= 0x00000002;

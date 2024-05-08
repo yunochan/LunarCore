@@ -19,32 +19,32 @@ public final class RogueAreaOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 rogue_area_status = 1;</code>
+     * <code>optional uint32 rogue_area_status = 2;</code>
      */
     private int rogueAreaStatus;
 
     /**
-     * <code>optional uint32 area_id = 2;</code>
-     */
-    private int areaId;
-
-    /**
-     * <code>optional uint32 rogue_status = 4;</code>
-     */
-    private int rogueStatus;
-
-    /**
-     * <code>optional uint32 cur_reach_room_num = 6;</code>
-     */
-    private int curReachRoomNum;
-
-    /**
-     * <code>optional uint32 map_id = 15;</code>
+     * <code>optional uint32 map_id = 3;</code>
      */
     private int mapId;
 
     /**
-     * <code>optional bool has_taken_rewards = 11;</code>
+     * <code>optional uint32 rogue_status = 5;</code>
+     */
+    private int rogueStatus;
+
+    /**
+     * <code>optional uint32 area_id = 8;</code>
+     */
+    private int areaId;
+
+    /**
+     * <code>optional uint32 cur_reach_room_num = 14;</code>
+     */
+    private int curReachRoomNum;
+
+    /**
+     * <code>optional bool has_taken_rewards = 9;</code>
      */
     private boolean hasTakenRewards;
 
@@ -59,7 +59,7 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_area_status = 1;</code>
+     * <code>optional uint32 rogue_area_status = 2;</code>
      * @return whether the rogueAreaStatus field is set
      */
     public boolean hasRogueAreaStatus() {
@@ -67,7 +67,7 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_area_status = 1;</code>
+     * <code>optional uint32 rogue_area_status = 2;</code>
      * @return this
      */
     public RogueArea clearRogueAreaStatus() {
@@ -77,7 +77,7 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_area_status = 1;</code>
+     * <code>optional uint32 rogue_area_status = 2;</code>
      * @return the rogueAreaStatus
      */
     public int getRogueAreaStatus() {
@@ -85,7 +85,7 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_area_status = 1;</code>
+     * <code>optional uint32 rogue_area_status = 2;</code>
      * @param value the rogueAreaStatus to set
      * @return this
      */
@@ -96,44 +96,44 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional uint32 area_id = 2;</code>
-     * @return whether the areaId field is set
+     * <code>optional uint32 map_id = 3;</code>
+     * @return whether the mapId field is set
      */
-    public boolean hasAreaId() {
+    public boolean hasMapId() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 area_id = 2;</code>
+     * <code>optional uint32 map_id = 3;</code>
      * @return this
      */
-    public RogueArea clearAreaId() {
+    public RogueArea clearMapId() {
       bitField0_ &= ~0x00000002;
-      areaId = 0;
+      mapId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 area_id = 2;</code>
-     * @return the areaId
+     * <code>optional uint32 map_id = 3;</code>
+     * @return the mapId
      */
-    public int getAreaId() {
-      return areaId;
+    public int getMapId() {
+      return mapId;
     }
 
     /**
-     * <code>optional uint32 area_id = 2;</code>
-     * @param value the areaId to set
+     * <code>optional uint32 map_id = 3;</code>
+     * @param value the mapId to set
      * @return this
      */
-    public RogueArea setAreaId(final int value) {
+    public RogueArea setMapId(final int value) {
       bitField0_ |= 0x00000002;
-      areaId = value;
+      mapId = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 rogue_status = 4;</code>
+     * <code>optional uint32 rogue_status = 5;</code>
      * @return whether the rogueStatus field is set
      */
     public boolean hasRogueStatus() {
@@ -141,7 +141,7 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_status = 4;</code>
+     * <code>optional uint32 rogue_status = 5;</code>
      * @return this
      */
     public RogueArea clearRogueStatus() {
@@ -151,7 +151,7 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_status = 4;</code>
+     * <code>optional uint32 rogue_status = 5;</code>
      * @return the rogueStatus
      */
     public int getRogueStatus() {
@@ -159,7 +159,7 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_status = 4;</code>
+     * <code>optional uint32 rogue_status = 5;</code>
      * @param value the rogueStatus to set
      * @return this
      */
@@ -170,25 +170,62 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional uint32 cur_reach_room_num = 6;</code>
-     * @return whether the curReachRoomNum field is set
+     * <code>optional uint32 area_id = 8;</code>
+     * @return whether the areaId field is set
      */
-    public boolean hasCurReachRoomNum() {
+    public boolean hasAreaId() {
       return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
-     * <code>optional uint32 cur_reach_room_num = 6;</code>
+     * <code>optional uint32 area_id = 8;</code>
+     * @return this
+     */
+    public RogueArea clearAreaId() {
+      bitField0_ &= ~0x00000008;
+      areaId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 area_id = 8;</code>
+     * @return the areaId
+     */
+    public int getAreaId() {
+      return areaId;
+    }
+
+    /**
+     * <code>optional uint32 area_id = 8;</code>
+     * @param value the areaId to set
+     * @return this
+     */
+    public RogueArea setAreaId(final int value) {
+      bitField0_ |= 0x00000008;
+      areaId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 cur_reach_room_num = 14;</code>
+     * @return whether the curReachRoomNum field is set
+     */
+    public boolean hasCurReachRoomNum() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <code>optional uint32 cur_reach_room_num = 14;</code>
      * @return this
      */
     public RogueArea clearCurReachRoomNum() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000010;
       curReachRoomNum = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 cur_reach_room_num = 6;</code>
+     * <code>optional uint32 cur_reach_room_num = 14;</code>
      * @return the curReachRoomNum
      */
     public int getCurReachRoomNum() {
@@ -196,55 +233,18 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional uint32 cur_reach_room_num = 6;</code>
+     * <code>optional uint32 cur_reach_room_num = 14;</code>
      * @param value the curReachRoomNum to set
      * @return this
      */
     public RogueArea setCurReachRoomNum(final int value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       curReachRoomNum = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 map_id = 15;</code>
-     * @return whether the mapId field is set
-     */
-    public boolean hasMapId() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>optional uint32 map_id = 15;</code>
-     * @return this
-     */
-    public RogueArea clearMapId() {
-      bitField0_ &= ~0x00000010;
-      mapId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 map_id = 15;</code>
-     * @return the mapId
-     */
-    public int getMapId() {
-      return mapId;
-    }
-
-    /**
-     * <code>optional uint32 map_id = 15;</code>
-     * @param value the mapId to set
-     * @return this
-     */
-    public RogueArea setMapId(final int value) {
-      bitField0_ |= 0x00000010;
-      mapId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool has_taken_rewards = 11;</code>
+     * <code>optional bool has_taken_rewards = 9;</code>
      * @return whether the hasTakenRewards field is set
      */
     public boolean hasHasTakenRewards() {
@@ -252,7 +252,7 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional bool has_taken_rewards = 11;</code>
+     * <code>optional bool has_taken_rewards = 9;</code>
      * @return this
      */
     public RogueArea clearHasTakenRewards() {
@@ -262,7 +262,7 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional bool has_taken_rewards = 11;</code>
+     * <code>optional bool has_taken_rewards = 9;</code>
      * @return the hasTakenRewards
      */
     public boolean getHasTakenRewards() {
@@ -270,7 +270,7 @@ public final class RogueAreaOuterClass {
     }
 
     /**
-     * <code>optional bool has_taken_rewards = 11;</code>
+     * <code>optional bool has_taken_rewards = 9;</code>
      * @param value the hasTakenRewards to set
      * @return this
      */
@@ -286,10 +286,10 @@ public final class RogueAreaOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         rogueAreaStatus = other.rogueAreaStatus;
-        areaId = other.areaId;
-        rogueStatus = other.rogueStatus;
-        curReachRoomNum = other.curReachRoomNum;
         mapId = other.mapId;
+        rogueStatus = other.rogueStatus;
+        areaId = other.areaId;
+        curReachRoomNum = other.curReachRoomNum;
         hasTakenRewards = other.hasTakenRewards;
       }
       return this;
@@ -304,17 +304,17 @@ public final class RogueAreaOuterClass {
       if (other.hasRogueAreaStatus()) {
         setRogueAreaStatus(other.rogueAreaStatus);
       }
-      if (other.hasAreaId()) {
-        setAreaId(other.areaId);
+      if (other.hasMapId()) {
+        setMapId(other.mapId);
       }
       if (other.hasRogueStatus()) {
         setRogueStatus(other.rogueStatus);
       }
+      if (other.hasAreaId()) {
+        setAreaId(other.areaId);
+      }
       if (other.hasCurReachRoomNum()) {
         setCurReachRoomNum(other.curReachRoomNum);
-      }
-      if (other.hasMapId()) {
-        setMapId(other.mapId);
       }
       if (other.hasHasTakenRewards()) {
         setHasTakenRewards(other.hasTakenRewards);
@@ -330,10 +330,10 @@ public final class RogueAreaOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       rogueAreaStatus = 0;
-      areaId = 0;
-      rogueStatus = 0;
-      curReachRoomNum = 0;
       mapId = 0;
+      rogueStatus = 0;
+      areaId = 0;
+      curReachRoomNum = 0;
       hasTakenRewards = false;
       return this;
     }
@@ -359,37 +359,37 @@ public final class RogueAreaOuterClass {
       RogueArea other = (RogueArea) o;
       return bitField0_ == other.bitField0_
         && (!hasRogueAreaStatus() || rogueAreaStatus == other.rogueAreaStatus)
-        && (!hasAreaId() || areaId == other.areaId)
-        && (!hasRogueStatus() || rogueStatus == other.rogueStatus)
-        && (!hasCurReachRoomNum() || curReachRoomNum == other.curReachRoomNum)
         && (!hasMapId() || mapId == other.mapId)
+        && (!hasRogueStatus() || rogueStatus == other.rogueStatus)
+        && (!hasAreaId() || areaId == other.areaId)
+        && (!hasCurReachRoomNum() || curReachRoomNum == other.curReachRoomNum)
         && (!hasHasTakenRewards() || hasTakenRewards == other.hasTakenRewards);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(rogueAreaStatus);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 16);
-        output.writeUInt32NoTag(areaId);
+        output.writeRawByte((byte) 24);
+        output.writeUInt32NoTag(mapId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(rogueStatus);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 48);
-        output.writeUInt32NoTag(curReachRoomNum);
+        output.writeRawByte((byte) 64);
+        output.writeUInt32NoTag(areaId);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 120);
-        output.writeUInt32NoTag(mapId);
+        output.writeRawByte((byte) 112);
+        output.writeUInt32NoTag(curReachRoomNum);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 72);
         output.writeBoolNoTag(hasTakenRewards);
       }
     }
@@ -401,16 +401,16 @@ public final class RogueAreaOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(rogueAreaStatus);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(areaId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(mapId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(rogueStatus);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(curReachRoomNum);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(areaId);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(mapId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(curReachRoomNum);
       }
       if ((bitField0_ & 0x00000020) != 0) {
         size += 2;
@@ -425,52 +425,52 @@ public final class RogueAreaOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 16: {
             // rogueAreaStatus
             rogueAreaStatus = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 16) {
+            if (tag != 24) {
               break;
             }
           }
-          case 16: {
-            // areaId
-            areaId = input.readUInt32();
+          case 24: {
+            // mapId
+            mapId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 32) {
+            if (tag != 40) {
               break;
             }
           }
-          case 32: {
+          case 40: {
             // rogueStatus
             rogueStatus = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 48) {
+            if (tag != 64) {
               break;
             }
           }
-          case 48: {
-            // curReachRoomNum
-            curReachRoomNum = input.readUInt32();
+          case 64: {
+            // areaId
+            areaId = input.readUInt32();
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 112) {
               break;
             }
           }
-          case 120: {
-            // mapId
-            mapId = input.readUInt32();
+          case 112: {
+            // curReachRoomNum
+            curReachRoomNum = input.readUInt32();
             bitField0_ |= 0x00000010;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 72) {
               break;
             }
           }
-          case 88: {
+          case 72: {
             // hasTakenRewards
             hasTakenRewards = input.readBool();
             bitField0_ |= 0x00000020;
@@ -500,16 +500,16 @@ public final class RogueAreaOuterClass {
         output.writeUInt32(FieldNames.rogueAreaStatus, rogueAreaStatus);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.areaId, areaId);
+        output.writeUInt32(FieldNames.mapId, mapId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeUInt32(FieldNames.rogueStatus, rogueStatus);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.curReachRoomNum, curReachRoomNum);
+        output.writeUInt32(FieldNames.areaId, areaId);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeUInt32(FieldNames.mapId, mapId);
+        output.writeUInt32(FieldNames.curReachRoomNum, curReachRoomNum);
       }
       if ((bitField0_ & 0x00000020) != 0) {
         output.writeBool(FieldNames.hasTakenRewards, hasTakenRewards);
@@ -536,11 +536,11 @@ public final class RogueAreaOuterClass {
             }
             break;
           }
-          case -1409553784:
-          case -746472947: {
-            if (input.isAtField(FieldNames.areaId)) {
+          case 103663511:
+          case -1081377058: {
+            if (input.isAtField(FieldNames.mapId)) {
               if (!input.trySkipNullValue()) {
-                areaId = input.readUInt32();
+                mapId = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -560,11 +560,11 @@ public final class RogueAreaOuterClass {
             }
             break;
           }
-          case 888045080:
-          case 328196941: {
-            if (input.isAtField(FieldNames.curReachRoomNum)) {
+          case -1409553784:
+          case -746472947: {
+            if (input.isAtField(FieldNames.areaId)) {
               if (!input.trySkipNullValue()) {
-                curReachRoomNum = input.readUInt32();
+                areaId = input.readUInt32();
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -572,11 +572,11 @@ public final class RogueAreaOuterClass {
             }
             break;
           }
-          case 103663511:
-          case -1081377058: {
-            if (input.isAtField(FieldNames.mapId)) {
+          case 888045080:
+          case 328196941: {
+            if (input.isAtField(FieldNames.curReachRoomNum)) {
               if (!input.trySkipNullValue()) {
-                mapId = input.readUInt32();
+                curReachRoomNum = input.readUInt32();
                 bitField0_ |= 0x00000010;
               }
             } else {
@@ -650,13 +650,13 @@ public final class RogueAreaOuterClass {
     static class FieldNames {
       static final FieldName rogueAreaStatus = FieldName.forField("rogueAreaStatus", "rogue_area_status");
 
-      static final FieldName areaId = FieldName.forField("areaId", "area_id");
+      static final FieldName mapId = FieldName.forField("mapId", "map_id");
 
       static final FieldName rogueStatus = FieldName.forField("rogueStatus", "rogue_status");
 
-      static final FieldName curReachRoomNum = FieldName.forField("curReachRoomNum", "cur_reach_room_num");
+      static final FieldName areaId = FieldName.forField("areaId", "area_id");
 
-      static final FieldName mapId = FieldName.forField("mapId", "map_id");
+      static final FieldName curReachRoomNum = FieldName.forField("curReachRoomNum", "cur_reach_room_num");
 
       static final FieldName hasTakenRewards = FieldName.forField("hasTakenRewards", "has_taken_rewards");
     }

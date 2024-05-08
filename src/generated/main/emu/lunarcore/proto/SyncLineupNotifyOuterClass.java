@@ -20,7 +20,7 @@ public final class SyncLineupNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .LineupInfo lineup = 6;</code>
+     * <code>optional .LineupInfo lineup = 4;</code>
      */
     private final LineupInfoOuterClass.LineupInfo lineup = LineupInfoOuterClass.LineupInfo.newInstance();
 
@@ -40,7 +40,7 @@ public final class SyncLineupNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 6;</code>
+     * <code>optional .LineupInfo lineup = 4;</code>
      * @return whether the lineup field is set
      */
     public boolean hasLineup() {
@@ -48,7 +48,7 @@ public final class SyncLineupNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 6;</code>
+     * <code>optional .LineupInfo lineup = 4;</code>
      * @return this
      */
     public SyncLineupNotify clearLineup() {
@@ -58,7 +58,7 @@ public final class SyncLineupNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 6;</code>
+     * <code>optional .LineupInfo lineup = 4;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -72,7 +72,7 @@ public final class SyncLineupNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 6;</code>
+     * <code>optional .LineupInfo lineup = 4;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -86,7 +86,7 @@ public final class SyncLineupNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 6;</code>
+     * <code>optional .LineupInfo lineup = 4;</code>
      * @param value the lineup to set
      * @return this
      */
@@ -231,7 +231,7 @@ public final class SyncLineupNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 50);
+        output.writeRawByte((byte) 34);
         output.writeMessageNoTag(lineup);
       }
       if ((bitField0_ & 0x00000002) != 0) {
@@ -261,7 +261,7 @@ public final class SyncLineupNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 50: {
+          case 34: {
             // lineup
             input.readMessage(lineup);
             bitField0_ |= 0x00000001;

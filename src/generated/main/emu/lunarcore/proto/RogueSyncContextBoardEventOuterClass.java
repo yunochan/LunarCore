@@ -24,7 +24,7 @@ public final class RogueSyncContextBoardEventOuterClass {
     private int modifierEffectType;
 
     /**
-     * <code>optional uint32 board_event_id = 13;</code>
+     * <code>optional uint32 board_event_id = 15;</code>
      */
     private int boardEventId;
 
@@ -76,7 +76,7 @@ public final class RogueSyncContextBoardEventOuterClass {
     }
 
     /**
-     * <code>optional uint32 board_event_id = 13;</code>
+     * <code>optional uint32 board_event_id = 15;</code>
      * @return whether the boardEventId field is set
      */
     public boolean hasBoardEventId() {
@@ -84,7 +84,7 @@ public final class RogueSyncContextBoardEventOuterClass {
     }
 
     /**
-     * <code>optional uint32 board_event_id = 13;</code>
+     * <code>optional uint32 board_event_id = 15;</code>
      * @return this
      */
     public RogueSyncContextBoardEvent clearBoardEventId() {
@@ -94,7 +94,7 @@ public final class RogueSyncContextBoardEventOuterClass {
     }
 
     /**
-     * <code>optional uint32 board_event_id = 13;</code>
+     * <code>optional uint32 board_event_id = 15;</code>
      * @return the boardEventId
      */
     public int getBoardEventId() {
@@ -102,7 +102,7 @@ public final class RogueSyncContextBoardEventOuterClass {
     }
 
     /**
-     * <code>optional uint32 board_event_id = 13;</code>
+     * <code>optional uint32 board_event_id = 15;</code>
      * @param value the boardEventId to set
      * @return this
      */
@@ -181,7 +181,7 @@ public final class RogueSyncContextBoardEventOuterClass {
         output.writeUInt32NoTag(modifierEffectType);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 104);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(boardEventId);
       }
     }
@@ -210,11 +210,11 @@ public final class RogueSyncContextBoardEventOuterClass {
             modifierEffectType = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 104) {
+            if (tag != 120) {
               break;
             }
           }
-          case 104: {
+          case 120: {
             // boardEventId
             boardEventId = input.readUInt32();
             bitField0_ |= 0x00000002;

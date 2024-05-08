@@ -28,11 +28,6 @@ public final class BattleTargetOuterClass {
      */
     private int progress;
 
-    /**
-     * <code>optional uint32 CDLKMKKOGLL = 3;</code>
-     */
-    private int cDLKMKKOGLL;
-
     private BattleTarget() {
     }
 
@@ -117,43 +112,6 @@ public final class BattleTargetOuterClass {
       return this;
     }
 
-    /**
-     * <code>optional uint32 CDLKMKKOGLL = 3;</code>
-     * @return whether the cDLKMKKOGLL field is set
-     */
-    public boolean hasCDLKMKKOGLL() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 CDLKMKKOGLL = 3;</code>
-     * @return this
-     */
-    public BattleTarget clearCDLKMKKOGLL() {
-      bitField0_ &= ~0x00000004;
-      cDLKMKKOGLL = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 CDLKMKKOGLL = 3;</code>
-     * @return the cDLKMKKOGLL
-     */
-    public int getCDLKMKKOGLL() {
-      return cDLKMKKOGLL;
-    }
-
-    /**
-     * <code>optional uint32 CDLKMKKOGLL = 3;</code>
-     * @param value the cDLKMKKOGLL to set
-     * @return this
-     */
-    public BattleTarget setCDLKMKKOGLL(final int value) {
-      bitField0_ |= 0x00000004;
-      cDLKMKKOGLL = value;
-      return this;
-    }
-
     @Override
     public BattleTarget copyFrom(final BattleTarget other) {
       cachedSize = other.cachedSize;
@@ -161,7 +119,6 @@ public final class BattleTargetOuterClass {
         bitField0_ = other.bitField0_;
         id = other.id;
         progress = other.progress;
-        cDLKMKKOGLL = other.cDLKMKKOGLL;
       }
       return this;
     }
@@ -178,9 +135,6 @@ public final class BattleTargetOuterClass {
       if (other.hasProgress()) {
         setProgress(other.progress);
       }
-      if (other.hasCDLKMKKOGLL()) {
-        setCDLKMKKOGLL(other.cDLKMKKOGLL);
-      }
       return this;
     }
 
@@ -193,7 +147,6 @@ public final class BattleTargetOuterClass {
       bitField0_ = 0;
       id = 0;
       progress = 0;
-      cDLKMKKOGLL = 0;
       return this;
     }
 
@@ -218,8 +171,7 @@ public final class BattleTargetOuterClass {
       BattleTarget other = (BattleTarget) o;
       return bitField0_ == other.bitField0_
         && (!hasId() || id == other.id)
-        && (!hasProgress() || progress == other.progress)
-        && (!hasCDLKMKKOGLL() || cDLKMKKOGLL == other.cDLKMKKOGLL);
+        && (!hasProgress() || progress == other.progress);
     }
 
     @Override
@@ -232,10 +184,6 @@ public final class BattleTargetOuterClass {
         output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(progress);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 24);
-        output.writeUInt32NoTag(cDLKMKKOGLL);
-      }
     }
 
     @Override
@@ -246,9 +194,6 @@ public final class BattleTargetOuterClass {
       }
       if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(progress);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(cDLKMKKOGLL);
       }
       return size;
     }
@@ -273,15 +218,6 @@ public final class BattleTargetOuterClass {
             // progress
             progress = input.readUInt32();
             bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 24) {
-              break;
-            }
-          }
-          case 24: {
-            // cDLKMKKOGLL
-            cDLKMKKOGLL = input.readUInt32();
-            bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -310,9 +246,6 @@ public final class BattleTargetOuterClass {
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.progress, progress);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.cDLKMKKOGLL, cDLKMKKOGLL);
-      }
       output.endObject();
     }
 
@@ -339,17 +272,6 @@ public final class BattleTargetOuterClass {
               if (!input.trySkipNullValue()) {
                 progress = input.readUInt32();
                 bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1138288731: {
-            if (input.isAtField(FieldNames.cDLKMKKOGLL)) {
-              if (!input.trySkipNullValue()) {
-                cDLKMKKOGLL = input.readUInt32();
-                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -411,8 +333,6 @@ public final class BattleTargetOuterClass {
       static final FieldName id = FieldName.forField("id");
 
       static final FieldName progress = FieldName.forField("progress");
-
-      static final FieldName cDLKMKKOGLL = FieldName.forField("CDLKMKKOGLL");
     }
   }
 }

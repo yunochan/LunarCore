@@ -19,14 +19,14 @@ public final class ChessRogueInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .LineupInfo lineup = 4;</code>
-     */
-    private final LineupInfoOuterClass.LineupInfo lineup = LineupInfoOuterClass.LineupInfo.newInstance();
-
-    /**
-     * <code>optional .SceneInfo scene = 6;</code>
+     * <code>optional .SceneInfo scene = 5;</code>
      */
     private final SceneInfoOuterClass.SceneInfo scene = SceneInfoOuterClass.SceneInfo.newInstance();
+
+    /**
+     * <code>optional .LineupInfo lineup = 7;</code>
+     */
+    private final LineupInfoOuterClass.LineupInfo lineup = LineupInfoOuterClass.LineupInfo.newInstance();
 
     private ChessRogueInfo() {
     }
@@ -39,82 +39,25 @@ public final class ChessRogueInfoOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 4;</code>
-     * @return whether the lineup field is set
+     * <code>optional .SceneInfo scene = 5;</code>
+     * @return whether the scene field is set
      */
-    public boolean hasLineup() {
+    public boolean hasScene() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 4;</code>
-     * @return this
-     */
-    public ChessRogueInfo clearLineup() {
-      bitField0_ &= ~0x00000001;
-      lineup.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional .LineupInfo lineup = 4;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableLineup()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public LineupInfoOuterClass.LineupInfo getLineup() {
-      return lineup;
-    }
-
-    /**
-     * <code>optional .LineupInfo lineup = 4;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public LineupInfoOuterClass.LineupInfo getMutableLineup() {
-      bitField0_ |= 0x00000001;
-      return lineup;
-    }
-
-    /**
-     * <code>optional .LineupInfo lineup = 4;</code>
-     * @param value the lineup to set
-     * @return this
-     */
-    public ChessRogueInfo setLineup(final LineupInfoOuterClass.LineupInfo value) {
-      bitField0_ |= 0x00000001;
-      lineup.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional .SceneInfo scene = 6;</code>
-     * @return whether the scene field is set
-     */
-    public boolean hasScene() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional .SceneInfo scene = 6;</code>
+     * <code>optional .SceneInfo scene = 5;</code>
      * @return this
      */
     public ChessRogueInfo clearScene() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       scene.clear();
       return this;
     }
 
     /**
-     * <code>optional .SceneInfo scene = 6;</code>
+     * <code>optional .SceneInfo scene = 5;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -128,7 +71,7 @@ public final class ChessRogueInfoOuterClass {
     }
 
     /**
-     * <code>optional .SceneInfo scene = 6;</code>
+     * <code>optional .SceneInfo scene = 5;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -137,18 +80,75 @@ public final class ChessRogueInfoOuterClass {
      * @return internal storage object for modifications
      */
     public SceneInfoOuterClass.SceneInfo getMutableScene() {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       return scene;
     }
 
     /**
-     * <code>optional .SceneInfo scene = 6;</code>
+     * <code>optional .SceneInfo scene = 5;</code>
      * @param value the scene to set
      * @return this
      */
     public ChessRogueInfo setScene(final SceneInfoOuterClass.SceneInfo value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       scene.copyFrom(value);
+      return this;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 7;</code>
+     * @return whether the lineup field is set
+     */
+    public boolean hasLineup() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 7;</code>
+     * @return this
+     */
+    public ChessRogueInfo clearLineup() {
+      bitField0_ &= ~0x00000002;
+      lineup.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 7;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableLineup()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public LineupInfoOuterClass.LineupInfo getLineup() {
+      return lineup;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 7;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public LineupInfoOuterClass.LineupInfo getMutableLineup() {
+      bitField0_ |= 0x00000002;
+      return lineup;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 7;</code>
+     * @param value the lineup to set
+     * @return this
+     */
+    public ChessRogueInfo setLineup(final LineupInfoOuterClass.LineupInfo value) {
+      bitField0_ |= 0x00000002;
+      lineup.copyFrom(value);
       return this;
     }
 
@@ -157,8 +157,8 @@ public final class ChessRogueInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        lineup.copyFrom(other.lineup);
         scene.copyFrom(other.scene);
+        lineup.copyFrom(other.lineup);
       }
       return this;
     }
@@ -169,11 +169,11 @@ public final class ChessRogueInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasLineup()) {
-        getMutableLineup().mergeFrom(other.lineup);
-      }
       if (other.hasScene()) {
         getMutableScene().mergeFrom(other.scene);
+      }
+      if (other.hasLineup()) {
+        getMutableLineup().mergeFrom(other.lineup);
       }
       return this;
     }
@@ -185,8 +185,8 @@ public final class ChessRogueInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      lineup.clear();
       scene.clear();
+      lineup.clear();
       return this;
     }
 
@@ -197,8 +197,8 @@ public final class ChessRogueInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      lineup.clearQuick();
       scene.clearQuick();
+      lineup.clearQuick();
       return this;
     }
 
@@ -212,19 +212,19 @@ public final class ChessRogueInfoOuterClass {
       }
       ChessRogueInfo other = (ChessRogueInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasLineup() || lineup.equals(other.lineup))
-        && (!hasScene() || scene.equals(other.scene));
+        && (!hasScene() || scene.equals(other.scene))
+        && (!hasLineup() || lineup.equals(other.lineup));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 34);
-        output.writeMessageNoTag(lineup);
+        output.writeRawByte((byte) 42);
+        output.writeMessageNoTag(scene);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 50);
-        output.writeMessageNoTag(scene);
+        output.writeRawByte((byte) 58);
+        output.writeMessageNoTag(lineup);
       }
     }
 
@@ -232,10 +232,10 @@ public final class ChessRogueInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(lineup);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(scene);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(scene);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(lineup);
       }
       return size;
     }
@@ -247,18 +247,18 @@ public final class ChessRogueInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 34: {
-            // lineup
-            input.readMessage(lineup);
+          case 42: {
+            // scene
+            input.readMessage(scene);
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 58) {
               break;
             }
           }
-          case 50: {
-            // scene
-            input.readMessage(scene);
+          case 58: {
+            // lineup
+            input.readMessage(lineup);
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
@@ -283,10 +283,10 @@ public final class ChessRogueInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeMessage(FieldNames.lineup, lineup);
+        output.writeMessage(FieldNames.scene, scene);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeMessage(FieldNames.scene, scene);
+        output.writeMessage(FieldNames.lineup, lineup);
       }
       output.endObject();
     }
@@ -298,10 +298,10 @@ public final class ChessRogueInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -1102671473: {
-            if (input.isAtField(FieldNames.lineup)) {
+          case 109254796: {
+            if (input.isAtField(FieldNames.scene)) {
               if (!input.trySkipNullValue()) {
-                input.readMessage(lineup);
+                input.readMessage(scene);
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -309,10 +309,10 @@ public final class ChessRogueInfoOuterClass {
             }
             break;
           }
-          case 109254796: {
-            if (input.isAtField(FieldNames.scene)) {
+          case -1102671473: {
+            if (input.isAtField(FieldNames.lineup)) {
               if (!input.trySkipNullValue()) {
-                input.readMessage(scene);
+                input.readMessage(lineup);
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -373,9 +373,9 @@ public final class ChessRogueInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName lineup = FieldName.forField("lineup");
-
       static final FieldName scene = FieldName.forField("scene");
+
+      static final FieldName lineup = FieldName.forField("lineup");
     }
   }
 }

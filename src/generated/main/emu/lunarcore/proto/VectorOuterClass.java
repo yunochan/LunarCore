@@ -19,17 +19,17 @@ public final class VectorOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional sint32 x = 3;</code>
+     * <code>optional sint32 x = 2;</code>
      */
     private int x;
 
     /**
-     * <code>optional sint32 y = 7;</code>
+     * <code>optional sint32 y = 3;</code>
      */
     private int y;
 
     /**
-     * <code>optional sint32 z = 9;</code>
+     * <code>optional sint32 z = 4;</code>
      */
     private int z;
 
@@ -44,7 +44,7 @@ public final class VectorOuterClass {
     }
 
     /**
-     * <code>optional sint32 x = 3;</code>
+     * <code>optional sint32 x = 2;</code>
      * @return whether the x field is set
      */
     public boolean hasX() {
@@ -52,7 +52,7 @@ public final class VectorOuterClass {
     }
 
     /**
-     * <code>optional sint32 x = 3;</code>
+     * <code>optional sint32 x = 2;</code>
      * @return this
      */
     public Vector clearX() {
@@ -62,7 +62,7 @@ public final class VectorOuterClass {
     }
 
     /**
-     * <code>optional sint32 x = 3;</code>
+     * <code>optional sint32 x = 2;</code>
      * @return the x
      */
     public int getX() {
@@ -70,7 +70,7 @@ public final class VectorOuterClass {
     }
 
     /**
-     * <code>optional sint32 x = 3;</code>
+     * <code>optional sint32 x = 2;</code>
      * @param value the x to set
      * @return this
      */
@@ -81,7 +81,7 @@ public final class VectorOuterClass {
     }
 
     /**
-     * <code>optional sint32 y = 7;</code>
+     * <code>optional sint32 y = 3;</code>
      * @return whether the y field is set
      */
     public boolean hasY() {
@@ -89,7 +89,7 @@ public final class VectorOuterClass {
     }
 
     /**
-     * <code>optional sint32 y = 7;</code>
+     * <code>optional sint32 y = 3;</code>
      * @return this
      */
     public Vector clearY() {
@@ -99,7 +99,7 @@ public final class VectorOuterClass {
     }
 
     /**
-     * <code>optional sint32 y = 7;</code>
+     * <code>optional sint32 y = 3;</code>
      * @return the y
      */
     public int getY() {
@@ -107,7 +107,7 @@ public final class VectorOuterClass {
     }
 
     /**
-     * <code>optional sint32 y = 7;</code>
+     * <code>optional sint32 y = 3;</code>
      * @param value the y to set
      * @return this
      */
@@ -118,7 +118,7 @@ public final class VectorOuterClass {
     }
 
     /**
-     * <code>optional sint32 z = 9;</code>
+     * <code>optional sint32 z = 4;</code>
      * @return whether the z field is set
      */
     public boolean hasZ() {
@@ -126,7 +126,7 @@ public final class VectorOuterClass {
     }
 
     /**
-     * <code>optional sint32 z = 9;</code>
+     * <code>optional sint32 z = 4;</code>
      * @return this
      */
     public Vector clearZ() {
@@ -136,7 +136,7 @@ public final class VectorOuterClass {
     }
 
     /**
-     * <code>optional sint32 z = 9;</code>
+     * <code>optional sint32 z = 4;</code>
      * @return the z
      */
     public int getZ() {
@@ -144,7 +144,7 @@ public final class VectorOuterClass {
     }
 
     /**
-     * <code>optional sint32 z = 9;</code>
+     * <code>optional sint32 z = 4;</code>
      * @param value the z to set
      * @return this
      */
@@ -225,15 +225,15 @@ public final class VectorOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 16);
         output.writeSInt32NoTag(x);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 24);
         output.writeSInt32NoTag(y);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 32);
         output.writeSInt32NoTag(z);
       }
     }
@@ -260,25 +260,25 @@ public final class VectorOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 16: {
             // x
             x = input.readSInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 24) {
               break;
             }
           }
-          case 56: {
+          case 24: {
             // y
             y = input.readSInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 72) {
+            if (tag != 32) {
               break;
             }
           }
-          case 72: {
+          case 32: {
             // z
             z = input.readSInt32();
             bitField0_ |= 0x00000004;

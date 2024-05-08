@@ -25,12 +25,12 @@ public final class DialogueResultOuterClass {
     private int hFHKBMGBJAN;
 
     /**
-     * <code>optional .ItemList item_result = 5;</code>
+     * <code>optional .ItemList item_result = 13;</code>
      */
     private final ItemListOuterClass.ItemList itemResult = ItemListOuterClass.ItemList.newInstance();
 
     /**
-     * <code>repeated uint32 event_ids = 15;</code>
+     * <code>repeated uint32 event_ids = 10;</code>
      */
     private final RepeatedInt eventIds = RepeatedInt.newEmptyInstance();
 
@@ -82,7 +82,7 @@ public final class DialogueResultOuterClass {
     }
 
     /**
-     * <code>optional .ItemList item_result = 5;</code>
+     * <code>optional .ItemList item_result = 13;</code>
      * @return whether the itemResult field is set
      */
     public boolean hasItemResult() {
@@ -90,7 +90,7 @@ public final class DialogueResultOuterClass {
     }
 
     /**
-     * <code>optional .ItemList item_result = 5;</code>
+     * <code>optional .ItemList item_result = 13;</code>
      * @return this
      */
     public DialogueResult clearItemResult() {
@@ -100,7 +100,7 @@ public final class DialogueResultOuterClass {
     }
 
     /**
-     * <code>optional .ItemList item_result = 5;</code>
+     * <code>optional .ItemList item_result = 13;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -114,7 +114,7 @@ public final class DialogueResultOuterClass {
     }
 
     /**
-     * <code>optional .ItemList item_result = 5;</code>
+     * <code>optional .ItemList item_result = 13;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -128,7 +128,7 @@ public final class DialogueResultOuterClass {
     }
 
     /**
-     * <code>optional .ItemList item_result = 5;</code>
+     * <code>optional .ItemList item_result = 13;</code>
      * @param value the itemResult to set
      * @return this
      */
@@ -139,7 +139,7 @@ public final class DialogueResultOuterClass {
     }
 
     /**
-     * <code>repeated uint32 event_ids = 15;</code>
+     * <code>repeated uint32 event_ids = 10;</code>
      * @return whether the eventIds field is set
      */
     public boolean hasEventIds() {
@@ -147,7 +147,7 @@ public final class DialogueResultOuterClass {
     }
 
     /**
-     * <code>repeated uint32 event_ids = 15;</code>
+     * <code>repeated uint32 event_ids = 10;</code>
      * @return this
      */
     public DialogueResult clearEventIds() {
@@ -157,7 +157,7 @@ public final class DialogueResultOuterClass {
     }
 
     /**
-     * <code>repeated uint32 event_ids = 15;</code>
+     * <code>repeated uint32 event_ids = 10;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -171,7 +171,7 @@ public final class DialogueResultOuterClass {
     }
 
     /**
-     * <code>repeated uint32 event_ids = 15;</code>
+     * <code>repeated uint32 event_ids = 10;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -185,7 +185,7 @@ public final class DialogueResultOuterClass {
     }
 
     /**
-     * <code>repeated uint32 event_ids = 15;</code>
+     * <code>repeated uint32 event_ids = 10;</code>
      * @param value the eventIds to add
      * @return this
      */
@@ -196,7 +196,7 @@ public final class DialogueResultOuterClass {
     }
 
     /**
-     * <code>repeated uint32 event_ids = 15;</code>
+     * <code>repeated uint32 event_ids = 10;</code>
      * @param values the eventIds to add
      * @return this
      */
@@ -283,12 +283,12 @@ public final class DialogueResultOuterClass {
         output.writeUInt32NoTag(hFHKBMGBJAN);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 42);
+        output.writeRawByte((byte) 106);
         output.writeMessageNoTag(itemResult);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < eventIds.length(); i++) {
-          output.writeRawByte((byte) 120);
+          output.writeRawByte((byte) 80);
           output.writeUInt32NoTag(eventIds.array()[i]);
         }
       }
@@ -321,20 +321,20 @@ public final class DialogueResultOuterClass {
             hFHKBMGBJAN = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 42) {
+            if (tag != 106) {
               break;
             }
           }
-          case 42: {
+          case 106: {
             // itemResult
             input.readMessage(itemResult);
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 122) {
+            if (tag != 82) {
               break;
             }
           }
-          case 122: {
+          case 82: {
             // eventIds [packed=true]
             input.readPackedUInt32(eventIds, tag);
             bitField0_ |= 0x00000004;
@@ -353,7 +353,7 @@ public final class DialogueResultOuterClass {
             tag = input.readTag();
             break;
           }
-          case 120: {
+          case 80: {
             // eventIds [packed=false]
             tag = input.readRepeatedUInt32(eventIds, tag);
             bitField0_ |= 0x00000004;

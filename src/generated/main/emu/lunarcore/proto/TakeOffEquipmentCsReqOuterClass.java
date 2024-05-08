@@ -19,9 +19,14 @@ public final class TakeOffEquipmentCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 base_avatar_id = 4;</code>
+     * <code>optional uint32 base_avatar_id = 8;</code>
      */
     private int baseAvatarId;
+
+    /**
+     * <code>optional uint32 equip_avatar_id = 14;</code>
+     */
+    private int equipAvatarId;
 
     private TakeOffEquipmentCsReq() {
     }
@@ -34,7 +39,7 @@ public final class TakeOffEquipmentCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 base_avatar_id = 4;</code>
+     * <code>optional uint32 base_avatar_id = 8;</code>
      * @return whether the baseAvatarId field is set
      */
     public boolean hasBaseAvatarId() {
@@ -42,7 +47,7 @@ public final class TakeOffEquipmentCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 base_avatar_id = 4;</code>
+     * <code>optional uint32 base_avatar_id = 8;</code>
      * @return this
      */
     public TakeOffEquipmentCsReq clearBaseAvatarId() {
@@ -52,7 +57,7 @@ public final class TakeOffEquipmentCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 base_avatar_id = 4;</code>
+     * <code>optional uint32 base_avatar_id = 8;</code>
      * @return the baseAvatarId
      */
     public int getBaseAvatarId() {
@@ -60,7 +65,7 @@ public final class TakeOffEquipmentCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 base_avatar_id = 4;</code>
+     * <code>optional uint32 base_avatar_id = 8;</code>
      * @param value the baseAvatarId to set
      * @return this
      */
@@ -70,12 +75,50 @@ public final class TakeOffEquipmentCsReqOuterClass {
       return this;
     }
 
+    /**
+     * <code>optional uint32 equip_avatar_id = 14;</code>
+     * @return whether the equipAvatarId field is set
+     */
+    public boolean hasEquipAvatarId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 equip_avatar_id = 14;</code>
+     * @return this
+     */
+    public TakeOffEquipmentCsReq clearEquipAvatarId() {
+      bitField0_ &= ~0x00000002;
+      equipAvatarId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 equip_avatar_id = 14;</code>
+     * @return the equipAvatarId
+     */
+    public int getEquipAvatarId() {
+      return equipAvatarId;
+    }
+
+    /**
+     * <code>optional uint32 equip_avatar_id = 14;</code>
+     * @param value the equipAvatarId to set
+     * @return this
+     */
+    public TakeOffEquipmentCsReq setEquipAvatarId(final int value) {
+      bitField0_ |= 0x00000002;
+      equipAvatarId = value;
+      return this;
+    }
+
     @Override
     public TakeOffEquipmentCsReq copyFrom(final TakeOffEquipmentCsReq other) {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         baseAvatarId = other.baseAvatarId;
+        equipAvatarId = other.equipAvatarId;
       }
       return this;
     }
@@ -89,6 +132,9 @@ public final class TakeOffEquipmentCsReqOuterClass {
       if (other.hasBaseAvatarId()) {
         setBaseAvatarId(other.baseAvatarId);
       }
+      if (other.hasEquipAvatarId()) {
+        setEquipAvatarId(other.equipAvatarId);
+      }
       return this;
     }
 
@@ -100,6 +146,7 @@ public final class TakeOffEquipmentCsReqOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       baseAvatarId = 0;
+      equipAvatarId = 0;
       return this;
     }
 
@@ -123,14 +170,19 @@ public final class TakeOffEquipmentCsReqOuterClass {
       }
       TakeOffEquipmentCsReq other = (TakeOffEquipmentCsReq) o;
       return bitField0_ == other.bitField0_
-        && (!hasBaseAvatarId() || baseAvatarId == other.baseAvatarId);
+        && (!hasBaseAvatarId() || baseAvatarId == other.baseAvatarId)
+        && (!hasEquipAvatarId() || equipAvatarId == other.equipAvatarId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 64);
         output.writeUInt32NoTag(baseAvatarId);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 112);
+        output.writeUInt32NoTag(equipAvatarId);
       }
     }
 
@@ -139,6 +191,9 @@ public final class TakeOffEquipmentCsReqOuterClass {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(baseAvatarId);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(equipAvatarId);
       }
       return size;
     }
@@ -150,10 +205,19 @@ public final class TakeOffEquipmentCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 32: {
+          case 64: {
             // baseAvatarId
             baseAvatarId = input.readUInt32();
             bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 112) {
+              break;
+            }
+          }
+          case 112: {
+            // equipAvatarId
+            equipAvatarId = input.readUInt32();
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -179,6 +243,9 @@ public final class TakeOffEquipmentCsReqOuterClass {
       if ((bitField0_ & 0x00000001) != 0) {
         output.writeUInt32(FieldNames.baseAvatarId, baseAvatarId);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeUInt32(FieldNames.equipAvatarId, equipAvatarId);
+      }
       output.endObject();
     }
 
@@ -195,6 +262,18 @@ public final class TakeOffEquipmentCsReqOuterClass {
               if (!input.trySkipNullValue()) {
                 baseAvatarId = input.readUInt32();
                 bitField0_ |= 0x00000001;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 169047204:
+          case 33057906: {
+            if (input.isAtField(FieldNames.equipAvatarId)) {
+              if (!input.trySkipNullValue()) {
+                equipAvatarId = input.readUInt32();
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -255,6 +334,8 @@ public final class TakeOffEquipmentCsReqOuterClass {
      */
     static class FieldNames {
       static final FieldName baseAvatarId = FieldName.forField("baseAvatarId", "base_avatar_id");
+
+      static final FieldName equipAvatarId = FieldName.forField("equipAvatarId", "equip_avatar_id");
     }
   }
 }

@@ -19,14 +19,19 @@ public final class DoGachaInRollShopCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 BBJIJINJAFK = 5;</code>
+     * <code>optional uint32 BBJIJINJAFK = 6;</code>
      */
     private int bBJIJINJAFK;
 
     /**
-     * <code>optional uint32 roll_shop_id = 10;</code>
+     * <code>optional uint32 roll_shop_id = 13;</code>
      */
     private int rollShopId;
+
+    /**
+     * <code>optional uint32 gacha_random = 14;</code>
+     */
+    private int gachaRandom;
 
     private DoGachaInRollShopCsReq() {
     }
@@ -39,7 +44,7 @@ public final class DoGachaInRollShopCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 BBJIJINJAFK = 5;</code>
+     * <code>optional uint32 BBJIJINJAFK = 6;</code>
      * @return whether the bBJIJINJAFK field is set
      */
     public boolean hasBBJIJINJAFK() {
@@ -47,7 +52,7 @@ public final class DoGachaInRollShopCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 BBJIJINJAFK = 5;</code>
+     * <code>optional uint32 BBJIJINJAFK = 6;</code>
      * @return this
      */
     public DoGachaInRollShopCsReq clearBBJIJINJAFK() {
@@ -57,7 +62,7 @@ public final class DoGachaInRollShopCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 BBJIJINJAFK = 5;</code>
+     * <code>optional uint32 BBJIJINJAFK = 6;</code>
      * @return the bBJIJINJAFK
      */
     public int getBBJIJINJAFK() {
@@ -65,7 +70,7 @@ public final class DoGachaInRollShopCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 BBJIJINJAFK = 5;</code>
+     * <code>optional uint32 BBJIJINJAFK = 6;</code>
      * @param value the bBJIJINJAFK to set
      * @return this
      */
@@ -76,7 +81,7 @@ public final class DoGachaInRollShopCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 roll_shop_id = 10;</code>
+     * <code>optional uint32 roll_shop_id = 13;</code>
      * @return whether the rollShopId field is set
      */
     public boolean hasRollShopId() {
@@ -84,7 +89,7 @@ public final class DoGachaInRollShopCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 roll_shop_id = 10;</code>
+     * <code>optional uint32 roll_shop_id = 13;</code>
      * @return this
      */
     public DoGachaInRollShopCsReq clearRollShopId() {
@@ -94,7 +99,7 @@ public final class DoGachaInRollShopCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 roll_shop_id = 10;</code>
+     * <code>optional uint32 roll_shop_id = 13;</code>
      * @return the rollShopId
      */
     public int getRollShopId() {
@@ -102,13 +107,50 @@ public final class DoGachaInRollShopCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 roll_shop_id = 10;</code>
+     * <code>optional uint32 roll_shop_id = 13;</code>
      * @param value the rollShopId to set
      * @return this
      */
     public DoGachaInRollShopCsReq setRollShopId(final int value) {
       bitField0_ |= 0x00000002;
       rollShopId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 gacha_random = 14;</code>
+     * @return whether the gachaRandom field is set
+     */
+    public boolean hasGachaRandom() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 gacha_random = 14;</code>
+     * @return this
+     */
+    public DoGachaInRollShopCsReq clearGachaRandom() {
+      bitField0_ &= ~0x00000004;
+      gachaRandom = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 gacha_random = 14;</code>
+     * @return the gachaRandom
+     */
+    public int getGachaRandom() {
+      return gachaRandom;
+    }
+
+    /**
+     * <code>optional uint32 gacha_random = 14;</code>
+     * @param value the gachaRandom to set
+     * @return this
+     */
+    public DoGachaInRollShopCsReq setGachaRandom(final int value) {
+      bitField0_ |= 0x00000004;
+      gachaRandom = value;
       return this;
     }
 
@@ -119,6 +161,7 @@ public final class DoGachaInRollShopCsReqOuterClass {
         bitField0_ = other.bitField0_;
         bBJIJINJAFK = other.bBJIJINJAFK;
         rollShopId = other.rollShopId;
+        gachaRandom = other.gachaRandom;
       }
       return this;
     }
@@ -135,6 +178,9 @@ public final class DoGachaInRollShopCsReqOuterClass {
       if (other.hasRollShopId()) {
         setRollShopId(other.rollShopId);
       }
+      if (other.hasGachaRandom()) {
+        setGachaRandom(other.gachaRandom);
+      }
       return this;
     }
 
@@ -147,6 +193,7 @@ public final class DoGachaInRollShopCsReqOuterClass {
       bitField0_ = 0;
       bBJIJINJAFK = 0;
       rollShopId = 0;
+      gachaRandom = 0;
       return this;
     }
 
@@ -171,18 +218,23 @@ public final class DoGachaInRollShopCsReqOuterClass {
       DoGachaInRollShopCsReq other = (DoGachaInRollShopCsReq) o;
       return bitField0_ == other.bitField0_
         && (!hasBBJIJINJAFK() || bBJIJINJAFK == other.bBJIJINJAFK)
-        && (!hasRollShopId() || rollShopId == other.rollShopId);
+        && (!hasRollShopId() || rollShopId == other.rollShopId)
+        && (!hasGachaRandom() || gachaRandom == other.gachaRandom);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(bBJIJINJAFK);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(rollShopId);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 112);
+        output.writeUInt32NoTag(gachaRandom);
       }
     }
 
@@ -195,6 +247,9 @@ public final class DoGachaInRollShopCsReqOuterClass {
       if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(rollShopId);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(gachaRandom);
+      }
       return size;
     }
 
@@ -205,19 +260,28 @@ public final class DoGachaInRollShopCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
+          case 48: {
             // bBJIJINJAFK
             bBJIJINJAFK = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 80) {
+            if (tag != 104) {
               break;
             }
           }
-          case 80: {
+          case 104: {
             // rollShopId
             rollShopId = input.readUInt32();
             bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 112) {
+              break;
+            }
+          }
+          case 112: {
+            // gachaRandom
+            gachaRandom = input.readUInt32();
+            bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -246,6 +310,9 @@ public final class DoGachaInRollShopCsReqOuterClass {
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.rollShopId, rollShopId);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeUInt32(FieldNames.gachaRandom, gachaRandom);
+      }
       output.endObject();
     }
 
@@ -273,6 +340,18 @@ public final class DoGachaInRollShopCsReqOuterClass {
               if (!input.trySkipNullValue()) {
                 rollShopId = input.readUInt32();
                 bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -1635961627:
+          case -47579616: {
+            if (input.isAtField(FieldNames.gachaRandom)) {
+              if (!input.trySkipNullValue()) {
+                gachaRandom = input.readUInt32();
+                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -335,6 +414,8 @@ public final class DoGachaInRollShopCsReqOuterClass {
       static final FieldName bBJIJINJAFK = FieldName.forField("BBJIJINJAFK");
 
       static final FieldName rollShopId = FieldName.forField("rollShopId", "roll_shop_id");
+
+      static final FieldName gachaRandom = FieldName.forField("gachaRandom", "gacha_random");
     }
   }
 }

@@ -19,12 +19,12 @@ public final class FirstNpcTalkInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 npc_id = 15;</code>
+     * <code>optional uint32 npc_id = 6;</code>
      */
     private int npcId;
 
     /**
-     * <code>optional bool unk_bool = 12;</code>
+     * <code>optional bool unk_bool = 14;</code>
      */
     private boolean unkBool;
 
@@ -39,7 +39,7 @@ public final class FirstNpcTalkInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 npc_id = 15;</code>
+     * <code>optional uint32 npc_id = 6;</code>
      * @return whether the npcId field is set
      */
     public boolean hasNpcId() {
@@ -47,7 +47,7 @@ public final class FirstNpcTalkInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 npc_id = 15;</code>
+     * <code>optional uint32 npc_id = 6;</code>
      * @return this
      */
     public FirstNpcTalkInfo clearNpcId() {
@@ -57,7 +57,7 @@ public final class FirstNpcTalkInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 npc_id = 15;</code>
+     * <code>optional uint32 npc_id = 6;</code>
      * @return the npcId
      */
     public int getNpcId() {
@@ -65,7 +65,7 @@ public final class FirstNpcTalkInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 npc_id = 15;</code>
+     * <code>optional uint32 npc_id = 6;</code>
      * @param value the npcId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class FirstNpcTalkInfoOuterClass {
     }
 
     /**
-     * <code>optional bool unk_bool = 12;</code>
+     * <code>optional bool unk_bool = 14;</code>
      * @return whether the unkBool field is set
      */
     public boolean hasUnkBool() {
@@ -84,7 +84,7 @@ public final class FirstNpcTalkInfoOuterClass {
     }
 
     /**
-     * <code>optional bool unk_bool = 12;</code>
+     * <code>optional bool unk_bool = 14;</code>
      * @return this
      */
     public FirstNpcTalkInfo clearUnkBool() {
@@ -94,7 +94,7 @@ public final class FirstNpcTalkInfoOuterClass {
     }
 
     /**
-     * <code>optional bool unk_bool = 12;</code>
+     * <code>optional bool unk_bool = 14;</code>
      * @return the unkBool
      */
     public boolean getUnkBool() {
@@ -102,7 +102,7 @@ public final class FirstNpcTalkInfoOuterClass {
     }
 
     /**
-     * <code>optional bool unk_bool = 12;</code>
+     * <code>optional bool unk_bool = 14;</code>
      * @param value the unkBool to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class FirstNpcTalkInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(npcId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 112);
         output.writeBoolNoTag(unkBool);
       }
     }
@@ -205,16 +205,16 @@ public final class FirstNpcTalkInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 120: {
+          case 48: {
             // npcId
             npcId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 96) {
+            if (tag != 112) {
               break;
             }
           }
-          case 96: {
+          case 112: {
             // unkBool
             unkBool = input.readBool();
             bitField0_ |= 0x00000002;

@@ -24,22 +24,22 @@ public final class DoGachaInRollShopScRspOuterClass {
     private int aFMPDBBHCHM;
 
     /**
-     * <code>optional uint32 LEJJOJGNIHK = 4;</code>
-     */
-    private int lEJJOJGNIHK;
-
-    /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 9;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 roll_shop_id = 8;</code>
+     * <code>optional uint32 LEJJOJGNIHK = 12;</code>
+     */
+    private int lEJJOJGNIHK;
+
+    /**
+     * <code>optional uint32 roll_shop_id = 15;</code>
      */
     private int rollShopId;
 
     /**
-     * <code>optional .ItemList reward = 9;</code>
+     * <code>optional .ItemList reward = 13;</code>
      */
     private final ItemListOuterClass.ItemList reward = ItemListOuterClass.ItemList.newInstance();
 
@@ -91,62 +91,25 @@ public final class DoGachaInRollShopScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 LEJJOJGNIHK = 4;</code>
-     * @return whether the lEJJOJGNIHK field is set
+     * <code>optional uint32 retcode = 9;</code>
+     * @return whether the retcode field is set
      */
-    public boolean hasLEJJOJGNIHK() {
+    public boolean hasRetcode() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 LEJJOJGNIHK = 4;</code>
-     * @return this
-     */
-    public DoGachaInRollShopScRsp clearLEJJOJGNIHK() {
-      bitField0_ &= ~0x00000002;
-      lEJJOJGNIHK = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 LEJJOJGNIHK = 4;</code>
-     * @return the lEJJOJGNIHK
-     */
-    public int getLEJJOJGNIHK() {
-      return lEJJOJGNIHK;
-    }
-
-    /**
-     * <code>optional uint32 LEJJOJGNIHK = 4;</code>
-     * @param value the lEJJOJGNIHK to set
-     * @return this
-     */
-    public DoGachaInRollShopScRsp setLEJJOJGNIHK(final int value) {
-      bitField0_ |= 0x00000002;
-      lEJJOJGNIHK = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 7;</code>
-     * @return whether the retcode field is set
-     */
-    public boolean hasRetcode() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 9;</code>
      * @return this
      */
     public DoGachaInRollShopScRsp clearRetcode() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000002;
       retcode = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 9;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -154,18 +117,55 @@ public final class DoGachaInRollShopScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 9;</code>
      * @param value the retcode to set
      * @return this
      */
     public DoGachaInRollShopScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       retcode = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 roll_shop_id = 8;</code>
+     * <code>optional uint32 LEJJOJGNIHK = 12;</code>
+     * @return whether the lEJJOJGNIHK field is set
+     */
+    public boolean hasLEJJOJGNIHK() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 LEJJOJGNIHK = 12;</code>
+     * @return this
+     */
+    public DoGachaInRollShopScRsp clearLEJJOJGNIHK() {
+      bitField0_ &= ~0x00000004;
+      lEJJOJGNIHK = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 LEJJOJGNIHK = 12;</code>
+     * @return the lEJJOJGNIHK
+     */
+    public int getLEJJOJGNIHK() {
+      return lEJJOJGNIHK;
+    }
+
+    /**
+     * <code>optional uint32 LEJJOJGNIHK = 12;</code>
+     * @param value the lEJJOJGNIHK to set
+     * @return this
+     */
+    public DoGachaInRollShopScRsp setLEJJOJGNIHK(final int value) {
+      bitField0_ |= 0x00000004;
+      lEJJOJGNIHK = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 roll_shop_id = 15;</code>
      * @return whether the rollShopId field is set
      */
     public boolean hasRollShopId() {
@@ -173,7 +173,7 @@ public final class DoGachaInRollShopScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 roll_shop_id = 8;</code>
+     * <code>optional uint32 roll_shop_id = 15;</code>
      * @return this
      */
     public DoGachaInRollShopScRsp clearRollShopId() {
@@ -183,7 +183,7 @@ public final class DoGachaInRollShopScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 roll_shop_id = 8;</code>
+     * <code>optional uint32 roll_shop_id = 15;</code>
      * @return the rollShopId
      */
     public int getRollShopId() {
@@ -191,7 +191,7 @@ public final class DoGachaInRollShopScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 roll_shop_id = 8;</code>
+     * <code>optional uint32 roll_shop_id = 15;</code>
      * @param value the rollShopId to set
      * @return this
      */
@@ -202,7 +202,7 @@ public final class DoGachaInRollShopScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward = 9;</code>
+     * <code>optional .ItemList reward = 13;</code>
      * @return whether the reward field is set
      */
     public boolean hasReward() {
@@ -210,7 +210,7 @@ public final class DoGachaInRollShopScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward = 9;</code>
+     * <code>optional .ItemList reward = 13;</code>
      * @return this
      */
     public DoGachaInRollShopScRsp clearReward() {
@@ -220,7 +220,7 @@ public final class DoGachaInRollShopScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward = 9;</code>
+     * <code>optional .ItemList reward = 13;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -234,7 +234,7 @@ public final class DoGachaInRollShopScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward = 9;</code>
+     * <code>optional .ItemList reward = 13;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -248,7 +248,7 @@ public final class DoGachaInRollShopScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward = 9;</code>
+     * <code>optional .ItemList reward = 13;</code>
      * @param value the reward to set
      * @return this
      */
@@ -264,8 +264,8 @@ public final class DoGachaInRollShopScRspOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         aFMPDBBHCHM = other.aFMPDBBHCHM;
-        lEJJOJGNIHK = other.lEJJOJGNIHK;
         retcode = other.retcode;
+        lEJJOJGNIHK = other.lEJJOJGNIHK;
         rollShopId = other.rollShopId;
         reward.copyFrom(other.reward);
       }
@@ -281,11 +281,11 @@ public final class DoGachaInRollShopScRspOuterClass {
       if (other.hasAFMPDBBHCHM()) {
         setAFMPDBBHCHM(other.aFMPDBBHCHM);
       }
-      if (other.hasLEJJOJGNIHK()) {
-        setLEJJOJGNIHK(other.lEJJOJGNIHK);
-      }
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
+      }
+      if (other.hasLEJJOJGNIHK()) {
+        setLEJJOJGNIHK(other.lEJJOJGNIHK);
       }
       if (other.hasRollShopId()) {
         setRollShopId(other.rollShopId);
@@ -304,8 +304,8 @@ public final class DoGachaInRollShopScRspOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       aFMPDBBHCHM = 0;
-      lEJJOJGNIHK = 0;
       retcode = 0;
+      lEJJOJGNIHK = 0;
       rollShopId = 0;
       reward.clear();
       return this;
@@ -333,8 +333,8 @@ public final class DoGachaInRollShopScRspOuterClass {
       DoGachaInRollShopScRsp other = (DoGachaInRollShopScRsp) o;
       return bitField0_ == other.bitField0_
         && (!hasAFMPDBBHCHM() || aFMPDBBHCHM == other.aFMPDBBHCHM)
-        && (!hasLEJJOJGNIHK() || lEJJOJGNIHK == other.lEJJOJGNIHK)
         && (!hasRetcode() || retcode == other.retcode)
+        && (!hasLEJJOJGNIHK() || lEJJOJGNIHK == other.lEJJOJGNIHK)
         && (!hasRollShopId() || rollShopId == other.rollShopId)
         && (!hasReward() || reward.equals(other.reward));
     }
@@ -346,19 +346,19 @@ public final class DoGachaInRollShopScRspOuterClass {
         output.writeUInt32NoTag(aFMPDBBHCHM);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 32);
-        output.writeUInt32NoTag(lEJJOJGNIHK);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 72);
         output.writeUInt32NoTag(retcode);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 96);
+        output.writeUInt32NoTag(lEJJOJGNIHK);
+      }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(rollShopId);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 74);
+        output.writeRawByte((byte) 106);
         output.writeMessageNoTag(reward);
       }
     }
@@ -370,10 +370,10 @@ public final class DoGachaInRollShopScRspOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(aFMPDBBHCHM);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(lEJJOJGNIHK);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(lEJJOJGNIHK);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(rollShopId);
@@ -396,38 +396,38 @@ public final class DoGachaInRollShopScRspOuterClass {
             aFMPDBBHCHM = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 32) {
+            if (tag != 72) {
               break;
             }
           }
-          case 32: {
-            // lEJJOJGNIHK
-            lEJJOJGNIHK = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 56) {
-              break;
-            }
-          }
-          case 56: {
+          case 72: {
             // retcode
             retcode = input.readUInt32();
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 96) {
               break;
             }
           }
-          case 64: {
+          case 96: {
+            // lEJJOJGNIHK
+            lEJJOJGNIHK = input.readUInt32();
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 120) {
+              break;
+            }
+          }
+          case 120: {
             // rollShopId
             rollShopId = input.readUInt32();
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 74) {
+            if (tag != 106) {
               break;
             }
           }
-          case 74: {
+          case 106: {
             // reward
             input.readMessage(reward);
             bitField0_ |= 0x00000010;
@@ -457,10 +457,10 @@ public final class DoGachaInRollShopScRspOuterClass {
         output.writeUInt32(FieldNames.aFMPDBBHCHM, aFMPDBBHCHM);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.lEJJOJGNIHK, lEJJOJGNIHK);
+        output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.retcode, retcode);
+        output.writeUInt32(FieldNames.lEJJOJGNIHK, lEJJOJGNIHK);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeUInt32(FieldNames.rollShopId, rollShopId);
@@ -489,10 +489,10 @@ public final class DoGachaInRollShopScRspOuterClass {
             }
             break;
           }
-          case -1007707855: {
-            if (input.isAtField(FieldNames.lEJJOJGNIHK)) {
+          case 1097936398: {
+            if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
-                lEJJOJGNIHK = input.readUInt32();
+                retcode = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -500,10 +500,10 @@ public final class DoGachaInRollShopScRspOuterClass {
             }
             break;
           }
-          case 1097936398: {
-            if (input.isAtField(FieldNames.retcode)) {
+          case -1007707855: {
+            if (input.isAtField(FieldNames.lEJJOJGNIHK)) {
               if (!input.trySkipNullValue()) {
-                retcode = input.readUInt32();
+                lEJJOJGNIHK = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -589,9 +589,9 @@ public final class DoGachaInRollShopScRspOuterClass {
     static class FieldNames {
       static final FieldName aFMPDBBHCHM = FieldName.forField("AFMPDBBHCHM");
 
-      static final FieldName lEJJOJGNIHK = FieldName.forField("LEJJOJGNIHK");
-
       static final FieldName retcode = FieldName.forField("retcode");
+
+      static final FieldName lEJJOJGNIHK = FieldName.forField("LEJJOJGNIHK");
 
       static final FieldName rollShopId = FieldName.forField("rollShopId", "roll_shop_id");
 

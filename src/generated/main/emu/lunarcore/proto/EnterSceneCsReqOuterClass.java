@@ -24,7 +24,7 @@ public final class EnterSceneCsReqOuterClass {
     private int entryId;
 
     /**
-     * <code>optional uint32 teleport_id = 8;</code>
+     * <code>optional uint32 teleport_id = 13;</code>
      */
     private int teleportId;
 
@@ -76,7 +76,7 @@ public final class EnterSceneCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 teleport_id = 8;</code>
+     * <code>optional uint32 teleport_id = 13;</code>
      * @return whether the teleportId field is set
      */
     public boolean hasTeleportId() {
@@ -84,7 +84,7 @@ public final class EnterSceneCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 teleport_id = 8;</code>
+     * <code>optional uint32 teleport_id = 13;</code>
      * @return this
      */
     public EnterSceneCsReq clearTeleportId() {
@@ -94,7 +94,7 @@ public final class EnterSceneCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 teleport_id = 8;</code>
+     * <code>optional uint32 teleport_id = 13;</code>
      * @return the teleportId
      */
     public int getTeleportId() {
@@ -102,7 +102,7 @@ public final class EnterSceneCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 teleport_id = 8;</code>
+     * <code>optional uint32 teleport_id = 13;</code>
      * @param value the teleportId to set
      * @return this
      */
@@ -181,7 +181,7 @@ public final class EnterSceneCsReqOuterClass {
         output.writeUInt32NoTag(entryId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(teleportId);
       }
     }
@@ -210,11 +210,11 @@ public final class EnterSceneCsReqOuterClass {
             entryId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 104) {
               break;
             }
           }
-          case 64: {
+          case 104: {
             // teleportId
             teleportId = input.readUInt32();
             bitField0_ |= 0x00000002;

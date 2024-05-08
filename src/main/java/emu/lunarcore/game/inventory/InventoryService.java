@@ -238,6 +238,20 @@ public class InventoryService extends BaseGameService {
         player.sendPacket(new PacketPlayerSyncScNotify(avatar));
         return rewards;
     }
+    
+    public GameAvatar markAvatar(Player player, int avatarId, boolean isMarked) {
+        // Get avatar
+        GameAvatar avatar = player.getAvatarById(avatarId);
+        if (avatar == null) return null;
+        
+        // Mark avatar
+        avatar.setMarked(isMarked);
+        avatar.save();
+        
+        // Send packets
+        player.sendPacket(new PacketPlayerSyncScNotify(avatar));
+        return avatar;
+    }
 
     // === Equipment ===
 

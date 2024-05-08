@@ -20,17 +20,17 @@ public final class RogueHandbookEventOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 event_id = 7;</code>
+     * <code>optional uint32 event_id = 11;</code>
      */
     private int eventId;
 
     /**
-     * <code>optional bool is_unlocked = 2;</code>
+     * <code>optional bool is_unlocked = 14;</code>
      */
     private boolean isUnlocked;
 
     /**
-     * <code>repeated uint32 MDALHHJKHNJ = 6;</code>
+     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
      */
     private final RepeatedInt mDALHHJKHNJ = RepeatedInt.newEmptyInstance();
 
@@ -45,7 +45,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 7;</code>
+     * <code>optional uint32 event_id = 11;</code>
      * @return whether the eventId field is set
      */
     public boolean hasEventId() {
@@ -53,7 +53,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 7;</code>
+     * <code>optional uint32 event_id = 11;</code>
      * @return this
      */
     public RogueHandbookEvent clearEventId() {
@@ -63,7 +63,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 7;</code>
+     * <code>optional uint32 event_id = 11;</code>
      * @return the eventId
      */
     public int getEventId() {
@@ -71,7 +71,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 7;</code>
+     * <code>optional uint32 event_id = 11;</code>
      * @param value the eventId to set
      * @return this
      */
@@ -82,7 +82,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional bool is_unlocked = 2;</code>
+     * <code>optional bool is_unlocked = 14;</code>
      * @return whether the isUnlocked field is set
      */
     public boolean hasIsUnlocked() {
@@ -90,7 +90,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional bool is_unlocked = 2;</code>
+     * <code>optional bool is_unlocked = 14;</code>
      * @return this
      */
     public RogueHandbookEvent clearIsUnlocked() {
@@ -100,7 +100,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional bool is_unlocked = 2;</code>
+     * <code>optional bool is_unlocked = 14;</code>
      * @return the isUnlocked
      */
     public boolean getIsUnlocked() {
@@ -108,7 +108,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional bool is_unlocked = 2;</code>
+     * <code>optional bool is_unlocked = 14;</code>
      * @param value the isUnlocked to set
      * @return this
      */
@@ -119,7 +119,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>repeated uint32 MDALHHJKHNJ = 6;</code>
+     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
      * @return whether the mDALHHJKHNJ field is set
      */
     public boolean hasMDALHHJKHNJ() {
@@ -127,7 +127,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>repeated uint32 MDALHHJKHNJ = 6;</code>
+     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
      * @return this
      */
     public RogueHandbookEvent clearMDALHHJKHNJ() {
@@ -137,7 +137,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>repeated uint32 MDALHHJKHNJ = 6;</code>
+     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -151,7 +151,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>repeated uint32 MDALHHJKHNJ = 6;</code>
+     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -165,7 +165,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>repeated uint32 MDALHHJKHNJ = 6;</code>
+     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
      * @param value the mDALHHJKHNJ to add
      * @return this
      */
@@ -176,7 +176,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>repeated uint32 MDALHHJKHNJ = 6;</code>
+     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
      * @param values the mDALHHJKHNJ to add
      * @return this
      */
@@ -258,16 +258,16 @@ public final class RogueHandbookEventOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(eventId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 112);
         output.writeBoolNoTag(isUnlocked);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < mDALHHJKHNJ.length(); i++) {
-          output.writeRawByte((byte) 48);
+          output.writeRawByte((byte) 104);
           output.writeUInt32NoTag(mDALHHJKHNJ.array()[i]);
         }
       }
@@ -295,25 +295,25 @@ public final class RogueHandbookEventOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 56: {
+          case 88: {
             // eventId
             eventId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 16) {
+            if (tag != 112) {
               break;
             }
           }
-          case 16: {
+          case 112: {
             // isUnlocked
             isUnlocked = input.readBool();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 106) {
               break;
             }
           }
-          case 50: {
+          case 106: {
             // mDALHHJKHNJ [packed=true]
             input.readPackedUInt32(mDALHHJKHNJ, tag);
             bitField0_ |= 0x00000004;
@@ -332,7 +332,7 @@ public final class RogueHandbookEventOuterClass {
             tag = input.readTag();
             break;
           }
-          case 48: {
+          case 104: {
             // mDALHHJKHNJ [packed=false]
             tag = input.readRepeatedUInt32(mDALHHJKHNJ, tag);
             bitField0_ |= 0x00000004;

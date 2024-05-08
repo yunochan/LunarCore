@@ -19,22 +19,22 @@ public final class UseItemScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 use_item_id = 3;</code>
+     * <code>optional uint32 use_item_id = 10;</code>
      */
     private int useItemId;
 
     /**
-     * <code>optional uint32 use_item_count = 6;</code>
+     * <code>optional uint32 use_item_count = 12;</code>
      */
     private int useItemCount;
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 13;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional .ItemList return_data = 1;</code>
+     * <code>optional .ItemList return_data = 7;</code>
      */
     private final ItemListOuterClass.ItemList returnData = ItemListOuterClass.ItemList.newInstance();
 
@@ -49,7 +49,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 use_item_id = 3;</code>
+     * <code>optional uint32 use_item_id = 10;</code>
      * @return whether the useItemId field is set
      */
     public boolean hasUseItemId() {
@@ -57,7 +57,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 use_item_id = 3;</code>
+     * <code>optional uint32 use_item_id = 10;</code>
      * @return this
      */
     public UseItemScRsp clearUseItemId() {
@@ -67,7 +67,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 use_item_id = 3;</code>
+     * <code>optional uint32 use_item_id = 10;</code>
      * @return the useItemId
      */
     public int getUseItemId() {
@@ -75,7 +75,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 use_item_id = 3;</code>
+     * <code>optional uint32 use_item_id = 10;</code>
      * @param value the useItemId to set
      * @return this
      */
@@ -86,7 +86,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 use_item_count = 6;</code>
+     * <code>optional uint32 use_item_count = 12;</code>
      * @return whether the useItemCount field is set
      */
     public boolean hasUseItemCount() {
@@ -94,7 +94,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 use_item_count = 6;</code>
+     * <code>optional uint32 use_item_count = 12;</code>
      * @return this
      */
     public UseItemScRsp clearUseItemCount() {
@@ -104,7 +104,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 use_item_count = 6;</code>
+     * <code>optional uint32 use_item_count = 12;</code>
      * @return the useItemCount
      */
     public int getUseItemCount() {
@@ -112,7 +112,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 use_item_count = 6;</code>
+     * <code>optional uint32 use_item_count = 12;</code>
      * @param value the useItemCount to set
      * @return this
      */
@@ -123,7 +123,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 13;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -131,7 +131,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 13;</code>
      * @return this
      */
     public UseItemScRsp clearRetcode() {
@@ -141,7 +141,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 13;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -149,7 +149,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 13;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -160,7 +160,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_data = 1;</code>
+     * <code>optional .ItemList return_data = 7;</code>
      * @return whether the returnData field is set
      */
     public boolean hasReturnData() {
@@ -168,7 +168,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_data = 1;</code>
+     * <code>optional .ItemList return_data = 7;</code>
      * @return this
      */
     public UseItemScRsp clearReturnData() {
@@ -178,7 +178,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_data = 1;</code>
+     * <code>optional .ItemList return_data = 7;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -192,7 +192,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_data = 1;</code>
+     * <code>optional .ItemList return_data = 7;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -206,7 +206,7 @@ public final class UseItemScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_data = 1;</code>
+     * <code>optional .ItemList return_data = 7;</code>
      * @param value the returnData to set
      * @return this
      */
@@ -294,19 +294,19 @@ public final class UseItemScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(useItemId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 96);
         output.writeUInt32NoTag(useItemCount);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 10);
+        output.writeRawByte((byte) 58);
         output.writeMessageNoTag(returnData);
       }
     }
@@ -336,34 +336,34 @@ public final class UseItemScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 80: {
             // useItemId
             useItemId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 48) {
+            if (tag != 96) {
               break;
             }
           }
-          case 48: {
+          case 96: {
             // useItemCount
             useItemCount = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 104) {
               break;
             }
           }
-          case 56: {
+          case 104: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 10) {
+            if (tag != 58) {
               break;
             }
           }
-          case 10: {
+          case 58: {
             // returnData
             input.readMessage(returnData);
             bitField0_ |= 0x00000008;

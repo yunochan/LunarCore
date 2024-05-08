@@ -20,9 +20,9 @@ public final class GetFirstTalkNpcCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>repeated uint32 npc_id = 15;</code>
+     * <code>repeated uint32 npc_id_list = 15;</code>
      */
-    private final RepeatedInt npcId = RepeatedInt.newEmptyInstance();
+    private final RepeatedInt npcIdList = RepeatedInt.newEmptyInstance();
 
     private GetFirstTalkNpcCsReq() {
     }
@@ -35,39 +35,39 @@ public final class GetFirstTalkNpcCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 npc_id = 15;</code>
-     * @return whether the npcId field is set
+     * <code>repeated uint32 npc_id_list = 15;</code>
+     * @return whether the npcIdList field is set
      */
-    public boolean hasNpcId() {
+    public boolean hasNpcIdList() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>repeated uint32 npc_id = 15;</code>
+     * <code>repeated uint32 npc_id_list = 15;</code>
      * @return this
      */
-    public GetFirstTalkNpcCsReq clearNpcId() {
+    public GetFirstTalkNpcCsReq clearNpcIdList() {
       bitField0_ &= ~0x00000001;
-      npcId.clear();
+      npcIdList.clear();
       return this;
     }
 
     /**
-     * <code>repeated uint32 npc_id = 15;</code>
+     * <code>repeated uint32 npc_id_list = 15;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
      *
-     * Use {@link #getMutableNpcId()} if you want to modify it.
+     * Use {@link #getMutableNpcIdList()} if you want to modify it.
      *
      * @return internal storage object for reading
      */
-    public RepeatedInt getNpcId() {
-      return npcId;
+    public RepeatedInt getNpcIdList() {
+      return npcIdList;
     }
 
     /**
-     * <code>repeated uint32 npc_id = 15;</code>
+     * <code>repeated uint32 npc_id_list = 15;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -75,30 +75,30 @@ public final class GetFirstTalkNpcCsReqOuterClass {
      *
      * @return internal storage object for modifications
      */
-    public RepeatedInt getMutableNpcId() {
+    public RepeatedInt getMutableNpcIdList() {
       bitField0_ |= 0x00000001;
-      return npcId;
+      return npcIdList;
     }
 
     /**
-     * <code>repeated uint32 npc_id = 15;</code>
-     * @param value the npcId to add
+     * <code>repeated uint32 npc_id_list = 15;</code>
+     * @param value the npcIdList to add
      * @return this
      */
-    public GetFirstTalkNpcCsReq addNpcId(final int value) {
+    public GetFirstTalkNpcCsReq addNpcIdList(final int value) {
       bitField0_ |= 0x00000001;
-      npcId.add(value);
+      npcIdList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated uint32 npc_id = 15;</code>
-     * @param values the npcId to add
+     * <code>repeated uint32 npc_id_list = 15;</code>
+     * @param values the npcIdList to add
      * @return this
      */
-    public GetFirstTalkNpcCsReq addAllNpcId(final int... values) {
+    public GetFirstTalkNpcCsReq addAllNpcIdList(final int... values) {
       bitField0_ |= 0x00000001;
-      npcId.addAll(values);
+      npcIdList.addAll(values);
       return this;
     }
 
@@ -107,7 +107,7 @@ public final class GetFirstTalkNpcCsReqOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        npcId.copyFrom(other.npcId);
+        npcIdList.copyFrom(other.npcIdList);
       }
       return this;
     }
@@ -118,8 +118,8 @@ public final class GetFirstTalkNpcCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasNpcId()) {
-        getMutableNpcId().addAll(other.npcId);
+      if (other.hasNpcIdList()) {
+        getMutableNpcIdList().addAll(other.npcIdList);
       }
       return this;
     }
@@ -131,7 +131,7 @@ public final class GetFirstTalkNpcCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      npcId.clear();
+      npcIdList.clear();
       return this;
     }
 
@@ -142,7 +142,7 @@ public final class GetFirstTalkNpcCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      npcId.clear();
+      npcIdList.clear();
       return this;
     }
 
@@ -156,15 +156,15 @@ public final class GetFirstTalkNpcCsReqOuterClass {
       }
       GetFirstTalkNpcCsReq other = (GetFirstTalkNpcCsReq) o;
       return bitField0_ == other.bitField0_
-        && (!hasNpcId() || npcId.equals(other.npcId));
+        && (!hasNpcIdList() || npcIdList.equals(other.npcIdList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        for (int i = 0; i < npcId.length(); i++) {
+        for (int i = 0; i < npcIdList.length(); i++) {
           output.writeRawByte((byte) 120);
-          output.writeUInt32NoTag(npcId.array()[i]);
+          output.writeUInt32NoTag(npcIdList.array()[i]);
         }
       }
     }
@@ -173,7 +173,7 @@ public final class GetFirstTalkNpcCsReqOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += (1 * npcId.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(npcId);
+        size += (1 * npcIdList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(npcIdList);
       }
       return size;
     }
@@ -186,8 +186,8 @@ public final class GetFirstTalkNpcCsReqOuterClass {
       while (true) {
         switch (tag) {
           case 122: {
-            // npcId [packed=true]
-            input.readPackedUInt32(npcId, tag);
+            // npcIdList [packed=true]
+            input.readPackedUInt32(npcIdList, tag);
             bitField0_ |= 0x00000001;
             tag = input.readTag();
             if (tag != 0) {
@@ -205,8 +205,8 @@ public final class GetFirstTalkNpcCsReqOuterClass {
             break;
           }
           case 120: {
-            // npcId [packed=false]
-            tag = input.readRepeatedUInt32(npcId, tag);
+            // npcIdList [packed=false]
+            tag = input.readRepeatedUInt32(npcIdList, tag);
             bitField0_ |= 0x00000001;
             break;
           }
@@ -218,7 +218,7 @@ public final class GetFirstTalkNpcCsReqOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRepeatedUInt32(FieldNames.npcId, npcId);
+        output.writeRepeatedUInt32(FieldNames.npcIdList, npcIdList);
       }
       output.endObject();
     }
@@ -230,11 +230,11 @@ public final class GetFirstTalkNpcCsReqOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 105021404:
-          case -1039282375: {
-            if (input.isAtField(FieldNames.npcId)) {
+          case 522933914:
+          case 535639524: {
+            if (input.isAtField(FieldNames.npcIdList)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(npcId);
+                input.readRepeatedUInt32(npcIdList);
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -295,7 +295,7 @@ public final class GetFirstTalkNpcCsReqOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName npcId = FieldName.forField("npcId", "npc_id");
+      static final FieldName npcIdList = FieldName.forField("npcIdList", "npc_id_list");
     }
   }
 }

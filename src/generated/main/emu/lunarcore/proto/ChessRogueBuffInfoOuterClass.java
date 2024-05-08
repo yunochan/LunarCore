@@ -19,7 +19,7 @@ public final class ChessRogueBuffInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .ChessRogueBuffData buff_data = 1;</code>
+     * <code>optional .ChessRogueBuffData buff_data = 12;</code>
      */
     private final ChessRogueBuffDataOuterClass.ChessRogueBuffData buffData = ChessRogueBuffDataOuterClass.ChessRogueBuffData.newInstance();
 
@@ -34,7 +34,7 @@ public final class ChessRogueBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueBuffData buff_data = 1;</code>
+     * <code>optional .ChessRogueBuffData buff_data = 12;</code>
      * @return whether the buffData field is set
      */
     public boolean hasBuffData() {
@@ -42,7 +42,7 @@ public final class ChessRogueBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueBuffData buff_data = 1;</code>
+     * <code>optional .ChessRogueBuffData buff_data = 12;</code>
      * @return this
      */
     public ChessRogueBuffInfo clearBuffData() {
@@ -52,7 +52,7 @@ public final class ChessRogueBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueBuffData buff_data = 1;</code>
+     * <code>optional .ChessRogueBuffData buff_data = 12;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -66,7 +66,7 @@ public final class ChessRogueBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueBuffData buff_data = 1;</code>
+     * <code>optional .ChessRogueBuffData buff_data = 12;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -80,7 +80,7 @@ public final class ChessRogueBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueBuffData buff_data = 1;</code>
+     * <code>optional .ChessRogueBuffData buff_data = 12;</code>
      * @param value the buffData to set
      * @return this
      */
@@ -151,7 +151,7 @@ public final class ChessRogueBuffInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 10);
+        output.writeRawByte((byte) 98);
         output.writeMessageNoTag(buffData);
       }
     }
@@ -172,7 +172,7 @@ public final class ChessRogueBuffInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 10: {
+          case 98: {
             // buffData
             input.readMessage(buffData);
             bitField0_ |= 0x00000001;

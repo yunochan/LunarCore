@@ -19,12 +19,12 @@ public final class SyncHandleFriendScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 uid = 5;</code>
+     * <code>optional uint32 uid = 4;</code>
      */
     private int uid;
 
     /**
-     * <code>optional bool handle_result = 14;</code>
+     * <code>optional bool handle_result = 9;</code>
      */
     private boolean handleResult;
 
@@ -44,7 +44,7 @@ public final class SyncHandleFriendScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 5;</code>
+     * <code>optional uint32 uid = 4;</code>
      * @return whether the uid field is set
      */
     public boolean hasUid() {
@@ -52,7 +52,7 @@ public final class SyncHandleFriendScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 5;</code>
+     * <code>optional uint32 uid = 4;</code>
      * @return this
      */
     public SyncHandleFriendScNotify clearUid() {
@@ -62,7 +62,7 @@ public final class SyncHandleFriendScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 5;</code>
+     * <code>optional uint32 uid = 4;</code>
      * @return the uid
      */
     public int getUid() {
@@ -70,7 +70,7 @@ public final class SyncHandleFriendScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 5;</code>
+     * <code>optional uint32 uid = 4;</code>
      * @param value the uid to set
      * @return this
      */
@@ -81,7 +81,7 @@ public final class SyncHandleFriendScNotifyOuterClass {
     }
 
     /**
-     * <code>optional bool handle_result = 14;</code>
+     * <code>optional bool handle_result = 9;</code>
      * @return whether the handleResult field is set
      */
     public boolean hasHandleResult() {
@@ -89,7 +89,7 @@ public final class SyncHandleFriendScNotifyOuterClass {
     }
 
     /**
-     * <code>optional bool handle_result = 14;</code>
+     * <code>optional bool handle_result = 9;</code>
      * @return this
      */
     public SyncHandleFriendScNotify clearHandleResult() {
@@ -99,7 +99,7 @@ public final class SyncHandleFriendScNotifyOuterClass {
     }
 
     /**
-     * <code>optional bool handle_result = 14;</code>
+     * <code>optional bool handle_result = 9;</code>
      * @return the handleResult
      */
     public boolean getHandleResult() {
@@ -107,7 +107,7 @@ public final class SyncHandleFriendScNotifyOuterClass {
     }
 
     /**
-     * <code>optional bool handle_result = 14;</code>
+     * <code>optional bool handle_result = 9;</code>
      * @param value the handleResult to set
      * @return this
      */
@@ -247,11 +247,11 @@ public final class SyncHandleFriendScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(uid);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 72);
         output.writeBoolNoTag(handleResult);
       }
       if ((bitField0_ & 0x00000004) != 0) {
@@ -282,16 +282,16 @@ public final class SyncHandleFriendScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
+          case 32: {
             // uid
             uid = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 112) {
+            if (tag != 72) {
               break;
             }
           }
-          case 112: {
+          case 72: {
             // handleResult
             handleResult = input.readBool();
             bitField0_ |= 0x00000002;

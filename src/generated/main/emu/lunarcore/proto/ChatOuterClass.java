@@ -20,12 +20,12 @@ public final class ChatOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint64 sent_time = 15;</code>
+     * <code>optional uint64 sent_time = 1;</code>
      */
     private long sentTime;
 
     /**
-     * <code>optional uint32 sender_uid = 4;</code>
+     * <code>optional uint32 sender_uid = 9;</code>
      */
     private int senderUid;
 
@@ -35,12 +35,12 @@ public final class ChatOuterClass {
     private int emote;
 
     /**
-     * <code>optional .MsgType msg_type = 10;</code>
+     * <code>optional .MsgType msg_type = 7;</code>
      */
     private int msgType;
 
     /**
-     * <code>optional string text = 8;</code>
+     * <code>optional string text = 15;</code>
      */
     private final Utf8String text = Utf8String.newEmptyInstance();
 
@@ -55,7 +55,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional uint64 sent_time = 15;</code>
+     * <code>optional uint64 sent_time = 1;</code>
      * @return whether the sentTime field is set
      */
     public boolean hasSentTime() {
@@ -63,7 +63,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional uint64 sent_time = 15;</code>
+     * <code>optional uint64 sent_time = 1;</code>
      * @return this
      */
     public Chat clearSentTime() {
@@ -73,7 +73,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional uint64 sent_time = 15;</code>
+     * <code>optional uint64 sent_time = 1;</code>
      * @return the sentTime
      */
     public long getSentTime() {
@@ -81,7 +81,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional uint64 sent_time = 15;</code>
+     * <code>optional uint64 sent_time = 1;</code>
      * @param value the sentTime to set
      * @return this
      */
@@ -92,7 +92,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional uint32 sender_uid = 4;</code>
+     * <code>optional uint32 sender_uid = 9;</code>
      * @return whether the senderUid field is set
      */
     public boolean hasSenderUid() {
@@ -100,7 +100,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional uint32 sender_uid = 4;</code>
+     * <code>optional uint32 sender_uid = 9;</code>
      * @return this
      */
     public Chat clearSenderUid() {
@@ -110,7 +110,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional uint32 sender_uid = 4;</code>
+     * <code>optional uint32 sender_uid = 9;</code>
      * @return the senderUid
      */
     public int getSenderUid() {
@@ -118,7 +118,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional uint32 sender_uid = 4;</code>
+     * <code>optional uint32 sender_uid = 9;</code>
      * @param value the senderUid to set
      * @return this
      */
@@ -166,7 +166,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional .MsgType msg_type = 10;</code>
+     * <code>optional .MsgType msg_type = 7;</code>
      * @return whether the msgType field is set
      */
     public boolean hasMsgType() {
@@ -174,7 +174,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional .MsgType msg_type = 10;</code>
+     * <code>optional .MsgType msg_type = 7;</code>
      * @return this
      */
     public Chat clearMsgType() {
@@ -184,7 +184,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional .MsgType msg_type = 10;</code>
+     * <code>optional .MsgType msg_type = 7;</code>
      * @return the msgType
      */
     public MsgTypeOuterClass.MsgType getMsgType() {
@@ -217,7 +217,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional .MsgType msg_type = 10;</code>
+     * <code>optional .MsgType msg_type = 7;</code>
      * @param value the msgType to set
      * @return this
      */
@@ -228,7 +228,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional string text = 8;</code>
+     * <code>optional string text = 15;</code>
      * @return whether the text field is set
      */
     public boolean hasText() {
@@ -236,7 +236,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional string text = 8;</code>
+     * <code>optional string text = 15;</code>
      * @return this
      */
     public Chat clearText() {
@@ -246,7 +246,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional string text = 8;</code>
+     * <code>optional string text = 15;</code>
      * @return the text
      */
     public String getText() {
@@ -254,7 +254,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional string text = 8;</code>
+     * <code>optional string text = 15;</code>
      * @return internal {@code Utf8String} representation of text for reading
      */
     public Utf8String getTextBytes() {
@@ -262,7 +262,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional string text = 8;</code>
+     * <code>optional string text = 15;</code>
      * @return internal {@code Utf8String} representation of text for modifications
      */
     public Utf8String getMutableTextBytes() {
@@ -271,7 +271,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional string text = 8;</code>
+     * <code>optional string text = 15;</code>
      * @param value the text to set
      * @return this
      */
@@ -282,7 +282,7 @@ public final class ChatOuterClass {
     }
 
     /**
-     * <code>optional string text = 8;</code>
+     * <code>optional string text = 15;</code>
      * @param value the text to set
      * @return this
      */
@@ -376,11 +376,11 @@ public final class ChatOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 8);
         output.writeUInt64NoTag(sentTime);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 72);
         output.writeUInt32NoTag(senderUid);
       }
       if ((bitField0_ & 0x00000004) != 0) {
@@ -388,11 +388,11 @@ public final class ChatOuterClass {
         output.writeUInt32NoTag(emote);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 56);
         output.writeEnumNoTag(msgType);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 66);
+        output.writeRawByte((byte) 122);
         output.writeStringNoTag(text);
       }
     }
@@ -425,16 +425,16 @@ public final class ChatOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 120: {
+          case 8: {
             // sentTime
             sentTime = input.readUInt64();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 32) {
+            if (tag != 72) {
               break;
             }
           }
-          case 32: {
+          case 72: {
             // senderUid
             senderUid = input.readUInt32();
             bitField0_ |= 0x00000002;
@@ -448,11 +448,11 @@ public final class ChatOuterClass {
             emote = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 80) {
+            if (tag != 56) {
               break;
             }
           }
-          case 80: {
+          case 56: {
             // msgType
             final int value = input.readInt32();
             if (MsgTypeOuterClass.MsgType.forNumber(value) != null) {
@@ -460,11 +460,11 @@ public final class ChatOuterClass {
               bitField0_ |= 0x00000008;
             }
             tag = input.readTag();
-            if (tag != 66) {
+            if (tag != 122) {
               break;
             }
           }
-          case 66: {
+          case 122: {
             // text
             input.readString(text);
             bitField0_ |= 0x00000010;

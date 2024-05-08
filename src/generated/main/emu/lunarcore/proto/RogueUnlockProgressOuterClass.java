@@ -19,17 +19,17 @@ public final class RogueUnlockProgressOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 unlock_id = 12;</code>
-     */
-    private int unlockId;
-
-    /**
-     * <code>optional uint32 progress = 15;</code>
+     * <code>optional uint32 progress = 9;</code>
      */
     private int progress;
 
     /**
-     * <code>optional bool finish = 11;</code>
+     * <code>optional uint32 unlock_id = 13;</code>
+     */
+    private int unlockId;
+
+    /**
+     * <code>optional bool finish = 15;</code>
      */
     private boolean finish;
 
@@ -44,62 +44,25 @@ public final class RogueUnlockProgressOuterClass {
     }
 
     /**
-     * <code>optional uint32 unlock_id = 12;</code>
-     * @return whether the unlockId field is set
+     * <code>optional uint32 progress = 9;</code>
+     * @return whether the progress field is set
      */
-    public boolean hasUnlockId() {
+    public boolean hasProgress() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 unlock_id = 12;</code>
-     * @return this
-     */
-    public RogueUnlockProgress clearUnlockId() {
-      bitField0_ &= ~0x00000001;
-      unlockId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 unlock_id = 12;</code>
-     * @return the unlockId
-     */
-    public int getUnlockId() {
-      return unlockId;
-    }
-
-    /**
-     * <code>optional uint32 unlock_id = 12;</code>
-     * @param value the unlockId to set
-     * @return this
-     */
-    public RogueUnlockProgress setUnlockId(final int value) {
-      bitField0_ |= 0x00000001;
-      unlockId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 progress = 15;</code>
-     * @return whether the progress field is set
-     */
-    public boolean hasProgress() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 progress = 15;</code>
+     * <code>optional uint32 progress = 9;</code>
      * @return this
      */
     public RogueUnlockProgress clearProgress() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       progress = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 progress = 15;</code>
+     * <code>optional uint32 progress = 9;</code>
      * @return the progress
      */
     public int getProgress() {
@@ -107,18 +70,55 @@ public final class RogueUnlockProgressOuterClass {
     }
 
     /**
-     * <code>optional uint32 progress = 15;</code>
+     * <code>optional uint32 progress = 9;</code>
      * @param value the progress to set
      * @return this
      */
     public RogueUnlockProgress setProgress(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       progress = value;
       return this;
     }
 
     /**
-     * <code>optional bool finish = 11;</code>
+     * <code>optional uint32 unlock_id = 13;</code>
+     * @return whether the unlockId field is set
+     */
+    public boolean hasUnlockId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 unlock_id = 13;</code>
+     * @return this
+     */
+    public RogueUnlockProgress clearUnlockId() {
+      bitField0_ &= ~0x00000002;
+      unlockId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 unlock_id = 13;</code>
+     * @return the unlockId
+     */
+    public int getUnlockId() {
+      return unlockId;
+    }
+
+    /**
+     * <code>optional uint32 unlock_id = 13;</code>
+     * @param value the unlockId to set
+     * @return this
+     */
+    public RogueUnlockProgress setUnlockId(final int value) {
+      bitField0_ |= 0x00000002;
+      unlockId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional bool finish = 15;</code>
      * @return whether the finish field is set
      */
     public boolean hasFinish() {
@@ -126,7 +126,7 @@ public final class RogueUnlockProgressOuterClass {
     }
 
     /**
-     * <code>optional bool finish = 11;</code>
+     * <code>optional bool finish = 15;</code>
      * @return this
      */
     public RogueUnlockProgress clearFinish() {
@@ -136,7 +136,7 @@ public final class RogueUnlockProgressOuterClass {
     }
 
     /**
-     * <code>optional bool finish = 11;</code>
+     * <code>optional bool finish = 15;</code>
      * @return the finish
      */
     public boolean getFinish() {
@@ -144,7 +144,7 @@ public final class RogueUnlockProgressOuterClass {
     }
 
     /**
-     * <code>optional bool finish = 11;</code>
+     * <code>optional bool finish = 15;</code>
      * @param value the finish to set
      * @return this
      */
@@ -159,8 +159,8 @@ public final class RogueUnlockProgressOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        unlockId = other.unlockId;
         progress = other.progress;
+        unlockId = other.unlockId;
         finish = other.finish;
       }
       return this;
@@ -172,11 +172,11 @@ public final class RogueUnlockProgressOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasUnlockId()) {
-        setUnlockId(other.unlockId);
-      }
       if (other.hasProgress()) {
         setProgress(other.progress);
+      }
+      if (other.hasUnlockId()) {
+        setUnlockId(other.unlockId);
       }
       if (other.hasFinish()) {
         setFinish(other.finish);
@@ -191,8 +191,8 @@ public final class RogueUnlockProgressOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      unlockId = 0;
       progress = 0;
+      unlockId = 0;
       finish = false;
       return this;
     }
@@ -217,23 +217,23 @@ public final class RogueUnlockProgressOuterClass {
       }
       RogueUnlockProgress other = (RogueUnlockProgress) o;
       return bitField0_ == other.bitField0_
-        && (!hasUnlockId() || unlockId == other.unlockId)
         && (!hasProgress() || progress == other.progress)
+        && (!hasUnlockId() || unlockId == other.unlockId)
         && (!hasFinish() || finish == other.finish);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 96);
-        output.writeUInt32NoTag(unlockId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 72);
         output.writeUInt32NoTag(progress);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 104);
+        output.writeUInt32NoTag(unlockId);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 120);
         output.writeBoolNoTag(finish);
       }
     }
@@ -242,10 +242,10 @@ public final class RogueUnlockProgressOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(unlockId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(progress);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(progress);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(unlockId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += 2;
@@ -260,25 +260,25 @@ public final class RogueUnlockProgressOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 96: {
+          case 72: {
+            // progress
+            progress = input.readUInt32();
+            bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 104) {
+              break;
+            }
+          }
+          case 104: {
             // unlockId
             unlockId = input.readUInt32();
-            bitField0_ |= 0x00000001;
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 120) {
               break;
             }
           }
           case 120: {
-            // progress
-            progress = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 88) {
-              break;
-            }
-          }
-          case 88: {
             // finish
             finish = input.readBool();
             bitField0_ |= 0x00000004;
@@ -305,10 +305,10 @@ public final class RogueUnlockProgressOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.unlockId, unlockId);
+        output.writeUInt32(FieldNames.progress, progress);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.progress, progress);
+        output.writeUInt32(FieldNames.unlockId, unlockId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeBool(FieldNames.finish, finish);
@@ -323,11 +323,10 @@ public final class RogueUnlockProgressOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -210950273:
-          case 2050497526: {
-            if (input.isAtField(FieldNames.unlockId)) {
+          case -1001078227: {
+            if (input.isAtField(FieldNames.progress)) {
               if (!input.trySkipNullValue()) {
-                unlockId = input.readUInt32();
+                progress = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -335,10 +334,11 @@ public final class RogueUnlockProgressOuterClass {
             }
             break;
           }
-          case -1001078227: {
-            if (input.isAtField(FieldNames.progress)) {
+          case -210950273:
+          case 2050497526: {
+            if (input.isAtField(FieldNames.unlockId)) {
               if (!input.trySkipNullValue()) {
-                progress = input.readUInt32();
+                unlockId = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -410,9 +410,9 @@ public final class RogueUnlockProgressOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName unlockId = FieldName.forField("unlockId", "unlock_id");
-
       static final FieldName progress = FieldName.forField("progress");
+
+      static final FieldName unlockId = FieldName.forField("unlockId", "unlock_id");
 
       static final FieldName finish = FieldName.forField("finish");
     }

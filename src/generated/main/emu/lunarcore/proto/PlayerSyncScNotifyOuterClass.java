@@ -21,39 +21,39 @@ public final class PlayerSyncScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 total_achievement_exp = 1822;</code>
+     * <code>optional uint32 total_achievement_exp = 1571;</code>
      */
     private int totalAchievementExp;
 
     /**
-     * <code>optional .AvatarSync avatar_sync = 11;</code>
+     * <code>optional .AvatarSync avatar_sync = 3;</code>
      */
     private final AvatarSyncOuterClass.AvatarSync avatarSync = AvatarSyncOuterClass.AvatarSync.newInstance();
 
     /**
-     * <code>optional .PlayerBasicInfo basic_info = 15;</code>
+     * <code>optional .PlayerBasicInfo basic_info = 6;</code>
      */
     private final PlayerBasicInfoOuterClass.PlayerBasicInfo basicInfo = PlayerBasicInfoOuterClass.PlayerBasicInfo.newInstance();
 
     /**
-     * <code>optional .BoardDataSync board_data_sync = 480;</code>
+     * <code>optional .MissionSync mission_sync = 8;</code>
+     */
+    private final MissionSyncOuterClass.MissionSync missionSync = MissionSyncOuterClass.MissionSync.newInstance();
+
+    /**
+     * <code>optional .BoardDataSync board_data_sync = 1050;</code>
      */
     private final BoardDataSyncOuterClass.BoardDataSync boardDataSync = BoardDataSyncOuterClass.BoardDataSync.newInstance();
 
     /**
-     * <code>repeated uint32 del_equipment_list = 7;</code>
-     */
-    private final RepeatedInt delEquipmentList = RepeatedInt.newEmptyInstance();
-
-    /**
-     * <code>repeated uint32 del_relic_list = 13;</code>
+     * <code>repeated uint32 del_relic_list = 2;</code>
      */
     private final RepeatedInt delRelicList = RepeatedInt.newEmptyInstance();
 
     /**
-     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 1;</code>
+     * <code>repeated uint32 del_equipment_list = 13;</code>
      */
-    private final RepeatedMessage<HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo> basicTypeInfoList = RepeatedMessage.newEmptyInstance(HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo.getFactory());
+    private final RepeatedInt delEquipmentList = RepeatedInt.newEmptyInstance();
 
     /**
      * <code>repeated .Equipment equipment_list = 4;</code>
@@ -61,9 +61,14 @@ public final class PlayerSyncScNotifyOuterClass {
     private final RepeatedMessage<EquipmentOuterClass.Equipment> equipmentList = RepeatedMessage.newEmptyInstance(EquipmentOuterClass.Equipment.getFactory());
 
     /**
-     * <code>repeated .Material material_list = 12;</code>
+     * <code>repeated .Material material_list = 7;</code>
      */
     private final RepeatedMessage<MaterialOuterClass.Material> materialList = RepeatedMessage.newEmptyInstance(MaterialOuterClass.Material.getFactory());
+
+    /**
+     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 11;</code>
+     */
+    private final RepeatedMessage<HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo> basicTypeInfoList = RepeatedMessage.newEmptyInstance(HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo.getFactory());
 
     /**
      * <code>repeated .Relic relic_list = 14;</code>
@@ -81,7 +86,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 total_achievement_exp = 1822;</code>
+     * <code>optional uint32 total_achievement_exp = 1571;</code>
      * @return whether the totalAchievementExp field is set
      */
     public boolean hasTotalAchievementExp() {
@@ -89,7 +94,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 total_achievement_exp = 1822;</code>
+     * <code>optional uint32 total_achievement_exp = 1571;</code>
      * @return this
      */
     public PlayerSyncScNotify clearTotalAchievementExp() {
@@ -99,7 +104,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 total_achievement_exp = 1822;</code>
+     * <code>optional uint32 total_achievement_exp = 1571;</code>
      * @return the totalAchievementExp
      */
     public int getTotalAchievementExp() {
@@ -107,7 +112,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 total_achievement_exp = 1822;</code>
+     * <code>optional uint32 total_achievement_exp = 1571;</code>
      * @param value the totalAchievementExp to set
      * @return this
      */
@@ -118,7 +123,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .AvatarSync avatar_sync = 11;</code>
+     * <code>optional .AvatarSync avatar_sync = 3;</code>
      * @return whether the avatarSync field is set
      */
     public boolean hasAvatarSync() {
@@ -126,7 +131,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .AvatarSync avatar_sync = 11;</code>
+     * <code>optional .AvatarSync avatar_sync = 3;</code>
      * @return this
      */
     public PlayerSyncScNotify clearAvatarSync() {
@@ -136,7 +141,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .AvatarSync avatar_sync = 11;</code>
+     * <code>optional .AvatarSync avatar_sync = 3;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -150,7 +155,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .AvatarSync avatar_sync = 11;</code>
+     * <code>optional .AvatarSync avatar_sync = 3;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -164,7 +169,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .AvatarSync avatar_sync = 11;</code>
+     * <code>optional .AvatarSync avatar_sync = 3;</code>
      * @param value the avatarSync to set
      * @return this
      */
@@ -175,7 +180,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .PlayerBasicInfo basic_info = 15;</code>
+     * <code>optional .PlayerBasicInfo basic_info = 6;</code>
      * @return whether the basicInfo field is set
      */
     public boolean hasBasicInfo() {
@@ -183,7 +188,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .PlayerBasicInfo basic_info = 15;</code>
+     * <code>optional .PlayerBasicInfo basic_info = 6;</code>
      * @return this
      */
     public PlayerSyncScNotify clearBasicInfo() {
@@ -193,7 +198,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .PlayerBasicInfo basic_info = 15;</code>
+     * <code>optional .PlayerBasicInfo basic_info = 6;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -207,7 +212,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .PlayerBasicInfo basic_info = 15;</code>
+     * <code>optional .PlayerBasicInfo basic_info = 6;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -221,7 +226,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .PlayerBasicInfo basic_info = 15;</code>
+     * <code>optional .PlayerBasicInfo basic_info = 6;</code>
      * @param value the basicInfo to set
      * @return this
      */
@@ -232,25 +237,82 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .BoardDataSync board_data_sync = 480;</code>
-     * @return whether the boardDataSync field is set
+     * <code>optional .MissionSync mission_sync = 8;</code>
+     * @return whether the missionSync field is set
      */
-    public boolean hasBoardDataSync() {
+    public boolean hasMissionSync() {
       return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
-     * <code>optional .BoardDataSync board_data_sync = 480;</code>
+     * <code>optional .MissionSync mission_sync = 8;</code>
+     * @return this
+     */
+    public PlayerSyncScNotify clearMissionSync() {
+      bitField0_ &= ~0x00000008;
+      missionSync.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional .MissionSync mission_sync = 8;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableMissionSync()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public MissionSyncOuterClass.MissionSync getMissionSync() {
+      return missionSync;
+    }
+
+    /**
+     * <code>optional .MissionSync mission_sync = 8;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public MissionSyncOuterClass.MissionSync getMutableMissionSync() {
+      bitField0_ |= 0x00000008;
+      return missionSync;
+    }
+
+    /**
+     * <code>optional .MissionSync mission_sync = 8;</code>
+     * @param value the missionSync to set
+     * @return this
+     */
+    public PlayerSyncScNotify setMissionSync(final MissionSyncOuterClass.MissionSync value) {
+      bitField0_ |= 0x00000008;
+      missionSync.copyFrom(value);
+      return this;
+    }
+
+    /**
+     * <code>optional .BoardDataSync board_data_sync = 1050;</code>
+     * @return whether the boardDataSync field is set
+     */
+    public boolean hasBoardDataSync() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <code>optional .BoardDataSync board_data_sync = 1050;</code>
      * @return this
      */
     public PlayerSyncScNotify clearBoardDataSync() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000010;
       boardDataSync.clear();
       return this;
     }
 
     /**
-     * <code>optional .BoardDataSync board_data_sync = 480;</code>
+     * <code>optional .BoardDataSync board_data_sync = 1050;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -264,7 +326,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .BoardDataSync board_data_sync = 480;</code>
+     * <code>optional .BoardDataSync board_data_sync = 1050;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -273,91 +335,23 @@ public final class PlayerSyncScNotifyOuterClass {
      * @return internal storage object for modifications
      */
     public BoardDataSyncOuterClass.BoardDataSync getMutableBoardDataSync() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       return boardDataSync;
     }
 
     /**
-     * <code>optional .BoardDataSync board_data_sync = 480;</code>
+     * <code>optional .BoardDataSync board_data_sync = 1050;</code>
      * @param value the boardDataSync to set
      * @return this
      */
     public PlayerSyncScNotify setBoardDataSync(final BoardDataSyncOuterClass.BoardDataSync value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       boardDataSync.copyFrom(value);
       return this;
     }
 
     /**
-     * <code>repeated uint32 del_equipment_list = 7;</code>
-     * @return whether the delEquipmentList field is set
-     */
-    public boolean hasDelEquipmentList() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>repeated uint32 del_equipment_list = 7;</code>
-     * @return this
-     */
-    public PlayerSyncScNotify clearDelEquipmentList() {
-      bitField0_ &= ~0x00000010;
-      delEquipmentList.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 del_equipment_list = 7;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableDelEquipmentList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getDelEquipmentList() {
-      return delEquipmentList;
-    }
-
-    /**
-     * <code>repeated uint32 del_equipment_list = 7;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableDelEquipmentList() {
-      bitField0_ |= 0x00000010;
-      return delEquipmentList;
-    }
-
-    /**
-     * <code>repeated uint32 del_equipment_list = 7;</code>
-     * @param value the delEquipmentList to add
-     * @return this
-     */
-    public PlayerSyncScNotify addDelEquipmentList(final int value) {
-      bitField0_ |= 0x00000010;
-      delEquipmentList.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 del_equipment_list = 7;</code>
-     * @param values the delEquipmentList to add
-     * @return this
-     */
-    public PlayerSyncScNotify addAllDelEquipmentList(final int... values) {
-      bitField0_ |= 0x00000010;
-      delEquipmentList.addAll(values);
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 del_relic_list = 13;</code>
+     * <code>repeated uint32 del_relic_list = 2;</code>
      * @return whether the delRelicList field is set
      */
     public boolean hasDelRelicList() {
@@ -365,7 +359,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated uint32 del_relic_list = 13;</code>
+     * <code>repeated uint32 del_relic_list = 2;</code>
      * @return this
      */
     public PlayerSyncScNotify clearDelRelicList() {
@@ -375,7 +369,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated uint32 del_relic_list = 13;</code>
+     * <code>repeated uint32 del_relic_list = 2;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -389,7 +383,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated uint32 del_relic_list = 13;</code>
+     * <code>repeated uint32 del_relic_list = 2;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -403,7 +397,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated uint32 del_relic_list = 13;</code>
+     * <code>repeated uint32 del_relic_list = 2;</code>
      * @param value the delRelicList to add
      * @return this
      */
@@ -414,7 +408,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated uint32 del_relic_list = 13;</code>
+     * <code>repeated uint32 del_relic_list = 2;</code>
      * @param values the delRelicList to add
      * @return this
      */
@@ -425,39 +419,39 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 1;</code>
-     * @return whether the basicTypeInfoList field is set
+     * <code>repeated uint32 del_equipment_list = 13;</code>
+     * @return whether the delEquipmentList field is set
      */
-    public boolean hasBasicTypeInfoList() {
+    public boolean hasDelEquipmentList() {
       return (bitField0_ & 0x00000040) != 0;
     }
 
     /**
-     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 1;</code>
+     * <code>repeated uint32 del_equipment_list = 13;</code>
      * @return this
      */
-    public PlayerSyncScNotify clearBasicTypeInfoList() {
+    public PlayerSyncScNotify clearDelEquipmentList() {
       bitField0_ &= ~0x00000040;
-      basicTypeInfoList.clear();
+      delEquipmentList.clear();
       return this;
     }
 
     /**
-     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 1;</code>
+     * <code>repeated uint32 del_equipment_list = 13;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
      *
-     * Use {@link #getMutableBasicTypeInfoList()} if you want to modify it.
+     * Use {@link #getMutableDelEquipmentList()} if you want to modify it.
      *
      * @return internal storage object for reading
      */
-    public RepeatedMessage<HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo> getBasicTypeInfoList() {
-      return basicTypeInfoList;
+    public RepeatedInt getDelEquipmentList() {
+      return delEquipmentList;
     }
 
     /**
-     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 1;</code>
+     * <code>repeated uint32 del_equipment_list = 13;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -465,33 +459,30 @@ public final class PlayerSyncScNotifyOuterClass {
      *
      * @return internal storage object for modifications
      */
-    public RepeatedMessage<HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo> getMutableBasicTypeInfoList(
-        ) {
+    public RepeatedInt getMutableDelEquipmentList() {
       bitField0_ |= 0x00000040;
-      return basicTypeInfoList;
+      return delEquipmentList;
     }
 
     /**
-     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 1;</code>
-     * @param value the basicTypeInfoList to add
+     * <code>repeated uint32 del_equipment_list = 13;</code>
+     * @param value the delEquipmentList to add
      * @return this
      */
-    public PlayerSyncScNotify addBasicTypeInfoList(
-        final HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo value) {
+    public PlayerSyncScNotify addDelEquipmentList(final int value) {
       bitField0_ |= 0x00000040;
-      basicTypeInfoList.add(value);
+      delEquipmentList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 1;</code>
-     * @param values the basicTypeInfoList to add
+     * <code>repeated uint32 del_equipment_list = 13;</code>
+     * @param values the delEquipmentList to add
      * @return this
      */
-    public PlayerSyncScNotify addAllBasicTypeInfoList(
-        final HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo... values) {
+    public PlayerSyncScNotify addAllDelEquipmentList(final int... values) {
       bitField0_ |= 0x00000040;
-      basicTypeInfoList.addAll(values);
+      delEquipmentList.addAll(values);
       return this;
     }
 
@@ -564,7 +555,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .Material material_list = 12;</code>
+     * <code>repeated .Material material_list = 7;</code>
      * @return whether the materialList field is set
      */
     public boolean hasMaterialList() {
@@ -572,7 +563,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .Material material_list = 12;</code>
+     * <code>repeated .Material material_list = 7;</code>
      * @return this
      */
     public PlayerSyncScNotify clearMaterialList() {
@@ -582,7 +573,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .Material material_list = 12;</code>
+     * <code>repeated .Material material_list = 7;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -596,7 +587,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .Material material_list = 12;</code>
+     * <code>repeated .Material material_list = 7;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -610,7 +601,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .Material material_list = 12;</code>
+     * <code>repeated .Material material_list = 7;</code>
      * @param value the materialList to add
      * @return this
      */
@@ -621,7 +612,7 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .Material material_list = 12;</code>
+     * <code>repeated .Material material_list = 7;</code>
      * @param values the materialList to add
      * @return this
      */
@@ -632,11 +623,82 @@ public final class PlayerSyncScNotifyOuterClass {
     }
 
     /**
+     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 11;</code>
+     * @return whether the basicTypeInfoList field is set
+     */
+    public boolean hasBasicTypeInfoList() {
+      return (bitField0_ & 0x00000200) != 0;
+    }
+
+    /**
+     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 11;</code>
+     * @return this
+     */
+    public PlayerSyncScNotify clearBasicTypeInfoList() {
+      bitField0_ &= ~0x00000200;
+      basicTypeInfoList.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 11;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableBasicTypeInfoList()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo> getBasicTypeInfoList() {
+      return basicTypeInfoList;
+    }
+
+    /**
+     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 11;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo> getMutableBasicTypeInfoList(
+        ) {
+      bitField0_ |= 0x00000200;
+      return basicTypeInfoList;
+    }
+
+    /**
+     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 11;</code>
+     * @param value the basicTypeInfoList to add
+     * @return this
+     */
+    public PlayerSyncScNotify addBasicTypeInfoList(
+        final HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo value) {
+      bitField0_ |= 0x00000200;
+      basicTypeInfoList.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .HeroBasicTypeInfo basic_type_info_list = 11;</code>
+     * @param values the basicTypeInfoList to add
+     * @return this
+     */
+    public PlayerSyncScNotify addAllBasicTypeInfoList(
+        final HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo... values) {
+      bitField0_ |= 0x00000200;
+      basicTypeInfoList.addAll(values);
+      return this;
+    }
+
+    /**
      * <code>repeated .Relic relic_list = 14;</code>
      * @return whether the relicList field is set
      */
     public boolean hasRelicList() {
-      return (bitField0_ & 0x00000200) != 0;
+      return (bitField0_ & 0x00000400) != 0;
     }
 
     /**
@@ -644,7 +706,7 @@ public final class PlayerSyncScNotifyOuterClass {
      * @return this
      */
     public PlayerSyncScNotify clearRelicList() {
-      bitField0_ &= ~0x00000200;
+      bitField0_ &= ~0x00000400;
       relicList.clear();
       return this;
     }
@@ -673,7 +735,7 @@ public final class PlayerSyncScNotifyOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<RelicOuterClass.Relic> getMutableRelicList() {
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       return relicList;
     }
 
@@ -683,7 +745,7 @@ public final class PlayerSyncScNotifyOuterClass {
      * @return this
      */
     public PlayerSyncScNotify addRelicList(final RelicOuterClass.Relic value) {
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       relicList.add(value);
       return this;
     }
@@ -694,7 +756,7 @@ public final class PlayerSyncScNotifyOuterClass {
      * @return this
      */
     public PlayerSyncScNotify addAllRelicList(final RelicOuterClass.Relic... values) {
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       relicList.addAll(values);
       return this;
     }
@@ -707,12 +769,13 @@ public final class PlayerSyncScNotifyOuterClass {
         totalAchievementExp = other.totalAchievementExp;
         avatarSync.copyFrom(other.avatarSync);
         basicInfo.copyFrom(other.basicInfo);
+        missionSync.copyFrom(other.missionSync);
         boardDataSync.copyFrom(other.boardDataSync);
-        delEquipmentList.copyFrom(other.delEquipmentList);
         delRelicList.copyFrom(other.delRelicList);
-        basicTypeInfoList.copyFrom(other.basicTypeInfoList);
+        delEquipmentList.copyFrom(other.delEquipmentList);
         equipmentList.copyFrom(other.equipmentList);
         materialList.copyFrom(other.materialList);
+        basicTypeInfoList.copyFrom(other.basicTypeInfoList);
         relicList.copyFrom(other.relicList);
       }
       return this;
@@ -733,23 +796,26 @@ public final class PlayerSyncScNotifyOuterClass {
       if (other.hasBasicInfo()) {
         getMutableBasicInfo().mergeFrom(other.basicInfo);
       }
+      if (other.hasMissionSync()) {
+        getMutableMissionSync().mergeFrom(other.missionSync);
+      }
       if (other.hasBoardDataSync()) {
         getMutableBoardDataSync().mergeFrom(other.boardDataSync);
-      }
-      if (other.hasDelEquipmentList()) {
-        getMutableDelEquipmentList().addAll(other.delEquipmentList);
       }
       if (other.hasDelRelicList()) {
         getMutableDelRelicList().addAll(other.delRelicList);
       }
-      if (other.hasBasicTypeInfoList()) {
-        getMutableBasicTypeInfoList().addAll(other.basicTypeInfoList);
+      if (other.hasDelEquipmentList()) {
+        getMutableDelEquipmentList().addAll(other.delEquipmentList);
       }
       if (other.hasEquipmentList()) {
         getMutableEquipmentList().addAll(other.equipmentList);
       }
       if (other.hasMaterialList()) {
         getMutableMaterialList().addAll(other.materialList);
+      }
+      if (other.hasBasicTypeInfoList()) {
+        getMutableBasicTypeInfoList().addAll(other.basicTypeInfoList);
       }
       if (other.hasRelicList()) {
         getMutableRelicList().addAll(other.relicList);
@@ -767,12 +833,13 @@ public final class PlayerSyncScNotifyOuterClass {
       totalAchievementExp = 0;
       avatarSync.clear();
       basicInfo.clear();
+      missionSync.clear();
       boardDataSync.clear();
-      delEquipmentList.clear();
       delRelicList.clear();
-      basicTypeInfoList.clear();
+      delEquipmentList.clear();
       equipmentList.clear();
       materialList.clear();
+      basicTypeInfoList.clear();
       relicList.clear();
       return this;
     }
@@ -786,12 +853,13 @@ public final class PlayerSyncScNotifyOuterClass {
       bitField0_ = 0;
       avatarSync.clearQuick();
       basicInfo.clearQuick();
+      missionSync.clearQuick();
       boardDataSync.clearQuick();
-      delEquipmentList.clear();
       delRelicList.clear();
-      basicTypeInfoList.clearQuick();
+      delEquipmentList.clear();
       equipmentList.clearQuick();
       materialList.clearQuick();
+      basicTypeInfoList.clearQuick();
       relicList.clearQuick();
       return this;
     }
@@ -809,49 +877,48 @@ public final class PlayerSyncScNotifyOuterClass {
         && (!hasTotalAchievementExp() || totalAchievementExp == other.totalAchievementExp)
         && (!hasAvatarSync() || avatarSync.equals(other.avatarSync))
         && (!hasBasicInfo() || basicInfo.equals(other.basicInfo))
+        && (!hasMissionSync() || missionSync.equals(other.missionSync))
         && (!hasBoardDataSync() || boardDataSync.equals(other.boardDataSync))
-        && (!hasDelEquipmentList() || delEquipmentList.equals(other.delEquipmentList))
         && (!hasDelRelicList() || delRelicList.equals(other.delRelicList))
-        && (!hasBasicTypeInfoList() || basicTypeInfoList.equals(other.basicTypeInfoList))
+        && (!hasDelEquipmentList() || delEquipmentList.equals(other.delEquipmentList))
         && (!hasEquipmentList() || equipmentList.equals(other.equipmentList))
         && (!hasMaterialList() || materialList.equals(other.materialList))
+        && (!hasBasicTypeInfoList() || basicTypeInfoList.equals(other.basicTypeInfoList))
         && (!hasRelicList() || relicList.equals(other.relicList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawLittleEndian16((short) 29168);
+        output.writeRawLittleEndian16((short) 25240);
         output.writeUInt32NoTag(totalAchievementExp);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 90);
+        output.writeRawByte((byte) 26);
         output.writeMessageNoTag(avatarSync);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 122);
+        output.writeRawByte((byte) 50);
         output.writeMessageNoTag(basicInfo);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawLittleEndian16((short) 7810);
-        output.writeMessageNoTag(boardDataSync);
+        output.writeRawByte((byte) 66);
+        output.writeMessageNoTag(missionSync);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        for (int i = 0; i < delEquipmentList.length(); i++) {
-          output.writeRawByte((byte) 56);
-          output.writeUInt32NoTag(delEquipmentList.array()[i]);
-        }
+        output.writeRawLittleEndian16((short) 16850);
+        output.writeMessageNoTag(boardDataSync);
       }
       if ((bitField0_ & 0x00000020) != 0) {
         for (int i = 0; i < delRelicList.length(); i++) {
-          output.writeRawByte((byte) 104);
+          output.writeRawByte((byte) 16);
           output.writeUInt32NoTag(delRelicList.array()[i]);
         }
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        for (int i = 0; i < basicTypeInfoList.length(); i++) {
-          output.writeRawByte((byte) 10);
-          output.writeMessageNoTag(basicTypeInfoList.get(i));
+        for (int i = 0; i < delEquipmentList.length(); i++) {
+          output.writeRawByte((byte) 104);
+          output.writeUInt32NoTag(delEquipmentList.array()[i]);
         }
       }
       if ((bitField0_ & 0x00000080) != 0) {
@@ -862,11 +929,17 @@ public final class PlayerSyncScNotifyOuterClass {
       }
       if ((bitField0_ & 0x00000100) != 0) {
         for (int i = 0; i < materialList.length(); i++) {
-          output.writeRawByte((byte) 98);
+          output.writeRawByte((byte) 58);
           output.writeMessageNoTag(materialList.get(i));
         }
       }
       if ((bitField0_ & 0x00000200) != 0) {
+        for (int i = 0; i < basicTypeInfoList.length(); i++) {
+          output.writeRawByte((byte) 90);
+          output.writeMessageNoTag(basicTypeInfoList.get(i));
+        }
+      }
+      if ((bitField0_ & 0x00000400) != 0) {
         for (int i = 0; i < relicList.length(); i++) {
           output.writeRawByte((byte) 114);
           output.writeMessageNoTag(relicList.get(i));
@@ -887,16 +960,16 @@ public final class PlayerSyncScNotifyOuterClass {
         size += 1 + ProtoSink.computeMessageSizeNoTag(basicInfo);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 2 + ProtoSink.computeMessageSizeNoTag(boardDataSync);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(missionSync);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        size += (1 * delEquipmentList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(delEquipmentList);
+        size += 2 + ProtoSink.computeMessageSizeNoTag(boardDataSync);
       }
       if ((bitField0_ & 0x00000020) != 0) {
         size += (1 * delRelicList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(delRelicList);
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        size += (1 * basicTypeInfoList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(basicTypeInfoList);
+        size += (1 * delEquipmentList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(delEquipmentList);
       }
       if ((bitField0_ & 0x00000080) != 0) {
         size += (1 * equipmentList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(equipmentList);
@@ -905,6 +978,9 @@ public final class PlayerSyncScNotifyOuterClass {
         size += (1 * materialList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(materialList);
       }
       if ((bitField0_ & 0x00000200) != 0) {
+        size += (1 * basicTypeInfoList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(basicTypeInfoList);
+      }
+      if ((bitField0_ & 0x00000400) != 0) {
         size += (1 * relicList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(relicList);
       }
       return size;
@@ -917,64 +993,65 @@ public final class PlayerSyncScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 14576: {
+          case 12568: {
             // totalAchievementExp
             totalAchievementExp = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 90) {
+            if (tag != 26) {
               break;
             }
           }
-          case 90: {
+          case 26: {
             // avatarSync
             input.readMessage(avatarSync);
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 122) {
+            if (tag != 50) {
               break;
             }
           }
-          case 122: {
+          case 50: {
             // basicInfo
             input.readMessage(basicInfo);
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 3842) {
+            if (tag != 66) {
               break;
             }
           }
-          case 3842: {
-            // boardDataSync
-            input.readMessage(boardDataSync);
+          case 66: {
+            // missionSync
+            input.readMessage(missionSync);
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 8402) {
               break;
             }
           }
-          case 58: {
-            // delEquipmentList [packed=true]
-            input.readPackedUInt32(delEquipmentList, tag);
+          case 8402: {
+            // boardDataSync
+            input.readMessage(boardDataSync);
             bitField0_ |= 0x00000010;
+            tag = input.readTag();
+            if (tag != 18) {
+              break;
+            }
+          }
+          case 18: {
+            // delRelicList [packed=true]
+            input.readPackedUInt32(delRelicList, tag);
+            bitField0_ |= 0x00000020;
             tag = input.readTag();
             if (tag != 106) {
               break;
             }
           }
           case 106: {
-            // delRelicList [packed=true]
-            input.readPackedUInt32(delRelicList, tag);
-            bitField0_ |= 0x00000020;
-            tag = input.readTag();
-            if (tag != 10) {
-              break;
-            }
-          }
-          case 10: {
-            // basicTypeInfoList
-            tag = input.readRepeatedMessage(basicTypeInfoList, tag);
+            // delEquipmentList [packed=true]
+            input.readPackedUInt32(delEquipmentList, tag);
             bitField0_ |= 0x00000040;
+            tag = input.readTag();
             if (tag != 34) {
               break;
             }
@@ -983,14 +1060,22 @@ public final class PlayerSyncScNotifyOuterClass {
             // equipmentList
             tag = input.readRepeatedMessage(equipmentList, tag);
             bitField0_ |= 0x00000080;
-            if (tag != 98) {
+            if (tag != 58) {
               break;
             }
           }
-          case 98: {
+          case 58: {
             // materialList
             tag = input.readRepeatedMessage(materialList, tag);
             bitField0_ |= 0x00000100;
+            if (tag != 90) {
+              break;
+            }
+          }
+          case 90: {
+            // basicTypeInfoList
+            tag = input.readRepeatedMessage(basicTypeInfoList, tag);
+            bitField0_ |= 0x00000200;
             if (tag != 114) {
               break;
             }
@@ -998,7 +1083,7 @@ public final class PlayerSyncScNotifyOuterClass {
           case 114: {
             // relicList
             tag = input.readRepeatedMessage(relicList, tag);
-            bitField0_ |= 0x00000200;
+            bitField0_ |= 0x00000400;
             if (tag != 0) {
               break;
             }
@@ -1013,16 +1098,16 @@ public final class PlayerSyncScNotifyOuterClass {
             tag = input.readTag();
             break;
           }
-          case 56: {
-            // delEquipmentList [packed=false]
-            tag = input.readRepeatedUInt32(delEquipmentList, tag);
-            bitField0_ |= 0x00000010;
-            break;
-          }
-          case 104: {
+          case 16: {
             // delRelicList [packed=false]
             tag = input.readRepeatedUInt32(delRelicList, tag);
             bitField0_ |= 0x00000020;
+            break;
+          }
+          case 104: {
+            // delEquipmentList [packed=false]
+            tag = input.readRepeatedUInt32(delEquipmentList, tag);
+            bitField0_ |= 0x00000040;
             break;
           }
         }
@@ -1042,16 +1127,16 @@ public final class PlayerSyncScNotifyOuterClass {
         output.writeMessage(FieldNames.basicInfo, basicInfo);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeMessage(FieldNames.boardDataSync, boardDataSync);
+        output.writeMessage(FieldNames.missionSync, missionSync);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRepeatedUInt32(FieldNames.delEquipmentList, delEquipmentList);
+        output.writeMessage(FieldNames.boardDataSync, boardDataSync);
       }
       if ((bitField0_ & 0x00000020) != 0) {
         output.writeRepeatedUInt32(FieldNames.delRelicList, delRelicList);
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        output.writeRepeatedMessage(FieldNames.basicTypeInfoList, basicTypeInfoList);
+        output.writeRepeatedUInt32(FieldNames.delEquipmentList, delEquipmentList);
       }
       if ((bitField0_ & 0x00000080) != 0) {
         output.writeRepeatedMessage(FieldNames.equipmentList, equipmentList);
@@ -1060,6 +1145,9 @@ public final class PlayerSyncScNotifyOuterClass {
         output.writeRepeatedMessage(FieldNames.materialList, materialList);
       }
       if ((bitField0_ & 0x00000200) != 0) {
+        output.writeRepeatedMessage(FieldNames.basicTypeInfoList, basicTypeInfoList);
+      }
+      if ((bitField0_ & 0x00000400) != 0) {
         output.writeRepeatedMessage(FieldNames.relicList, relicList);
       }
       output.endObject();
@@ -1108,11 +1196,11 @@ public final class PlayerSyncScNotifyOuterClass {
             }
             break;
           }
-          case 818128491:
-          case -589815817: {
-            if (input.isAtField(FieldNames.boardDataSync)) {
+          case 1383230023:
+          case -58627730: {
+            if (input.isAtField(FieldNames.missionSync)) {
               if (!input.trySkipNullValue()) {
-                input.readMessage(boardDataSync);
+                input.readMessage(missionSync);
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -1120,11 +1208,11 @@ public final class PlayerSyncScNotifyOuterClass {
             }
             break;
           }
-          case -2124519167:
-          case -1682718877: {
-            if (input.isAtField(FieldNames.delEquipmentList)) {
+          case 818128491:
+          case -589815817: {
+            if (input.isAtField(FieldNames.boardDataSync)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(delEquipmentList);
+                input.readMessage(boardDataSync);
                 bitField0_ |= 0x00000010;
               }
             } else {
@@ -1144,11 +1232,11 @@ public final class PlayerSyncScNotifyOuterClass {
             }
             break;
           }
-          case -344592620:
-          case -1315699973: {
-            if (input.isAtField(FieldNames.basicTypeInfoList)) {
+          case -2124519167:
+          case -1682718877: {
+            if (input.isAtField(FieldNames.delEquipmentList)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedMessage(basicTypeInfoList);
+                input.readRepeatedUInt32(delEquipmentList);
                 bitField0_ |= 0x00000040;
               }
             } else {
@@ -1180,12 +1268,24 @@ public final class PlayerSyncScNotifyOuterClass {
             }
             break;
           }
+          case -344592620:
+          case -1315699973: {
+            if (input.isAtField(FieldNames.basicTypeInfoList)) {
+              if (!input.trySkipNullValue()) {
+                input.readRepeatedMessage(basicTypeInfoList);
+                bitField0_ |= 0x00000200;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
           case 204814001:
           case 2071893482: {
             if (input.isAtField(FieldNames.relicList)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedMessage(relicList);
-                bitField0_ |= 0x00000200;
+                bitField0_ |= 0x00000400;
               }
             } else {
               input.skipUnknownField();
@@ -1251,17 +1351,19 @@ public final class PlayerSyncScNotifyOuterClass {
 
       static final FieldName basicInfo = FieldName.forField("basicInfo", "basic_info");
 
-      static final FieldName boardDataSync = FieldName.forField("boardDataSync", "board_data_sync");
+      static final FieldName missionSync = FieldName.forField("missionSync", "mission_sync");
 
-      static final FieldName delEquipmentList = FieldName.forField("delEquipmentList", "del_equipment_list");
+      static final FieldName boardDataSync = FieldName.forField("boardDataSync", "board_data_sync");
 
       static final FieldName delRelicList = FieldName.forField("delRelicList", "del_relic_list");
 
-      static final FieldName basicTypeInfoList = FieldName.forField("basicTypeInfoList", "basic_type_info_list");
+      static final FieldName delEquipmentList = FieldName.forField("delEquipmentList", "del_equipment_list");
 
       static final FieldName equipmentList = FieldName.forField("equipmentList", "equipment_list");
 
       static final FieldName materialList = FieldName.forField("materialList", "material_list");
+
+      static final FieldName basicTypeInfoList = FieldName.forField("basicTypeInfoList", "basic_type_info_list");
 
       static final FieldName relicList = FieldName.forField("relicList", "relic_list");
     }

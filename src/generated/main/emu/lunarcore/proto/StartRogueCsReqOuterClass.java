@@ -25,7 +25,7 @@ public final class StartRogueCsReqOuterClass {
     private int buffAeonId;
 
     /**
-     * <code>optional uint32 area_id = 7;</code>
+     * <code>optional uint32 area_id = 3;</code>
      */
     private int areaId;
 
@@ -82,7 +82,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 area_id = 7;</code>
+     * <code>optional uint32 area_id = 3;</code>
      * @return whether the areaId field is set
      */
     public boolean hasAreaId() {
@@ -90,7 +90,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 area_id = 7;</code>
+     * <code>optional uint32 area_id = 3;</code>
      * @return this
      */
     public StartRogueCsReq clearAreaId() {
@@ -100,7 +100,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 area_id = 7;</code>
+     * <code>optional uint32 area_id = 3;</code>
      * @return the areaId
      */
     public int getAreaId() {
@@ -108,7 +108,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 area_id = 7;</code>
+     * <code>optional uint32 area_id = 3;</code>
      * @param value the areaId to set
      * @return this
      */
@@ -262,7 +262,7 @@ public final class StartRogueCsReqOuterClass {
         output.writeUInt32NoTag(buffAeonId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(areaId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
@@ -300,11 +300,11 @@ public final class StartRogueCsReqOuterClass {
             buffAeonId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 24) {
               break;
             }
           }
-          case 56: {
+          case 24: {
             // areaId
             areaId = input.readUInt32();
             bitField0_ |= 0x00000002;

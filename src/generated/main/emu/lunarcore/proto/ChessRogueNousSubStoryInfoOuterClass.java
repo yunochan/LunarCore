@@ -19,7 +19,7 @@ public final class ChessRogueNousSubStoryInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 sub_story_id = 4;</code>
+     * <code>optional uint32 sub_story_id = 5;</code>
      */
     private int subStoryId;
 
@@ -34,7 +34,7 @@ public final class ChessRogueNousSubStoryInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 sub_story_id = 4;</code>
+     * <code>optional uint32 sub_story_id = 5;</code>
      * @return whether the subStoryId field is set
      */
     public boolean hasSubStoryId() {
@@ -42,7 +42,7 @@ public final class ChessRogueNousSubStoryInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 sub_story_id = 4;</code>
+     * <code>optional uint32 sub_story_id = 5;</code>
      * @return this
      */
     public ChessRogueNousSubStoryInfo clearSubStoryId() {
@@ -52,7 +52,7 @@ public final class ChessRogueNousSubStoryInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 sub_story_id = 4;</code>
+     * <code>optional uint32 sub_story_id = 5;</code>
      * @return the subStoryId
      */
     public int getSubStoryId() {
@@ -60,7 +60,7 @@ public final class ChessRogueNousSubStoryInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 sub_story_id = 4;</code>
+     * <code>optional uint32 sub_story_id = 5;</code>
      * @param value the subStoryId to set
      * @return this
      */
@@ -129,7 +129,7 @@ public final class ChessRogueNousSubStoryInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(subStoryId);
       }
     }
@@ -150,7 +150,7 @@ public final class ChessRogueNousSubStoryInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 32: {
+          case 40: {
             // subStoryId
             subStoryId = input.readUInt32();
             bitField0_ |= 0x00000001;

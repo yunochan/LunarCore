@@ -24,7 +24,7 @@ public final class SelectChatBubbleScRspOuterClass {
     private int retcode;
 
     /**
-     * <code>optional uint32 cur_chat_bubble = 15;</code>
+     * <code>optional uint32 cur_chat_bubble = 10;</code>
      */
     private int curChatBubble;
 
@@ -76,7 +76,7 @@ public final class SelectChatBubbleScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 cur_chat_bubble = 15;</code>
+     * <code>optional uint32 cur_chat_bubble = 10;</code>
      * @return whether the curChatBubble field is set
      */
     public boolean hasCurChatBubble() {
@@ -84,7 +84,7 @@ public final class SelectChatBubbleScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 cur_chat_bubble = 15;</code>
+     * <code>optional uint32 cur_chat_bubble = 10;</code>
      * @return this
      */
     public SelectChatBubbleScRsp clearCurChatBubble() {
@@ -94,7 +94,7 @@ public final class SelectChatBubbleScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 cur_chat_bubble = 15;</code>
+     * <code>optional uint32 cur_chat_bubble = 10;</code>
      * @return the curChatBubble
      */
     public int getCurChatBubble() {
@@ -102,7 +102,7 @@ public final class SelectChatBubbleScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 cur_chat_bubble = 15;</code>
+     * <code>optional uint32 cur_chat_bubble = 10;</code>
      * @param value the curChatBubble to set
      * @return this
      */
@@ -181,7 +181,7 @@ public final class SelectChatBubbleScRspOuterClass {
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(curChatBubble);
       }
     }
@@ -210,11 +210,11 @@ public final class SelectChatBubbleScRspOuterClass {
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 80) {
               break;
             }
           }
-          case 120: {
+          case 80: {
             // curChatBubble
             curChatBubble = input.readUInt32();
             bitField0_ |= 0x00000002;

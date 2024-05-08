@@ -25,7 +25,7 @@ public final class GetActivityScheduleConfigScRspOuterClass {
     private int retcode;
 
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 7;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 8;</code>
      */
     private final RepeatedMessage<ActivityScheduleInfoOuterClass.ActivityScheduleInfo> activityScheduleList = RepeatedMessage.newEmptyInstance(ActivityScheduleInfoOuterClass.ActivityScheduleInfo.getFactory());
 
@@ -77,7 +77,7 @@ public final class GetActivityScheduleConfigScRspOuterClass {
     }
 
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 7;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 8;</code>
      * @return whether the activityScheduleList field is set
      */
     public boolean hasActivityScheduleList() {
@@ -85,7 +85,7 @@ public final class GetActivityScheduleConfigScRspOuterClass {
     }
 
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 7;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 8;</code>
      * @return this
      */
     public GetActivityScheduleConfigScRsp clearActivityScheduleList() {
@@ -95,7 +95,7 @@ public final class GetActivityScheduleConfigScRspOuterClass {
     }
 
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 7;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -110,7 +110,7 @@ public final class GetActivityScheduleConfigScRspOuterClass {
     }
 
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 7;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -125,7 +125,7 @@ public final class GetActivityScheduleConfigScRspOuterClass {
     }
 
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 7;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 8;</code>
      * @param value the activityScheduleList to add
      * @return this
      */
@@ -137,7 +137,7 @@ public final class GetActivityScheduleConfigScRspOuterClass {
     }
 
     /**
-     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 7;</code>
+     * <code>repeated .ActivityScheduleInfo activity_schedule_list = 8;</code>
      * @param values the activityScheduleList to add
      * @return this
      */
@@ -219,7 +219,7 @@ public final class GetActivityScheduleConfigScRspOuterClass {
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < activityScheduleList.length(); i++) {
-          output.writeRawByte((byte) 58);
+          output.writeRawByte((byte) 66);
           output.writeMessageNoTag(activityScheduleList.get(i));
         }
       }
@@ -249,11 +249,11 @@ public final class GetActivityScheduleConfigScRspOuterClass {
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 66) {
               break;
             }
           }
-          case 58: {
+          case 66: {
             // activityScheduleList
             tag = input.readRepeatedMessage(activityScheduleList, tag);
             bitField0_ |= 0x00000002;

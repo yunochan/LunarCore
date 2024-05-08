@@ -19,7 +19,7 @@ public final class ChessRogueMiracleInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .ChessRogueMiracleData miracle_data = 11;</code>
+     * <code>optional .ChessRogueMiracleData miracle_data = 13;</code>
      */
     private final ChessRogueMiracleDataOuterClass.ChessRogueMiracleData miracleData = ChessRogueMiracleDataOuterClass.ChessRogueMiracleData.newInstance();
 
@@ -34,7 +34,7 @@ public final class ChessRogueMiracleInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueMiracleData miracle_data = 11;</code>
+     * <code>optional .ChessRogueMiracleData miracle_data = 13;</code>
      * @return whether the miracleData field is set
      */
     public boolean hasMiracleData() {
@@ -42,7 +42,7 @@ public final class ChessRogueMiracleInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueMiracleData miracle_data = 11;</code>
+     * <code>optional .ChessRogueMiracleData miracle_data = 13;</code>
      * @return this
      */
     public ChessRogueMiracleInfo clearMiracleData() {
@@ -52,7 +52,7 @@ public final class ChessRogueMiracleInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueMiracleData miracle_data = 11;</code>
+     * <code>optional .ChessRogueMiracleData miracle_data = 13;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -66,7 +66,7 @@ public final class ChessRogueMiracleInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueMiracleData miracle_data = 11;</code>
+     * <code>optional .ChessRogueMiracleData miracle_data = 13;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -80,7 +80,7 @@ public final class ChessRogueMiracleInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChessRogueMiracleData miracle_data = 11;</code>
+     * <code>optional .ChessRogueMiracleData miracle_data = 13;</code>
      * @param value the miracleData to set
      * @return this
      */
@@ -151,7 +151,7 @@ public final class ChessRogueMiracleInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 90);
+        output.writeRawByte((byte) 106);
         output.writeMessageNoTag(miracleData);
       }
     }
@@ -172,7 +172,7 @@ public final class ChessRogueMiracleInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 90: {
+          case 106: {
             // miracleData
             input.readMessage(miracleData);
             bitField0_ |= 0x00000001;

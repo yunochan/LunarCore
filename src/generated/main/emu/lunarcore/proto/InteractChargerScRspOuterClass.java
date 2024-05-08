@@ -19,16 +19,17 @@ public final class InteractChargerScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 11;</code>
+     * <code>optional uint32 retcode = 2;</code>
      */
     private int retcode;
 
     /**
-     * <pre>
-     *  RotatorEnergyInfo energy_info = 6;
-     * </pre>
-     *
-     * <code>optional .ChargerInfo charger_info = 1;</code>
+     * <code>optional .RotatorEnergyInfo energy_info = 5;</code>
+     */
+    private final RotatorEnergyInfoOuterClass.RotatorEnergyInfo energyInfo = RotatorEnergyInfoOuterClass.RotatorEnergyInfo.newInstance();
+
+    /**
+     * <code>optional .ChargerInfo charger_info = 11;</code>
      */
     private final ChargerInfoOuterClass.ChargerInfo chargerInfo = ChargerInfoOuterClass.ChargerInfo.newInstance();
 
@@ -43,7 +44,7 @@ public final class InteractChargerScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 11;</code>
+     * <code>optional uint32 retcode = 2;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -51,7 +52,7 @@ public final class InteractChargerScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 11;</code>
+     * <code>optional uint32 retcode = 2;</code>
      * @return this
      */
     public InteractChargerScRsp clearRetcode() {
@@ -61,7 +62,7 @@ public final class InteractChargerScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 11;</code>
+     * <code>optional uint32 retcode = 2;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -69,7 +70,7 @@ public final class InteractChargerScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 11;</code>
+     * <code>optional uint32 retcode = 2;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -80,37 +81,83 @@ public final class InteractChargerScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  RotatorEnergyInfo energy_info = 6;
-     * </pre>
-     *
-     * <code>optional .ChargerInfo charger_info = 1;</code>
-     * @return whether the chargerInfo field is set
+     * <code>optional .RotatorEnergyInfo energy_info = 5;</code>
+     * @return whether the energyInfo field is set
      */
-    public boolean hasChargerInfo() {
+    public boolean hasEnergyInfo() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <pre>
-     *  RotatorEnergyInfo energy_info = 6;
-     * </pre>
+     * <code>optional .RotatorEnergyInfo energy_info = 5;</code>
+     * @return this
+     */
+    public InteractChargerScRsp clearEnergyInfo() {
+      bitField0_ &= ~0x00000002;
+      energyInfo.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional .RotatorEnergyInfo energy_info = 5;</code>
      *
-     * <code>optional .ChargerInfo charger_info = 1;</code>
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableEnergyInfo()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RotatorEnergyInfoOuterClass.RotatorEnergyInfo getEnergyInfo() {
+      return energyInfo;
+    }
+
+    /**
+     * <code>optional .RotatorEnergyInfo energy_info = 5;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RotatorEnergyInfoOuterClass.RotatorEnergyInfo getMutableEnergyInfo() {
+      bitField0_ |= 0x00000002;
+      return energyInfo;
+    }
+
+    /**
+     * <code>optional .RotatorEnergyInfo energy_info = 5;</code>
+     * @param value the energyInfo to set
+     * @return this
+     */
+    public InteractChargerScRsp setEnergyInfo(
+        final RotatorEnergyInfoOuterClass.RotatorEnergyInfo value) {
+      bitField0_ |= 0x00000002;
+      energyInfo.copyFrom(value);
+      return this;
+    }
+
+    /**
+     * <code>optional .ChargerInfo charger_info = 11;</code>
+     * @return whether the chargerInfo field is set
+     */
+    public boolean hasChargerInfo() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional .ChargerInfo charger_info = 11;</code>
      * @return this
      */
     public InteractChargerScRsp clearChargerInfo() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000004;
       chargerInfo.clear();
       return this;
     }
 
     /**
-     * <pre>
-     *  RotatorEnergyInfo energy_info = 6;
-     * </pre>
-     *
-     * <code>optional .ChargerInfo charger_info = 1;</code>
+     * <code>optional .ChargerInfo charger_info = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -124,11 +171,7 @@ public final class InteractChargerScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  RotatorEnergyInfo energy_info = 6;
-     * </pre>
-     *
-     * <code>optional .ChargerInfo charger_info = 1;</code>
+     * <code>optional .ChargerInfo charger_info = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -137,21 +180,17 @@ public final class InteractChargerScRspOuterClass {
      * @return internal storage object for modifications
      */
     public ChargerInfoOuterClass.ChargerInfo getMutableChargerInfo() {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       return chargerInfo;
     }
 
     /**
-     * <pre>
-     *  RotatorEnergyInfo energy_info = 6;
-     * </pre>
-     *
-     * <code>optional .ChargerInfo charger_info = 1;</code>
+     * <code>optional .ChargerInfo charger_info = 11;</code>
      * @param value the chargerInfo to set
      * @return this
      */
     public InteractChargerScRsp setChargerInfo(final ChargerInfoOuterClass.ChargerInfo value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       chargerInfo.copyFrom(value);
       return this;
     }
@@ -162,6 +201,7 @@ public final class InteractChargerScRspOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         retcode = other.retcode;
+        energyInfo.copyFrom(other.energyInfo);
         chargerInfo.copyFrom(other.chargerInfo);
       }
       return this;
@@ -175,6 +215,9 @@ public final class InteractChargerScRspOuterClass {
       cachedSize = -1;
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
+      }
+      if (other.hasEnergyInfo()) {
+        getMutableEnergyInfo().mergeFrom(other.energyInfo);
       }
       if (other.hasChargerInfo()) {
         getMutableChargerInfo().mergeFrom(other.chargerInfo);
@@ -190,6 +233,7 @@ public final class InteractChargerScRspOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       retcode = 0;
+      energyInfo.clear();
       chargerInfo.clear();
       return this;
     }
@@ -201,6 +245,7 @@ public final class InteractChargerScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
+      energyInfo.clearQuick();
       chargerInfo.clearQuick();
       return this;
     }
@@ -216,17 +261,22 @@ public final class InteractChargerScRspOuterClass {
       InteractChargerScRsp other = (InteractChargerScRsp) o;
       return bitField0_ == other.bitField0_
         && (!hasRetcode() || retcode == other.retcode)
+        && (!hasEnergyInfo() || energyInfo.equals(other.energyInfo))
         && (!hasChargerInfo() || chargerInfo.equals(other.chargerInfo));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 10);
+        output.writeRawByte((byte) 42);
+        output.writeMessageNoTag(energyInfo);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 90);
         output.writeMessageNoTag(chargerInfo);
       }
     }
@@ -238,6 +288,9 @@ public final class InteractChargerScRspOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
+        size += 1 + ProtoSink.computeMessageSizeNoTag(energyInfo);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
         size += 1 + ProtoSink.computeMessageSizeNoTag(chargerInfo);
       }
       return size;
@@ -250,19 +303,28 @@ public final class InteractChargerScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 88: {
+          case 16: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 10) {
+            if (tag != 42) {
               break;
             }
           }
-          case 10: {
+          case 42: {
+            // energyInfo
+            input.readMessage(energyInfo);
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 90) {
+              break;
+            }
+          }
+          case 90: {
             // chargerInfo
             input.readMessage(chargerInfo);
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -289,6 +351,9 @@ public final class InteractChargerScRspOuterClass {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
+        output.writeMessage(FieldNames.energyInfo, energyInfo);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
         output.writeMessage(FieldNames.chargerInfo, chargerInfo);
       }
       output.endObject();
@@ -312,12 +377,24 @@ public final class InteractChargerScRspOuterClass {
             }
             break;
           }
+          case 1464698710:
+          case -1818804219: {
+            if (input.isAtField(FieldNames.energyInfo)) {
+              if (!input.trySkipNullValue()) {
+                input.readMessage(energyInfo);
+                bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
           case 1038073356:
           case 2135678991: {
             if (input.isAtField(FieldNames.chargerInfo)) {
               if (!input.trySkipNullValue()) {
                 input.readMessage(chargerInfo);
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -378,6 +455,8 @@ public final class InteractChargerScRspOuterClass {
      */
     static class FieldNames {
       static final FieldName retcode = FieldName.forField("retcode");
+
+      static final FieldName energyInfo = FieldName.forField("energyInfo", "energy_info");
 
       static final FieldName chargerInfo = FieldName.forField("chargerInfo", "charger_info");
     }

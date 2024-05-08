@@ -19,14 +19,18 @@ public final class RogueCurVirtualItemInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 cur_rogue_coin = 8;</code>
-     */
-    private int curRogueCoin;
-
-    /**
-     * <code>optional uint32 cur_rogue_ability_point = 9;</code>
+     * <pre>
+     *  idk, isnt being used by official server
+     * </pre>
+     *
+     * <code>optional uint32 cur_rogue_ability_point = 1;</code>
      */
     private int curRogueAbilityPoint;
+
+    /**
+     * <code>optional uint32 cur_rogue_coin = 12;</code>
+     */
+    private int curRogueCoin;
 
     private RogueCurVirtualItemInfo() {
     }
@@ -39,62 +43,37 @@ public final class RogueCurVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 cur_rogue_coin = 8;</code>
-     * @return whether the curRogueCoin field is set
+     * <pre>
+     *  idk, isnt being used by official server
+     * </pre>
+     *
+     * <code>optional uint32 cur_rogue_ability_point = 1;</code>
+     * @return whether the curRogueAbilityPoint field is set
      */
-    public boolean hasCurRogueCoin() {
+    public boolean hasCurRogueAbilityPoint() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 cur_rogue_coin = 8;</code>
-     * @return this
-     */
-    public RogueCurVirtualItemInfo clearCurRogueCoin() {
-      bitField0_ &= ~0x00000001;
-      curRogueCoin = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 cur_rogue_coin = 8;</code>
-     * @return the curRogueCoin
-     */
-    public int getCurRogueCoin() {
-      return curRogueCoin;
-    }
-
-    /**
-     * <code>optional uint32 cur_rogue_coin = 8;</code>
-     * @param value the curRogueCoin to set
-     * @return this
-     */
-    public RogueCurVirtualItemInfo setCurRogueCoin(final int value) {
-      bitField0_ |= 0x00000001;
-      curRogueCoin = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 cur_rogue_ability_point = 9;</code>
-     * @return whether the curRogueAbilityPoint field is set
-     */
-    public boolean hasCurRogueAbilityPoint() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 cur_rogue_ability_point = 9;</code>
+     * <pre>
+     *  idk, isnt being used by official server
+     * </pre>
+     *
+     * <code>optional uint32 cur_rogue_ability_point = 1;</code>
      * @return this
      */
     public RogueCurVirtualItemInfo clearCurRogueAbilityPoint() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       curRogueAbilityPoint = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 cur_rogue_ability_point = 9;</code>
+     * <pre>
+     *  idk, isnt being used by official server
+     * </pre>
+     *
+     * <code>optional uint32 cur_rogue_ability_point = 1;</code>
      * @return the curRogueAbilityPoint
      */
     public int getCurRogueAbilityPoint() {
@@ -102,13 +81,54 @@ public final class RogueCurVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 cur_rogue_ability_point = 9;</code>
+     * <pre>
+     *  idk, isnt being used by official server
+     * </pre>
+     *
+     * <code>optional uint32 cur_rogue_ability_point = 1;</code>
      * @param value the curRogueAbilityPoint to set
      * @return this
      */
     public RogueCurVirtualItemInfo setCurRogueAbilityPoint(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       curRogueAbilityPoint = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 cur_rogue_coin = 12;</code>
+     * @return whether the curRogueCoin field is set
+     */
+    public boolean hasCurRogueCoin() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 cur_rogue_coin = 12;</code>
+     * @return this
+     */
+    public RogueCurVirtualItemInfo clearCurRogueCoin() {
+      bitField0_ &= ~0x00000002;
+      curRogueCoin = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 cur_rogue_coin = 12;</code>
+     * @return the curRogueCoin
+     */
+    public int getCurRogueCoin() {
+      return curRogueCoin;
+    }
+
+    /**
+     * <code>optional uint32 cur_rogue_coin = 12;</code>
+     * @param value the curRogueCoin to set
+     * @return this
+     */
+    public RogueCurVirtualItemInfo setCurRogueCoin(final int value) {
+      bitField0_ |= 0x00000002;
+      curRogueCoin = value;
       return this;
     }
 
@@ -117,8 +137,8 @@ public final class RogueCurVirtualItemInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        curRogueCoin = other.curRogueCoin;
         curRogueAbilityPoint = other.curRogueAbilityPoint;
+        curRogueCoin = other.curRogueCoin;
       }
       return this;
     }
@@ -129,11 +149,11 @@ public final class RogueCurVirtualItemInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasCurRogueCoin()) {
-        setCurRogueCoin(other.curRogueCoin);
-      }
       if (other.hasCurRogueAbilityPoint()) {
         setCurRogueAbilityPoint(other.curRogueAbilityPoint);
+      }
+      if (other.hasCurRogueCoin()) {
+        setCurRogueCoin(other.curRogueCoin);
       }
       return this;
     }
@@ -145,8 +165,8 @@ public final class RogueCurVirtualItemInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      curRogueCoin = 0;
       curRogueAbilityPoint = 0;
+      curRogueCoin = 0;
       return this;
     }
 
@@ -170,19 +190,19 @@ public final class RogueCurVirtualItemInfoOuterClass {
       }
       RogueCurVirtualItemInfo other = (RogueCurVirtualItemInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasCurRogueCoin() || curRogueCoin == other.curRogueCoin)
-        && (!hasCurRogueAbilityPoint() || curRogueAbilityPoint == other.curRogueAbilityPoint);
+        && (!hasCurRogueAbilityPoint() || curRogueAbilityPoint == other.curRogueAbilityPoint)
+        && (!hasCurRogueCoin() || curRogueCoin == other.curRogueCoin);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 64);
-        output.writeUInt32NoTag(curRogueCoin);
+        output.writeRawByte((byte) 8);
+        output.writeUInt32NoTag(curRogueAbilityPoint);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 72);
-        output.writeUInt32NoTag(curRogueAbilityPoint);
+        output.writeRawByte((byte) 96);
+        output.writeUInt32NoTag(curRogueCoin);
       }
     }
 
@@ -190,10 +210,10 @@ public final class RogueCurVirtualItemInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(curRogueCoin);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(curRogueAbilityPoint);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(curRogueAbilityPoint);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(curRogueCoin);
       }
       return size;
     }
@@ -205,18 +225,18 @@ public final class RogueCurVirtualItemInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 64: {
-            // curRogueCoin
-            curRogueCoin = input.readUInt32();
+          case 8: {
+            // curRogueAbilityPoint
+            curRogueAbilityPoint = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 72) {
+            if (tag != 96) {
               break;
             }
           }
-          case 72: {
-            // curRogueAbilityPoint
-            curRogueAbilityPoint = input.readUInt32();
+          case 96: {
+            // curRogueCoin
+            curRogueCoin = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
@@ -241,10 +261,10 @@ public final class RogueCurVirtualItemInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.curRogueCoin, curRogueCoin);
+        output.writeUInt32(FieldNames.curRogueAbilityPoint, curRogueAbilityPoint);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.curRogueAbilityPoint, curRogueAbilityPoint);
+        output.writeUInt32(FieldNames.curRogueCoin, curRogueCoin);
       }
       output.endObject();
     }
@@ -256,11 +276,11 @@ public final class RogueCurVirtualItemInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 1836271915:
-          case -979997387: {
-            if (input.isAtField(FieldNames.curRogueCoin)) {
+          case 1423162144:
+          case 1565581335: {
+            if (input.isAtField(FieldNames.curRogueAbilityPoint)) {
               if (!input.trySkipNullValue()) {
-                curRogueCoin = input.readUInt32();
+                curRogueAbilityPoint = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -268,11 +288,11 @@ public final class RogueCurVirtualItemInfoOuterClass {
             }
             break;
           }
-          case 1423162144:
-          case 1565581335: {
-            if (input.isAtField(FieldNames.curRogueAbilityPoint)) {
+          case 1836271915:
+          case -979997387: {
+            if (input.isAtField(FieldNames.curRogueCoin)) {
               if (!input.trySkipNullValue()) {
-                curRogueAbilityPoint = input.readUInt32();
+                curRogueCoin = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -333,9 +353,9 @@ public final class RogueCurVirtualItemInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName curRogueCoin = FieldName.forField("curRogueCoin", "cur_rogue_coin");
-
       static final FieldName curRogueAbilityPoint = FieldName.forField("curRogueAbilityPoint", "cur_rogue_ability_point");
+
+      static final FieldName curRogueCoin = FieldName.forField("curRogueCoin", "cur_rogue_coin");
     }
   }
 }

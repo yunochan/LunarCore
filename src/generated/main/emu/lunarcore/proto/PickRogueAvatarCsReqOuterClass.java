@@ -20,7 +20,7 @@ public final class PickRogueAvatarCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>repeated uint32 base_avatar_list = 9;</code>
+     * <code>repeated uint32 base_avatar_list = 12;</code>
      */
     private final RepeatedInt baseAvatarList = RepeatedInt.newEmptyInstance();
 
@@ -35,7 +35,7 @@ public final class PickRogueAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 base_avatar_list = 9;</code>
+     * <code>repeated uint32 base_avatar_list = 12;</code>
      * @return whether the baseAvatarList field is set
      */
     public boolean hasBaseAvatarList() {
@@ -43,7 +43,7 @@ public final class PickRogueAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 base_avatar_list = 9;</code>
+     * <code>repeated uint32 base_avatar_list = 12;</code>
      * @return this
      */
     public PickRogueAvatarCsReq clearBaseAvatarList() {
@@ -53,7 +53,7 @@ public final class PickRogueAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 base_avatar_list = 9;</code>
+     * <code>repeated uint32 base_avatar_list = 12;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -67,7 +67,7 @@ public final class PickRogueAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 base_avatar_list = 9;</code>
+     * <code>repeated uint32 base_avatar_list = 12;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -81,7 +81,7 @@ public final class PickRogueAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 base_avatar_list = 9;</code>
+     * <code>repeated uint32 base_avatar_list = 12;</code>
      * @param value the baseAvatarList to add
      * @return this
      */
@@ -92,7 +92,7 @@ public final class PickRogueAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 base_avatar_list = 9;</code>
+     * <code>repeated uint32 base_avatar_list = 12;</code>
      * @param values the baseAvatarList to add
      * @return this
      */
@@ -163,7 +163,7 @@ public final class PickRogueAvatarCsReqOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         for (int i = 0; i < baseAvatarList.length(); i++) {
-          output.writeRawByte((byte) 72);
+          output.writeRawByte((byte) 96);
           output.writeUInt32NoTag(baseAvatarList.array()[i]);
         }
       }
@@ -185,7 +185,7 @@ public final class PickRogueAvatarCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 74: {
+          case 98: {
             // baseAvatarList [packed=true]
             input.readPackedUInt32(baseAvatarList, tag);
             bitField0_ |= 0x00000001;
@@ -204,7 +204,7 @@ public final class PickRogueAvatarCsReqOuterClass {
             tag = input.readTag();
             break;
           }
-          case 72: {
+          case 96: {
             // baseAvatarList [packed=false]
             tag = input.readRepeatedUInt32(baseAvatarList, tag);
             bitField0_ |= 0x00000001;

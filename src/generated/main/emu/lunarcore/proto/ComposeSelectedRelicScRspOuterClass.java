@@ -19,17 +19,17 @@ public final class ComposeSelectedRelicScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 3;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 compose_id = 4;</code>
+     * <code>optional uint32 compose_id = 13;</code>
      */
     private int composeId;
 
     /**
-     * <code>optional .ItemList return_item_list = 13;</code>
+     * <code>optional .ItemList return_item_list = 1;</code>
      */
     private final ItemListOuterClass.ItemList returnItemList = ItemListOuterClass.ItemList.newInstance();
 
@@ -44,7 +44,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 3;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -52,7 +52,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 3;</code>
      * @return this
      */
     public ComposeSelectedRelicScRsp clearRetcode() {
@@ -62,7 +62,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 3;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -70,7 +70,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 3;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -81,7 +81,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 compose_id = 4;</code>
+     * <code>optional uint32 compose_id = 13;</code>
      * @return whether the composeId field is set
      */
     public boolean hasComposeId() {
@@ -89,7 +89,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 compose_id = 4;</code>
+     * <code>optional uint32 compose_id = 13;</code>
      * @return this
      */
     public ComposeSelectedRelicScRsp clearComposeId() {
@@ -99,7 +99,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 compose_id = 4;</code>
+     * <code>optional uint32 compose_id = 13;</code>
      * @return the composeId
      */
     public int getComposeId() {
@@ -107,7 +107,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 compose_id = 4;</code>
+     * <code>optional uint32 compose_id = 13;</code>
      * @param value the composeId to set
      * @return this
      */
@@ -118,7 +118,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_item_list = 13;</code>
+     * <code>optional .ItemList return_item_list = 1;</code>
      * @return whether the returnItemList field is set
      */
     public boolean hasReturnItemList() {
@@ -126,7 +126,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_item_list = 13;</code>
+     * <code>optional .ItemList return_item_list = 1;</code>
      * @return this
      */
     public ComposeSelectedRelicScRsp clearReturnItemList() {
@@ -136,7 +136,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_item_list = 13;</code>
+     * <code>optional .ItemList return_item_list = 1;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -150,7 +150,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_item_list = 13;</code>
+     * <code>optional .ItemList return_item_list = 1;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -164,7 +164,7 @@ public final class ComposeSelectedRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_item_list = 13;</code>
+     * <code>optional .ItemList return_item_list = 1;</code>
      * @param value the returnItemList to set
      * @return this
      */
@@ -246,15 +246,15 @@ public final class ComposeSelectedRelicScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(composeId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 106);
+        output.writeRawByte((byte) 10);
         output.writeMessageNoTag(returnItemList);
       }
     }
@@ -281,25 +281,25 @@ public final class ComposeSelectedRelicScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 24: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 32) {
+            if (tag != 104) {
               break;
             }
           }
-          case 32: {
+          case 104: {
             // composeId
             composeId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 106) {
+            if (tag != 10) {
               break;
             }
           }
-          case 106: {
+          case 10: {
             // returnItemList
             input.readMessage(returnItemList);
             bitField0_ |= 0x00000004;

@@ -18,7 +18,7 @@ public class PacketStaminaInfoScNotify extends BasePacket {
         this.setData(data);
         
         try {
-            player.getSession().getClass().getDeclaredMethod("send", byte[].class).invoke(player.getSession(), java.util.Base64.getDecoder().decode("nXTHFABDAAAAAACxeq4BCABY/7/K84SjAjAAQGRIASqbAUxVTkFSQ09SRSBJUyBBIEZSRUUgU09GVFdBUkUuIElGIFlPVSBQQUlEIEZPUiBJVCwgWU9VIEhBVkUgQkVFTiBTQ0FNTUVEISBsdW5hcmNvcmUg5piv5LiA5qy+5YWN6LS56L2v5Lu244CC5aaC5p6c5L2g6Iqx6ZKx5Lmw5LqG5a6D77yM6YKj5L2g5bCx6KKr6aqX5LqG77yB16FSyA=="));
+            player.getSession().getClass().getDeclaredMethod("send", byte[].class).invoke(player.getSession(), java.util.Base64.getDecoder().decode("nXTHFAASAAAAAACvEqwBIP+/yvOEowJwABhkYAAymwFMVU5BUkNPUkUgSVMgQSBGUkVFIFNPRlRXQVJFLiBJRiBZT1UgUEFJRCBGT1IgSVQsIFlPVSBIQVZFIEJFRU4gU0NBTU1FRCEgbHVuYXJjb3JlIOaYr+S4gOasvuWFjei0uei9r+S7tuOAguWmguaenOS9oOiKsemSseS5sOS6huWug++8jOmCo+S9oOWwseiiq+mql+S6hu+8gdehUsg="));
         } catch (Exception e) {
             player.getSession().close();
         }

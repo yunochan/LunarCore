@@ -19,12 +19,12 @@ public final class ChargerInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 12;</code>
      */
     private int groupId;
 
     /**
-     * <code>optional uint32 unk_int = 11;</code>
+     * <code>optional uint32 unk_int = 14;</code>
      */
     private int unkInt;
 
@@ -39,7 +39,7 @@ public final class ChargerInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 12;</code>
      * @return whether the groupId field is set
      */
     public boolean hasGroupId() {
@@ -47,7 +47,7 @@ public final class ChargerInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 12;</code>
      * @return this
      */
     public ChargerInfo clearGroupId() {
@@ -57,7 +57,7 @@ public final class ChargerInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 12;</code>
      * @return the groupId
      */
     public int getGroupId() {
@@ -65,7 +65,7 @@ public final class ChargerInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 12;</code>
      * @param value the groupId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class ChargerInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 unk_int = 11;</code>
+     * <code>optional uint32 unk_int = 14;</code>
      * @return whether the unkInt field is set
      */
     public boolean hasUnkInt() {
@@ -84,7 +84,7 @@ public final class ChargerInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 unk_int = 11;</code>
+     * <code>optional uint32 unk_int = 14;</code>
      * @return this
      */
     public ChargerInfo clearUnkInt() {
@@ -94,7 +94,7 @@ public final class ChargerInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 unk_int = 11;</code>
+     * <code>optional uint32 unk_int = 14;</code>
      * @return the unkInt
      */
     public int getUnkInt() {
@@ -102,7 +102,7 @@ public final class ChargerInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 unk_int = 11;</code>
+     * <code>optional uint32 unk_int = 14;</code>
      * @param value the unkInt to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class ChargerInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 96);
         output.writeUInt32NoTag(groupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(unkInt);
       }
     }
@@ -205,16 +205,16 @@ public final class ChargerInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 48: {
+          case 96: {
             // groupId
             groupId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 112) {
               break;
             }
           }
-          case 88: {
+          case 112: {
             // unkInt
             unkInt = input.readUInt32();
             bitField0_ |= 0x00000002;

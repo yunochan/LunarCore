@@ -20,7 +20,7 @@ public final class ChessRogueMiracleDataOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>repeated .RogueMiracle miracle_list = 15;</code>
+     * <code>repeated .RogueMiracle miracle_list = 11;</code>
      */
     private final RepeatedMessage<RogueMiracleOuterClass.RogueMiracle> miracleList = RepeatedMessage.newEmptyInstance(RogueMiracleOuterClass.RogueMiracle.getFactory());
 
@@ -35,7 +35,7 @@ public final class ChessRogueMiracleDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracle miracle_list = 15;</code>
+     * <code>repeated .RogueMiracle miracle_list = 11;</code>
      * @return whether the miracleList field is set
      */
     public boolean hasMiracleList() {
@@ -43,7 +43,7 @@ public final class ChessRogueMiracleDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracle miracle_list = 15;</code>
+     * <code>repeated .RogueMiracle miracle_list = 11;</code>
      * @return this
      */
     public ChessRogueMiracleData clearMiracleList() {
@@ -53,7 +53,7 @@ public final class ChessRogueMiracleDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracle miracle_list = 15;</code>
+     * <code>repeated .RogueMiracle miracle_list = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -67,7 +67,7 @@ public final class ChessRogueMiracleDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracle miracle_list = 15;</code>
+     * <code>repeated .RogueMiracle miracle_list = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -81,7 +81,7 @@ public final class ChessRogueMiracleDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracle miracle_list = 15;</code>
+     * <code>repeated .RogueMiracle miracle_list = 11;</code>
      * @param value the miracleList to add
      * @return this
      */
@@ -92,7 +92,7 @@ public final class ChessRogueMiracleDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracle miracle_list = 15;</code>
+     * <code>repeated .RogueMiracle miracle_list = 11;</code>
      * @param values the miracleList to add
      * @return this
      */
@@ -164,7 +164,7 @@ public final class ChessRogueMiracleDataOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         for (int i = 0; i < miracleList.length(); i++) {
-          output.writeRawByte((byte) 122);
+          output.writeRawByte((byte) 90);
           output.writeMessageNoTag(miracleList.get(i));
         }
       }
@@ -186,7 +186,7 @@ public final class ChessRogueMiracleDataOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 122: {
+          case 90: {
             // miracleList
             tag = input.readRepeatedMessage(miracleList, tag);
             bitField0_ |= 0x00000001;

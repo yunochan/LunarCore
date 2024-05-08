@@ -255,6 +255,7 @@ public class ResourceLoader {
             
             // Check if we are missing group infos
             if (floor.getGroups().size() == 0) {
+                LunarCore.getLogger().warn("Floor " + floor.getFloorID() + " is missing group infos.");
                 missingGroupInfos = true;
             }
 
