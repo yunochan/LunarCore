@@ -139,47 +139,47 @@ public class ChallengeInstance {
         
         // Handle result
         switch (result) {
-        case BATTLE_END_WIN:
-            // Check if any avatar in the lineup has died
-            battle.getLineup().forEachAvatar(avatar -> {
-                if (avatar.getCurrentHp(battle.getLineup()) <= 0) {
-                    hasAvatarDied = true;
+            case BATTLE_END_WIN:
+                // Check if any avatar in the lineup has died
+                battle.getLineup().forEachAvatar(avatar -> {
+                    if (avatar.getCurrentHp(battle.getLineup()) <= 0) {
+                        hasAvatarDied = true;
+                    }
+                });
+                
+                // Get monster count in stage
+                long monsters = player.getScene().getEntities().values().stream().filter(e -> e instanceof EntityMonster).count();
+                
+                if (monsters == 0) {
+                    this.advanceStage();
                 }
-            });
-            
-            // Get monster count in stage
-            long monsters = player.getScene().getEntities().values().stream().filter(e -> e instanceof EntityMonster).count();
-            
-            if (monsters == 0) {
-                this.advanceStage();
-            }
-            
-            // Calculate rounds left
-            if (!this.isStory()) {
-                this.roundsLeft = Math.min(Math.max(this.roundsLeft - stats.getRoundCnt(), 1), this.roundsLeft);
-            }
-            
-            // Set saved technique points (This will be restored if the player resets the challenge)
-            this.savedMp = player.getCurrentLineup().getMp();
-            break;
-        case BATTLE_END_QUIT:
-            // Reset technique points and move back to start position
-            var lineup = player.getCurrentLineup();
-            lineup.setMp(this.savedMp);
-            player.moveTo(this.getStartPos(), this.getStartRot());
-            player.sendPacket(new PacketSyncLineupNotify(lineup));
-            break;
-        default:
-            // Determine challenge result
-            if (this.isStory() && stats.getEndReason() == BattleEndReason.BATTLE_END_REASON_TURN_LIMIT) {
-                this.advanceStage();
-            } else {
-                // Fail challenge
-                this.setStatus(ChallengeStatus.CHALLENGE_FAILED);
-                // Send challenge result data
-                player.sendPacket(new PacketChallengeSettleNotify(this));
-            }
-            break;
+                
+                // Calculate rounds left
+                if (!this.isStory()) {
+                    this.roundsLeft = Math.min(Math.max(this.roundsLeft - stats.getRoundCnt(), 1), this.roundsLeft);
+                }
+                
+                // Set saved technique points (This will be restored if the player resets the challenge)
+                this.savedMp = player.getCurrentLineup().getMp();
+                break;
+            case BATTLE_END_QUIT:
+                // Reset technique points and move back to start position
+                var lineup = player.getCurrentLineup();
+                lineup.setMp(this.savedMp);
+                player.moveTo(this.getStartPos(), this.getStartRot());
+                player.sendPacket(new PacketSyncLineupNotify(lineup));
+                break;
+            default:
+                // Determine challenge result
+                if (this.isStory() && stats.getEndReason() == BattleEndReason.BATTLE_END_REASON_TURN_LIMIT) {
+                    this.advanceStage();
+                } else {
+                    // Fail challenge
+                    this.setStatus(ChallengeStatus.CHALLENGE_FAILED);
+                    // Send challenge result data
+                    player.sendPacket(new PacketChallengeSettleNotify(this));
+                }
+                break;
         }
     }
     

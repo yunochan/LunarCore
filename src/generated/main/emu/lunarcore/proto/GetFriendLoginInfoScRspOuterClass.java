@@ -25,10 +25,6 @@ public final class GetFriendLoginInfoScRspOuterClass {
     private int retcode;
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>repeated uint32 friend_uid_list = 7;</code>
      */
     private final RepeatedInt friendUidList = RepeatedInt.newEmptyInstance();
@@ -81,10 +77,6 @@ public final class GetFriendLoginInfoScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>repeated uint32 friend_uid_list = 7;</code>
      * @return whether the friendUidList field is set
      */
@@ -93,10 +85,6 @@ public final class GetFriendLoginInfoScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>repeated uint32 friend_uid_list = 7;</code>
      * @return this
      */
@@ -107,10 +95,6 @@ public final class GetFriendLoginInfoScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>repeated uint32 friend_uid_list = 7;</code>
      *
      * This method returns the internal storage object without modifying any has state.
@@ -125,10 +109,6 @@ public final class GetFriendLoginInfoScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>repeated uint32 friend_uid_list = 7;</code>
      *
      * This method returns the internal storage object and sets the corresponding
@@ -143,10 +123,6 @@ public final class GetFriendLoginInfoScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>repeated uint32 friend_uid_list = 7;</code>
      * @param value the friendUidList to add
      * @return this
@@ -158,10 +134,6 @@ public final class GetFriendLoginInfoScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>repeated uint32 friend_uid_list = 7;</code>
      * @param values the friendUidList to add
      * @return this
