@@ -933,8 +933,10 @@ public class Player implements Tickable {
                 .setLevel(this.getLevel())
                 .setWorldLevel(this.getWorldLevel())
                 .setPlatformType(PlatformType.PC)
-                .setRecordInfo("")
                 .setHeadIcon(this.getHeadIcon());
+        
+        proto.getMutableRecordInfo().getMutableCollectionInfo();
+        proto.getMutableDisplaySettings();
         
         return proto;
     }
