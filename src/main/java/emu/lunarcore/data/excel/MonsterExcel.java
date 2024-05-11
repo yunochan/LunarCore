@@ -8,6 +8,7 @@ import lombok.Getter;
 @ResourceType(name = {"MonsterConfig.json"})
 public class MonsterExcel extends GameResource {
     private int MonsterID;
+    private long MonsterName;
 
     @Override
     public int getId() {

@@ -5,6 +5,7 @@ import emu.lunarcore.data.config.GroupInfo;
 import emu.lunarcore.data.config.MonsterInfo;
 import emu.lunarcore.data.excel.NpcMonsterExcel;
 import emu.lunarcore.game.battle.Battle;
+import emu.lunarcore.game.battle.BattleStage;
 import emu.lunarcore.game.inventory.ItemParamMap;
 import emu.lunarcore.game.scene.Scene;
 import emu.lunarcore.game.scene.SceneBuff;
@@ -37,7 +38,7 @@ public class EntityMonster implements GameEntity, Tickable {
     @Setter private SceneBuff tempBuff;
     
     private int farmElementId;
-    @Setter private int customStageId;
+    private BattleStage customStage;
     @Setter private int customLevel;
     
     public EntityMonster(Scene scene, NpcMonsterExcel excel, GroupInfo group, MonsterInfo monsterInfo) {
@@ -59,11 +60,19 @@ public class EntityMonster implements GameEntity, Tickable {
     }
     
     public int getStageId() {
-        if (this.customStageId == 0) {
+        if (this.customStage == null) {
             return (this.getEventId() * 10) + worldLevel;
         } else {
-            return this.customStageId;
+            return this.customStage.getId();
         }
+    }
+
+    public void setCustomStage(BattleStage stage) {
+        this.customStage = stage;
+    }
+    
+    public void setCustomStage(int stageId) {
+        this.customStage = GameData.getStageExcelMap().get(stageId);
     }
     
     public synchronized SceneBuff addBuff(int caster, int buffId, int duration) {

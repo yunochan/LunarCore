@@ -113,6 +113,17 @@ public class Handbook {
                 writer.print("[Level " + excel.getLevel() + "] ");
                 writer.println(textMap.getOrDefault(excel.getStageName(), "null"));
             }
+            
+            // Dump monsters
+            writer.println(System.lineSeparator());
+            writer.println("# Battle Monsters");
+            list = GameData.getMonsterExcelMap().keySet().intStream().sorted().boxed().toList();
+            for (int id : list) {
+                MonsterExcel excel = GameData.getMonsterExcelMap().get(id);
+                writer.print(excel.getId());
+                writer.print(" : ");
+                writer.println(textMap.getOrDefault(excel.getMonsterName(), "null"));
+            }
 
             // Dump stages
             writer.println(System.lineSeparator());

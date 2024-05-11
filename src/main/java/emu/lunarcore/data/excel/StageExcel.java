@@ -5,6 +5,7 @@ import java.util.List;
 
 import emu.lunarcore.data.GameResource;
 import emu.lunarcore.data.ResourceType;
+import emu.lunarcore.game.battle.BattleStage;
 import emu.lunarcore.game.enums.StageType;
 import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntList;
@@ -13,7 +14,7 @@ import lombok.Getter;
 
 @Getter
 @ResourceType(name = {"StageConfig.json"})
-public class StageExcel extends GameResource {
+public class StageExcel extends GameResource implements BattleStage {
     private int StageID;
     private long StageName;
     private StageType StageType;

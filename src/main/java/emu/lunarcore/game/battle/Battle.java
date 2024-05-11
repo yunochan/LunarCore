@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 
 import emu.lunarcore.GameConstants;
 import emu.lunarcore.data.GameData;
-import emu.lunarcore.data.excel.StageExcel;
 import emu.lunarcore.game.avatar.GameAvatar;
 import emu.lunarcore.game.inventory.GameItem;
 import emu.lunarcore.game.player.Player;
@@ -39,7 +38,7 @@ public class Battle {
     private final List<GameItem> drops;
     private final long timestamp;
     
-    private StageExcel stage; // Main battle stage
+    private BattleStage stage; // Main battle stage
     private IntList battleEvents; // TODO maybe turn it into a map?
     private Int2ObjectMap<BattleTargetList> battleTargets; // TODO use custom battle target object as value type in case we need to save battles to the db
     
@@ -67,11 +66,11 @@ public class Battle {
         this.timestamp = System.currentTimeMillis();
     }
     
-    public Battle(Player player, PlayerLineup lineup, StageExcel stage) {
+    public Battle(Player player, PlayerLineup lineup, BattleStage stage) {
         this(player, lineup, stage, true);
     }
     
-    public Battle(Player player, PlayerLineup lineup, StageExcel stage, boolean loadStage) {
+    public Battle(Player player, PlayerLineup lineup, BattleStage stage, boolean loadStage) {
         this(player, lineup);
         this.stage = stage;
         
@@ -80,11 +79,11 @@ public class Battle {
         }
     }
     
-    public Battle(Player player, PlayerLineup lineup, List<StageExcel> stages) {
+    public Battle(Player player, PlayerLineup lineup, List<? extends BattleStage> stages) {
         this(player, lineup);
         this.stage = stages.get(0);
         
-        for (StageExcel stage : stages) {
+        for (var stage : stages) {
             this.loadStage(stage);
         }
     }
@@ -105,8 +104,11 @@ public class Battle {
             }
             
             // Get stage
-            StageExcel stage = GameData.getStageExcelMap().get(npcMonster.getStageId());
-            if (stage == null) continue;
+            BattleStage stage = npcMonster.getCustomStage();
+            if (stage == null) {
+                stage = GameData.getStageExcelMap().get(npcMonster.getStageId());
+                if (stage == null) continue;
+            }
             
             // Set main battle stage if we havent already
             if (this.stage == null) {
@@ -118,11 +120,11 @@ public class Battle {
         }
     }
     
-    private void loadStage(StageExcel stage) {
+    private void loadStage(BattleStage stage) {
         this.loadStage(stage, null);
     }
     
-    private void loadStage(StageExcel stage, EntityMonster npcMonster) {
+    private void loadStage(BattleStage stage, EntityMonster npcMonster) {
         // Build monster waves
         for (IntList stageMonsterWave : stage.getMonsterWaves()) {
             // Create battle wave

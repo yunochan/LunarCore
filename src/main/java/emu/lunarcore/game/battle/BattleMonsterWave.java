@@ -1,6 +1,5 @@
 package emu.lunarcore.game.battle;
 
-import emu.lunarcore.data.excel.StageExcel;
 import emu.lunarcore.proto.SceneMonsterOuterClass.SceneMonster;
 import emu.lunarcore.proto.SceneMonsterWaveOuterClass.SceneMonsterWave;
 import it.unimi.dsi.fastutil.ints.IntArrayList;
@@ -10,13 +9,13 @@ import lombok.Setter;
 
 @Getter
 public class BattleMonsterWave {
-    private final StageExcel stage;
+    private final BattleStage stage;
     private IntList monsters;
     
     @Setter
     private int customLevel;
     
-    public BattleMonsterWave(StageExcel stage) {
+    public BattleMonsterWave(BattleStage stage) {
         this.stage = stage;
         this.monsters = new IntArrayList();
     }

@@ -69,7 +69,7 @@ public class ChallengeEntityLoader extends SceneEntityLoader {
         // Create monster from group monster info
         EntityMonster monster = new EntityMonster(scene, npcMonsterExcel, group, monsterInfo);
         monster.setEventId(challengeMonsterInfo.getEventId());
-        monster.setCustomStageId(challengeMonsterInfo.getEventId());
+        monster.setCustomStage(challengeMonsterInfo.getEventId());
         
         return monster;
     }
