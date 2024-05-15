@@ -114,6 +114,11 @@ application {
     mainClassName = 'emu.lunarcore.LunarCore'
 }
 
+run {
+    // Set the standard input to wait for user input
+    standardInput = System.in
+}
+
 jar {
 	dependsOn 'injectGitHash'
 
