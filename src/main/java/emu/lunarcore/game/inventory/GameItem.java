@@ -15,6 +15,7 @@ import emu.lunarcore.data.GameDepot;
 import emu.lunarcore.data.excel.ItemExcel;
 import emu.lunarcore.data.excel.RelicMainAffixExcel;
 import emu.lunarcore.data.excel.RelicSubAffixExcel;
+import emu.lunarcore.game.avatar.GameAvatar;
 import emu.lunarcore.game.enums.AvatarPropertyType;
 import emu.lunarcore.game.enums.ItemMainType;
 import emu.lunarcore.game.player.Player;
@@ -54,6 +55,7 @@ public class GameItem {
     private List<GameItemSubAffix> subAffixes;
 
     private int equipAvatar;
+    @Indexed private ObjectId equipAvatarId;
 
     @Deprecated
     public GameItem() {
@@ -132,7 +134,7 @@ public class GameItem {
     }
 
     public boolean isEquipped() {
-        return this.getEquipAvatar() > 0;
+        return this.getEquipAvatarId() != null;
     }
 
     public boolean isDestroyable() {
@@ -148,14 +150,20 @@ public class GameItem {
         return false;
     }
 
-    public boolean setEquipAvatar(int newEquipAvatar) {
-        if (this.equipAvatar != newEquipAvatar) {
-            this.equipAvatar = newEquipAvatar;
+    public boolean setEquipAvatar(GameAvatar avatar) {
+        if (avatar == null && this.isEquipped()) {
+            this.equipAvatarId = null;
+            this.equipAvatar = 0;
+            return true;
+        } else if (this.equipAvatarId != avatar.getId()) {
+            this.equipAvatarId = avatar.getId();
+            this.equipAvatar = 0;
             return true;
         }
+        
         return false;
     }
-
+    
     // Sub affixes
     
     public void resetSubAffixes() {

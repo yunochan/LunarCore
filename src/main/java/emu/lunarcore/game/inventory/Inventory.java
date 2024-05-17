@@ -560,44 +560,63 @@ public class Inventory extends BasePlayerManager {
 
     public void loadFromDatabase() {
         Stream<GameItem> stream = LunarCore.getGameDatabase().getObjects(GameItem.class, "ownerUid", this.getPlayer().getUid());
+        stream.forEach(this::loadItem);
+    }
+    
+    public boolean loadItem(GameItem item) {
+        // Should never happen
+        if (item.getId() == null) {
+            return false;
+        }
+        
+        // Check item owner
+        if (item.getOwnerUid() != this.getPlayer().getUid()) {
+            return false;
+        }
 
-        stream.forEach(item -> {
-            // Should never happen
-            if (item.getId() == null) {
-                return;
-            }
+        // Load item excel data
+        ItemExcel excel = GameData.getItemExcelMap().get(item.getItemId());
+        if (excel == null) {
+            // Delete item if it has no excel data
+            item.setCount(0);
+            item.save();
+            return false;
+        }
 
-            // Load item excel data
-            ItemExcel excel = GameData.getItemExcelMap().get(item.getItemId());
-            if (excel == null) {
-                // Delete item if it has no excel data
-                item.setCount(0);
+        // Set ownerships
+        item.setExcel(excel);
+
+        // Put in inventory
+        InventoryTab tab = getTabByItemType(item.getExcel().getItemMainType());
+        putItem(item, tab);
+
+        // Equip to a character if possible
+        if (item.isEquipped() || item.getEquipAvatar() > 0) {
+            GameAvatar avatar = null;
+            boolean hasEquipped = false;
+            
+            if (item.getEquipAvatar() > 0) {
+                // Legacy equip handler
+                avatar = getPlayer().getAvatars().getAvatarById(item.getEquipAvatar());
+                item.setEquipAvatar(avatar);
                 item.save();
-                return;
+            } else {
+                avatar = getPlayer().getAvatars().getAvatarById(item.getEquipAvatarId());
             }
-
-            // Set ownerships
-            item.setExcel(excel);
-
-            // Put in inventory
-            InventoryTab tab = getTabByItemType(item.getExcel().getItemMainType());
-            putItem(item, tab);
-
-            // Equip to a character if possible
-            if (item.isEquipped()) {
-                GameAvatar avatar = getPlayer().getAvatarById(item.getEquipAvatar());
-                boolean hasEquipped = false;
-
-                if (avatar != null) {
-                    hasEquipped = avatar.equipItem(item);
-                }
-
-                if (!hasEquipped) {
-                    // Unset equipped flag on item since we couldnt find an avatar to equip it to
-                    item.setEquipAvatar(0);
-                    item.save();
-                }
+            
+            // Make sure the avatar that we equipped this item to actually exists
+            if (avatar != null) {
+                hasEquipped = avatar.equipItem(item);
             }
-        });
+            
+            // Unset equipped flag on item since we couldnt find an avatar to equip it to
+            if (!hasEquipped) {
+                item.setEquipAvatar(null);
+                item.save();
+            }
+        }
+        
+        // Done
+        return true;
     }
 }

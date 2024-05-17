@@ -3,27 +3,35 @@ package emu.lunarcore.game.avatar;
 import java.util.Iterator;
 import java.util.stream.Stream;
 
+import org.bson.types.ObjectId;
+
 import emu.lunarcore.GameConstants;
 import emu.lunarcore.LunarCore;
 import emu.lunarcore.data.GameData;
 import emu.lunarcore.data.excel.AvatarExcel;
 import emu.lunarcore.data.excel.HeroExcel;
+import emu.lunarcore.game.inventory.GameItem;
 import emu.lunarcore.game.player.BasePlayerManager;
 import emu.lunarcore.game.player.Player;
 import emu.lunarcore.server.packet.send.PacketPlayerSyncScNotify;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
+import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import lombok.Getter;
 
 @Getter
 public class AvatarStorage extends BasePlayerManager implements Iterable<GameAvatar> {
     private final Int2ObjectMap<GameAvatar> avatars;
+    private final Object2ObjectMap<ObjectId, GameAvatar> avatarObjectIdMap;
+    
     private final Int2ObjectMap<AvatarHeroPath> heroPaths;
     
     public AvatarStorage(Player player) {
         super(player);
         this.avatars = new Int2ObjectOpenHashMap<>();
+        this.avatarObjectIdMap = new Object2ObjectOpenHashMap<>();
         this.heroPaths = new Int2ObjectOpenHashMap<>();
     }
 
@@ -32,11 +40,15 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
     }
 
     public GameAvatar getAvatarById(int id) {
-        if (this.getHeroPaths().containsKey(id)) {
-            id = GameConstants.TRAILBLAZER_AVATAR_ID;
+        return getAvatars().get(id);
+    }
+    
+    public GameAvatar getAvatarById(ObjectId id) {
+        if (id == null) {
+            return null;
         }
         
-        return getAvatars().get(id);
+        return getAvatarObjectIdMap().get(id);
     }
 
     public boolean hasAvatar(int id) {
@@ -56,12 +68,15 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
 
         // Set owner first
         avatar.setOwner(getPlayer());
+        
+        // Save avatar
+        avatar.save();
 
         // Put into avatar map
         this.avatars.put(avatar.getAvatarId(), avatar);
+        this.avatarObjectIdMap.put(avatar.getId(), avatar);
 
-        // Save to database and send packet
-        avatar.save();
+        // Send packet
         getPlayer().sendPacket(new PacketPlayerSyncScNotify(avatar));
         
         // Add head icon
@@ -99,7 +114,16 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
     // Database
 
     public void loadFromDatabase() {
-        // Load hero paths
+        // Load hero paths first (Important)
+        loadHeroPathsFromDatabase();
+        
+        // Load avatars
+        Stream<GameAvatar> stream = LunarCore.getGameDatabase().getObjects(GameAvatar.class, "ownerUid", this.getPlayer().getUid());
+        stream.forEach(this::loadAvatar);
+    }
+    
+    private void loadHeroPathsFromDatabase() {
+        // Get stream from database
         Stream<AvatarHeroPath> heroStream = LunarCore.getGameDatabase().getObjects(AvatarHeroPath.class, "ownerUid", this.getPlayer().getUid());
 
         heroStream.forEach(heroPath -> {
@@ -116,35 +140,59 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
         
         // Setup hero paths if they dont exist
         this.validateHeroPaths();
+    }
+    
+    public boolean loadAvatar(GameAvatar avatar) {
+        // Should never happen
+        if (avatar.getId() == null) {
+            return false;
+        }
         
-        // Load avatars
-        Stream<GameAvatar> stream = LunarCore.getGameDatabase().getObjects(GameAvatar.class, "ownerUid", this.getPlayer().getUid());
-
-        stream.forEach(avatar -> {
-            // Should never happen
-            if (avatar.getId() == null) {
-                return;
+        // Check avatar owner
+        if (avatar.getOwnerUid() != this.getPlayer().getUid()) {
+            return false;
+        }
+        
+        // Set hero path
+        if (avatar.isHero()) {
+            avatar.setHeroPath(getPlayer().getCurHeroPath());
+        } else {
+            // Load avatar excel data
+            AvatarExcel excel = GameData.getAvatarExcelMap().get(avatar.getAvatarId());
+            if (excel == null) {
+                return false;
             }
             
-            // Set hero path
-            if (avatar.isHero()) {
-                avatar.setHeroPath(getPlayer().getCurHeroPath());
-            } else {
-                // Load avatar excel data
-                AvatarExcel excel = GameData.getAvatarExcelMap().get(avatar.getAvatarId());
-                if (excel == null) {
-                    return;
-                }
-                
-                // Set ownerships
-                avatar.setExcel(excel);
-            }
-            
-            // Set ownership
-            avatar.setOwner(getPlayer());
+            // Set ownerships
+            avatar.setExcel(excel);
+        }
+        
+        // Set ownership
+        avatar.setOwner(getPlayer());
 
-            // Add to avatar storage
-            this.avatars.put(avatar.getAvatarId(), avatar);
-        });
+        // Add to avatar storage
+        this.avatars.put(avatar.getAvatarId(), avatar);
+        this.avatarObjectIdMap.put(avatar.getId(), avatar);
+        
+        // Done
+        return true;
+    }
+    
+    public GameAvatar loadAvatarByObjectId(ObjectId id) {
+        // Load hero paths first
+        if (this.getHeroPaths().size() == 0) {
+            this.loadHeroPathsFromDatabase();
+        }
+        
+        // Load avatar
+        GameAvatar avatar = LunarCore.getGameDatabase().getObjectByField(GameAvatar.class, "_id", id);
+        
+        if (this.loadAvatar(avatar)) {
+            // Load items
+            var stream = LunarCore.getGameDatabase().getObjects(GameItem.class, "equipAvatarId", id);
+            stream.forEach(this.getPlayer().getInventory()::loadItem);
+        }
+        
+        return avatar;
     }
 }

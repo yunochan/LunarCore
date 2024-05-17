@@ -135,12 +135,16 @@ public final class DatabaseManager {
         return getDatastore().find(cls).filter(Filters.eq("_id", uid)).first();
     }
 
-    public <T> T getObjectByField(Class<T> cls, String filter, String value) {
+    public <T> T getObjectByField(Class<T> cls, String filter, Object value) {
         return getDatastore().find(cls).filter(Filters.eq(filter, value)).first();
     }
 
     public <T> T getObjectByField(Class<T> cls, String filter, long value) {
         return getDatastore().find(cls).filter(Filters.eq(filter, value)).first();
+    }
+    
+    public <T> Stream<T> getObjects(Class<T> cls, String filter, Object value) {
+        return getDatastore().find(cls).filter(Filters.eq(filter, value)).stream();
     }
 
     public <T> Stream<T> getObjects(Class<T> cls, String filter, long value) {

@@ -1,5 +1,10 @@
 package emu.lunarcore.game.player;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.bson.types.ObjectId;
+
 import com.mongodb.client.model.Filters;
 
 import dev.morphia.annotations.Entity;
@@ -48,6 +53,7 @@ import emu.lunarcore.game.scene.SceneBuff;
 import emu.lunarcore.game.scene.entity.EntityProp;
 import emu.lunarcore.game.scene.entity.GameEntity;
 import emu.lunarcore.proto.BoardDataSyncOuterClass.BoardDataSync;
+import emu.lunarcore.proto.DisplayAvatarOuterClass.DisplayAvatar;
 import emu.lunarcore.proto.FriendOnlineStatusOuterClass.FriendOnlineStatus;
 import emu.lunarcore.proto.HeadIconOuterClass.HeadIcon;
 import emu.lunarcore.proto.PlatformTypeOuterClass.PlatformType;
@@ -67,6 +73,8 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import lombok.Getter;
 import lombok.Setter;
+import us.hebi.quickbuf.RepeatedInt;
+import us.hebi.quickbuf.RepeatedMessage;
 
 @Entity(value = "players", useDiscriminator = false)
 @Getter
@@ -118,6 +126,8 @@ public class Player implements Tickable {
     // Database persistent data
     private LineupManager lineupManager;
     private PlayerGachaInfo gachaInfo;
+    private List<ObjectId> assistAvatars;
+    private List<ObjectId> displayAvatars;
 
     // Instances
     @Setter private ChallengeInstance challengeInstance;
@@ -138,6 +148,8 @@ public class Player implements Tickable {
         this.curBasicType = GameConstants.TRAILBLAZER_AVATAR_ID;
         this.gender = PlayerGender.GENDER_MAN;
         this.foodBuffs = new Int2ObjectOpenHashMap<>();
+        this.assistAvatars = new ArrayList<>();
+        this.displayAvatars = new ArrayList<>();
         
         this.avatars = new AvatarStorage(this);
         this.inventory = new Inventory(this);
@@ -322,6 +334,10 @@ public class Player implements Tickable {
         }
         
         return getAvatars().getAvatarById(avatarId);
+    }
+    
+    public GameAvatar getAvatarById(ObjectId id) {
+        return getAvatars().getAvatarById(id);
     }
     
     public boolean setHeadIcon(int id) {
@@ -777,6 +793,54 @@ public class Player implements Tickable {
         // Done, return success
         return true;
     }
+    
+    public void setAssistAvatars(RepeatedInt avatars) {
+        // Check size
+        if (avatars.length() > 3) {
+            return;
+        }
+        
+        // Clear
+        this.getAssistAvatars().clear();
+        
+        // Parse list from proto
+        for (int id : avatars) {
+            GameAvatar avatar = this.getAvatarById(id);
+            if (avatar == null) continue;
+            
+            this.getAssistAvatars().add(avatar.getId());
+        }
+        
+        // Save player
+        this.save();
+    }
+    
+    public void setDisplayAvatars(RepeatedMessage<DisplayAvatar> avatars) {
+        // Check size
+        if (avatars.length() > 5) {
+            return;
+        }
+        
+        // Clear
+        this.getDisplayAvatars().clear();
+        
+        // Parse list from proto
+        for (int i = 0; i < avatars.length(); i++) {
+            var info = avatars.get(i);
+            
+            if (info.getAvatarId() > 0) {
+                GameAvatar avatar = this.getAvatarById(info.getAvatarId());
+                if (avatar == null) continue;
+                
+                this.getDisplayAvatars().add(avatar.getId());
+            } else {
+                this.getDisplayAvatars().add(null);
+            }
+        }
+        
+        // Save player
+        this.save();
+    }
 
     public void sendMessage(String message) {
         var msg = new ChatMessage(GameConstants.SERVER_CONSOLE_UID, this.getUid(), message);
@@ -933,10 +997,44 @@ public class Player implements Tickable {
                 .setLevel(this.getLevel())
                 .setWorldLevel(this.getWorldLevel())
                 .setPlatformType(PlatformType.PC)
+                .setShowDisplayAvatars(true)
                 .setHeadIcon(this.getHeadIcon());
         
         proto.getMutableRecordInfo().getMutableCollectionInfo();
         proto.getMutableDisplaySettings();
+        
+        for (int i = 0; i < this.getAssistAvatars().size(); i++) {
+            ObjectId objectId = this.getAssistAvatars().get(i);
+            
+            GameAvatar avatar = this.getAvatarById(objectId);
+            if (avatar == null && this.getSession() == null) {
+                avatar = this.getAvatars().loadAvatarByObjectId(objectId);
+            }
+            
+            if (avatar == null) continue;
+            
+            var info = avatar.toDisplayAvatarProto();
+            info.setPos(i);
+            
+            proto.addAssistAvatarList(info);
+        }
+        
+        for (int i = 0; i < this.getDisplayAvatars().size(); i++) {
+            ObjectId objectId = this.getDisplayAvatars().get(i);
+            if (objectId == null) continue;
+            
+            GameAvatar avatar = this.getAvatarById(objectId);
+            if (avatar == null && this.getSession() == null) {
+                avatar = this.getAvatars().loadAvatarByObjectId(objectId);
+            }
+            
+            if (avatar == null) continue;
+            
+            var info = avatar.toDisplayAvatarProto();
+            info.setPos(i);
+            
+            proto.addDisplayAvatarList(info);
+        }
         
         return proto;
     }
@@ -952,6 +1050,22 @@ public class Player implements Tickable {
                 .setPlatformType(PlatformType.PC)
                 .setLastActiveTime(this.getLastActiveTime())
                 .setHeadIcon(this.getHeadIcon());
+        
+        for (int i = 0; i < this.getAssistAvatars().size(); i++) {
+            ObjectId objectId = this.getAssistAvatars().get(i);
+            
+            GameAvatar avatar = this.getAvatarById(objectId);
+            if (avatar == null && this.getSession() == null) {
+                avatar = this.getAvatars().loadAvatarByObjectId(objectId);
+            }
+            
+            if (avatar == null) continue;
+            
+            var info = avatar.toAssistSimpleProto();
+            info.setPos(i);
+            
+            proto.addAssistSimpleInfo(info);
+        }
         
         return proto;
     }
