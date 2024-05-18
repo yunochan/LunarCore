@@ -1083,7 +1083,7 @@ public class Player implements Tickable {
     
     public RogueCurVirtualItemInfo getCurRogueVirtualItem() {
         var proto = RogueCurVirtualItemInfo.newInstance()
-                .setCurRogueAbilityPoint(this.getTalentPoints());
+                .setCurTalentCoin(this.getTalentPoints());
         
         if (this.getRogueInstance() != null) {
             proto.setCurRogueCoin(this.getRogueInstance().getMoney());
