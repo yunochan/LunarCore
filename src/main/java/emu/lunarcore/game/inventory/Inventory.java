@@ -591,13 +591,13 @@ public class Inventory extends BasePlayerManager {
         putItem(item, tab);
 
         // Equip to a character if possible
-        if (item.isEquipped() || item.getEquipAvatar() > 0) {
+        if (item.isEquipped() || item.getEquipAvatarExcelId() > 0) {
             GameAvatar avatar = null;
             boolean hasEquipped = false;
             
-            if (item.getEquipAvatar() > 0) {
+            if (item.getEquipAvatarExcelId() > 0) {
                 // Legacy equip handler
-                avatar = getPlayer().getAvatars().getAvatarById(item.getEquipAvatar());
+                avatar = getPlayer().getAvatars().getAvatarById(item.getEquipAvatarExcelId());
                 item.setEquipAvatar(avatar);
                 item.save();
             } else {

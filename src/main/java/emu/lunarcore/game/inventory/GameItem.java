@@ -6,9 +6,7 @@ import java.util.List;
 
 import org.bson.types.ObjectId;
 
-import dev.morphia.annotations.Entity;
-import dev.morphia.annotations.Id;
-import dev.morphia.annotations.Indexed;
+import dev.morphia.annotations.*;
 import emu.lunarcore.LunarCore;
 import emu.lunarcore.data.GameData;
 import emu.lunarcore.data.GameDepot;
@@ -54,8 +52,11 @@ public class GameItem {
     @Setter private int mainAffix;
     private List<GameItemSubAffix> subAffixes;
 
-    private int equipAvatar;
-    @Indexed private ObjectId equipAvatarId;
+    @Indexed private ObjectId equipAvatarId; // Object id of the avatar this item is equipped to
+    private transient GameAvatar equipAvatar;
+    
+    @LoadOnly @AlsoLoad("equipAvatar")
+    private int equipAvatarExcelId; // Deprecated legacy field
 
     @Deprecated
     public GameItem() {
@@ -153,11 +154,13 @@ public class GameItem {
     public boolean setEquipAvatar(GameAvatar avatar) {
         if (avatar == null && this.isEquipped()) {
             this.equipAvatarId = null;
-            this.equipAvatar = 0;
+            this.equipAvatar = null;
+            this.equipAvatarExcelId = 0; // Legacy field
             return true;
         } else if (this.equipAvatarId != avatar.getId()) {
             this.equipAvatarId = avatar.getId();
-            this.equipAvatar = 0;
+            this.equipAvatar = avatar;
+            this.equipAvatarExcelId = 0; // Legacy field
             return true;
         }
         
@@ -287,9 +290,12 @@ public class GameItem {
                 .setExp(this.getExp())
                 .setIsProtected(this.isLocked())
                 .setIsDiscarded(this.isDiscarded())
-                .setBaseAvatarId(this.getEquipAvatar())
-                .setEquipAvatarId(this.getEquipAvatar())
                 .setMainAffixId(this.mainAffix);
+        
+        if (this.getEquipAvatar() != null) {
+            proto.setBaseAvatarId(this.getEquipAvatar().getAvatarId());
+            proto.setEquipAvatarId(this.getEquipAvatar().getAvatarId());
+        }
 
         if (this.subAffixes != null) {
             for (var subAffix : this.subAffixes) {
@@ -308,9 +314,12 @@ public class GameItem {
                 .setExp(this.getExp())
                 .setIsProtected(this.isLocked())
                 .setPromotion(this.getPromotion())
-                .setRank(this.getRank())
-                .setBaseAvatarId(this.getEquipAvatar())
-                .setEquipAvatarId(this.getEquipAvatar());
+                .setRank(this.getRank());
+        
+        if (this.getEquipAvatar() != null) {
+            proto.setBaseAvatarId(this.getEquipAvatar().getAvatarId());
+            proto.setEquipAvatarId(this.getEquipAvatar().getAvatarId());
+        }
         
         return proto;
     }
