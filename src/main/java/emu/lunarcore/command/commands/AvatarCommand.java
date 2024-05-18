@@ -9,8 +9,9 @@ import emu.lunarcore.command.CommandArgs;
 import emu.lunarcore.command.CommandHandler;
 import emu.lunarcore.game.avatar.GameAvatar;
 import emu.lunarcore.server.packet.send.PacketPlayerSyncScNotify;
+import emu.lunarcore.util.Utils;
 
-@Command(label = "avatar", aliases = {"a"}, requireTarget = true, permission = "player.avatar", desc = "/avatar {cur | all | lineup} lv(level) p(ascension) r(eidolon) s(skill levels). Sets the current avatar's properties")
+@Command(label = "avatar", aliases = {"a"}, requireTarget = true, permission = "player.avatar", desc = "/avatar {cur | all | lineup} lv(level) p(ascension) e(eidolon) s(skill levels). Sets the current avatar's properties")
 public class AvatarCommand implements CommandHandler {
 
     @Override
@@ -19,17 +20,31 @@ public class AvatarCommand implements CommandHandler {
         List<GameAvatar> changeList = new ArrayList<>();
         
         // Handle optional arguments
-        switch (args.get(0).toLowerCase()) {
-        case "all":
-            args.getTarget().getAvatars().forEach(changeList::add);
-            break;
-        case "lineup":
-            args.getTarget().getCurrentLineup().forEachAvatar(changeList::add);
-            break;
-        case "cur":
-        default:
+        String arg = args.get(0).toLowerCase();
+        
+        if (arg.isBlank()) {
+            // Select current avatar if we dont specify any extra args
             changeList.add(args.getTarget().getCurrentLeaderAvatar());
-            break;
+        } else {
+            // Handle
+            switch (arg) {
+                case "all":
+                    args.getTarget().getAvatars().forEach(changeList::add);
+                    break;
+                case "lineup":
+                    args.getTarget().getCurrentLineup().forEachAvatar(changeList::add);
+                    break;
+                case "cur":
+                    changeList.add(args.getTarget().getCurrentLeaderAvatar());
+                    break;
+                default:
+                    int avatarId = Utils.parseSafeInt(arg);
+                    var avatar = args.getTarget().getAvatarById(avatarId);
+                    if (avatar != null) {
+                        changeList.add(avatar);
+                    }
+                    break;
+            }
         }
         
         // Try to set properties of avatars
