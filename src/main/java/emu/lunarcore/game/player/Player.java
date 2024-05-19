@@ -901,6 +901,17 @@ public class Player implements Tickable {
             this.enterScene(GameConstants.START_ENTRY_ID, 0, false);
         }
         
+        // Make sure the current lineup's leader exists
+        var lineup = this.getCurrentLineup();
+        if (lineup.size() == 0) {
+            lineup.getAvatars().add(GameConstants.TRAILBLAZER_AVATAR_ID);
+            lineup.setLeader(0);
+            lineup.save();
+        } else if (lineup.getLeader() >= lineup.size()) {
+            lineup.setLeader(0);
+            lineup.save();
+        }
+        
         // Sanity check lineup to prevent the player from getting stuck in a loading screen if they loaded into the game with an avatar that had 0 hp
         var leader = this.getCurrentLeaderAvatar();
         if (leader != null && leader.getCurrentHp(this.getCurrentLineup()) <= 0) {
