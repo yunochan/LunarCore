@@ -70,6 +70,12 @@ public class GameServer extends KcpServer {
     public GameServerConfig getServerConfig() {
         return this.serverConfig;
     }
+    
+    public int getPlayerCount() {
+        synchronized (this.players) {
+            return this.players.size();
+        }
+    }
 
     public void registerPlayer(Player player) {
         synchronized (this.players) {

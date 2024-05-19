@@ -226,7 +226,7 @@ public class LunarCore {
         return "";
     }
 
-    private static String getGitHash() {
+    public static String getGitHash() {
         // Use a string builder in case one of the build config fields are missing
         StringBuilder builder = new StringBuilder();
         
@@ -246,7 +246,7 @@ public class LunarCore {
         }
         
         if (builder.isEmpty()) {
-            return "";
+            return "UNKNOWN";
         } else {
             return builder.toString();
         }
@@ -273,6 +273,14 @@ public class LunarCore {
         } else {
             timeOffset = 0;
         }
+    }
+    
+    /**
+     * Returns the memory usage of the server, in megabytes.
+     */
+    public static long getMemoryUsage() {
+        Runtime runtime = Runtime.getRuntime();
+        return (runtime.totalMemory() - runtime.freeMemory()) / 1_048_576L;
     }
 
     // Server console
