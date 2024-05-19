@@ -580,6 +580,18 @@ public class InventoryService extends BaseGameService {
         return player.getInventory().addItems(returnItems);
     }
     
+    public boolean destroyItem(Player player, int itemId, int count) {
+        // Sanity check
+        if (count <= 0) return true;
+        
+        // Remove items from inventory
+        if (player.getInventory().removePileItem(itemId, count)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     public List<GameItem> composeItem(Player player, int composeId, int count, List<ItemParam> costItems) {
         // Sanity check
         if (count <= 0) return null;
