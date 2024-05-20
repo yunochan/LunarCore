@@ -11,6 +11,7 @@ public class ReloadCommand implements CommandHandler {
     @Override
     public void execute(CommandArgs args) {
         LunarCore.loadConfig();
+        LunarCore.loadHotfixData();
         args.sendMessage("Reloaded the server config");
     }
 

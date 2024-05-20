@@ -25,7 +25,6 @@ public class Config {
     public ServerTime serverTime = new ServerTime();
     public ServerRates serverRates = new ServerRates();
     public LogOptions logOptions = new LogOptions();
-    public DownloadData downloadData = new DownloadData();
 
     public String resourceDir = "./resources";
     public String dataDir = "./data";
@@ -192,14 +191,6 @@ public class Config {
         public boolean connections = true;
         public boolean packets = false;
         public boolean filterLoopingPackets = false;
-    }
-    
-    @Getter
-    public static class DownloadData {
-        public String assetBundleUrl = null;
-        public String exResourceUrl = null;
-        public String luaUrl = null;
-        public String ifixUrl = null;
     }
 
     public void validate() {
