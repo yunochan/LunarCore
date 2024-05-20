@@ -86,7 +86,7 @@ public class CommandManager {
      * @param command
      * @return true if the sender has permission to use this command
      */
-    private boolean checkPermission(Player sender, Command command) {
+    public boolean checkPermission(Player sender, Command command) {
         if (sender == null || command.permission().isEmpty()) {
             return true;
         }
