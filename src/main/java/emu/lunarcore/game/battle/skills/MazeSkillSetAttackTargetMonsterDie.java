@@ -25,7 +25,7 @@ public class MazeSkillSetAttackTargetMonsterDie extends MazeSkillAction {
                 // Rogue TODO optimize
                 if (caster.getOwner().getRogueInstance() != null) {
                     caster.getOwner().getRogueInstance().createBuffSelect(1);
-                    caster.getOwner().getRogueInstance().addMoney(Utils.randomRange(20, 40));
+                    caster.getOwner().getRogueInstance().addCoin(Utils.randomRange(20, 40));
                 }
             }
         }

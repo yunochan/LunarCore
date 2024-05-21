@@ -74,7 +74,7 @@ public class RogueEntityLoader extends SceneEntityLoader {
         PropState state = propInfo.getState();
         PropRogueData propExtra = null;
         
-        // Rogue Door id is 1000
+        // Rogue portal id is 1000
         if (propId == 1000 || propId == 1021 || propId == 1022 || propId == 1023) {
             // Site index
             int index = 0;
@@ -101,13 +101,18 @@ public class RogueEntityLoader extends SceneEntityLoader {
                 propId = 1000;
             }
 
-            // Force rogue door to be open
+            // Force rogue portal to always be open, even if occurrences or monsters exist in the scene. TODO handle correctly
             state = PropState.Open;
         }
         
         // Get prop excel
         PropExcel propExcel = GameData.getPropExcelMap().get(propId);
         if (propExcel == null) return null;
+        
+        // Hacky fix to always open doors
+        if (propExcel.isDoor()) {
+            state = PropState.Open;
+        }
         
         // Create prop from prop info
         EntityProp prop = new EntityProp(scene, propExcel, group, propInfo);

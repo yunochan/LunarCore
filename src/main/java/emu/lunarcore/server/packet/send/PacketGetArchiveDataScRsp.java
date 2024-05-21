@@ -1,9 +1,6 @@
 package emu.lunarcore.server.packet.send;
 
-import java.util.stream.Collectors;
-
 import emu.lunarcore.data.GameData;
-import emu.lunarcore.data.excel.RelicExcel;
 import emu.lunarcore.proto.GetArchiveDataScRspOuterClass.GetArchiveDataScRsp;
 import emu.lunarcore.proto.MonsterArchiveOuterClass.MonsterArchive;
 import emu.lunarcore.proto.RelicArchiveOuterClass.RelicArchive;

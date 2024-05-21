@@ -2,12 +2,12 @@ package emu.lunarcore.game.rogue;
 
 import java.util.*;
 
+import emu.lunarcore.GameConstants;
 import emu.lunarcore.data.GameData;
 import emu.lunarcore.data.config.AnchorInfo;
 import emu.lunarcore.data.excel.*;
 import emu.lunarcore.game.battle.Battle;
 import emu.lunarcore.game.enums.RogueBuffAeonType;
-import emu.lunarcore.game.inventory.GameItem;
 import emu.lunarcore.game.player.Player;
 import emu.lunarcore.game.player.lineup.PlayerLineup;
 import emu.lunarcore.proto.AvatarTypeOuterClass.AvatarType;
@@ -67,7 +67,7 @@ public class RogueInstance {
     private int aeonId;
     private int aeonBuffType;
     private int maxAeonBuffs;
-    private int money;  // universal debris
+    private int coin;  // universal debris
     public int actionUniqueId = 0;
     public int eventUniqueId = 690;
     public Int2ObjectMap<List<RogueDialogueEventParam>> curDialogueParams = new Int2ObjectOpenHashMap<>();
@@ -90,7 +90,7 @@ public class RogueInstance {
         this.buffs = new HashMap<>();
         this.miracles = new HashMap<>();
         this.maxAeonBuffs = 4;
-        this.money = 100;
+        this.coin = 100;
         this.eventManager = new RogueEventManager(this);
         
         if (aeonExcel != null) {
@@ -231,9 +231,9 @@ public class RogueInstance {
     }
     
     public synchronized RogueBuffSelectMenu rollBuffSelect() {
-        if (getBuffSelect() != null && getBuffSelect().hasRerolls() && money >= 30) {
+        if (getBuffSelect() != null && getBuffSelect().hasRerolls() && coin >= 30) {
             this.getBuffSelect().reroll();
-            this.setMoney(money - 30);
+            this.removeCoin(30);
             this.getPlayer().sendPacket(new PacketHandleRogueCommonPendingActionScRsp(this.getBuffSelect().toProto(), this.actionUniqueId - 2));
             
             var proto = new PacketSyncRogueCommonPendingActionScNotify(this.buffSelect.toProto(), this.actionUniqueId);
@@ -301,8 +301,8 @@ public class RogueInstance {
         var buff = this.getBuffs().get(buffId);
         if (buff == null) return null;
         var cost = 100 + (buff.getExcel().getRogueBuffRarity() - 1) * 30;
-        if (this.getMoney() < cost) return null;
-        this.setMoney(this.getMoney() - cost);
+        if (this.getCoin() < cost) return null;
+        this.removeCoin(cost);
         this.getBuffs().remove(buffId);
         this.addBuff(new RogueBuffData(buff.getId(), buff.getLevel() + 1), RogueBuffSource.ROGUE_BUFF_SOURCE_TYPE_ENHANCE);
         return RogueBuff.newInstance()
@@ -411,28 +411,25 @@ public class RogueInstance {
         return bonus;
     }
     
-    public synchronized void setMoney(int money) {
-        if (this.money <= money) {
-            this.getPlayer().sendPacket(new PacketScenePlaneEventScNotify(new GameItem(31, money - this.money)));
-        }
-        this.money = money;
+    /**
+     * Sets the amount of coins the player has without showing any tooltip
+     */
+    public synchronized void setCoin(int amount) {
+        this.coin = Math.max(amount, 0);
         this.getPlayer().sendPacket(new PacketSyncRogueVirtualItemInfoScNotify(this.getPlayer()));
     }
     
-    public synchronized void addMoney(int amount) {
-        this.setMoney(this.money + amount);
+    public void addCoin(int count) {
+        this.getPlayer().getInventory().addItem(GameConstants.ROGUE_COIN_ID, count, true);
     }
     
-    public synchronized void addDialogueMoney(int money) {
-        this.money += money;
-        this.getPlayer().sendPacket(new PacketSyncRogueVirtualItemInfoScNotify(this.getPlayer()));
-        this.getPlayer().sendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueBuffSource.ROGUE_BUFF_SOURCE_TYPE_DIALOGUE, money));
+    public void removeCoin(int count) {
+        this.getPlayer().getInventory().addItem(GameConstants.ROGUE_COIN_ID, -count, true);
     }
-
-    public synchronized void addCommandMoney(int money_num) {
-        this.money += money_num;
-        this.getPlayer().sendPacket(new PacketSyncRogueVirtualItemInfoScNotify(this.getPlayer()));
-        this.getPlayer().sendPacket(new PacketScenePlaneEventScNotify(new GameItem(31, money)));
+    
+    public void addDialogueCoin(int count) {
+        this.addCoin(count);
+        this.getPlayer().sendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueBuffSource.ROGUE_BUFF_SOURCE_TYPE_DIALOGUE, count));
     }
     
     public synchronized void pickAvatar(RepeatedInt avatarId) {
@@ -600,7 +597,7 @@ public class RogueInstance {
                 } else {
                     this.createBuffSelect(amount);
                 }
-                this.addMoney(Utils.randomRange(20, 40) * amount);
+                this.addCoin(Utils.randomRange(20, 40) * amount);
             }
         } else {
             this.getPlayer().getRogueManager().quitRogue();
@@ -736,7 +733,7 @@ public class RogueInstance {
     
     public RogueVirtualItemInfo toRogueVirtualItemProto() {
         var proto = RogueVirtualItemInfo.newInstance()
-                .setRogueCoin(this.getMoney());
+                .setRogueCoin(this.getCoin());
         
         return proto;
     }

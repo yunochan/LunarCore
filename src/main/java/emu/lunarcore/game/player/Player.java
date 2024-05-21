@@ -1097,7 +1097,7 @@ public class Player implements Tickable {
                 .setCurTalentCoin(this.getTalentPoints());
         
         if (this.getRogueInstance() != null) {
-            proto.setCurRogueCoin(this.getRogueInstance().getMoney());
+            proto.setCurRogueCoin(this.getRogueInstance().getCoin());
         }
         
         return proto;

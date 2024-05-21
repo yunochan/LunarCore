@@ -102,21 +102,29 @@ public class Inventory extends BasePlayerManager {
     // Add/Remove items
 
     public boolean addItem(int itemId, int count) {
+        return addItem(itemId, count, false);
+    }
+    
+    public boolean addItem(int itemId, int count, boolean showHint) {
         ItemExcel itemExcel = GameData.getItemExcelMap().get(itemId);
 
         if (itemExcel == null) {
             return false;
         }
         
-        return addItem(itemExcel, count);
+        return addItem(itemExcel, count, showHint);
     }
     
-    public boolean addItem(ItemExcel itemExcel, int count) {
+    public boolean addItem(ItemExcel itemExcel, int count, boolean showHint) {
         GameItem item = new GameItem(itemExcel, count);
-        return addItem(item);
+        return addItem(item, showHint);
+    }
+    
+    public boolean addItem(GameItem item) {
+        return addItem(item, false);
     }
 
-    public boolean addItem(GameItem item) {
+    public boolean addItem(GameItem item, boolean showHint) {
         // Set excel in case its missing
         if (item.getExcel() == null) {
             item.setExcel(GameData.getItemExcelMap().get(item.getItemId()));
@@ -126,7 +134,15 @@ public class Inventory extends BasePlayerManager {
         GameItem result = putItem(item);
 
         if (result != null) {
-            getPlayer().sendPacket(new PacketPlayerSyncScNotify(result));
+            // Send packets
+            if (item.getExcel().getItemMainType().getTabType() != InventoryTabType.NONE) {
+                getPlayer().sendPacket(new PacketPlayerSyncScNotify(result));
+            }
+            if (showHint) {
+                getPlayer().sendPacket(new PacketScenePlaneEventScNotify(item));
+            }
+            
+            // Success
             return true;
         }
 
@@ -296,24 +312,29 @@ public class Inventory extends BasePlayerManager {
 
     private void addVirtualItem(int itemId, int count) {
         switch (itemId) {
-        case 1: // Stellar Jade
-            getPlayer().addHCoin(count);
-            break;
-        case 2: // Credit
-            getPlayer().addSCoin(count);
-            break;
-        case 3: // Oneiric Shard
-            getPlayer().addMCoin(count);
-            break;
-        case 11: // Trailblaze Power
-            getPlayer().addStamina(count);
-            break;
-        case 22: // Trailblaze EXP
-            getPlayer().addExp(count);
-            break;
-        case GameConstants.ROGUE_TALENT_POINT_ITEM_ID: // Rogue talent points
-            getPlayer().addTalentPoints(count);
-            break;
+            case 1: // Stellar Jade
+                getPlayer().addHCoin(count);
+                break;
+            case 2: // Credit
+                getPlayer().addSCoin(count);
+                break;
+            case 3: // Oneiric Shard
+                getPlayer().addMCoin(count);
+                break;
+            case 11: // Trailblaze Power
+                getPlayer().addStamina(count);
+                break;
+            case 22: // Trailblaze EXP
+                getPlayer().addExp(count);
+                break;
+            case GameConstants.ROGUE_TALENT_COIN_ID: // Rogue talent points
+                getPlayer().addTalentPoints(count);
+                break;
+            case GameConstants.ROGUE_COIN_ID:
+                if (getPlayer().getRogueInstance() != null) {
+                    getPlayer().getRogueInstance().setCoin(getPlayer().getRogueInstance().getCoin() + count);
+                }
+                break;
         }
     }
     
@@ -341,7 +362,7 @@ public class Inventory extends BasePlayerManager {
                     // Remove credits
                     getPlayer().addHCoin(-param.getCount() * multiplier);
                     continue;
-                } else if (param.getId() == GameConstants.ROGUE_TALENT_POINT_ITEM_ID) {
+                } else if (param.getId() == GameConstants.ROGUE_TALENT_COIN_ID) {
                     // Remove credits
                     getPlayer().addTalentPoints(-param.getCount() * multiplier);
                     continue;
@@ -469,7 +490,7 @@ public class Inventory extends BasePlayerManager {
                 if (!verifyHcoin(param.getCount() * multiplier)) {
                     return false;
                 }
-            } else if (param.getId() == GameConstants.ROGUE_TALENT_POINT_ITEM_ID) {
+            } else if (param.getId() == GameConstants.ROGUE_TALENT_COIN_ID) {
                 return this.getPlayer().getTalentPoints() >= param.getCount() * multiplier;
             } else {
                 // Check param items

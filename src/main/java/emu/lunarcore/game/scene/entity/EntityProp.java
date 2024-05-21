@@ -3,6 +3,7 @@ package emu.lunarcore.game.scene.entity;
 import emu.lunarcore.data.config.GroupInfo;
 import emu.lunarcore.data.config.PropInfo;
 import emu.lunarcore.data.excel.PropExcel;
+import emu.lunarcore.game.enums.PlaneType;
 import emu.lunarcore.game.enums.PropState;
 import emu.lunarcore.game.enums.PropType;
 import emu.lunarcore.game.scene.Scene;
@@ -12,6 +13,7 @@ import emu.lunarcore.proto.SceneEntityInfoOuterClass.SceneEntityInfo;
 import emu.lunarcore.proto.ScenePropInfoOuterClass.ScenePropInfo;
 import emu.lunarcore.server.packet.send.PacketSceneGroupRefreshScNotify;
 import emu.lunarcore.util.Position;
+import emu.lunarcore.util.Utils;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -91,6 +93,11 @@ public class EntityProp implements GameEntity {
             scene.getPlayer().getCurrentLineup().addMp(2);
         } else if (excel.isRecoverHp()) {
             scene.getPlayer().getCurrentLineup().heal(2500, false);
+        } else {
+            // Add SU coins if prop isnt a healing/technique restore prop
+            if (scene.getPlaneType() == PlaneType.Rogue && scene.getPlayer().getRogueInstance() != null) {
+                scene.getPlayer().getRogueInstance().addCoin(Utils.randomRange(10, 15) * 2);
+            }
         }
     }
 

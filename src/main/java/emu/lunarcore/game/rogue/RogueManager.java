@@ -26,6 +26,7 @@ import emu.lunarcore.server.packet.CmdId;
 import emu.lunarcore.server.packet.send.PacketLeaveRogueScRsp;
 import emu.lunarcore.server.packet.send.PacketStartRogueScRsp;
 import emu.lunarcore.server.packet.send.PacketSyncRogueFinishScNotify;
+import emu.lunarcore.server.packet.send.PacketSyncRogueVirtualItemInfoScNotify;
 import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
 import it.unimi.dsi.fastutil.ints.IntSet;
 import lombok.Getter;
@@ -129,6 +130,7 @@ public class RogueManager extends BasePlayerManager {
         
         // Done
         getPlayer().sendPacket(new PacketStartRogueScRsp(getPlayer()));
+        getPlayer().sendPacket(new PacketSyncRogueVirtualItemInfoScNotify(getPlayer())); // Hacky fix to show coin amount
     }
     
     public void leaveRogue() {

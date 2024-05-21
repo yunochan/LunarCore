@@ -57,7 +57,9 @@ public class GameConstants {
     // Rogue
     public static final boolean ENABLE_ROGUE = true;
     public static final int ROGUE_ENTRANCE = 801120102;
-    public static final int ROGUE_TALENT_POINT_ITEM_ID = 32;
+    public static final int ROGUE_START_COIN_COUNT = 100;
+    public static final int ROGUE_COIN_ID = 31;
+    public static final int ROGUE_TALENT_COIN_ID = 32;
     
     // Activity
     public static final int[] ENABLE_ACTIVITY_TYPES = { 18, 34 };

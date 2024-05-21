@@ -27,7 +27,7 @@ public class RogueEventManager {
         IntArrayList param = event.getRogueEffectParamList();
         
         switch (event.getRogueEffectType()) {
-            case GetItem -> rogueInstance.addDialogueMoney(param.getInt(1));
+            case GetItem -> rogueInstance.addDialogueCoin(param.getInt(1));
             case TriggerBattle -> {
                 this.getPlayer().getServer().getBattleService().startBattle(player, param.getInt(0)); // handle in SceneEnterStageCsReq
             }
@@ -84,7 +84,7 @@ public class RogueEventManager {
             case GetAllRogueBuffInGroupAndGetItem -> {
                 var rogueBuff = GameData.getRogueBuffGroupExcelMap().get(param.getInt(0));
                 this.getRogueInstance().addBuff(rogueBuff.getRogueBuffList());
-                this.getRogueInstance().addDialogueMoney(param.getInt(2));
+                this.getRogueInstance().addDialogueCoin(param.getInt(2));
             }
             case RepeatableGamble -> {
                 var failEventId = param.getInt(0);
@@ -149,8 +149,8 @@ public class RogueEventManager {
         if (event == null || event.getCostType() == null) return;
         var param = event.getCostParamList();
         switch (event.getCostType()) {
-            case CostItemValue -> rogueInstance.setMoney(rogueInstance.getMoney() - param.getInt(1));
-            case CostItemPercent -> rogueInstance.setMoney(rogueInstance.getMoney() - (rogueInstance.getMoney() * param.getInt(1) / 100));
+            case CostItemValue -> rogueInstance.removeCoin(param.getInt(1));
+            case CostItemPercent -> rogueInstance.removeCoin(rogueInstance.getCoin() * param.getInt(1) / 100);
             case CostHpCurrentPercent -> {
                 var lineup = this.getPlayer().getCurrentLineup();
                 lineup.forEachAvatar(avatar -> {
