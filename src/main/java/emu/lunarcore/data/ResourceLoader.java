@@ -366,7 +366,10 @@ public class ResourceLoader {
 
     private static void loadRogueMapGen() {
         File file = new File(LunarCore.getConfig().getDataDir() + "/RogueMapGen.json");
-        if (!file.exists()) return;
+        if (!file.exists()) {
+            LunarCore.getLogger().warn("RogueMapGen not found in data folder. Simulated universe will not work.");
+            return;
+        }
 
         try (FileReader reader = new FileReader(file)) {
             Map<Integer, int[]> rogue = gson.fromJson(reader, TypeToken.getParameterized(Map.class, Integer.class, int[].class).getType());

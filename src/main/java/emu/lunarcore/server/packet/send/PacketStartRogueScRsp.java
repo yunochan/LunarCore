@@ -4,20 +4,22 @@ import emu.lunarcore.game.player.Player;
 import emu.lunarcore.proto.StartRogueScRspOuterClass.StartRogueScRsp;
 import emu.lunarcore.server.packet.BasePacket;
 import emu.lunarcore.server.packet.CmdId;
-import lombok.SneakyThrows;
 
 public class PacketStartRogueScRsp extends BasePacket {
 
     public PacketStartRogueScRsp() {
+        this(1);
+    }
+    
+    public PacketStartRogueScRsp(int retcode) {
         super(CmdId.StartRogueScRsp);
         
         var data = StartRogueScRsp.newInstance()
-                .setRetcode(1);
+                .setRetcode(retcode);
         
         this.setData(data);
     }
     
-    @SneakyThrows
     public PacketStartRogueScRsp(Player player) {
         super(CmdId.StartRogueScRsp);
 

@@ -23,6 +23,7 @@ import emu.lunarcore.proto.RogueTalentInfoOuterClass.RogueTalentInfo;
 import emu.lunarcore.proto.RogueTalentOuterClass.RogueTalent;
 import emu.lunarcore.proto.RogueTalentStatusOuterClass.RogueTalentStatus;
 import emu.lunarcore.server.packet.CmdId;
+import emu.lunarcore.server.packet.Retcode;
 import emu.lunarcore.server.packet.send.PacketLeaveRogueScRsp;
 import emu.lunarcore.server.packet.send.PacketStartRogueScRsp;
 import emu.lunarcore.server.packet.send.PacketSyncRogueFinishScNotify;
@@ -71,6 +72,12 @@ public class RogueManager extends BasePlayerManager {
     }
     
     public void startRogue(int areaId, int aeonId, RepeatedInt avatarIdList) {
+        // Check if map gen is loaded
+        if (GameDepot.getRogueMapGen().size() == 0) {
+            getPlayer().sendPacket(new PacketStartRogueScRsp(Retcode.ROGUE_AREA_INVALID.getVal()));
+            return;
+        }
+        
         // Make sure player already isnt in a rogue instance
         if (getPlayer().getRogueInstance() != null) {
             getPlayer().sendPacket(new PacketStartRogueScRsp());
