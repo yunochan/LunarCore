@@ -108,18 +108,6 @@ public final class PluginManager {
                     return;
                 }
 
-                // Load all classes in the plugin's JAR file.
-                var pluginJar = new JarFile(pluginFile);
-                var entries = pluginJar.entries();
-                while (entries.hasMoreElements()) {
-                    var entry = entries.nextElement();
-                    if (entry.isDirectory() || !entry.getName().endsWith(".class")) continue;
-
-                    var className = entry.getName().substring(0, entry.getName().length() - 6);
-                    className = className.replace('/', '.');
-                    classLoader.loadClass(className);
-                }
-
                 // Instantiate the plugin.
                 var pluginClass = classLoader.loadClass(pluginConfig.mainClass());
                 var pluginInstance = (Plugin) pluginClass.getDeclaredConstructor(
