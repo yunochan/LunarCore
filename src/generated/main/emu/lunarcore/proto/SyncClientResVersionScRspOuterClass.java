@@ -19,12 +19,12 @@ public final class SyncClientResVersionScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 client_res_version = 6;</code>
+     * <code>optional uint32 client_res_version = 2;</code>
      */
     private int clientResVersion;
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 5;</code>
      */
     private int retcode;
 
@@ -39,7 +39,7 @@ public final class SyncClientResVersionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_res_version = 6;</code>
+     * <code>optional uint32 client_res_version = 2;</code>
      * @return whether the clientResVersion field is set
      */
     public boolean hasClientResVersion() {
@@ -47,7 +47,7 @@ public final class SyncClientResVersionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_res_version = 6;</code>
+     * <code>optional uint32 client_res_version = 2;</code>
      * @return this
      */
     public SyncClientResVersionScRsp clearClientResVersion() {
@@ -57,7 +57,7 @@ public final class SyncClientResVersionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_res_version = 6;</code>
+     * <code>optional uint32 client_res_version = 2;</code>
      * @return the clientResVersion
      */
     public int getClientResVersion() {
@@ -65,7 +65,7 @@ public final class SyncClientResVersionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_res_version = 6;</code>
+     * <code>optional uint32 client_res_version = 2;</code>
      * @param value the clientResVersion to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class SyncClientResVersionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -84,7 +84,7 @@ public final class SyncClientResVersionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @return this
      */
     public SyncClientResVersionScRsp clearRetcode() {
@@ -94,7 +94,7 @@ public final class SyncClientResVersionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -102,7 +102,7 @@ public final class SyncClientResVersionScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class SyncClientResVersionScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(clientResVersion);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(retcode);
       }
     }
@@ -205,16 +205,16 @@ public final class SyncClientResVersionScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 48: {
+          case 16: {
             // clientResVersion
             clientResVersion = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 112) {
+            if (tag != 40) {
               break;
             }
           }
-          case 112: {
+          case 40: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000002;

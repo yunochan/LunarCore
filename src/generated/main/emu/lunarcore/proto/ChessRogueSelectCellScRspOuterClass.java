@@ -19,12 +19,12 @@ public final class ChessRogueSelectCellScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 4;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 cell_id = 12;</code>
+     * <code>optional uint32 cell_id = 14;</code>
      */
     private int cellId;
 
@@ -39,7 +39,7 @@ public final class ChessRogueSelectCellScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 4;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -47,7 +47,7 @@ public final class ChessRogueSelectCellScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 4;</code>
      * @return this
      */
     public ChessRogueSelectCellScRsp clearRetcode() {
@@ -57,7 +57,7 @@ public final class ChessRogueSelectCellScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 4;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -65,7 +65,7 @@ public final class ChessRogueSelectCellScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
+     * <code>optional uint32 retcode = 4;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class ChessRogueSelectCellScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 cell_id = 12;</code>
+     * <code>optional uint32 cell_id = 14;</code>
      * @return whether the cellId field is set
      */
     public boolean hasCellId() {
@@ -84,7 +84,7 @@ public final class ChessRogueSelectCellScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 cell_id = 12;</code>
+     * <code>optional uint32 cell_id = 14;</code>
      * @return this
      */
     public ChessRogueSelectCellScRsp clearCellId() {
@@ -94,7 +94,7 @@ public final class ChessRogueSelectCellScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 cell_id = 12;</code>
+     * <code>optional uint32 cell_id = 14;</code>
      * @return the cellId
      */
     public int getCellId() {
@@ -102,7 +102,7 @@ public final class ChessRogueSelectCellScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 cell_id = 12;</code>
+     * <code>optional uint32 cell_id = 14;</code>
      * @param value the cellId to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class ChessRogueSelectCellScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(cellId);
       }
     }
@@ -205,16 +205,16 @@ public final class ChessRogueSelectCellScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
+          case 32: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 96) {
+            if (tag != 112) {
               break;
             }
           }
-          case 96: {
+          case 112: {
             // cellId
             cellId = input.readUInt32();
             bitField0_ |= 0x00000002;

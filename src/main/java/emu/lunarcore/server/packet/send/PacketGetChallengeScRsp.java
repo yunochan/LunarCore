@@ -2,6 +2,7 @@ package emu.lunarcore.server.packet.send;
 
 import emu.lunarcore.LunarCore;
 import emu.lunarcore.data.GameData;
+import emu.lunarcore.game.challenge.ChallengeType;
 import emu.lunarcore.game.player.Player;
 import emu.lunarcore.proto.ChallengeOuterClass.Challenge;
 import emu.lunarcore.proto.GetChallengeScRspOuterClass.GetChallengeScRsp;
@@ -19,12 +20,23 @@ public class PacketGetChallengeScRsp extends BasePacket {
             // Add all challenge excels to our challenge list
             // TODO find out which challenge groups are active so we dont have to send old challenge ids to the client
             for (var challengeExcel : GameData.getChallengeExcelMap().values()) {
+                // Get challenge history
                 var history = player.getChallengeManager().getHistory().get(challengeExcel.getId());
                 
                 if (history != null) {
                     data.addChallengeList(history.toProto());
                 } else {
-                    data.addChallengeList(Challenge.newInstance().setChallengeId(challengeExcel.getId()));
+                    // Create fake completed challenge proto
+                    var proto = Challenge.newInstance().setChallengeId(challengeExcel.getId());
+                    
+                    // Skip boss challenges for now TODO
+                    if (challengeExcel.getType() == ChallengeType.BOSS) {
+                        var boss = proto.getMutableExtInfo().getMutableBossInfo();
+                        boss.getMutableFirstNode();
+                        boss.getMutableSecondNode();
+                    }
+                    
+                    data.addChallengeList(proto);
                 }
             }
         } else {

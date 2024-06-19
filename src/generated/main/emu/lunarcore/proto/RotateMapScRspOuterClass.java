@@ -19,17 +19,17 @@ public final class RotateMapScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 13;</code>
+     * <code>optional uint32 retcode = 1;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 11;</code>
      */
     private int clientPosVersion;
 
     /**
-     * <code>optional .MotionInfo motion = 10;</code>
+     * <code>optional .MotionInfo motion = 6;</code>
      */
     private final MotionInfoOuterClass.MotionInfo motion = MotionInfoOuterClass.MotionInfo.newInstance();
 
@@ -44,7 +44,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 13;</code>
+     * <code>optional uint32 retcode = 1;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -52,7 +52,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 13;</code>
+     * <code>optional uint32 retcode = 1;</code>
      * @return this
      */
     public RotateMapScRsp clearRetcode() {
@@ -62,7 +62,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 13;</code>
+     * <code>optional uint32 retcode = 1;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -70,7 +70,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 13;</code>
+     * <code>optional uint32 retcode = 1;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -81,7 +81,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 11;</code>
      * @return whether the clientPosVersion field is set
      */
     public boolean hasClientPosVersion() {
@@ -89,7 +89,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 11;</code>
      * @return this
      */
     public RotateMapScRsp clearClientPosVersion() {
@@ -99,7 +99,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 11;</code>
      * @return the clientPosVersion
      */
     public int getClientPosVersion() {
@@ -107,7 +107,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 11;</code>
      * @param value the clientPosVersion to set
      * @return this
      */
@@ -118,7 +118,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional .MotionInfo motion = 10;</code>
+     * <code>optional .MotionInfo motion = 6;</code>
      * @return whether the motion field is set
      */
     public boolean hasMotion() {
@@ -126,7 +126,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional .MotionInfo motion = 10;</code>
+     * <code>optional .MotionInfo motion = 6;</code>
      * @return this
      */
     public RotateMapScRsp clearMotion() {
@@ -136,7 +136,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional .MotionInfo motion = 10;</code>
+     * <code>optional .MotionInfo motion = 6;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -150,7 +150,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional .MotionInfo motion = 10;</code>
+     * <code>optional .MotionInfo motion = 6;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -164,7 +164,7 @@ public final class RotateMapScRspOuterClass {
     }
 
     /**
-     * <code>optional .MotionInfo motion = 10;</code>
+     * <code>optional .MotionInfo motion = 6;</code>
      * @param value the motion to set
      * @return this
      */
@@ -246,15 +246,15 @@ public final class RotateMapScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 104);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(clientPosVersion);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 82);
+        output.writeRawByte((byte) 50);
         output.writeMessageNoTag(motion);
       }
     }
@@ -281,25 +281,25 @@ public final class RotateMapScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 104: {
+          case 8: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 88) {
               break;
             }
           }
-          case 120: {
+          case 88: {
             // clientPosVersion
             clientPosVersion = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 82) {
+            if (tag != 50) {
               break;
             }
           }
-          case 82: {
+          case 50: {
             // motion
             input.readMessage(motion);
             bitField0_ |= 0x00000004;

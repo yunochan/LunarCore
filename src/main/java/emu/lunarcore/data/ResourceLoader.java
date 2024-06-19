@@ -207,15 +207,15 @@ public class ResourceLoader {
         }
     }
 
-    // Might be better to cache
+ // Might be better to cache
     private static void loadFloorInfos() {
         // Load floor infos
         LunarCore.getLogger().info("Loading floor infos... this may take a while.");
-        File floorDir = new File(LunarCore.getConfig().getResourceDir() + "/Config/LevelOutput/Floor/");
+        File floorDir = new File(LunarCore.getConfig().getResourceDir() + "/Config/LevelOutput/RuntimeFloor/");
         boolean missingGroupInfos = false;
 
         if (!floorDir.exists()) {
-            LunarCore.getLogger().warn("Floor infos are missing, please check your resources folder: {resources}/Config/LevelOutput/Floor. Teleports and natural world spawns may not work!");
+            LunarCore.getLogger().warn("Floor infos are missing, please check your resources folder: {resources}/Config/LevelOutput/RuntimeFloor. Teleports and natural world spawns may not work!");
             return;
         }
 
@@ -247,6 +247,7 @@ public class ResourceLoader {
                     GroupInfo group = gson.fromJson(reader, GroupInfo.class);
                     group.setId(simpleGroup.getID());
                     
+                    floor.getGroupList().add(group);
                     floor.getGroups().put(simpleGroup.getID(), group);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -265,7 +266,7 @@ public class ResourceLoader {
         
         // Notify the server owner if we are missing any files
         if (missingGroupInfos) {
-            LunarCore.getLogger().warn("Group infos are missing, please check your resources folder: {resources}/Config/LevelOutput/Group. Teleports, monster battles, and natural world spawns may not work!");
+            LunarCore.getLogger().warn("Group infos are missing, please check your resources folder: {resources}/Config/LevelOutput/SharedRuntimeGroup. Teleports, monster battles, and natural world spawns may not work!");
         }
         
         // Done

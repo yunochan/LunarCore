@@ -20,52 +20,52 @@ public final class SceneBattleInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 stage_id = 1;</code>
-     */
-    private int stageId;
-
-    /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 1;</code>
      */
     private int worldLevel;
 
     /**
-     * <code>optional uint32 battle_id = 3;</code>
-     */
-    private int battleId;
-
-    /**
-     * <code>optional uint32 rounds_limit = 5;</code>
-     */
-    private int roundsLimit;
-
-    /**
-     * <code>optional uint32 logic_random_seed = 9;</code>
+     * <code>optional uint32 logic_random_seed = 3;</code>
      */
     private int logicRandomSeed;
 
     /**
-     * <code>repeated .SceneMonsterWave monster_wave_list = 10;</code>
+     * <code>optional uint32 rounds_limit = 8;</code>
      */
-    private final RepeatedMessage<SceneMonsterWaveOuterClass.SceneMonsterWave> monsterWaveList = RepeatedMessage.newEmptyInstance(SceneMonsterWaveOuterClass.SceneMonsterWave.getFactory());
+    private int roundsLimit;
 
     /**
-     * <code>repeated .BattleBuff buff_list = 12;</code>
+     * <code>optional uint32 stage_id = 11;</code>
      */
-    private final RepeatedMessage<BattleBuffOuterClass.BattleBuff> buffList = RepeatedMessage.newEmptyInstance(BattleBuffOuterClass.BattleBuff.getFactory());
+    private int stageId;
 
     /**
-     * <code>repeated .BattleAvatar battle_avatar_list = 14;</code>
+     * <code>optional uint32 battle_id = 15;</code>
+     */
+    private int battleId;
+
+    /**
+     * <code>repeated .BattleAvatar battle_avatar_list = 4;</code>
      */
     private final RepeatedMessage<BattleAvatarOuterClass.BattleAvatar> battleAvatarList = RepeatedMessage.newEmptyInstance(BattleAvatarOuterClass.BattleAvatar.getFactory());
 
     /**
-     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 1179;</code>
+     * <code>repeated .BattleBuff buff_list = 6;</code>
+     */
+    private final RepeatedMessage<BattleBuffOuterClass.BattleBuff> buffList = RepeatedMessage.newEmptyInstance(BattleBuffOuterClass.BattleBuff.getFactory());
+
+    /**
+     * <code>repeated .SceneMonsterWave monster_wave_list = 7;</code>
+     */
+    private final RepeatedMessage<SceneMonsterWaveOuterClass.SceneMonsterWave> monsterWaveList = RepeatedMessage.newEmptyInstance(SceneMonsterWaveOuterClass.SceneMonsterWave.getFactory());
+
+    /**
+     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 413;</code>
      */
     private final RepeatedMessage<BattleEventBattleInfoOuterClass.BattleEventBattleInfo> eventBattleInfoList = RepeatedMessage.newEmptyInstance(BattleEventBattleInfoOuterClass.BattleEventBattleInfo.getFactory());
 
     /**
-     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 1433;</code>
+     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 583;</code>
      */
     private final RepeatedMessage<BattleTargetInfoEntry> battleTargetInfo = RepeatedMessage.newEmptyInstance(BattleTargetInfoEntry.getFactory());
 
@@ -80,62 +80,25 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 stage_id = 1;</code>
-     * @return whether the stageId field is set
+     * <code>optional uint32 world_level = 1;</code>
+     * @return whether the worldLevel field is set
      */
-    public boolean hasStageId() {
+    public boolean hasWorldLevel() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 stage_id = 1;</code>
-     * @return this
-     */
-    public SceneBattleInfo clearStageId() {
-      bitField0_ &= ~0x00000001;
-      stageId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 stage_id = 1;</code>
-     * @return the stageId
-     */
-    public int getStageId() {
-      return stageId;
-    }
-
-    /**
-     * <code>optional uint32 stage_id = 1;</code>
-     * @param value the stageId to set
-     * @return this
-     */
-    public SceneBattleInfo setStageId(final int value) {
-      bitField0_ |= 0x00000001;
-      stageId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 world_level = 2;</code>
-     * @return whether the worldLevel field is set
-     */
-    public boolean hasWorldLevel() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 1;</code>
      * @return this
      */
     public SceneBattleInfo clearWorldLevel() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       worldLevel = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 1;</code>
      * @return the worldLevel
      */
     public int getWorldLevel() {
@@ -143,110 +106,36 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 1;</code>
      * @param value the worldLevel to set
      * @return this
      */
     public SceneBattleInfo setWorldLevel(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       worldLevel = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 battle_id = 3;</code>
-     * @return whether the battleId field is set
-     */
-    public boolean hasBattleId() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 battle_id = 3;</code>
-     * @return this
-     */
-    public SceneBattleInfo clearBattleId() {
-      bitField0_ &= ~0x00000004;
-      battleId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 battle_id = 3;</code>
-     * @return the battleId
-     */
-    public int getBattleId() {
-      return battleId;
-    }
-
-    /**
-     * <code>optional uint32 battle_id = 3;</code>
-     * @param value the battleId to set
-     * @return this
-     */
-    public SceneBattleInfo setBattleId(final int value) {
-      bitField0_ |= 0x00000004;
-      battleId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 rounds_limit = 5;</code>
-     * @return whether the roundsLimit field is set
-     */
-    public boolean hasRoundsLimit() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional uint32 rounds_limit = 5;</code>
-     * @return this
-     */
-    public SceneBattleInfo clearRoundsLimit() {
-      bitField0_ &= ~0x00000008;
-      roundsLimit = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 rounds_limit = 5;</code>
-     * @return the roundsLimit
-     */
-    public int getRoundsLimit() {
-      return roundsLimit;
-    }
-
-    /**
-     * <code>optional uint32 rounds_limit = 5;</code>
-     * @param value the roundsLimit to set
-     * @return this
-     */
-    public SceneBattleInfo setRoundsLimit(final int value) {
-      bitField0_ |= 0x00000008;
-      roundsLimit = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 logic_random_seed = 9;</code>
+     * <code>optional uint32 logic_random_seed = 3;</code>
      * @return whether the logicRandomSeed field is set
      */
     public boolean hasLogicRandomSeed() {
-      return (bitField0_ & 0x00000010) != 0;
+      return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 logic_random_seed = 9;</code>
+     * <code>optional uint32 logic_random_seed = 3;</code>
      * @return this
      */
     public SceneBattleInfo clearLogicRandomSeed() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000002;
       logicRandomSeed = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 logic_random_seed = 9;</code>
+     * <code>optional uint32 logic_random_seed = 3;</code>
      * @return the logicRandomSeed
      */
     public int getLogicRandomSeed() {
@@ -254,175 +143,147 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 logic_random_seed = 9;</code>
+     * <code>optional uint32 logic_random_seed = 3;</code>
      * @param value the logicRandomSeed to set
      * @return this
      */
     public SceneBattleInfo setLogicRandomSeed(final int value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000002;
       logicRandomSeed = value;
       return this;
     }
 
     /**
-     * <code>repeated .SceneMonsterWave monster_wave_list = 10;</code>
-     * @return whether the monsterWaveList field is set
+     * <code>optional uint32 rounds_limit = 8;</code>
+     * @return whether the roundsLimit field is set
      */
-    public boolean hasMonsterWaveList() {
+    public boolean hasRoundsLimit() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 rounds_limit = 8;</code>
+     * @return this
+     */
+    public SceneBattleInfo clearRoundsLimit() {
+      bitField0_ &= ~0x00000004;
+      roundsLimit = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 rounds_limit = 8;</code>
+     * @return the roundsLimit
+     */
+    public int getRoundsLimit() {
+      return roundsLimit;
+    }
+
+    /**
+     * <code>optional uint32 rounds_limit = 8;</code>
+     * @param value the roundsLimit to set
+     * @return this
+     */
+    public SceneBattleInfo setRoundsLimit(final int value) {
+      bitField0_ |= 0x00000004;
+      roundsLimit = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 stage_id = 11;</code>
+     * @return whether the stageId field is set
+     */
+    public boolean hasStageId() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>optional uint32 stage_id = 11;</code>
+     * @return this
+     */
+    public SceneBattleInfo clearStageId() {
+      bitField0_ &= ~0x00000008;
+      stageId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 stage_id = 11;</code>
+     * @return the stageId
+     */
+    public int getStageId() {
+      return stageId;
+    }
+
+    /**
+     * <code>optional uint32 stage_id = 11;</code>
+     * @param value the stageId to set
+     * @return this
+     */
+    public SceneBattleInfo setStageId(final int value) {
+      bitField0_ |= 0x00000008;
+      stageId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 battle_id = 15;</code>
+     * @return whether the battleId field is set
+     */
+    public boolean hasBattleId() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <code>optional uint32 battle_id = 15;</code>
+     * @return this
+     */
+    public SceneBattleInfo clearBattleId() {
+      bitField0_ &= ~0x00000010;
+      battleId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 battle_id = 15;</code>
+     * @return the battleId
+     */
+    public int getBattleId() {
+      return battleId;
+    }
+
+    /**
+     * <code>optional uint32 battle_id = 15;</code>
+     * @param value the battleId to set
+     * @return this
+     */
+    public SceneBattleInfo setBattleId(final int value) {
+      bitField0_ |= 0x00000010;
+      battleId = value;
+      return this;
+    }
+
+    /**
+     * <code>repeated .BattleAvatar battle_avatar_list = 4;</code>
+     * @return whether the battleAvatarList field is set
+     */
+    public boolean hasBattleAvatarList() {
       return (bitField0_ & 0x00000020) != 0;
     }
 
     /**
-     * <code>repeated .SceneMonsterWave monster_wave_list = 10;</code>
-     * @return this
-     */
-    public SceneBattleInfo clearMonsterWaveList() {
-      bitField0_ &= ~0x00000020;
-      monsterWaveList.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated .SceneMonsterWave monster_wave_list = 10;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableMonsterWaveList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedMessage<SceneMonsterWaveOuterClass.SceneMonsterWave> getMonsterWaveList() {
-      return monsterWaveList;
-    }
-
-    /**
-     * <code>repeated .SceneMonsterWave monster_wave_list = 10;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedMessage<SceneMonsterWaveOuterClass.SceneMonsterWave> getMutableMonsterWaveList(
-        ) {
-      bitField0_ |= 0x00000020;
-      return monsterWaveList;
-    }
-
-    /**
-     * <code>repeated .SceneMonsterWave monster_wave_list = 10;</code>
-     * @param value the monsterWaveList to add
-     * @return this
-     */
-    public SceneBattleInfo addMonsterWaveList(
-        final SceneMonsterWaveOuterClass.SceneMonsterWave value) {
-      bitField0_ |= 0x00000020;
-      monsterWaveList.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated .SceneMonsterWave monster_wave_list = 10;</code>
-     * @param values the monsterWaveList to add
-     * @return this
-     */
-    public SceneBattleInfo addAllMonsterWaveList(
-        final SceneMonsterWaveOuterClass.SceneMonsterWave... values) {
-      bitField0_ |= 0x00000020;
-      monsterWaveList.addAll(values);
-      return this;
-    }
-
-    /**
-     * <code>repeated .BattleBuff buff_list = 12;</code>
-     * @return whether the buffList field is set
-     */
-    public boolean hasBuffList() {
-      return (bitField0_ & 0x00000040) != 0;
-    }
-
-    /**
-     * <code>repeated .BattleBuff buff_list = 12;</code>
-     * @return this
-     */
-    public SceneBattleInfo clearBuffList() {
-      bitField0_ &= ~0x00000040;
-      buffList.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated .BattleBuff buff_list = 12;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableBuffList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedMessage<BattleBuffOuterClass.BattleBuff> getBuffList() {
-      return buffList;
-    }
-
-    /**
-     * <code>repeated .BattleBuff buff_list = 12;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedMessage<BattleBuffOuterClass.BattleBuff> getMutableBuffList() {
-      bitField0_ |= 0x00000040;
-      return buffList;
-    }
-
-    /**
-     * <code>repeated .BattleBuff buff_list = 12;</code>
-     * @param value the buffList to add
-     * @return this
-     */
-    public SceneBattleInfo addBuffList(final BattleBuffOuterClass.BattleBuff value) {
-      bitField0_ |= 0x00000040;
-      buffList.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated .BattleBuff buff_list = 12;</code>
-     * @param values the buffList to add
-     * @return this
-     */
-    public SceneBattleInfo addAllBuffList(final BattleBuffOuterClass.BattleBuff... values) {
-      bitField0_ |= 0x00000040;
-      buffList.addAll(values);
-      return this;
-    }
-
-    /**
-     * <code>repeated .BattleAvatar battle_avatar_list = 14;</code>
-     * @return whether the battleAvatarList field is set
-     */
-    public boolean hasBattleAvatarList() {
-      return (bitField0_ & 0x00000080) != 0;
-    }
-
-    /**
-     * <code>repeated .BattleAvatar battle_avatar_list = 14;</code>
+     * <code>repeated .BattleAvatar battle_avatar_list = 4;</code>
      * @return this
      */
     public SceneBattleInfo clearBattleAvatarList() {
-      bitField0_ &= ~0x00000080;
+      bitField0_ &= ~0x00000020;
       battleAvatarList.clear();
       return this;
     }
 
     /**
-     * <code>repeated .BattleAvatar battle_avatar_list = 14;</code>
+     * <code>repeated .BattleAvatar battle_avatar_list = 4;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -436,7 +297,7 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .BattleAvatar battle_avatar_list = 14;</code>
+     * <code>repeated .BattleAvatar battle_avatar_list = 4;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -445,35 +306,174 @@ public final class SceneBattleInfoOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<BattleAvatarOuterClass.BattleAvatar> getMutableBattleAvatarList() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000020;
       return battleAvatarList;
     }
 
     /**
-     * <code>repeated .BattleAvatar battle_avatar_list = 14;</code>
+     * <code>repeated .BattleAvatar battle_avatar_list = 4;</code>
      * @param value the battleAvatarList to add
      * @return this
      */
     public SceneBattleInfo addBattleAvatarList(final BattleAvatarOuterClass.BattleAvatar value) {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000020;
       battleAvatarList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated .BattleAvatar battle_avatar_list = 14;</code>
+     * <code>repeated .BattleAvatar battle_avatar_list = 4;</code>
      * @param values the battleAvatarList to add
      * @return this
      */
     public SceneBattleInfo addAllBattleAvatarList(
         final BattleAvatarOuterClass.BattleAvatar... values) {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000020;
       battleAvatarList.addAll(values);
       return this;
     }
 
     /**
-     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 1179;</code>
+     * <code>repeated .BattleBuff buff_list = 6;</code>
+     * @return whether the buffList field is set
+     */
+    public boolean hasBuffList() {
+      return (bitField0_ & 0x00000040) != 0;
+    }
+
+    /**
+     * <code>repeated .BattleBuff buff_list = 6;</code>
+     * @return this
+     */
+    public SceneBattleInfo clearBuffList() {
+      bitField0_ &= ~0x00000040;
+      buffList.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .BattleBuff buff_list = 6;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableBuffList()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<BattleBuffOuterClass.BattleBuff> getBuffList() {
+      return buffList;
+    }
+
+    /**
+     * <code>repeated .BattleBuff buff_list = 6;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<BattleBuffOuterClass.BattleBuff> getMutableBuffList() {
+      bitField0_ |= 0x00000040;
+      return buffList;
+    }
+
+    /**
+     * <code>repeated .BattleBuff buff_list = 6;</code>
+     * @param value the buffList to add
+     * @return this
+     */
+    public SceneBattleInfo addBuffList(final BattleBuffOuterClass.BattleBuff value) {
+      bitField0_ |= 0x00000040;
+      buffList.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .BattleBuff buff_list = 6;</code>
+     * @param values the buffList to add
+     * @return this
+     */
+    public SceneBattleInfo addAllBuffList(final BattleBuffOuterClass.BattleBuff... values) {
+      bitField0_ |= 0x00000040;
+      buffList.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated .SceneMonsterWave monster_wave_list = 7;</code>
+     * @return whether the monsterWaveList field is set
+     */
+    public boolean hasMonsterWaveList() {
+      return (bitField0_ & 0x00000080) != 0;
+    }
+
+    /**
+     * <code>repeated .SceneMonsterWave monster_wave_list = 7;</code>
+     * @return this
+     */
+    public SceneBattleInfo clearMonsterWaveList() {
+      bitField0_ &= ~0x00000080;
+      monsterWaveList.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .SceneMonsterWave monster_wave_list = 7;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableMonsterWaveList()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<SceneMonsterWaveOuterClass.SceneMonsterWave> getMonsterWaveList() {
+      return monsterWaveList;
+    }
+
+    /**
+     * <code>repeated .SceneMonsterWave monster_wave_list = 7;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<SceneMonsterWaveOuterClass.SceneMonsterWave> getMutableMonsterWaveList(
+        ) {
+      bitField0_ |= 0x00000080;
+      return monsterWaveList;
+    }
+
+    /**
+     * <code>repeated .SceneMonsterWave monster_wave_list = 7;</code>
+     * @param value the monsterWaveList to add
+     * @return this
+     */
+    public SceneBattleInfo addMonsterWaveList(
+        final SceneMonsterWaveOuterClass.SceneMonsterWave value) {
+      bitField0_ |= 0x00000080;
+      monsterWaveList.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .SceneMonsterWave monster_wave_list = 7;</code>
+     * @param values the monsterWaveList to add
+     * @return this
+     */
+    public SceneBattleInfo addAllMonsterWaveList(
+        final SceneMonsterWaveOuterClass.SceneMonsterWave... values) {
+      bitField0_ |= 0x00000080;
+      monsterWaveList.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 413;</code>
      * @return whether the eventBattleInfoList field is set
      */
     public boolean hasEventBattleInfoList() {
@@ -481,7 +481,7 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 1179;</code>
+     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 413;</code>
      * @return this
      */
     public SceneBattleInfo clearEventBattleInfoList() {
@@ -491,7 +491,7 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 1179;</code>
+     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 413;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -506,7 +506,7 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 1179;</code>
+     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 413;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -521,7 +521,7 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 1179;</code>
+     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 413;</code>
      * @param value the eventBattleInfoList to add
      * @return this
      */
@@ -533,7 +533,7 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 1179;</code>
+     * <code>repeated .BattleEventBattleInfo event_battle_info_list = 413;</code>
      * @param values the eventBattleInfoList to add
      * @return this
      */
@@ -545,7 +545,7 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 1433;</code>
+     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 583;</code>
      * @return whether the battleTargetInfo field is set
      */
     public boolean hasBattleTargetInfo() {
@@ -553,7 +553,7 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 1433;</code>
+     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 583;</code>
      * @return this
      */
     public SceneBattleInfo clearBattleTargetInfo() {
@@ -563,7 +563,7 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 1433;</code>
+     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 583;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -577,7 +577,7 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 1433;</code>
+     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 583;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -591,7 +591,7 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 1433;</code>
+     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 583;</code>
      * @param value the battleTargetInfo to add
      * @return this
      */
@@ -602,7 +602,7 @@ public final class SceneBattleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 1433;</code>
+     * <code>repeated .SceneBattleInfo.BattleTargetInfoEntry battle_target_info = 583;</code>
      * @param values the battleTargetInfo to add
      * @return this
      */
@@ -617,14 +617,14 @@ public final class SceneBattleInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        stageId = other.stageId;
         worldLevel = other.worldLevel;
-        battleId = other.battleId;
-        roundsLimit = other.roundsLimit;
         logicRandomSeed = other.logicRandomSeed;
-        monsterWaveList.copyFrom(other.monsterWaveList);
-        buffList.copyFrom(other.buffList);
+        roundsLimit = other.roundsLimit;
+        stageId = other.stageId;
+        battleId = other.battleId;
         battleAvatarList.copyFrom(other.battleAvatarList);
+        buffList.copyFrom(other.buffList);
+        monsterWaveList.copyFrom(other.monsterWaveList);
         eventBattleInfoList.copyFrom(other.eventBattleInfoList);
         battleTargetInfo.copyFrom(other.battleTargetInfo);
       }
@@ -637,29 +637,29 @@ public final class SceneBattleInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasStageId()) {
-        setStageId(other.stageId);
-      }
       if (other.hasWorldLevel()) {
         setWorldLevel(other.worldLevel);
-      }
-      if (other.hasBattleId()) {
-        setBattleId(other.battleId);
-      }
-      if (other.hasRoundsLimit()) {
-        setRoundsLimit(other.roundsLimit);
       }
       if (other.hasLogicRandomSeed()) {
         setLogicRandomSeed(other.logicRandomSeed);
       }
-      if (other.hasMonsterWaveList()) {
-        getMutableMonsterWaveList().addAll(other.monsterWaveList);
+      if (other.hasRoundsLimit()) {
+        setRoundsLimit(other.roundsLimit);
+      }
+      if (other.hasStageId()) {
+        setStageId(other.stageId);
+      }
+      if (other.hasBattleId()) {
+        setBattleId(other.battleId);
+      }
+      if (other.hasBattleAvatarList()) {
+        getMutableBattleAvatarList().addAll(other.battleAvatarList);
       }
       if (other.hasBuffList()) {
         getMutableBuffList().addAll(other.buffList);
       }
-      if (other.hasBattleAvatarList()) {
-        getMutableBattleAvatarList().addAll(other.battleAvatarList);
+      if (other.hasMonsterWaveList()) {
+        getMutableMonsterWaveList().addAll(other.monsterWaveList);
       }
       if (other.hasEventBattleInfoList()) {
         getMutableEventBattleInfoList().addAll(other.eventBattleInfoList);
@@ -677,14 +677,14 @@ public final class SceneBattleInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      stageId = 0;
       worldLevel = 0;
-      battleId = 0;
-      roundsLimit = 0;
       logicRandomSeed = 0;
-      monsterWaveList.clear();
-      buffList.clear();
+      roundsLimit = 0;
+      stageId = 0;
+      battleId = 0;
       battleAvatarList.clear();
+      buffList.clear();
+      monsterWaveList.clear();
       eventBattleInfoList.clear();
       battleTargetInfo.clear();
       return this;
@@ -697,9 +697,9 @@ public final class SceneBattleInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      monsterWaveList.clearQuick();
-      buffList.clearQuick();
       battleAvatarList.clearQuick();
+      buffList.clearQuick();
+      monsterWaveList.clearQuick();
       eventBattleInfoList.clearQuick();
       battleTargetInfo.clearQuick();
       return this;
@@ -715,14 +715,14 @@ public final class SceneBattleInfoOuterClass {
       }
       SceneBattleInfo other = (SceneBattleInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasStageId() || stageId == other.stageId)
         && (!hasWorldLevel() || worldLevel == other.worldLevel)
-        && (!hasBattleId() || battleId == other.battleId)
-        && (!hasRoundsLimit() || roundsLimit == other.roundsLimit)
         && (!hasLogicRandomSeed() || logicRandomSeed == other.logicRandomSeed)
-        && (!hasMonsterWaveList() || monsterWaveList.equals(other.monsterWaveList))
-        && (!hasBuffList() || buffList.equals(other.buffList))
+        && (!hasRoundsLimit() || roundsLimit == other.roundsLimit)
+        && (!hasStageId() || stageId == other.stageId)
+        && (!hasBattleId() || battleId == other.battleId)
         && (!hasBattleAvatarList() || battleAvatarList.equals(other.battleAvatarList))
+        && (!hasBuffList() || buffList.equals(other.buffList))
+        && (!hasMonsterWaveList() || monsterWaveList.equals(other.monsterWaveList))
         && (!hasEventBattleInfoList() || eventBattleInfoList.equals(other.eventBattleInfoList))
         && (!hasBattleTargetInfo() || battleTargetInfo.equals(other.battleTargetInfo));
     }
@@ -731,51 +731,51 @@ public final class SceneBattleInfoOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         output.writeRawByte((byte) 8);
-        output.writeUInt32NoTag(stageId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(worldLevel);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
         output.writeRawByte((byte) 24);
-        output.writeUInt32NoTag(battleId);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 40);
-        output.writeUInt32NoTag(roundsLimit);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 72);
         output.writeUInt32NoTag(logicRandomSeed);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 64);
+        output.writeUInt32NoTag(roundsLimit);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        output.writeRawByte((byte) 88);
+        output.writeUInt32NoTag(stageId);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeRawByte((byte) 120);
+        output.writeUInt32NoTag(battleId);
+      }
       if ((bitField0_ & 0x00000020) != 0) {
-        for (int i = 0; i < monsterWaveList.length(); i++) {
-          output.writeRawByte((byte) 82);
-          output.writeMessageNoTag(monsterWaveList.get(i));
+        for (int i = 0; i < battleAvatarList.length(); i++) {
+          output.writeRawByte((byte) 34);
+          output.writeMessageNoTag(battleAvatarList.get(i));
         }
       }
       if ((bitField0_ & 0x00000040) != 0) {
         for (int i = 0; i < buffList.length(); i++) {
-          output.writeRawByte((byte) 98);
+          output.writeRawByte((byte) 50);
           output.writeMessageNoTag(buffList.get(i));
         }
       }
       if ((bitField0_ & 0x00000080) != 0) {
-        for (int i = 0; i < battleAvatarList.length(); i++) {
-          output.writeRawByte((byte) 114);
-          output.writeMessageNoTag(battleAvatarList.get(i));
+        for (int i = 0; i < monsterWaveList.length(); i++) {
+          output.writeRawByte((byte) 58);
+          output.writeMessageNoTag(monsterWaveList.get(i));
         }
       }
       if ((bitField0_ & 0x00000100) != 0) {
         for (int i = 0; i < eventBattleInfoList.length(); i++) {
-          output.writeRawLittleEndian16((short) 18906);
+          output.writeRawLittleEndian16((short) 6634);
           output.writeMessageNoTag(eventBattleInfoList.get(i));
         }
       }
       if ((bitField0_ & 0x00000200) != 0) {
         for (int i = 0; i < battleTargetInfo.length(); i++) {
-          output.writeRawLittleEndian16((short) 22986);
+          output.writeRawLittleEndian16((short) 9402);
           output.writeMessageNoTag(battleTargetInfo.get(i));
         }
       }
@@ -785,28 +785,28 @@ public final class SceneBattleInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(stageId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(worldLevel);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(battleId);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(roundsLimit);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(logicRandomSeed);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(roundsLimit);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(stageId);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(battleId);
+      }
       if ((bitField0_ & 0x00000020) != 0) {
-        size += (1 * monsterWaveList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(monsterWaveList);
+        size += (1 * battleAvatarList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(battleAvatarList);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         size += (1 * buffList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(buffList);
       }
       if ((bitField0_ & 0x00000080) != 0) {
-        size += (1 * battleAvatarList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(battleAvatarList);
+        size += (1 * monsterWaveList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(monsterWaveList);
       }
       if ((bitField0_ & 0x00000100) != 0) {
         size += (2 * eventBattleInfoList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(eventBattleInfoList);
@@ -825,83 +825,83 @@ public final class SceneBattleInfoOuterClass {
       while (true) {
         switch (tag) {
           case 8: {
-            // stageId
-            stageId = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 16) {
-              break;
-            }
-          }
-          case 16: {
             // worldLevel
             worldLevel = input.readUInt32();
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
             if (tag != 24) {
               break;
             }
           }
           case 24: {
-            // battleId
-            battleId = input.readUInt32();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 40) {
-              break;
-            }
-          }
-          case 40: {
-            // roundsLimit
-            roundsLimit = input.readUInt32();
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
-            if (tag != 72) {
-              break;
-            }
-          }
-          case 72: {
             // logicRandomSeed
             logicRandomSeed = input.readUInt32();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 64) {
+              break;
+            }
+          }
+          case 64: {
+            // roundsLimit
+            roundsLimit = input.readUInt32();
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 88) {
+              break;
+            }
+          }
+          case 88: {
+            // stageId
+            stageId = input.readUInt32();
+            bitField0_ |= 0x00000008;
+            tag = input.readTag();
+            if (tag != 120) {
+              break;
+            }
+          }
+          case 120: {
+            // battleId
+            battleId = input.readUInt32();
             bitField0_ |= 0x00000010;
             tag = input.readTag();
-            if (tag != 82) {
+            if (tag != 34) {
               break;
             }
           }
-          case 82: {
-            // monsterWaveList
-            tag = input.readRepeatedMessage(monsterWaveList, tag);
+          case 34: {
+            // battleAvatarList
+            tag = input.readRepeatedMessage(battleAvatarList, tag);
             bitField0_ |= 0x00000020;
-            if (tag != 98) {
+            if (tag != 50) {
               break;
             }
           }
-          case 98: {
+          case 50: {
             // buffList
             tag = input.readRepeatedMessage(buffList, tag);
             bitField0_ |= 0x00000040;
-            if (tag != 114) {
+            if (tag != 58) {
               break;
             }
           }
-          case 114: {
-            // battleAvatarList
-            tag = input.readRepeatedMessage(battleAvatarList, tag);
+          case 58: {
+            // monsterWaveList
+            tag = input.readRepeatedMessage(monsterWaveList, tag);
             bitField0_ |= 0x00000080;
-            if (tag != 9434) {
+            if (tag != 3306) {
               break;
             }
           }
-          case 9434: {
+          case 3306: {
             // eventBattleInfoList
             tag = input.readRepeatedMessage(eventBattleInfoList, tag);
             bitField0_ |= 0x00000100;
-            if (tag != 11466) {
+            if (tag != 4666) {
               break;
             }
           }
-          case 11466: {
+          case 4666: {
             // battleTargetInfo
             tag = input.readRepeatedMessage(battleTargetInfo, tag);
             bitField0_ |= 0x00000200;
@@ -927,28 +927,28 @@ public final class SceneBattleInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.stageId, stageId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.worldLevel, worldLevel);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.battleId, battleId);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.roundsLimit, roundsLimit);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.logicRandomSeed, logicRandomSeed);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeUInt32(FieldNames.roundsLimit, roundsLimit);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        output.writeUInt32(FieldNames.stageId, stageId);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeUInt32(FieldNames.battleId, battleId);
+      }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRepeatedMessage(FieldNames.monsterWaveList, monsterWaveList);
+        output.writeRepeatedMessage(FieldNames.battleAvatarList, battleAvatarList);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         output.writeRepeatedMessage(FieldNames.buffList, buffList);
       }
       if ((bitField0_ & 0x00000080) != 0) {
-        output.writeRepeatedMessage(FieldNames.battleAvatarList, battleAvatarList);
+        output.writeRepeatedMessage(FieldNames.monsterWaveList, monsterWaveList);
       }
       if ((bitField0_ & 0x00000100) != 0) {
         output.writeRepeatedMessage(FieldNames.eventBattleInfoList, eventBattleInfoList);
@@ -966,48 +966,12 @@ public final class SceneBattleInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -1897528135:
-          case 1306191356: {
-            if (input.isAtField(FieldNames.stageId)) {
-              if (!input.trySkipNullValue()) {
-                stageId = input.readUInt32();
-                bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 440007442:
           case 1305257111: {
             if (input.isAtField(FieldNames.worldLevel)) {
               if (!input.trySkipNullValue()) {
                 worldLevel = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1678308365:
-          case -487930366: {
-            if (input.isAtField(FieldNames.battleId)) {
-              if (!input.trySkipNullValue()) {
-                battleId = input.readUInt32();
-                bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 306477590:
-          case 1457479585: {
-            if (input.isAtField(FieldNames.roundsLimit)) {
-              if (!input.trySkipNullValue()) {
-                roundsLimit = input.readUInt32();
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000001;
               }
             } else {
               input.skipUnknownField();
@@ -1019,6 +983,42 @@ public final class SceneBattleInfoOuterClass {
             if (input.isAtField(FieldNames.logicRandomSeed)) {
               if (!input.trySkipNullValue()) {
                 logicRandomSeed = input.readUInt32();
+                bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 306477590:
+          case 1457479585: {
+            if (input.isAtField(FieldNames.roundsLimit)) {
+              if (!input.trySkipNullValue()) {
+                roundsLimit = input.readUInt32();
+                bitField0_ |= 0x00000004;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -1897528135:
+          case 1306191356: {
+            if (input.isAtField(FieldNames.stageId)) {
+              if (!input.trySkipNullValue()) {
+                stageId = input.readUInt32();
+                bitField0_ |= 0x00000008;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -1678308365:
+          case -487930366: {
+            if (input.isAtField(FieldNames.battleId)) {
+              if (!input.trySkipNullValue()) {
+                battleId = input.readUInt32();
                 bitField0_ |= 0x00000010;
               }
             } else {
@@ -1026,11 +1026,11 @@ public final class SceneBattleInfoOuterClass {
             }
             break;
           }
-          case 697746737:
-          case -1492024321: {
-            if (input.isAtField(FieldNames.monsterWaveList)) {
+          case 768292975:
+          case 328463037: {
+            if (input.isAtField(FieldNames.battleAvatarList)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedMessage(monsterWaveList);
+                input.readRepeatedMessage(battleAvatarList);
                 bitField0_ |= 0x00000020;
               }
             } else {
@@ -1050,11 +1050,11 @@ public final class SceneBattleInfoOuterClass {
             }
             break;
           }
-          case 768292975:
-          case 328463037: {
-            if (input.isAtField(FieldNames.battleAvatarList)) {
+          case 697746737:
+          case -1492024321: {
+            if (input.isAtField(FieldNames.monsterWaveList)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedMessage(battleAvatarList);
+                input.readRepeatedMessage(monsterWaveList);
                 bitField0_ |= 0x00000080;
               }
             } else {
@@ -1486,21 +1486,21 @@ public final class SceneBattleInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName stageId = FieldName.forField("stageId", "stage_id");
-
       static final FieldName worldLevel = FieldName.forField("worldLevel", "world_level");
-
-      static final FieldName battleId = FieldName.forField("battleId", "battle_id");
-
-      static final FieldName roundsLimit = FieldName.forField("roundsLimit", "rounds_limit");
 
       static final FieldName logicRandomSeed = FieldName.forField("logicRandomSeed", "logic_random_seed");
 
-      static final FieldName monsterWaveList = FieldName.forField("monsterWaveList", "monster_wave_list");
+      static final FieldName roundsLimit = FieldName.forField("roundsLimit", "rounds_limit");
+
+      static final FieldName stageId = FieldName.forField("stageId", "stage_id");
+
+      static final FieldName battleId = FieldName.forField("battleId", "battle_id");
+
+      static final FieldName battleAvatarList = FieldName.forField("battleAvatarList", "battle_avatar_list");
 
       static final FieldName buffList = FieldName.forField("buffList", "buff_list");
 
-      static final FieldName battleAvatarList = FieldName.forField("battleAvatarList", "battle_avatar_list");
+      static final FieldName monsterWaveList = FieldName.forField("monsterWaveList", "monster_wave_list");
 
       static final FieldName eventBattleInfoList = FieldName.forField("eventBattleInfoList", "event_battle_info_list");
 

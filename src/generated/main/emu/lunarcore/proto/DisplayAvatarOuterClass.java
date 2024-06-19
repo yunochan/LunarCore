@@ -24,7 +24,7 @@ public final class DisplayAvatarOuterClass {
     private int pos;
 
     /**
-     * <code>optional uint32 avatar_id = 15;</code>
+     * <code>optional uint32 avatar_id = 14;</code>
      */
     private int avatarId;
 
@@ -76,7 +76,7 @@ public final class DisplayAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 15;</code>
+     * <code>optional uint32 avatar_id = 14;</code>
      * @return whether the avatarId field is set
      */
     public boolean hasAvatarId() {
@@ -84,7 +84,7 @@ public final class DisplayAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 15;</code>
+     * <code>optional uint32 avatar_id = 14;</code>
      * @return this
      */
     public DisplayAvatar clearAvatarId() {
@@ -94,7 +94,7 @@ public final class DisplayAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 15;</code>
+     * <code>optional uint32 avatar_id = 14;</code>
      * @return the avatarId
      */
     public int getAvatarId() {
@@ -102,7 +102,7 @@ public final class DisplayAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 15;</code>
+     * <code>optional uint32 avatar_id = 14;</code>
      * @param value the avatarId to set
      * @return this
      */
@@ -181,7 +181,7 @@ public final class DisplayAvatarOuterClass {
         output.writeUInt32NoTag(pos);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(avatarId);
       }
     }
@@ -210,11 +210,11 @@ public final class DisplayAvatarOuterClass {
             pos = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 112) {
               break;
             }
           }
-          case 120: {
+          case 112: {
             // avatarId
             avatarId = input.readUInt32();
             bitField0_ |= 0x00000002;

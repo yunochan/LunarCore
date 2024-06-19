@@ -20,17 +20,17 @@ public final class RogueMiracleInfoDataOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 DMJLJNDFOGP = 12;</code>
+     * <code>optional uint32 DMJLJNDFOGP = 1;</code>
      */
     private int dMJLJNDFOGP;
 
     /**
-     * <code>optional uint32 KHBDIKDDIIB = 15;</code>
+     * <code>optional uint32 KHBDIKDDIIB = 2;</code>
      */
     private int kHBDIKDDIIB;
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 2;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 10;</code>
      */
     private final RepeatedMessage<RogueMiracleDataInfoOuterClass.RogueMiracleDataInfo> rogueMiracleList = RepeatedMessage.newEmptyInstance(RogueMiracleDataInfoOuterClass.RogueMiracleDataInfo.getFactory());
 
@@ -45,7 +45,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 DMJLJNDFOGP = 12;</code>
+     * <code>optional uint32 DMJLJNDFOGP = 1;</code>
      * @return whether the dMJLJNDFOGP field is set
      */
     public boolean hasDMJLJNDFOGP() {
@@ -53,7 +53,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 DMJLJNDFOGP = 12;</code>
+     * <code>optional uint32 DMJLJNDFOGP = 1;</code>
      * @return this
      */
     public RogueMiracleInfoData clearDMJLJNDFOGP() {
@@ -63,7 +63,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 DMJLJNDFOGP = 12;</code>
+     * <code>optional uint32 DMJLJNDFOGP = 1;</code>
      * @return the dMJLJNDFOGP
      */
     public int getDMJLJNDFOGP() {
@@ -71,7 +71,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 DMJLJNDFOGP = 12;</code>
+     * <code>optional uint32 DMJLJNDFOGP = 1;</code>
      * @param value the dMJLJNDFOGP to set
      * @return this
      */
@@ -82,7 +82,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 KHBDIKDDIIB = 15;</code>
+     * <code>optional uint32 KHBDIKDDIIB = 2;</code>
      * @return whether the kHBDIKDDIIB field is set
      */
     public boolean hasKHBDIKDDIIB() {
@@ -90,7 +90,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 KHBDIKDDIIB = 15;</code>
+     * <code>optional uint32 KHBDIKDDIIB = 2;</code>
      * @return this
      */
     public RogueMiracleInfoData clearKHBDIKDDIIB() {
@@ -100,7 +100,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 KHBDIKDDIIB = 15;</code>
+     * <code>optional uint32 KHBDIKDDIIB = 2;</code>
      * @return the kHBDIKDDIIB
      */
     public int getKHBDIKDDIIB() {
@@ -108,7 +108,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 KHBDIKDDIIB = 15;</code>
+     * <code>optional uint32 KHBDIKDDIIB = 2;</code>
      * @param value the kHBDIKDDIIB to set
      * @return this
      */
@@ -119,7 +119,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 2;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 10;</code>
      * @return whether the rogueMiracleList field is set
      */
     public boolean hasRogueMiracleList() {
@@ -127,7 +127,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 2;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 10;</code>
      * @return this
      */
     public RogueMiracleInfoData clearRogueMiracleList() {
@@ -137,7 +137,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 2;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 10;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -152,7 +152,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 2;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 10;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -167,7 +167,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 2;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 10;</code>
      * @param value the rogueMiracleList to add
      * @return this
      */
@@ -179,7 +179,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 2;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 10;</code>
      * @param values the rogueMiracleList to add
      * @return this
      */
@@ -262,16 +262,16 @@ public final class RogueMiracleInfoDataOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(dMJLJNDFOGP);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(kHBDIKDDIIB);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < rogueMiracleList.length(); i++) {
-          output.writeRawByte((byte) 18);
+          output.writeRawByte((byte) 82);
           output.writeMessageNoTag(rogueMiracleList.get(i));
         }
       }
@@ -299,25 +299,25 @@ public final class RogueMiracleInfoDataOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 96: {
+          case 8: {
             // dMJLJNDFOGP
             dMJLJNDFOGP = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 16) {
               break;
             }
           }
-          case 120: {
+          case 16: {
             // kHBDIKDDIIB
             kHBDIKDDIIB = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 18) {
+            if (tag != 82) {
               break;
             }
           }
-          case 18: {
+          case 82: {
             // rogueMiracleList
             tag = input.readRepeatedMessage(rogueMiracleList, tag);
             bitField0_ |= 0x00000004;

@@ -20,17 +20,17 @@ public final class StartRogueCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 buff_aeon_id = 2;</code>
+     * <code>optional uint32 buff_aeon_id = 6;</code>
      */
     private int buffAeonId;
 
     /**
-     * <code>optional uint32 area_id = 3;</code>
+     * <code>optional uint32 area_id = 7;</code>
      */
     private int areaId;
 
     /**
-     * <code>repeated uint32 base_avatar_id_list = 14;</code>
+     * <code>repeated uint32 base_avatar_id_list = 13;</code>
      */
     private final RepeatedInt baseAvatarIdList = RepeatedInt.newEmptyInstance();
 
@@ -45,7 +45,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 buff_aeon_id = 2;</code>
+     * <code>optional uint32 buff_aeon_id = 6;</code>
      * @return whether the buffAeonId field is set
      */
     public boolean hasBuffAeonId() {
@@ -53,7 +53,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 buff_aeon_id = 2;</code>
+     * <code>optional uint32 buff_aeon_id = 6;</code>
      * @return this
      */
     public StartRogueCsReq clearBuffAeonId() {
@@ -63,7 +63,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 buff_aeon_id = 2;</code>
+     * <code>optional uint32 buff_aeon_id = 6;</code>
      * @return the buffAeonId
      */
     public int getBuffAeonId() {
@@ -71,7 +71,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 buff_aeon_id = 2;</code>
+     * <code>optional uint32 buff_aeon_id = 6;</code>
      * @param value the buffAeonId to set
      * @return this
      */
@@ -82,7 +82,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 area_id = 3;</code>
+     * <code>optional uint32 area_id = 7;</code>
      * @return whether the areaId field is set
      */
     public boolean hasAreaId() {
@@ -90,7 +90,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 area_id = 3;</code>
+     * <code>optional uint32 area_id = 7;</code>
      * @return this
      */
     public StartRogueCsReq clearAreaId() {
@@ -100,7 +100,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 area_id = 3;</code>
+     * <code>optional uint32 area_id = 7;</code>
      * @return the areaId
      */
     public int getAreaId() {
@@ -108,7 +108,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 area_id = 3;</code>
+     * <code>optional uint32 area_id = 7;</code>
      * @param value the areaId to set
      * @return this
      */
@@ -119,7 +119,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 base_avatar_id_list = 14;</code>
+     * <code>repeated uint32 base_avatar_id_list = 13;</code>
      * @return whether the baseAvatarIdList field is set
      */
     public boolean hasBaseAvatarIdList() {
@@ -127,7 +127,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 base_avatar_id_list = 14;</code>
+     * <code>repeated uint32 base_avatar_id_list = 13;</code>
      * @return this
      */
     public StartRogueCsReq clearBaseAvatarIdList() {
@@ -137,7 +137,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 base_avatar_id_list = 14;</code>
+     * <code>repeated uint32 base_avatar_id_list = 13;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -151,7 +151,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 base_avatar_id_list = 14;</code>
+     * <code>repeated uint32 base_avatar_id_list = 13;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -165,7 +165,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 base_avatar_id_list = 14;</code>
+     * <code>repeated uint32 base_avatar_id_list = 13;</code>
      * @param value the baseAvatarIdList to add
      * @return this
      */
@@ -176,7 +176,7 @@ public final class StartRogueCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 base_avatar_id_list = 14;</code>
+     * <code>repeated uint32 base_avatar_id_list = 13;</code>
      * @param values the baseAvatarIdList to add
      * @return this
      */
@@ -258,16 +258,16 @@ public final class StartRogueCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(buffAeonId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(areaId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < baseAvatarIdList.length(); i++) {
-          output.writeRawByte((byte) 112);
+          output.writeRawByte((byte) 104);
           output.writeUInt32NoTag(baseAvatarIdList.array()[i]);
         }
       }
@@ -295,25 +295,25 @@ public final class StartRogueCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
+          case 48: {
             // buffAeonId
             buffAeonId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 24) {
+            if (tag != 56) {
               break;
             }
           }
-          case 24: {
+          case 56: {
             // areaId
             areaId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 114) {
+            if (tag != 106) {
               break;
             }
           }
-          case 114: {
+          case 106: {
             // baseAvatarIdList [packed=true]
             input.readPackedUInt32(baseAvatarIdList, tag);
             bitField0_ |= 0x00000004;
@@ -332,7 +332,7 @@ public final class StartRogueCsReqOuterClass {
             tag = input.readTag();
             break;
           }
-          case 112: {
+          case 104: {
             // baseAvatarIdList [packed=false]
             tag = input.readRepeatedUInt32(baseAvatarIdList, tag);
             bitField0_ |= 0x00000004;

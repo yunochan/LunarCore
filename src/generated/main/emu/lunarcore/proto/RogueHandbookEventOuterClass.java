@@ -10,7 +10,6 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.RepeatedInt;
 
 public final class RogueHandbookEventOuterClass {
   /**
@@ -20,19 +19,14 @@ public final class RogueHandbookEventOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 event_id = 11;</code>
+     * <code>optional uint32 event_id = 15;</code>
      */
     private int eventId;
 
     /**
-     * <code>optional bool is_unlocked = 14;</code>
+     * <code>optional bool is_unlocked = 1;</code>
      */
     private boolean isUnlocked;
-
-    /**
-     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
-     */
-    private final RepeatedInt mDALHHJKHNJ = RepeatedInt.newEmptyInstance();
 
     private RogueHandbookEvent() {
     }
@@ -45,7 +39,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 11;</code>
+     * <code>optional uint32 event_id = 15;</code>
      * @return whether the eventId field is set
      */
     public boolean hasEventId() {
@@ -53,7 +47,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 11;</code>
+     * <code>optional uint32 event_id = 15;</code>
      * @return this
      */
     public RogueHandbookEvent clearEventId() {
@@ -63,7 +57,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 11;</code>
+     * <code>optional uint32 event_id = 15;</code>
      * @return the eventId
      */
     public int getEventId() {
@@ -71,7 +65,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 11;</code>
+     * <code>optional uint32 event_id = 15;</code>
      * @param value the eventId to set
      * @return this
      */
@@ -82,7 +76,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional bool is_unlocked = 14;</code>
+     * <code>optional bool is_unlocked = 1;</code>
      * @return whether the isUnlocked field is set
      */
     public boolean hasIsUnlocked() {
@@ -90,7 +84,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional bool is_unlocked = 14;</code>
+     * <code>optional bool is_unlocked = 1;</code>
      * @return this
      */
     public RogueHandbookEvent clearIsUnlocked() {
@@ -100,7 +94,7 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional bool is_unlocked = 14;</code>
+     * <code>optional bool is_unlocked = 1;</code>
      * @return the isUnlocked
      */
     public boolean getIsUnlocked() {
@@ -108,81 +102,13 @@ public final class RogueHandbookEventOuterClass {
     }
 
     /**
-     * <code>optional bool is_unlocked = 14;</code>
+     * <code>optional bool is_unlocked = 1;</code>
      * @param value the isUnlocked to set
      * @return this
      */
     public RogueHandbookEvent setIsUnlocked(final boolean value) {
       bitField0_ |= 0x00000002;
       isUnlocked = value;
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
-     * @return whether the mDALHHJKHNJ field is set
-     */
-    public boolean hasMDALHHJKHNJ() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
-     * @return this
-     */
-    public RogueHandbookEvent clearMDALHHJKHNJ() {
-      bitField0_ &= ~0x00000004;
-      mDALHHJKHNJ.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableMDALHHJKHNJ()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getMDALHHJKHNJ() {
-      return mDALHHJKHNJ;
-    }
-
-    /**
-     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableMDALHHJKHNJ() {
-      bitField0_ |= 0x00000004;
-      return mDALHHJKHNJ;
-    }
-
-    /**
-     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
-     * @param value the mDALHHJKHNJ to add
-     * @return this
-     */
-    public RogueHandbookEvent addMDALHHJKHNJ(final int value) {
-      bitField0_ |= 0x00000004;
-      mDALHHJKHNJ.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 MDALHHJKHNJ = 13;</code>
-     * @param values the mDALHHJKHNJ to add
-     * @return this
-     */
-    public RogueHandbookEvent addAllMDALHHJKHNJ(final int... values) {
-      bitField0_ |= 0x00000004;
-      mDALHHJKHNJ.addAll(values);
       return this;
     }
 
@@ -193,7 +119,6 @@ public final class RogueHandbookEventOuterClass {
         bitField0_ = other.bitField0_;
         eventId = other.eventId;
         isUnlocked = other.isUnlocked;
-        mDALHHJKHNJ.copyFrom(other.mDALHHJKHNJ);
       }
       return this;
     }
@@ -210,9 +135,6 @@ public final class RogueHandbookEventOuterClass {
       if (other.hasIsUnlocked()) {
         setIsUnlocked(other.isUnlocked);
       }
-      if (other.hasMDALHHJKHNJ()) {
-        getMutableMDALHHJKHNJ().addAll(other.mDALHHJKHNJ);
-      }
       return this;
     }
 
@@ -225,7 +147,6 @@ public final class RogueHandbookEventOuterClass {
       bitField0_ = 0;
       eventId = 0;
       isUnlocked = false;
-      mDALHHJKHNJ.clear();
       return this;
     }
 
@@ -236,7 +157,6 @@ public final class RogueHandbookEventOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      mDALHHJKHNJ.clear();
       return this;
     }
 
@@ -251,25 +171,18 @@ public final class RogueHandbookEventOuterClass {
       RogueHandbookEvent other = (RogueHandbookEvent) o;
       return bitField0_ == other.bitField0_
         && (!hasEventId() || eventId == other.eventId)
-        && (!hasIsUnlocked() || isUnlocked == other.isUnlocked)
-        && (!hasMDALHHJKHNJ() || mDALHHJKHNJ.equals(other.mDALHHJKHNJ));
+        && (!hasIsUnlocked() || isUnlocked == other.isUnlocked);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(eventId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 8);
         output.writeBoolNoTag(isUnlocked);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        for (int i = 0; i < mDALHHJKHNJ.length(); i++) {
-          output.writeRawByte((byte) 104);
-          output.writeUInt32NoTag(mDALHHJKHNJ.array()[i]);
-        }
       }
     }
 
@@ -282,9 +195,6 @@ public final class RogueHandbookEventOuterClass {
       if ((bitField0_ & 0x00000002) != 0) {
         size += 2;
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += (1 * mDALHHJKHNJ.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(mDALHHJKHNJ);
-      }
       return size;
     }
 
@@ -295,28 +205,19 @@ public final class RogueHandbookEventOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 88: {
+          case 120: {
             // eventId
             eventId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 112) {
+            if (tag != 8) {
               break;
             }
           }
-          case 112: {
+          case 8: {
             // isUnlocked
             isUnlocked = input.readBool();
             bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 106) {
-              break;
-            }
-          }
-          case 106: {
-            // mDALHHJKHNJ [packed=true]
-            input.readPackedUInt32(mDALHHJKHNJ, tag);
-            bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -332,12 +233,6 @@ public final class RogueHandbookEventOuterClass {
             tag = input.readTag();
             break;
           }
-          case 104: {
-            // mDALHHJKHNJ [packed=false]
-            tag = input.readRepeatedUInt32(mDALHHJKHNJ, tag);
-            bitField0_ |= 0x00000004;
-            break;
-          }
         }
       }
     }
@@ -350,9 +245,6 @@ public final class RogueHandbookEventOuterClass {
       }
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeBool(FieldNames.isUnlocked, isUnlocked);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRepeatedUInt32(FieldNames.mDALHHJKHNJ, mDALHHJKHNJ);
       }
       output.endObject();
     }
@@ -382,17 +274,6 @@ public final class RogueHandbookEventOuterClass {
               if (!input.trySkipNullValue()) {
                 isUnlocked = input.readBool();
                 bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -2007440415: {
-            if (input.isAtField(FieldNames.mDALHHJKHNJ)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(mDALHHJKHNJ);
-                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -455,8 +336,6 @@ public final class RogueHandbookEventOuterClass {
       static final FieldName eventId = FieldName.forField("eventId", "event_id");
 
       static final FieldName isUnlocked = FieldName.forField("isUnlocked", "is_unlocked");
-
-      static final FieldName mDALHHJKHNJ = FieldName.forField("MDALHHJKHNJ");
     }
   }
 }

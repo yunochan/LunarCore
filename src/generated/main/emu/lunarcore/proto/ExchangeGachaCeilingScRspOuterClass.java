@@ -19,14 +19,14 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 avatar_id = 11;</code>
-     */
-    private int avatarId;
-
-    /**
-     * <code>optional uint32 retcode = 13;</code>
+     * <code>optional uint32 retcode = 1;</code>
      */
     private int retcode;
+
+    /**
+     * <code>optional uint32 avatar_id = 9;</code>
+     */
+    private int avatarId;
 
     /**
      * <code>optional uint32 gacha_type = 15;</code>
@@ -34,12 +34,12 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     private int gachaType;
 
     /**
-     * <code>optional .ItemList transfer_item_list = 8;</code>
+     * <code>optional .ItemList transfer_item_list = 6;</code>
      */
     private final ItemListOuterClass.ItemList transferItemList = ItemListOuterClass.ItemList.newInstance();
 
     /**
-     * <code>optional .GachaCeiling gacha_ceiling = 12;</code>
+     * <code>optional .GachaCeiling gacha_ceiling = 14;</code>
      */
     private final GachaCeilingOuterClass.GachaCeiling gachaCeiling = GachaCeilingOuterClass.GachaCeiling.newInstance();
 
@@ -54,62 +54,25 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 11;</code>
-     * @return whether the avatarId field is set
+     * <code>optional uint32 retcode = 1;</code>
+     * @return whether the retcode field is set
      */
-    public boolean hasAvatarId() {
+    public boolean hasRetcode() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 avatar_id = 11;</code>
-     * @return this
-     */
-    public ExchangeGachaCeilingScRsp clearAvatarId() {
-      bitField0_ &= ~0x00000001;
-      avatarId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 avatar_id = 11;</code>
-     * @return the avatarId
-     */
-    public int getAvatarId() {
-      return avatarId;
-    }
-
-    /**
-     * <code>optional uint32 avatar_id = 11;</code>
-     * @param value the avatarId to set
-     * @return this
-     */
-    public ExchangeGachaCeilingScRsp setAvatarId(final int value) {
-      bitField0_ |= 0x00000001;
-      avatarId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 13;</code>
-     * @return whether the retcode field is set
-     */
-    public boolean hasRetcode() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 13;</code>
+     * <code>optional uint32 retcode = 1;</code>
      * @return this
      */
     public ExchangeGachaCeilingScRsp clearRetcode() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       retcode = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 retcode = 13;</code>
+     * <code>optional uint32 retcode = 1;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -117,13 +80,50 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 13;</code>
+     * <code>optional uint32 retcode = 1;</code>
      * @param value the retcode to set
      * @return this
      */
     public ExchangeGachaCeilingScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       retcode = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 avatar_id = 9;</code>
+     * @return whether the avatarId field is set
+     */
+    public boolean hasAvatarId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 avatar_id = 9;</code>
+     * @return this
+     */
+    public ExchangeGachaCeilingScRsp clearAvatarId() {
+      bitField0_ &= ~0x00000002;
+      avatarId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 avatar_id = 9;</code>
+     * @return the avatarId
+     */
+    public int getAvatarId() {
+      return avatarId;
+    }
+
+    /**
+     * <code>optional uint32 avatar_id = 9;</code>
+     * @param value the avatarId to set
+     * @return this
+     */
+    public ExchangeGachaCeilingScRsp setAvatarId(final int value) {
+      bitField0_ |= 0x00000002;
+      avatarId = value;
       return this;
     }
 
@@ -165,7 +165,7 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList transfer_item_list = 8;</code>
+     * <code>optional .ItemList transfer_item_list = 6;</code>
      * @return whether the transferItemList field is set
      */
     public boolean hasTransferItemList() {
@@ -173,7 +173,7 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList transfer_item_list = 8;</code>
+     * <code>optional .ItemList transfer_item_list = 6;</code>
      * @return this
      */
     public ExchangeGachaCeilingScRsp clearTransferItemList() {
@@ -183,7 +183,7 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList transfer_item_list = 8;</code>
+     * <code>optional .ItemList transfer_item_list = 6;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -197,7 +197,7 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList transfer_item_list = 8;</code>
+     * <code>optional .ItemList transfer_item_list = 6;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -211,7 +211,7 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList transfer_item_list = 8;</code>
+     * <code>optional .ItemList transfer_item_list = 6;</code>
      * @param value the transferItemList to set
      * @return this
      */
@@ -222,7 +222,7 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     }
 
     /**
-     * <code>optional .GachaCeiling gacha_ceiling = 12;</code>
+     * <code>optional .GachaCeiling gacha_ceiling = 14;</code>
      * @return whether the gachaCeiling field is set
      */
     public boolean hasGachaCeiling() {
@@ -230,7 +230,7 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     }
 
     /**
-     * <code>optional .GachaCeiling gacha_ceiling = 12;</code>
+     * <code>optional .GachaCeiling gacha_ceiling = 14;</code>
      * @return this
      */
     public ExchangeGachaCeilingScRsp clearGachaCeiling() {
@@ -240,7 +240,7 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     }
 
     /**
-     * <code>optional .GachaCeiling gacha_ceiling = 12;</code>
+     * <code>optional .GachaCeiling gacha_ceiling = 14;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -254,7 +254,7 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     }
 
     /**
-     * <code>optional .GachaCeiling gacha_ceiling = 12;</code>
+     * <code>optional .GachaCeiling gacha_ceiling = 14;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -268,7 +268,7 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     }
 
     /**
-     * <code>optional .GachaCeiling gacha_ceiling = 12;</code>
+     * <code>optional .GachaCeiling gacha_ceiling = 14;</code>
      * @param value the gachaCeiling to set
      * @return this
      */
@@ -284,8 +284,8 @@ public final class ExchangeGachaCeilingScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        avatarId = other.avatarId;
         retcode = other.retcode;
+        avatarId = other.avatarId;
         gachaType = other.gachaType;
         transferItemList.copyFrom(other.transferItemList);
         gachaCeiling.copyFrom(other.gachaCeiling);
@@ -299,11 +299,11 @@ public final class ExchangeGachaCeilingScRspOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasAvatarId()) {
-        setAvatarId(other.avatarId);
-      }
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
+      }
+      if (other.hasAvatarId()) {
+        setAvatarId(other.avatarId);
       }
       if (other.hasGachaType()) {
         setGachaType(other.gachaType);
@@ -324,8 +324,8 @@ public final class ExchangeGachaCeilingScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      avatarId = 0;
       retcode = 0;
+      avatarId = 0;
       gachaType = 0;
       transferItemList.clear();
       gachaCeiling.clear();
@@ -354,8 +354,8 @@ public final class ExchangeGachaCeilingScRspOuterClass {
       }
       ExchangeGachaCeilingScRsp other = (ExchangeGachaCeilingScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasAvatarId() || avatarId == other.avatarId)
         && (!hasRetcode() || retcode == other.retcode)
+        && (!hasAvatarId() || avatarId == other.avatarId)
         && (!hasGachaType() || gachaType == other.gachaType)
         && (!hasTransferItemList() || transferItemList.equals(other.transferItemList))
         && (!hasGachaCeiling() || gachaCeiling.equals(other.gachaCeiling));
@@ -364,23 +364,23 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 88);
-        output.writeUInt32NoTag(avatarId);
+        output.writeRawByte((byte) 8);
+        output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 104);
-        output.writeUInt32NoTag(retcode);
+        output.writeRawByte((byte) 72);
+        output.writeUInt32NoTag(avatarId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(gachaType);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 66);
+        output.writeRawByte((byte) 50);
         output.writeMessageNoTag(transferItemList);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 98);
+        output.writeRawByte((byte) 114);
         output.writeMessageNoTag(gachaCeiling);
       }
     }
@@ -389,10 +389,10 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(avatarId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(avatarId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(gachaType);
@@ -413,18 +413,18 @@ public final class ExchangeGachaCeilingScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 88: {
-            // avatarId
-            avatarId = input.readUInt32();
+          case 8: {
+            // retcode
+            retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 104) {
+            if (tag != 72) {
               break;
             }
           }
-          case 104: {
-            // retcode
-            retcode = input.readUInt32();
+          case 72: {
+            // avatarId
+            avatarId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 120) {
@@ -436,20 +436,20 @@ public final class ExchangeGachaCeilingScRspOuterClass {
             gachaType = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 66) {
+            if (tag != 50) {
               break;
             }
           }
-          case 66: {
+          case 50: {
             // transferItemList
             input.readMessage(transferItemList);
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 98) {
+            if (tag != 114) {
               break;
             }
           }
-          case 98: {
+          case 114: {
             // gachaCeiling
             input.readMessage(gachaCeiling);
             bitField0_ |= 0x00000010;
@@ -476,10 +476,10 @@ public final class ExchangeGachaCeilingScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.avatarId, avatarId);
+        output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.retcode, retcode);
+        output.writeUInt32(FieldNames.avatarId, avatarId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeUInt32(FieldNames.gachaType, gachaType);
@@ -500,11 +500,10 @@ public final class ExchangeGachaCeilingScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 1787287636:
-          case -428636735: {
-            if (input.isAtField(FieldNames.avatarId)) {
+          case 1097936398: {
+            if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
-                avatarId = input.readUInt32();
+                retcode = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -512,10 +511,11 @@ public final class ExchangeGachaCeilingScRspOuterClass {
             }
             break;
           }
-          case 1097936398: {
-            if (input.isAtField(FieldNames.retcode)) {
+          case 1787287636:
+          case -428636735: {
+            if (input.isAtField(FieldNames.avatarId)) {
               if (!input.trySkipNullValue()) {
-                retcode = input.readUInt32();
+                avatarId = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -612,9 +612,9 @@ public final class ExchangeGachaCeilingScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName avatarId = FieldName.forField("avatarId", "avatar_id");
-
       static final FieldName retcode = FieldName.forField("retcode");
+
+      static final FieldName avatarId = FieldName.forField("avatarId", "avatar_id");
 
       static final FieldName gachaType = FieldName.forField("gachaType", "gacha_type");
 

@@ -12,7 +12,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.*;
-import java.util.jar.JarFile;
 
 /** Manages the server's plugins and the event system. */
 @Getter

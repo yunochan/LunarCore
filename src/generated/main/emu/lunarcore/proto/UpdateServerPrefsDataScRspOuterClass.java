@@ -19,16 +19,12 @@ public final class UpdateServerPrefsDataScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 server_prefs_id = 1;</code>
+     * <code>optional uint32 server_prefs_id = 6;</code>
      */
     private int serverPrefsId;
 
     /**
-     * <pre>
-     *  PDBKKNJFBAJ FDAJEIDNMAK = 9;
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 3;</code>
+     * <code>optional uint32 retcode = 8;</code>
      */
     private int retcode;
 
@@ -43,7 +39,7 @@ public final class UpdateServerPrefsDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 server_prefs_id = 1;</code>
+     * <code>optional uint32 server_prefs_id = 6;</code>
      * @return whether the serverPrefsId field is set
      */
     public boolean hasServerPrefsId() {
@@ -51,7 +47,7 @@ public final class UpdateServerPrefsDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 server_prefs_id = 1;</code>
+     * <code>optional uint32 server_prefs_id = 6;</code>
      * @return this
      */
     public UpdateServerPrefsDataScRsp clearServerPrefsId() {
@@ -61,7 +57,7 @@ public final class UpdateServerPrefsDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 server_prefs_id = 1;</code>
+     * <code>optional uint32 server_prefs_id = 6;</code>
      * @return the serverPrefsId
      */
     public int getServerPrefsId() {
@@ -69,7 +65,7 @@ public final class UpdateServerPrefsDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 server_prefs_id = 1;</code>
+     * <code>optional uint32 server_prefs_id = 6;</code>
      * @param value the serverPrefsId to set
      * @return this
      */
@@ -80,11 +76,7 @@ public final class UpdateServerPrefsDataScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  PDBKKNJFBAJ FDAJEIDNMAK = 9;
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 3;</code>
+     * <code>optional uint32 retcode = 8;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -92,11 +84,7 @@ public final class UpdateServerPrefsDataScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  PDBKKNJFBAJ FDAJEIDNMAK = 9;
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 3;</code>
+     * <code>optional uint32 retcode = 8;</code>
      * @return this
      */
     public UpdateServerPrefsDataScRsp clearRetcode() {
@@ -106,11 +94,7 @@ public final class UpdateServerPrefsDataScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  PDBKKNJFBAJ FDAJEIDNMAK = 9;
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 3;</code>
+     * <code>optional uint32 retcode = 8;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -118,11 +102,7 @@ public final class UpdateServerPrefsDataScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  PDBKKNJFBAJ FDAJEIDNMAK = 9;
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 3;</code>
+     * <code>optional uint32 retcode = 8;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -197,11 +177,11 @@ public final class UpdateServerPrefsDataScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(serverPrefsId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 64);
         output.writeUInt32NoTag(retcode);
       }
     }
@@ -225,16 +205,16 @@ public final class UpdateServerPrefsDataScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 48: {
             // serverPrefsId
             serverPrefsId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 24) {
+            if (tag != 64) {
               break;
             }
           }
-          case 24: {
+          case 64: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000002;

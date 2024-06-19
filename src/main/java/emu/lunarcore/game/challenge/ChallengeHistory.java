@@ -8,6 +8,7 @@ import dev.morphia.annotations.Indexed;
 import emu.lunarcore.LunarCore;
 import emu.lunarcore.game.player.Player;
 import emu.lunarcore.proto.ChallengeOuterClass.Challenge;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,6 +26,9 @@ public class ChallengeHistory {
     private int takenReward;
     private int stars;
     private int score;
+    
+    @Setter(AccessLevel.NONE)
+    private ChallengeExtraHistory extraData;
     
     @Deprecated // Morphia
     public ChallengeHistory() {}
@@ -50,12 +54,26 @@ public class ChallengeHistory {
         this.score = score;
     }
     
+    public ChallengeExtraHistory getExtraData() {
+        if (this.extraData == null) {
+            this.extraData = new ChallengeExtraHistory();
+        }
+        
+        return this.extraData;
+    }
+    
     public Challenge toProto() {
         var proto = Challenge.newInstance()
                 .setChallengeId(this.getChallengeId())
                 .setTakenReward(this.getTakenReward())
                 .setScore(this.getScore())
                 .setStars(this.getStars());
+        
+        if (this.extraData != null) {
+            var boss = proto.getMutableExtInfo().getMutableBossInfo();
+            boss.getMutableFirstNode();
+            boss.getMutableSecondNode();
+        }
         
         return proto;
     }
@@ -66,5 +84,10 @@ public class ChallengeHistory {
     
     public void save() {
         LunarCore.getGameDatabase().save(this);
+    }
+    
+    @Entity(useDiscriminator = false)
+    public static class ChallengeExtraHistory {
+        
     }
 }

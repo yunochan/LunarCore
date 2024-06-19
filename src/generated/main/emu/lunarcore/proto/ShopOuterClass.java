@@ -20,37 +20,37 @@ public final class ShopOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional int64 begin_time = 5;</code>
+     * <code>optional int64 begin_time = 10;</code>
      */
     private long beginTime;
 
     /**
-     * <code>optional int64 end_time = 9;</code>
+     * <code>optional int64 end_time = 15;</code>
      */
     private long endTime;
 
     /**
-     * <code>optional uint64 city_taken_level_reward = 14;</code>
+     * <code>optional uint64 city_taken_level_reward = 4;</code>
      */
     private long cityTakenLevelReward;
 
     /**
-     * <code>optional uint32 shop_id = 6;</code>
-     */
-    private int shopId;
-
-    /**
-     * <code>optional uint32 city_exp = 11;</code>
+     * <code>optional uint32 city_exp = 2;</code>
      */
     private int cityExp;
 
     /**
-     * <code>optional uint32 city_level = 15;</code>
+     * <code>optional uint32 city_level = 8;</code>
      */
     private int cityLevel;
 
     /**
-     * <code>repeated .Goods goods_list = 7;</code>
+     * <code>optional uint32 shop_id = 14;</code>
+     */
+    private int shopId;
+
+    /**
+     * <code>repeated .Goods goods_list = 9;</code>
      */
     private final RepeatedMessage<GoodsOuterClass.Goods> goodsList = RepeatedMessage.newEmptyInstance(GoodsOuterClass.Goods.getFactory());
 
@@ -65,7 +65,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional int64 begin_time = 5;</code>
+     * <code>optional int64 begin_time = 10;</code>
      * @return whether the beginTime field is set
      */
     public boolean hasBeginTime() {
@@ -73,7 +73,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional int64 begin_time = 5;</code>
+     * <code>optional int64 begin_time = 10;</code>
      * @return this
      */
     public Shop clearBeginTime() {
@@ -83,7 +83,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional int64 begin_time = 5;</code>
+     * <code>optional int64 begin_time = 10;</code>
      * @return the beginTime
      */
     public long getBeginTime() {
@@ -91,7 +91,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional int64 begin_time = 5;</code>
+     * <code>optional int64 begin_time = 10;</code>
      * @param value the beginTime to set
      * @return this
      */
@@ -102,7 +102,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional int64 end_time = 9;</code>
+     * <code>optional int64 end_time = 15;</code>
      * @return whether the endTime field is set
      */
     public boolean hasEndTime() {
@@ -110,7 +110,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional int64 end_time = 9;</code>
+     * <code>optional int64 end_time = 15;</code>
      * @return this
      */
     public Shop clearEndTime() {
@@ -120,7 +120,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional int64 end_time = 9;</code>
+     * <code>optional int64 end_time = 15;</code>
      * @return the endTime
      */
     public long getEndTime() {
@@ -128,7 +128,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional int64 end_time = 9;</code>
+     * <code>optional int64 end_time = 15;</code>
      * @param value the endTime to set
      * @return this
      */
@@ -139,7 +139,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional uint64 city_taken_level_reward = 14;</code>
+     * <code>optional uint64 city_taken_level_reward = 4;</code>
      * @return whether the cityTakenLevelReward field is set
      */
     public boolean hasCityTakenLevelReward() {
@@ -147,7 +147,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional uint64 city_taken_level_reward = 14;</code>
+     * <code>optional uint64 city_taken_level_reward = 4;</code>
      * @return this
      */
     public Shop clearCityTakenLevelReward() {
@@ -157,7 +157,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional uint64 city_taken_level_reward = 14;</code>
+     * <code>optional uint64 city_taken_level_reward = 4;</code>
      * @return the cityTakenLevelReward
      */
     public long getCityTakenLevelReward() {
@@ -165,7 +165,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional uint64 city_taken_level_reward = 14;</code>
+     * <code>optional uint64 city_taken_level_reward = 4;</code>
      * @param value the cityTakenLevelReward to set
      * @return this
      */
@@ -176,62 +176,25 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional uint32 shop_id = 6;</code>
-     * @return whether the shopId field is set
+     * <code>optional uint32 city_exp = 2;</code>
+     * @return whether the cityExp field is set
      */
-    public boolean hasShopId() {
+    public boolean hasCityExp() {
       return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
-     * <code>optional uint32 shop_id = 6;</code>
-     * @return this
-     */
-    public Shop clearShopId() {
-      bitField0_ &= ~0x00000008;
-      shopId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 shop_id = 6;</code>
-     * @return the shopId
-     */
-    public int getShopId() {
-      return shopId;
-    }
-
-    /**
-     * <code>optional uint32 shop_id = 6;</code>
-     * @param value the shopId to set
-     * @return this
-     */
-    public Shop setShopId(final int value) {
-      bitField0_ |= 0x00000008;
-      shopId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 city_exp = 11;</code>
-     * @return whether the cityExp field is set
-     */
-    public boolean hasCityExp() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>optional uint32 city_exp = 11;</code>
+     * <code>optional uint32 city_exp = 2;</code>
      * @return this
      */
     public Shop clearCityExp() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000008;
       cityExp = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 city_exp = 11;</code>
+     * <code>optional uint32 city_exp = 2;</code>
      * @return the cityExp
      */
     public int getCityExp() {
@@ -239,36 +202,36 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional uint32 city_exp = 11;</code>
+     * <code>optional uint32 city_exp = 2;</code>
      * @param value the cityExp to set
      * @return this
      */
     public Shop setCityExp(final int value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       cityExp = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 city_level = 15;</code>
+     * <code>optional uint32 city_level = 8;</code>
      * @return whether the cityLevel field is set
      */
     public boolean hasCityLevel() {
-      return (bitField0_ & 0x00000020) != 0;
+      return (bitField0_ & 0x00000010) != 0;
     }
 
     /**
-     * <code>optional uint32 city_level = 15;</code>
+     * <code>optional uint32 city_level = 8;</code>
      * @return this
      */
     public Shop clearCityLevel() {
-      bitField0_ &= ~0x00000020;
+      bitField0_ &= ~0x00000010;
       cityLevel = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 city_level = 15;</code>
+     * <code>optional uint32 city_level = 8;</code>
      * @return the cityLevel
      */
     public int getCityLevel() {
@@ -276,18 +239,55 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>optional uint32 city_level = 15;</code>
+     * <code>optional uint32 city_level = 8;</code>
      * @param value the cityLevel to set
      * @return this
      */
     public Shop setCityLevel(final int value) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       cityLevel = value;
       return this;
     }
 
     /**
-     * <code>repeated .Goods goods_list = 7;</code>
+     * <code>optional uint32 shop_id = 14;</code>
+     * @return whether the shopId field is set
+     */
+    public boolean hasShopId() {
+      return (bitField0_ & 0x00000020) != 0;
+    }
+
+    /**
+     * <code>optional uint32 shop_id = 14;</code>
+     * @return this
+     */
+    public Shop clearShopId() {
+      bitField0_ &= ~0x00000020;
+      shopId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 shop_id = 14;</code>
+     * @return the shopId
+     */
+    public int getShopId() {
+      return shopId;
+    }
+
+    /**
+     * <code>optional uint32 shop_id = 14;</code>
+     * @param value the shopId to set
+     * @return this
+     */
+    public Shop setShopId(final int value) {
+      bitField0_ |= 0x00000020;
+      shopId = value;
+      return this;
+    }
+
+    /**
+     * <code>repeated .Goods goods_list = 9;</code>
      * @return whether the goodsList field is set
      */
     public boolean hasGoodsList() {
@@ -295,7 +295,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>repeated .Goods goods_list = 7;</code>
+     * <code>repeated .Goods goods_list = 9;</code>
      * @return this
      */
     public Shop clearGoodsList() {
@@ -305,7 +305,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>repeated .Goods goods_list = 7;</code>
+     * <code>repeated .Goods goods_list = 9;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -319,7 +319,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>repeated .Goods goods_list = 7;</code>
+     * <code>repeated .Goods goods_list = 9;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -333,7 +333,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>repeated .Goods goods_list = 7;</code>
+     * <code>repeated .Goods goods_list = 9;</code>
      * @param value the goodsList to add
      * @return this
      */
@@ -344,7 +344,7 @@ public final class ShopOuterClass {
     }
 
     /**
-     * <code>repeated .Goods goods_list = 7;</code>
+     * <code>repeated .Goods goods_list = 9;</code>
      * @param values the goodsList to add
      * @return this
      */
@@ -362,9 +362,9 @@ public final class ShopOuterClass {
         beginTime = other.beginTime;
         endTime = other.endTime;
         cityTakenLevelReward = other.cityTakenLevelReward;
-        shopId = other.shopId;
         cityExp = other.cityExp;
         cityLevel = other.cityLevel;
+        shopId = other.shopId;
         goodsList.copyFrom(other.goodsList);
       }
       return this;
@@ -385,14 +385,14 @@ public final class ShopOuterClass {
       if (other.hasCityTakenLevelReward()) {
         setCityTakenLevelReward(other.cityTakenLevelReward);
       }
-      if (other.hasShopId()) {
-        setShopId(other.shopId);
-      }
       if (other.hasCityExp()) {
         setCityExp(other.cityExp);
       }
       if (other.hasCityLevel()) {
         setCityLevel(other.cityLevel);
+      }
+      if (other.hasShopId()) {
+        setShopId(other.shopId);
       }
       if (other.hasGoodsList()) {
         getMutableGoodsList().addAll(other.goodsList);
@@ -410,9 +410,9 @@ public final class ShopOuterClass {
       beginTime = 0L;
       endTime = 0L;
       cityTakenLevelReward = 0L;
-      shopId = 0;
       cityExp = 0;
       cityLevel = 0;
+      shopId = 0;
       goodsList.clear();
       return this;
     }
@@ -441,41 +441,41 @@ public final class ShopOuterClass {
         && (!hasBeginTime() || beginTime == other.beginTime)
         && (!hasEndTime() || endTime == other.endTime)
         && (!hasCityTakenLevelReward() || cityTakenLevelReward == other.cityTakenLevelReward)
-        && (!hasShopId() || shopId == other.shopId)
         && (!hasCityExp() || cityExp == other.cityExp)
         && (!hasCityLevel() || cityLevel == other.cityLevel)
+        && (!hasShopId() || shopId == other.shopId)
         && (!hasGoodsList() || goodsList.equals(other.goodsList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 80);
         output.writeInt64NoTag(beginTime);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 120);
         output.writeInt64NoTag(endTime);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 32);
         output.writeUInt64NoTag(cityTakenLevelReward);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 48);
-        output.writeUInt32NoTag(shopId);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(cityExp);
       }
-      if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRawByte((byte) 120);
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeRawByte((byte) 64);
         output.writeUInt32NoTag(cityLevel);
+      }
+      if ((bitField0_ & 0x00000020) != 0) {
+        output.writeRawByte((byte) 112);
+        output.writeUInt32NoTag(shopId);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         for (int i = 0; i < goodsList.length(); i++) {
-          output.writeRawByte((byte) 58);
+          output.writeRawByte((byte) 74);
           output.writeMessageNoTag(goodsList.get(i));
         }
       }
@@ -494,13 +494,13 @@ public final class ShopOuterClass {
         size += 1 + ProtoSink.computeUInt64SizeNoTag(cityTakenLevelReward);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(shopId);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(cityExp);
       }
-      if ((bitField0_ & 0x00000020) != 0) {
+      if ((bitField0_ & 0x00000010) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(cityLevel);
+      }
+      if ((bitField0_ & 0x00000020) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(shopId);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         size += (1 * goodsList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(goodsList);
@@ -515,61 +515,61 @@ public final class ShopOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
+          case 80: {
             // beginTime
             beginTime = input.readInt64();
             bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 72) {
-              break;
-            }
-          }
-          case 72: {
-            // endTime
-            endTime = input.readInt64();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 112) {
-              break;
-            }
-          }
-          case 112: {
-            // cityTakenLevelReward
-            cityTakenLevelReward = input.readUInt64();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 48) {
-              break;
-            }
-          }
-          case 48: {
-            // shopId
-            shopId = input.readUInt32();
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
-            if (tag != 88) {
-              break;
-            }
-          }
-          case 88: {
-            // cityExp
-            cityExp = input.readUInt32();
-            bitField0_ |= 0x00000010;
             tag = input.readTag();
             if (tag != 120) {
               break;
             }
           }
           case 120: {
-            // cityLevel
-            cityLevel = input.readUInt32();
-            bitField0_ |= 0x00000020;
+            // endTime
+            endTime = input.readInt64();
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 32) {
               break;
             }
           }
-          case 58: {
+          case 32: {
+            // cityTakenLevelReward
+            cityTakenLevelReward = input.readUInt64();
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 16) {
+              break;
+            }
+          }
+          case 16: {
+            // cityExp
+            cityExp = input.readUInt32();
+            bitField0_ |= 0x00000008;
+            tag = input.readTag();
+            if (tag != 64) {
+              break;
+            }
+          }
+          case 64: {
+            // cityLevel
+            cityLevel = input.readUInt32();
+            bitField0_ |= 0x00000010;
+            tag = input.readTag();
+            if (tag != 112) {
+              break;
+            }
+          }
+          case 112: {
+            // shopId
+            shopId = input.readUInt32();
+            bitField0_ |= 0x00000020;
+            tag = input.readTag();
+            if (tag != 74) {
+              break;
+            }
+          }
+          case 74: {
             // goodsList
             tag = input.readRepeatedMessage(goodsList, tag);
             bitField0_ |= 0x00000040;
@@ -604,13 +604,13 @@ public final class ShopOuterClass {
         output.writeUInt64(FieldNames.cityTakenLevelReward, cityTakenLevelReward);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.shopId, shopId);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         output.writeUInt32(FieldNames.cityExp, cityExp);
       }
-      if ((bitField0_ & 0x00000020) != 0) {
+      if ((bitField0_ & 0x00000010) != 0) {
         output.writeUInt32(FieldNames.cityLevel, cityLevel);
+      }
+      if ((bitField0_ & 0x00000020) != 0) {
+        output.writeUInt32(FieldNames.shopId, shopId);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         output.writeRepeatedMessage(FieldNames.goodsList, goodsList);
@@ -661,24 +661,12 @@ public final class ShopOuterClass {
             }
             break;
           }
-          case -903151951:
-          case 2067081988: {
-            if (input.isAtField(FieldNames.shopId)) {
-              if (!input.trySkipNullValue()) {
-                shopId = input.readUInt32();
-                bitField0_ |= 0x00000008;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 785415346:
           case -1421171383: {
             if (input.isAtField(FieldNames.cityExp)) {
               if (!input.trySkipNullValue()) {
                 cityExp = input.readUInt32();
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000008;
               }
             } else {
               input.skipUnknownField();
@@ -690,6 +678,18 @@ public final class ShopOuterClass {
             if (input.isAtField(FieldNames.cityLevel)) {
               if (!input.trySkipNullValue()) {
                 cityLevel = input.readUInt32();
+                bitField0_ |= 0x00000010;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -903151951:
+          case 2067081988: {
+            if (input.isAtField(FieldNames.shopId)) {
+              if (!input.trySkipNullValue()) {
+                shopId = input.readUInt32();
                 bitField0_ |= 0x00000020;
               }
             } else {
@@ -767,11 +767,11 @@ public final class ShopOuterClass {
 
       static final FieldName cityTakenLevelReward = FieldName.forField("cityTakenLevelReward", "city_taken_level_reward");
 
-      static final FieldName shopId = FieldName.forField("shopId", "shop_id");
-
       static final FieldName cityExp = FieldName.forField("cityExp", "city_exp");
 
       static final FieldName cityLevel = FieldName.forField("cityLevel", "city_level");
+
+      static final FieldName shopId = FieldName.forField("shopId", "shop_id");
 
       static final FieldName goodsList = FieldName.forField("goodsList", "goods_list");
     }

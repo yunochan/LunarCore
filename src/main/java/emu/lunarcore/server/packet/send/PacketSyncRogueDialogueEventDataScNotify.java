@@ -10,7 +10,8 @@ import java.util.List;
 
 public class PacketSyncRogueDialogueEventDataScNotify extends BasePacket {
     public PacketSyncRogueDialogueEventDataScNotify(RogueDialogueEvent event) {
-        super(CmdId.SyncRogueDialogueEventDataScNotify);
+        //super(CmdId.SyncRogueDialogueEventDataScNotify);
+        super(CmdId.NONE);
         
         var proto = SyncRogueDialogueEventDataScNotify.newInstance()
             .addRogueDialogueEvent(event);

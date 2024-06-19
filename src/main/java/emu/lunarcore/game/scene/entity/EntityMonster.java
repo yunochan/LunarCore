@@ -1,5 +1,8 @@
 package emu.lunarcore.game.scene.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import emu.lunarcore.data.GameData;
 import emu.lunarcore.data.config.GroupInfo;
 import emu.lunarcore.data.config.MonsterInfo;
@@ -35,7 +38,7 @@ public class EntityMonster implements GameEntity, Tickable {
     private final Position rot;
     
     private Int2ObjectMap<SceneBuff> buffs;
-    @Setter private SceneBuff tempBuff;
+    private List<SceneBuff> tempBuffs;
     
     private int farmElementId;
     private BattleStage customStage;
@@ -88,6 +91,14 @@ public class EntityMonster implements GameEntity, Tickable {
         return buff;
     }
     
+    public synchronized void addTempBuff(SceneBuff tempBuff) {
+        if (this.tempBuffs == null) {
+            this.tempBuffs = new ArrayList<>();
+        }
+        
+        this.tempBuffs.add(tempBuff);
+    }
+    
     public synchronized void applyBuffs(Battle battle, int waveIndex) {
         if (this.buffs != null) {
             for (var entry : this.buffs.int2ObjectEntrySet()) {
@@ -101,9 +112,12 @@ public class EntityMonster implements GameEntity, Tickable {
             }
         }
         
-        if (this.getTempBuff() != null) {
-            this.applyBuff(battle, this.getTempBuff(), waveIndex);
-            this.tempBuff = null;
+        if (this.getTempBuffs() != null) {
+            for (var tempBuff : this.getTempBuffs()) {
+                this.applyBuff(battle, tempBuff, waveIndex);
+            }
+            
+            this.tempBuffs = null;
         }
     }
     

@@ -14,7 +14,7 @@ public class HandlerGroupStateChangeCsReq extends PacketHandler {
     @Override
     public void handle(GameSession session, byte[] data) throws Exception {
         var req = GroupStateChangeCsReq.parseFrom(data);
-        var groupStateInfo = req.getMutableGroupStateInfo();
+        var groupStateInfo = req.getMutableGroupInfo();
         
         session.send(new PacketGroupStateChangeScNotify(groupStateInfo));
         session.send(new PacketGroupStateChangeScRsp(groupStateInfo));

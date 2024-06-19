@@ -2,12 +2,13 @@ package emu.lunarcore.data.excel;
 
 import emu.lunarcore.data.GameResource;
 import emu.lunarcore.data.ResourceType;
+import emu.lunarcore.game.challenge.ChallengeType;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import lombok.Getter;
 
 @Getter
-@ResourceType(name = {"ChallengeMazeConfig.json", "ChallengeStoryMazeConfig.json"})
+@ResourceType(name = {"ChallengeMazeConfig.json", "ChallengeStoryMazeConfig.json", "ChallengeBossMazeConfig.json"})
 public class ChallengeExcel extends GameResource {
     private int ID;
     private int GroupID;
@@ -31,8 +32,10 @@ public class ChallengeExcel extends GameResource {
     private transient Int2ObjectMap<ChallengeMonsterInfo> challengeMonsters1;
     private transient Int2ObjectMap<ChallengeMonsterInfo> challengeMonsters2;
     
+    private transient ChallengeType type = ChallengeType.MEMORY;
     private transient ChallengeStoryExtraExcel storyExcel;
-
+    private transient ChallengeBossExtraExcel bossExcel;
+    
     @Override
     public int getId() {
         return ID;
@@ -42,9 +45,16 @@ public class ChallengeExcel extends GameResource {
         return this.storyExcel != null;
     }
 
-    public void setStoryExcel(ChallengeStoryExtraExcel storyExcel) {
-        this.storyExcel = storyExcel;
+    public void setStoryExcel(ChallengeStoryExtraExcel excel) {
+        this.type = ChallengeType.STORY;
+        this.storyExcel = excel;
         this.ChallengeCountDown = storyExcel.getTurnLimit();
+    }
+    
+    public void setBossExcel(ChallengeBossExtraExcel excel) {
+        this.type = ChallengeType.BOSS;
+        this.bossExcel = excel;
+        this.ChallengeCountDown = 10; // idk
     }
 
     @Override

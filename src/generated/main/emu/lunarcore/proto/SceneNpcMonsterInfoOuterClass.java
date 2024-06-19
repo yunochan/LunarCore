@@ -24,7 +24,7 @@ public final class SceneNpcMonsterInfoOuterClass {
     private int worldLevel;
 
     /**
-     * <code>optional uint32 event_id = 8;</code>
+     * <code>optional uint32 event_id = 11;</code>
      */
     private int eventId;
 
@@ -81,7 +81,7 @@ public final class SceneNpcMonsterInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 8;</code>
+     * <code>optional uint32 event_id = 11;</code>
      * @return whether the eventId field is set
      */
     public boolean hasEventId() {
@@ -89,7 +89,7 @@ public final class SceneNpcMonsterInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 8;</code>
+     * <code>optional uint32 event_id = 11;</code>
      * @return this
      */
     public SceneNpcMonsterInfo clearEventId() {
@@ -99,7 +99,7 @@ public final class SceneNpcMonsterInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 8;</code>
+     * <code>optional uint32 event_id = 11;</code>
      * @return the eventId
      */
     public int getEventId() {
@@ -107,7 +107,7 @@ public final class SceneNpcMonsterInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 8;</code>
+     * <code>optional uint32 event_id = 11;</code>
      * @param value the eventId to set
      * @return this
      */
@@ -229,7 +229,7 @@ public final class SceneNpcMonsterInfoOuterClass {
         output.writeUInt32NoTag(worldLevel);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(eventId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
@@ -265,11 +265,11 @@ public final class SceneNpcMonsterInfoOuterClass {
             worldLevel = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 88) {
               break;
             }
           }
-          case 64: {
+          case 88: {
             // eventId
             eventId = input.readUInt32();
             bitField0_ |= 0x00000002;

@@ -25,7 +25,7 @@ public final class GetFriendApplyListInfoScRspOuterClass {
     private int retcode;
 
     /**
-     * <code>repeated .FriendApplyInfo friend_apply_list = 4;</code>
+     * <code>repeated .FriendApplyInfo friend_apply_list = 15;</code>
      */
     private final RepeatedMessage<FriendApplyInfoOuterClass.FriendApplyInfo> friendApplyList = RepeatedMessage.newEmptyInstance(FriendApplyInfoOuterClass.FriendApplyInfo.getFactory());
 
@@ -77,7 +77,7 @@ public final class GetFriendApplyListInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .FriendApplyInfo friend_apply_list = 4;</code>
+     * <code>repeated .FriendApplyInfo friend_apply_list = 15;</code>
      * @return whether the friendApplyList field is set
      */
     public boolean hasFriendApplyList() {
@@ -85,7 +85,7 @@ public final class GetFriendApplyListInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .FriendApplyInfo friend_apply_list = 4;</code>
+     * <code>repeated .FriendApplyInfo friend_apply_list = 15;</code>
      * @return this
      */
     public GetFriendApplyListInfoScRsp clearFriendApplyList() {
@@ -95,7 +95,7 @@ public final class GetFriendApplyListInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .FriendApplyInfo friend_apply_list = 4;</code>
+     * <code>repeated .FriendApplyInfo friend_apply_list = 15;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -109,7 +109,7 @@ public final class GetFriendApplyListInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .FriendApplyInfo friend_apply_list = 4;</code>
+     * <code>repeated .FriendApplyInfo friend_apply_list = 15;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -123,7 +123,7 @@ public final class GetFriendApplyListInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .FriendApplyInfo friend_apply_list = 4;</code>
+     * <code>repeated .FriendApplyInfo friend_apply_list = 15;</code>
      * @param value the friendApplyList to add
      * @return this
      */
@@ -135,7 +135,7 @@ public final class GetFriendApplyListInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .FriendApplyInfo friend_apply_list = 4;</code>
+     * <code>repeated .FriendApplyInfo friend_apply_list = 15;</code>
      * @param values the friendApplyList to add
      * @return this
      */
@@ -217,7 +217,7 @@ public final class GetFriendApplyListInfoScRspOuterClass {
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < friendApplyList.length(); i++) {
-          output.writeRawByte((byte) 34);
+          output.writeRawByte((byte) 122);
           output.writeMessageNoTag(friendApplyList.get(i));
         }
       }
@@ -247,11 +247,11 @@ public final class GetFriendApplyListInfoScRspOuterClass {
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 34) {
+            if (tag != 122) {
               break;
             }
           }
-          case 34: {
+          case 122: {
             // friendApplyList
             tag = input.readRepeatedMessage(friendApplyList, tag);
             bitField0_ |= 0x00000002;

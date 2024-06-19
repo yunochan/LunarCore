@@ -50,7 +50,7 @@ public class MazeSkillAddBuff extends MazeSkillAction {
         for (GameEntity target : targets) {
             if (target instanceof EntityMonster monster) {
                 // Set as temp buff
-                monster.setTempBuff(new SceneBuff(caster.getAvatarId(), buffId));
+                monster.addTempBuff(new SceneBuff(caster.getAvatarId(), buffId));
             }
         }
     }

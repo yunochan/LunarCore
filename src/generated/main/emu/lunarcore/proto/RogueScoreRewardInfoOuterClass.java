@@ -20,37 +20,45 @@ public final class RogueScoreRewardInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional int64 begin_time = 9;</code>
-     */
-    private long beginTime;
-
-    /**
-     * <code>optional int64 end_time = 15;</code>
+     * <pre>
+     *  ?
+     * </pre>
+     *
+     * <code>optional int64 end_time = 4;</code>
      */
     private long endTime;
 
     /**
-     * <code>optional uint32 score = 4;</code>
+     * <pre>
+     *  ?
+     * </pre>
+     *
+     * <code>optional int64 begin_time = 12;</code>
      */
-    private int score;
+    private long beginTime;
 
     /**
-     * <code>optional uint32 pool_id = 6;</code>
+     * <code>optional uint32 pool_id = 11;</code>
      */
     private int poolId;
 
     /**
-     * <code>optional bool has_taken_initial_score = 11;</code>
+     * <code>optional uint32 score = 15;</code>
      */
-    private boolean hasTakenInitialScore;
+    private int score;
 
     /**
-     * <code>optional bool pool_refreshed = 13;</code>
+     * <code>optional bool pool_refreshed = 6;</code>
      */
     private boolean poolRefreshed;
 
     /**
-     * <code>repeated uint32 has_taken_reward = 7;</code>
+     * <code>optional bool has_taken_initial_score = 14;</code>
+     */
+    private boolean hasTakenInitialScore;
+
+    /**
+     * <code>repeated uint32 has_taken_reward = 5;</code>
      */
     private final RepeatedInt hasTakenReward = RepeatedInt.newEmptyInstance();
 
@@ -65,62 +73,37 @@ public final class RogueScoreRewardInfoOuterClass {
     }
 
     /**
-     * <code>optional int64 begin_time = 9;</code>
-     * @return whether the beginTime field is set
+     * <pre>
+     *  ?
+     * </pre>
+     *
+     * <code>optional int64 end_time = 4;</code>
+     * @return whether the endTime field is set
      */
-    public boolean hasBeginTime() {
+    public boolean hasEndTime() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional int64 begin_time = 9;</code>
-     * @return this
-     */
-    public RogueScoreRewardInfo clearBeginTime() {
-      bitField0_ &= ~0x00000001;
-      beginTime = 0L;
-      return this;
-    }
-
-    /**
-     * <code>optional int64 begin_time = 9;</code>
-     * @return the beginTime
-     */
-    public long getBeginTime() {
-      return beginTime;
-    }
-
-    /**
-     * <code>optional int64 begin_time = 9;</code>
-     * @param value the beginTime to set
-     * @return this
-     */
-    public RogueScoreRewardInfo setBeginTime(final long value) {
-      bitField0_ |= 0x00000001;
-      beginTime = value;
-      return this;
-    }
-
-    /**
-     * <code>optional int64 end_time = 15;</code>
-     * @return whether the endTime field is set
-     */
-    public boolean hasEndTime() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional int64 end_time = 15;</code>
+     * <pre>
+     *  ?
+     * </pre>
+     *
+     * <code>optional int64 end_time = 4;</code>
      * @return this
      */
     public RogueScoreRewardInfo clearEndTime() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       endTime = 0L;
       return this;
     }
 
     /**
-     * <code>optional int64 end_time = 15;</code>
+     * <pre>
+     *  ?
+     * </pre>
+     *
+     * <code>optional int64 end_time = 4;</code>
      * @return the endTime
      */
     public long getEndTime() {
@@ -128,73 +111,93 @@ public final class RogueScoreRewardInfoOuterClass {
     }
 
     /**
-     * <code>optional int64 end_time = 15;</code>
+     * <pre>
+     *  ?
+     * </pre>
+     *
+     * <code>optional int64 end_time = 4;</code>
      * @param value the endTime to set
      * @return this
      */
     public RogueScoreRewardInfo setEndTime(final long value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       endTime = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 score = 4;</code>
-     * @return whether the score field is set
+     * <pre>
+     *  ?
+     * </pre>
+     *
+     * <code>optional int64 begin_time = 12;</code>
+     * @return whether the beginTime field is set
      */
-    public boolean hasScore() {
+    public boolean hasBeginTime() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <pre>
+     *  ?
+     * </pre>
+     *
+     * <code>optional int64 begin_time = 12;</code>
+     * @return this
+     */
+    public RogueScoreRewardInfo clearBeginTime() {
+      bitField0_ &= ~0x00000002;
+      beginTime = 0L;
+      return this;
+    }
+
+    /**
+     * <pre>
+     *  ?
+     * </pre>
+     *
+     * <code>optional int64 begin_time = 12;</code>
+     * @return the beginTime
+     */
+    public long getBeginTime() {
+      return beginTime;
+    }
+
+    /**
+     * <pre>
+     *  ?
+     * </pre>
+     *
+     * <code>optional int64 begin_time = 12;</code>
+     * @param value the beginTime to set
+     * @return this
+     */
+    public RogueScoreRewardInfo setBeginTime(final long value) {
+      bitField0_ |= 0x00000002;
+      beginTime = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 pool_id = 11;</code>
+     * @return whether the poolId field is set
+     */
+    public boolean hasPoolId() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 score = 4;</code>
-     * @return this
-     */
-    public RogueScoreRewardInfo clearScore() {
-      bitField0_ &= ~0x00000004;
-      score = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 score = 4;</code>
-     * @return the score
-     */
-    public int getScore() {
-      return score;
-    }
-
-    /**
-     * <code>optional uint32 score = 4;</code>
-     * @param value the score to set
-     * @return this
-     */
-    public RogueScoreRewardInfo setScore(final int value) {
-      bitField0_ |= 0x00000004;
-      score = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 pool_id = 6;</code>
-     * @return whether the poolId field is set
-     */
-    public boolean hasPoolId() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional uint32 pool_id = 6;</code>
+     * <code>optional uint32 pool_id = 11;</code>
      * @return this
      */
     public RogueScoreRewardInfo clearPoolId() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000004;
       poolId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 pool_id = 6;</code>
+     * <code>optional uint32 pool_id = 11;</code>
      * @return the poolId
      */
     public int getPoolId() {
@@ -202,73 +205,73 @@ public final class RogueScoreRewardInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 pool_id = 6;</code>
+     * <code>optional uint32 pool_id = 11;</code>
      * @param value the poolId to set
      * @return this
      */
     public RogueScoreRewardInfo setPoolId(final int value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       poolId = value;
       return this;
     }
 
     /**
-     * <code>optional bool has_taken_initial_score = 11;</code>
-     * @return whether the hasTakenInitialScore field is set
+     * <code>optional uint32 score = 15;</code>
+     * @return whether the score field is set
      */
-    public boolean hasHasTakenInitialScore() {
+    public boolean hasScore() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>optional uint32 score = 15;</code>
+     * @return this
+     */
+    public RogueScoreRewardInfo clearScore() {
+      bitField0_ &= ~0x00000008;
+      score = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 score = 15;</code>
+     * @return the score
+     */
+    public int getScore() {
+      return score;
+    }
+
+    /**
+     * <code>optional uint32 score = 15;</code>
+     * @param value the score to set
+     * @return this
+     */
+    public RogueScoreRewardInfo setScore(final int value) {
+      bitField0_ |= 0x00000008;
+      score = value;
+      return this;
+    }
+
+    /**
+     * <code>optional bool pool_refreshed = 6;</code>
+     * @return whether the poolRefreshed field is set
+     */
+    public boolean hasPoolRefreshed() {
       return (bitField0_ & 0x00000010) != 0;
     }
 
     /**
-     * <code>optional bool has_taken_initial_score = 11;</code>
-     * @return this
-     */
-    public RogueScoreRewardInfo clearHasTakenInitialScore() {
-      bitField0_ &= ~0x00000010;
-      hasTakenInitialScore = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool has_taken_initial_score = 11;</code>
-     * @return the hasTakenInitialScore
-     */
-    public boolean getHasTakenInitialScore() {
-      return hasTakenInitialScore;
-    }
-
-    /**
-     * <code>optional bool has_taken_initial_score = 11;</code>
-     * @param value the hasTakenInitialScore to set
-     * @return this
-     */
-    public RogueScoreRewardInfo setHasTakenInitialScore(final boolean value) {
-      bitField0_ |= 0x00000010;
-      hasTakenInitialScore = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool pool_refreshed = 13;</code>
-     * @return whether the poolRefreshed field is set
-     */
-    public boolean hasPoolRefreshed() {
-      return (bitField0_ & 0x00000020) != 0;
-    }
-
-    /**
-     * <code>optional bool pool_refreshed = 13;</code>
+     * <code>optional bool pool_refreshed = 6;</code>
      * @return this
      */
     public RogueScoreRewardInfo clearPoolRefreshed() {
-      bitField0_ &= ~0x00000020;
+      bitField0_ &= ~0x00000010;
       poolRefreshed = false;
       return this;
     }
 
     /**
-     * <code>optional bool pool_refreshed = 13;</code>
+     * <code>optional bool pool_refreshed = 6;</code>
      * @return the poolRefreshed
      */
     public boolean getPoolRefreshed() {
@@ -276,18 +279,55 @@ public final class RogueScoreRewardInfoOuterClass {
     }
 
     /**
-     * <code>optional bool pool_refreshed = 13;</code>
+     * <code>optional bool pool_refreshed = 6;</code>
      * @param value the poolRefreshed to set
      * @return this
      */
     public RogueScoreRewardInfo setPoolRefreshed(final boolean value) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       poolRefreshed = value;
       return this;
     }
 
     /**
-     * <code>repeated uint32 has_taken_reward = 7;</code>
+     * <code>optional bool has_taken_initial_score = 14;</code>
+     * @return whether the hasTakenInitialScore field is set
+     */
+    public boolean hasHasTakenInitialScore() {
+      return (bitField0_ & 0x00000020) != 0;
+    }
+
+    /**
+     * <code>optional bool has_taken_initial_score = 14;</code>
+     * @return this
+     */
+    public RogueScoreRewardInfo clearHasTakenInitialScore() {
+      bitField0_ &= ~0x00000020;
+      hasTakenInitialScore = false;
+      return this;
+    }
+
+    /**
+     * <code>optional bool has_taken_initial_score = 14;</code>
+     * @return the hasTakenInitialScore
+     */
+    public boolean getHasTakenInitialScore() {
+      return hasTakenInitialScore;
+    }
+
+    /**
+     * <code>optional bool has_taken_initial_score = 14;</code>
+     * @param value the hasTakenInitialScore to set
+     * @return this
+     */
+    public RogueScoreRewardInfo setHasTakenInitialScore(final boolean value) {
+      bitField0_ |= 0x00000020;
+      hasTakenInitialScore = value;
+      return this;
+    }
+
+    /**
+     * <code>repeated uint32 has_taken_reward = 5;</code>
      * @return whether the hasTakenReward field is set
      */
     public boolean hasHasTakenReward() {
@@ -295,7 +335,7 @@ public final class RogueScoreRewardInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 has_taken_reward = 7;</code>
+     * <code>repeated uint32 has_taken_reward = 5;</code>
      * @return this
      */
     public RogueScoreRewardInfo clearHasTakenReward() {
@@ -305,7 +345,7 @@ public final class RogueScoreRewardInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 has_taken_reward = 7;</code>
+     * <code>repeated uint32 has_taken_reward = 5;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -319,7 +359,7 @@ public final class RogueScoreRewardInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 has_taken_reward = 7;</code>
+     * <code>repeated uint32 has_taken_reward = 5;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -333,7 +373,7 @@ public final class RogueScoreRewardInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 has_taken_reward = 7;</code>
+     * <code>repeated uint32 has_taken_reward = 5;</code>
      * @param value the hasTakenReward to add
      * @return this
      */
@@ -344,7 +384,7 @@ public final class RogueScoreRewardInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 has_taken_reward = 7;</code>
+     * <code>repeated uint32 has_taken_reward = 5;</code>
      * @param values the hasTakenReward to add
      * @return this
      */
@@ -359,12 +399,12 @@ public final class RogueScoreRewardInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        beginTime = other.beginTime;
         endTime = other.endTime;
-        score = other.score;
+        beginTime = other.beginTime;
         poolId = other.poolId;
-        hasTakenInitialScore = other.hasTakenInitialScore;
+        score = other.score;
         poolRefreshed = other.poolRefreshed;
+        hasTakenInitialScore = other.hasTakenInitialScore;
         hasTakenReward.copyFrom(other.hasTakenReward);
       }
       return this;
@@ -376,23 +416,23 @@ public final class RogueScoreRewardInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasBeginTime()) {
-        setBeginTime(other.beginTime);
-      }
       if (other.hasEndTime()) {
         setEndTime(other.endTime);
       }
-      if (other.hasScore()) {
-        setScore(other.score);
+      if (other.hasBeginTime()) {
+        setBeginTime(other.beginTime);
       }
       if (other.hasPoolId()) {
         setPoolId(other.poolId);
       }
-      if (other.hasHasTakenInitialScore()) {
-        setHasTakenInitialScore(other.hasTakenInitialScore);
+      if (other.hasScore()) {
+        setScore(other.score);
       }
       if (other.hasPoolRefreshed()) {
         setPoolRefreshed(other.poolRefreshed);
+      }
+      if (other.hasHasTakenInitialScore()) {
+        setHasTakenInitialScore(other.hasTakenInitialScore);
       }
       if (other.hasHasTakenReward()) {
         getMutableHasTakenReward().addAll(other.hasTakenReward);
@@ -407,12 +447,12 @@ public final class RogueScoreRewardInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      beginTime = 0L;
       endTime = 0L;
-      score = 0;
+      beginTime = 0L;
       poolId = 0;
-      hasTakenInitialScore = false;
+      score = 0;
       poolRefreshed = false;
+      hasTakenInitialScore = false;
       hasTakenReward.clear();
       return this;
     }
@@ -438,44 +478,44 @@ public final class RogueScoreRewardInfoOuterClass {
       }
       RogueScoreRewardInfo other = (RogueScoreRewardInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasBeginTime() || beginTime == other.beginTime)
         && (!hasEndTime() || endTime == other.endTime)
-        && (!hasScore() || score == other.score)
+        && (!hasBeginTime() || beginTime == other.beginTime)
         && (!hasPoolId() || poolId == other.poolId)
-        && (!hasHasTakenInitialScore() || hasTakenInitialScore == other.hasTakenInitialScore)
+        && (!hasScore() || score == other.score)
         && (!hasPoolRefreshed() || poolRefreshed == other.poolRefreshed)
+        && (!hasHasTakenInitialScore() || hasTakenInitialScore == other.hasTakenInitialScore)
         && (!hasHasTakenReward() || hasTakenReward.equals(other.hasTakenReward));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
-        output.writeInt64NoTag(beginTime);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 32);
         output.writeInt64NoTag(endTime);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 32);
-        output.writeUInt32NoTag(score);
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 96);
+        output.writeInt64NoTag(beginTime);
       }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 48);
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(poolId);
       }
+      if ((bitField0_ & 0x00000008) != 0) {
+        output.writeRawByte((byte) 120);
+        output.writeUInt32NoTag(score);
+      }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 88);
-        output.writeBoolNoTag(hasTakenInitialScore);
+        output.writeRawByte((byte) 48);
+        output.writeBoolNoTag(poolRefreshed);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRawByte((byte) 104);
-        output.writeBoolNoTag(poolRefreshed);
+        output.writeRawByte((byte) 112);
+        output.writeBoolNoTag(hasTakenInitialScore);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         for (int i = 0; i < hasTakenReward.length(); i++) {
-          output.writeRawByte((byte) 56);
+          output.writeRawByte((byte) 40);
           output.writeUInt32NoTag(hasTakenReward.array()[i]);
         }
       }
@@ -485,16 +525,16 @@ public final class RogueScoreRewardInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeInt64SizeNoTag(beginTime);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeInt64SizeNoTag(endTime);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        size += 1 + ProtoSink.computeInt64SizeNoTag(beginTime);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(score);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(poolId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(poolId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(score);
       }
       if ((bitField0_ & 0x00000010) != 0) {
         size += 2;
@@ -515,61 +555,61 @@ public final class RogueScoreRewardInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
-            // beginTime
-            beginTime = input.readInt64();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 120) {
-              break;
-            }
-          }
-          case 120: {
+          case 32: {
             // endTime
             endTime = input.readInt64();
+            bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 96) {
+              break;
+            }
+          }
+          case 96: {
+            // beginTime
+            beginTime = input.readInt64();
             bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 32) {
-              break;
-            }
-          }
-          case 32: {
-            // score
-            score = input.readUInt32();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 48) {
-              break;
-            }
-          }
-          case 48: {
-            // poolId
-            poolId = input.readUInt32();
-            bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 88) {
               break;
             }
           }
           case 88: {
-            // hasTakenInitialScore
-            hasTakenInitialScore = input.readBool();
-            bitField0_ |= 0x00000010;
+            // poolId
+            poolId = input.readUInt32();
+            bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 104) {
+            if (tag != 120) {
               break;
             }
           }
-          case 104: {
+          case 120: {
+            // score
+            score = input.readUInt32();
+            bitField0_ |= 0x00000008;
+            tag = input.readTag();
+            if (tag != 48) {
+              break;
+            }
+          }
+          case 48: {
             // poolRefreshed
             poolRefreshed = input.readBool();
-            bitField0_ |= 0x00000020;
+            bitField0_ |= 0x00000010;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 112) {
               break;
             }
           }
-          case 58: {
+          case 112: {
+            // hasTakenInitialScore
+            hasTakenInitialScore = input.readBool();
+            bitField0_ |= 0x00000020;
+            tag = input.readTag();
+            if (tag != 42) {
+              break;
+            }
+          }
+          case 42: {
             // hasTakenReward [packed=true]
             input.readPackedUInt32(hasTakenReward, tag);
             bitField0_ |= 0x00000040;
@@ -588,7 +628,7 @@ public final class RogueScoreRewardInfoOuterClass {
             tag = input.readTag();
             break;
           }
-          case 56: {
+          case 40: {
             // hasTakenReward [packed=false]
             tag = input.readRepeatedUInt32(hasTakenReward, tag);
             bitField0_ |= 0x00000040;
@@ -602,22 +642,22 @@ public final class RogueScoreRewardInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeInt64(FieldNames.beginTime, beginTime);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeInt64(FieldNames.endTime, endTime);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.score, score);
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeInt64(FieldNames.beginTime, beginTime);
       }
-      if ((bitField0_ & 0x00000008) != 0) {
+      if ((bitField0_ & 0x00000004) != 0) {
         output.writeUInt32(FieldNames.poolId, poolId);
       }
+      if ((bitField0_ & 0x00000008) != 0) {
+        output.writeUInt32(FieldNames.score, score);
+      }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeBool(FieldNames.hasTakenInitialScore, hasTakenInitialScore);
+        output.writeBool(FieldNames.poolRefreshed, poolRefreshed);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeBool(FieldNames.poolRefreshed, poolRefreshed);
+        output.writeBool(FieldNames.hasTakenInitialScore, hasTakenInitialScore);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         output.writeRepeatedUInt32(FieldNames.hasTakenReward, hasTakenReward);
@@ -632,11 +672,11 @@ public final class RogueScoreRewardInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -1072839914:
-          case 1112183971: {
-            if (input.isAtField(FieldNames.beginTime)) {
+          case -1607243192:
+          case 1725551537: {
+            if (input.isAtField(FieldNames.endTime)) {
               if (!input.trySkipNullValue()) {
-                beginTime = input.readInt64();
+                endTime = input.readInt64();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -644,23 +684,12 @@ public final class RogueScoreRewardInfoOuterClass {
             }
             break;
           }
-          case -1607243192:
-          case 1725551537: {
-            if (input.isAtField(FieldNames.endTime)) {
+          case -1072839914:
+          case 1112183971: {
+            if (input.isAtField(FieldNames.beginTime)) {
               if (!input.trySkipNullValue()) {
-                endTime = input.readInt64();
+                beginTime = input.readInt64();
                 bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 109264530: {
-            if (input.isAtField(FieldNames.score)) {
-              if (!input.trySkipNullValue()) {
-                score = input.readUInt32();
-                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -672,19 +701,18 @@ public final class RogueScoreRewardInfoOuterClass {
             if (input.isAtField(FieldNames.poolId)) {
               if (!input.trySkipNullValue()) {
                 poolId = input.readUInt32();
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
             }
             break;
           }
-          case 1561171099:
-          case -1786836166: {
-            if (input.isAtField(FieldNames.hasTakenInitialScore)) {
+          case 109264530: {
+            if (input.isAtField(FieldNames.score)) {
               if (!input.trySkipNullValue()) {
-                hasTakenInitialScore = input.readBool();
-                bitField0_ |= 0x00000010;
+                score = input.readUInt32();
+                bitField0_ |= 0x00000008;
               }
             } else {
               input.skipUnknownField();
@@ -696,6 +724,18 @@ public final class RogueScoreRewardInfoOuterClass {
             if (input.isAtField(FieldNames.poolRefreshed)) {
               if (!input.trySkipNullValue()) {
                 poolRefreshed = input.readBool();
+                bitField0_ |= 0x00000010;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 1561171099:
+          case -1786836166: {
+            if (input.isAtField(FieldNames.hasTakenInitialScore)) {
+              if (!input.trySkipNullValue()) {
+                hasTakenInitialScore = input.readBool();
                 bitField0_ |= 0x00000020;
               }
             } else {
@@ -768,17 +808,17 @@ public final class RogueScoreRewardInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName beginTime = FieldName.forField("beginTime", "begin_time");
-
       static final FieldName endTime = FieldName.forField("endTime", "end_time");
 
-      static final FieldName score = FieldName.forField("score");
+      static final FieldName beginTime = FieldName.forField("beginTime", "begin_time");
 
       static final FieldName poolId = FieldName.forField("poolId", "pool_id");
 
-      static final FieldName hasTakenInitialScore = FieldName.forField("hasTakenInitialScore", "has_taken_initial_score");
+      static final FieldName score = FieldName.forField("score");
 
       static final FieldName poolRefreshed = FieldName.forField("poolRefreshed", "pool_refreshed");
+
+      static final FieldName hasTakenInitialScore = FieldName.forField("hasTakenInitialScore", "has_taken_initial_score");
 
       static final FieldName hasTakenReward = FieldName.forField("hasTakenReward", "has_taken_reward");
     }

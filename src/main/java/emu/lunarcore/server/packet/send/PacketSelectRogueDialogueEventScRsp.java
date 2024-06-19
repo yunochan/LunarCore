@@ -11,7 +11,8 @@ import emu.lunarcore.server.packet.CmdId;
 public class PacketSelectRogueDialogueEventScRsp extends BasePacket {
 
     public PacketSelectRogueDialogueEventScRsp(int dialogueEventId, EntityNpc npc, int nextEventId) {
-        super(CmdId.SelectRogueDialogueEventScRsp);
+        //super(CmdId.SelectRogueDialogueEventScRsp);
+        super(CmdId.NONE);
         
         var data = SelectRogueDialogueEventScRsp.newInstance()
                 .setDialogueEventId(dialogueEventId);

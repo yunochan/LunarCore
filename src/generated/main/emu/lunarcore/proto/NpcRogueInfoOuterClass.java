@@ -20,7 +20,7 @@ public final class NpcRogueInfoOuterClass {
 
     /**
      * <pre>
-     *  uint32 KKCPLMGIADL = 3; // useless??
+     *  ???
      * </pre>
      *
      * <code>optional uint32 dialogue_group_id = 2;</code>
@@ -28,28 +28,28 @@ public final class NpcRogueInfoOuterClass {
     private int dialogueGroupId;
 
     /**
-     * <code>optional uint32 rogue_npc_id = 15;</code>
+     * <code>optional uint32 rogue_npc_id = 8;</code>
      */
     private int rogueNpcId;
 
     /**
-     * <code>optional bool AAHKFINCBIL = 1;</code>
+     * <code>optional bool AAHKFINCBIL = 7;</code>
      */
     private boolean aAHKFINCBIL;
-
-    /**
-     * <code>optional bool LCKILOCIFJH = 10;</code>
-     */
-    private boolean lCKILOCIFJH;
 
     /**
      * <pre>
      *  unk
      * </pre>
      *
-     * <code>optional bool finish_dialogue = 12;</code>
+     * <code>optional bool finish_dialogue = 10;</code>
      */
     private boolean finishDialogue;
+
+    /**
+     * <code>optional bool LCKILOCIFJH = 15;</code>
+     */
+    private boolean lCKILOCIFJH;
 
     private NpcRogueInfo() {
     }
@@ -63,7 +63,7 @@ public final class NpcRogueInfoOuterClass {
 
     /**
      * <pre>
-     *  uint32 KKCPLMGIADL = 3; // useless??
+     *  ???
      * </pre>
      *
      * <code>optional uint32 dialogue_group_id = 2;</code>
@@ -75,7 +75,7 @@ public final class NpcRogueInfoOuterClass {
 
     /**
      * <pre>
-     *  uint32 KKCPLMGIADL = 3; // useless??
+     *  ???
      * </pre>
      *
      * <code>optional uint32 dialogue_group_id = 2;</code>
@@ -89,7 +89,7 @@ public final class NpcRogueInfoOuterClass {
 
     /**
      * <pre>
-     *  uint32 KKCPLMGIADL = 3; // useless??
+     *  ???
      * </pre>
      *
      * <code>optional uint32 dialogue_group_id = 2;</code>
@@ -101,7 +101,7 @@ public final class NpcRogueInfoOuterClass {
 
     /**
      * <pre>
-     *  uint32 KKCPLMGIADL = 3; // useless??
+     *  ???
      * </pre>
      *
      * <code>optional uint32 dialogue_group_id = 2;</code>
@@ -115,7 +115,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_npc_id = 15;</code>
+     * <code>optional uint32 rogue_npc_id = 8;</code>
      * @return whether the rogueNpcId field is set
      */
     public boolean hasRogueNpcId() {
@@ -123,7 +123,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_npc_id = 15;</code>
+     * <code>optional uint32 rogue_npc_id = 8;</code>
      * @return this
      */
     public NpcRogueInfo clearRogueNpcId() {
@@ -133,7 +133,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_npc_id = 15;</code>
+     * <code>optional uint32 rogue_npc_id = 8;</code>
      * @return the rogueNpcId
      */
     public int getRogueNpcId() {
@@ -141,7 +141,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_npc_id = 15;</code>
+     * <code>optional uint32 rogue_npc_id = 8;</code>
      * @param value the rogueNpcId to set
      * @return this
      */
@@ -152,7 +152,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>optional bool AAHKFINCBIL = 1;</code>
+     * <code>optional bool AAHKFINCBIL = 7;</code>
      * @return whether the aAHKFINCBIL field is set
      */
     public boolean hasAAHKFINCBIL() {
@@ -160,7 +160,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>optional bool AAHKFINCBIL = 1;</code>
+     * <code>optional bool AAHKFINCBIL = 7;</code>
      * @return this
      */
     public NpcRogueInfo clearAAHKFINCBIL() {
@@ -170,7 +170,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>optional bool AAHKFINCBIL = 1;</code>
+     * <code>optional bool AAHKFINCBIL = 7;</code>
      * @return the aAHKFINCBIL
      */
     public boolean getAAHKFINCBIL() {
@@ -178,7 +178,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>optional bool AAHKFINCBIL = 1;</code>
+     * <code>optional bool AAHKFINCBIL = 7;</code>
      * @param value the aAHKFINCBIL to set
      * @return this
      */
@@ -189,64 +189,27 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>optional bool LCKILOCIFJH = 10;</code>
-     * @return whether the lCKILOCIFJH field is set
+     * <pre>
+     *  unk
+     * </pre>
+     *
+     * <code>optional bool finish_dialogue = 10;</code>
+     * @return whether the finishDialogue field is set
      */
-    public boolean hasLCKILOCIFJH() {
+    public boolean hasFinishDialogue() {
       return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
-     * <code>optional bool LCKILOCIFJH = 10;</code>
-     * @return this
-     */
-    public NpcRogueInfo clearLCKILOCIFJH() {
-      bitField0_ &= ~0x00000008;
-      lCKILOCIFJH = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool LCKILOCIFJH = 10;</code>
-     * @return the lCKILOCIFJH
-     */
-    public boolean getLCKILOCIFJH() {
-      return lCKILOCIFJH;
-    }
-
-    /**
-     * <code>optional bool LCKILOCIFJH = 10;</code>
-     * @param value the lCKILOCIFJH to set
-     * @return this
-     */
-    public NpcRogueInfo setLCKILOCIFJH(final boolean value) {
-      bitField0_ |= 0x00000008;
-      lCKILOCIFJH = value;
-      return this;
-    }
-
-    /**
      * <pre>
      *  unk
      * </pre>
      *
-     * <code>optional bool finish_dialogue = 12;</code>
-     * @return whether the finishDialogue field is set
-     */
-    public boolean hasFinishDialogue() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <pre>
-     *  unk
-     * </pre>
-     *
-     * <code>optional bool finish_dialogue = 12;</code>
+     * <code>optional bool finish_dialogue = 10;</code>
      * @return this
      */
     public NpcRogueInfo clearFinishDialogue() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000008;
       finishDialogue = false;
       return this;
     }
@@ -256,7 +219,7 @@ public final class NpcRogueInfoOuterClass {
      *  unk
      * </pre>
      *
-     * <code>optional bool finish_dialogue = 12;</code>
+     * <code>optional bool finish_dialogue = 10;</code>
      * @return the finishDialogue
      */
     public boolean getFinishDialogue() {
@@ -268,13 +231,50 @@ public final class NpcRogueInfoOuterClass {
      *  unk
      * </pre>
      *
-     * <code>optional bool finish_dialogue = 12;</code>
+     * <code>optional bool finish_dialogue = 10;</code>
      * @param value the finishDialogue to set
      * @return this
      */
     public NpcRogueInfo setFinishDialogue(final boolean value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       finishDialogue = value;
+      return this;
+    }
+
+    /**
+     * <code>optional bool LCKILOCIFJH = 15;</code>
+     * @return whether the lCKILOCIFJH field is set
+     */
+    public boolean hasLCKILOCIFJH() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <code>optional bool LCKILOCIFJH = 15;</code>
+     * @return this
+     */
+    public NpcRogueInfo clearLCKILOCIFJH() {
+      bitField0_ &= ~0x00000010;
+      lCKILOCIFJH = false;
+      return this;
+    }
+
+    /**
+     * <code>optional bool LCKILOCIFJH = 15;</code>
+     * @return the lCKILOCIFJH
+     */
+    public boolean getLCKILOCIFJH() {
+      return lCKILOCIFJH;
+    }
+
+    /**
+     * <code>optional bool LCKILOCIFJH = 15;</code>
+     * @param value the lCKILOCIFJH to set
+     * @return this
+     */
+    public NpcRogueInfo setLCKILOCIFJH(final boolean value) {
+      bitField0_ |= 0x00000010;
+      lCKILOCIFJH = value;
       return this;
     }
 
@@ -286,8 +286,8 @@ public final class NpcRogueInfoOuterClass {
         dialogueGroupId = other.dialogueGroupId;
         rogueNpcId = other.rogueNpcId;
         aAHKFINCBIL = other.aAHKFINCBIL;
-        lCKILOCIFJH = other.lCKILOCIFJH;
         finishDialogue = other.finishDialogue;
+        lCKILOCIFJH = other.lCKILOCIFJH;
       }
       return this;
     }
@@ -307,11 +307,11 @@ public final class NpcRogueInfoOuterClass {
       if (other.hasAAHKFINCBIL()) {
         setAAHKFINCBIL(other.aAHKFINCBIL);
       }
-      if (other.hasLCKILOCIFJH()) {
-        setLCKILOCIFJH(other.lCKILOCIFJH);
-      }
       if (other.hasFinishDialogue()) {
         setFinishDialogue(other.finishDialogue);
+      }
+      if (other.hasLCKILOCIFJH()) {
+        setLCKILOCIFJH(other.lCKILOCIFJH);
       }
       return this;
     }
@@ -326,8 +326,8 @@ public final class NpcRogueInfoOuterClass {
       dialogueGroupId = 0;
       rogueNpcId = 0;
       aAHKFINCBIL = false;
-      lCKILOCIFJH = false;
       finishDialogue = false;
+      lCKILOCIFJH = false;
       return this;
     }
 
@@ -354,8 +354,8 @@ public final class NpcRogueInfoOuterClass {
         && (!hasDialogueGroupId() || dialogueGroupId == other.dialogueGroupId)
         && (!hasRogueNpcId() || rogueNpcId == other.rogueNpcId)
         && (!hasAAHKFINCBIL() || aAHKFINCBIL == other.aAHKFINCBIL)
-        && (!hasLCKILOCIFJH() || lCKILOCIFJH == other.lCKILOCIFJH)
-        && (!hasFinishDialogue() || finishDialogue == other.finishDialogue);
+        && (!hasFinishDialogue() || finishDialogue == other.finishDialogue)
+        && (!hasLCKILOCIFJH() || lCKILOCIFJH == other.lCKILOCIFJH);
     }
 
     @Override
@@ -365,20 +365,20 @@ public final class NpcRogueInfoOuterClass {
         output.writeUInt32NoTag(dialogueGroupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 64);
         output.writeUInt32NoTag(rogueNpcId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 56);
         output.writeBoolNoTag(aAHKFINCBIL);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeRawByte((byte) 80);
-        output.writeBoolNoTag(lCKILOCIFJH);
+        output.writeBoolNoTag(finishDialogue);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 96);
-        output.writeBoolNoTag(finishDialogue);
+        output.writeRawByte((byte) 120);
+        output.writeBoolNoTag(lCKILOCIFJH);
       }
     }
 
@@ -415,20 +415,20 @@ public final class NpcRogueInfoOuterClass {
             dialogueGroupId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 64) {
               break;
             }
           }
-          case 120: {
+          case 64: {
             // rogueNpcId
             rogueNpcId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 8) {
+            if (tag != 56) {
               break;
             }
           }
-          case 8: {
+          case 56: {
             // aAHKFINCBIL
             aAHKFINCBIL = input.readBool();
             bitField0_ |= 0x00000004;
@@ -438,17 +438,17 @@ public final class NpcRogueInfoOuterClass {
             }
           }
           case 80: {
-            // lCKILOCIFJH
-            lCKILOCIFJH = input.readBool();
+            // finishDialogue
+            finishDialogue = input.readBool();
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 96) {
+            if (tag != 120) {
               break;
             }
           }
-          case 96: {
-            // finishDialogue
-            finishDialogue = input.readBool();
+          case 120: {
+            // lCKILOCIFJH
+            lCKILOCIFJH = input.readBool();
             bitField0_ |= 0x00000010;
             tag = input.readTag();
             if (tag != 0) {
@@ -482,10 +482,10 @@ public final class NpcRogueInfoOuterClass {
         output.writeBool(FieldNames.aAHKFINCBIL, aAHKFINCBIL);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeBool(FieldNames.lCKILOCIFJH, lCKILOCIFJH);
+        output.writeBool(FieldNames.finishDialogue, finishDialogue);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeBool(FieldNames.finishDialogue, finishDialogue);
+        output.writeBool(FieldNames.lCKILOCIFJH, lCKILOCIFJH);
       }
       output.endObject();
     }
@@ -532,10 +532,11 @@ public final class NpcRogueInfoOuterClass {
             }
             break;
           }
-          case 1901777798: {
-            if (input.isAtField(FieldNames.lCKILOCIFJH)) {
+          case 552830859:
+          case 764736516: {
+            if (input.isAtField(FieldNames.finishDialogue)) {
               if (!input.trySkipNullValue()) {
-                lCKILOCIFJH = input.readBool();
+                finishDialogue = input.readBool();
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -543,11 +544,10 @@ public final class NpcRogueInfoOuterClass {
             }
             break;
           }
-          case 552830859:
-          case 764736516: {
-            if (input.isAtField(FieldNames.finishDialogue)) {
+          case 1901777798: {
+            if (input.isAtField(FieldNames.lCKILOCIFJH)) {
               if (!input.trySkipNullValue()) {
-                finishDialogue = input.readBool();
+                lCKILOCIFJH = input.readBool();
                 bitField0_ |= 0x00000010;
               }
             } else {
@@ -613,9 +613,9 @@ public final class NpcRogueInfoOuterClass {
 
       static final FieldName aAHKFINCBIL = FieldName.forField("AAHKFINCBIL");
 
-      static final FieldName lCKILOCIFJH = FieldName.forField("LCKILOCIFJH");
-
       static final FieldName finishDialogue = FieldName.forField("finishDialogue", "finish_dialogue");
+
+      static final FieldName lCKILOCIFJH = FieldName.forField("LCKILOCIFJH");
     }
   }
 }

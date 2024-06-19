@@ -19,22 +19,22 @@ public final class HandleFriendScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 uid = 4;</code>
+     * <code>optional uint32 uid = 5;</code>
      */
     private int uid;
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 15;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional bool handle_result = 15;</code>
+     * <code>optional bool handle_result = 2;</code>
      */
     private boolean handleResult;
 
     /**
-     * <code>optional .FriendListInfo handle_friend_info = 9;</code>
+     * <code>optional .FriendListInfo handle_friend_info = 10;</code>
      */
     private final FriendListInfoOuterClass.FriendListInfo handleFriendInfo = FriendListInfoOuterClass.FriendListInfo.newInstance();
 
@@ -49,7 +49,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 4;</code>
+     * <code>optional uint32 uid = 5;</code>
      * @return whether the uid field is set
      */
     public boolean hasUid() {
@@ -57,7 +57,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 4;</code>
+     * <code>optional uint32 uid = 5;</code>
      * @return this
      */
     public HandleFriendScRsp clearUid() {
@@ -67,7 +67,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 4;</code>
+     * <code>optional uint32 uid = 5;</code>
      * @return the uid
      */
     public int getUid() {
@@ -75,7 +75,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 4;</code>
+     * <code>optional uint32 uid = 5;</code>
      * @param value the uid to set
      * @return this
      */
@@ -86,7 +86,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -94,7 +94,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return this
      */
     public HandleFriendScRsp clearRetcode() {
@@ -104,7 +104,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -112,7 +112,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -123,7 +123,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional bool handle_result = 15;</code>
+     * <code>optional bool handle_result = 2;</code>
      * @return whether the handleResult field is set
      */
     public boolean hasHandleResult() {
@@ -131,7 +131,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional bool handle_result = 15;</code>
+     * <code>optional bool handle_result = 2;</code>
      * @return this
      */
     public HandleFriendScRsp clearHandleResult() {
@@ -141,7 +141,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional bool handle_result = 15;</code>
+     * <code>optional bool handle_result = 2;</code>
      * @return the handleResult
      */
     public boolean getHandleResult() {
@@ -149,7 +149,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional bool handle_result = 15;</code>
+     * <code>optional bool handle_result = 2;</code>
      * @param value the handleResult to set
      * @return this
      */
@@ -160,7 +160,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional .FriendListInfo handle_friend_info = 9;</code>
+     * <code>optional .FriendListInfo handle_friend_info = 10;</code>
      * @return whether the handleFriendInfo field is set
      */
     public boolean hasHandleFriendInfo() {
@@ -168,7 +168,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional .FriendListInfo handle_friend_info = 9;</code>
+     * <code>optional .FriendListInfo handle_friend_info = 10;</code>
      * @return this
      */
     public HandleFriendScRsp clearHandleFriendInfo() {
@@ -178,7 +178,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional .FriendListInfo handle_friend_info = 9;</code>
+     * <code>optional .FriendListInfo handle_friend_info = 10;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -192,7 +192,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional .FriendListInfo handle_friend_info = 9;</code>
+     * <code>optional .FriendListInfo handle_friend_info = 10;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -206,7 +206,7 @@ public final class HandleFriendScRspOuterClass {
     }
 
     /**
-     * <code>optional .FriendListInfo handle_friend_info = 9;</code>
+     * <code>optional .FriendListInfo handle_friend_info = 10;</code>
      * @param value the handleFriendInfo to set
      * @return this
      */
@@ -295,19 +295,19 @@ public final class HandleFriendScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(uid);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 16);
         output.writeBoolNoTag(handleResult);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 74);
+        output.writeRawByte((byte) 82);
         output.writeMessageNoTag(handleFriendInfo);
       }
     }
@@ -337,34 +337,34 @@ public final class HandleFriendScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 32: {
+          case 40: {
             // uid
             uid = input.readUInt32();
             bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 112) {
-              break;
-            }
-          }
-          case 112: {
-            // retcode
-            retcode = input.readUInt32();
-            bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 120) {
               break;
             }
           }
           case 120: {
+            // retcode
+            retcode = input.readUInt32();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 16) {
+              break;
+            }
+          }
+          case 16: {
             // handleResult
             handleResult = input.readBool();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 74) {
+            if (tag != 82) {
               break;
             }
           }
-          case 74: {
+          case 82: {
             // handleFriendInfo
             input.readMessage(handleFriendInfo);
             bitField0_ |= 0x00000008;

@@ -19,7 +19,7 @@ public final class RotatorEnergyInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 max_num = 3;</code>
+     * <code>optional uint32 max_num = 6;</code>
      */
     private int maxNum;
 
@@ -39,7 +39,7 @@ public final class RotatorEnergyInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 max_num = 3;</code>
+     * <code>optional uint32 max_num = 6;</code>
      * @return whether the maxNum field is set
      */
     public boolean hasMaxNum() {
@@ -47,7 +47,7 @@ public final class RotatorEnergyInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 max_num = 3;</code>
+     * <code>optional uint32 max_num = 6;</code>
      * @return this
      */
     public RotatorEnergyInfo clearMaxNum() {
@@ -57,7 +57,7 @@ public final class RotatorEnergyInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 max_num = 3;</code>
+     * <code>optional uint32 max_num = 6;</code>
      * @return the maxNum
      */
     public int getMaxNum() {
@@ -65,7 +65,7 @@ public final class RotatorEnergyInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 max_num = 3;</code>
+     * <code>optional uint32 max_num = 6;</code>
      * @param value the maxNum to set
      * @return this
      */
@@ -177,7 +177,7 @@ public final class RotatorEnergyInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(maxNum);
       }
       if ((bitField0_ & 0x00000002) != 0) {
@@ -205,7 +205,7 @@ public final class RotatorEnergyInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 48: {
             // maxNum
             maxNum = input.readUInt32();
             bitField0_ |= 0x00000001;

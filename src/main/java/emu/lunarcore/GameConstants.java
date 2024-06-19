@@ -6,7 +6,7 @@ import java.time.ZoneOffset;
 import emu.lunarcore.util.Position;
 
 public class GameConstants {
-    public static String VERSION = "2.2.0";
+    public static String VERSION = "2.3.0";
     
     public static final ZoneOffset CURRENT_ZONEOFFSET = ZoneOffset.systemDefault().getRules().getOffset(Instant.now());
     public static final int CURRENT_TIMEZONE = CURRENT_ZONEOFFSET.getTotalSeconds() / 3600;
@@ -53,6 +53,7 @@ public class GameConstants {
     // Challenge
     public static final int CHALLENGE_ENTRANCE = 100000103;
     public static final int CHALLENGE_STORY_ENTRANCE = 102020107;
+    public static final int CHALLENGE_BOSS_ENTRANCE = 1030402;
     
     // Rogue
     public static final boolean ENABLE_ROGUE = true;

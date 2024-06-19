@@ -19,17 +19,17 @@ public final class UnlockedMusicOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 id = 4;</code>
+     * <code>optional uint32 id = 1;</code>
      */
     private int id;
 
     /**
-     * <code>optional uint32 group_id = 10;</code>
+     * <code>optional uint32 group_id = 2;</code>
      */
     private int groupId;
 
     /**
-     * <code>optional bool unkbool = 3;</code>
+     * <code>optional bool unkbool = 13;</code>
      */
     private boolean unkbool;
 
@@ -44,7 +44,7 @@ public final class UnlockedMusicOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 4;</code>
+     * <code>optional uint32 id = 1;</code>
      * @return whether the id field is set
      */
     public boolean hasId() {
@@ -52,7 +52,7 @@ public final class UnlockedMusicOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 4;</code>
+     * <code>optional uint32 id = 1;</code>
      * @return this
      */
     public UnlockedMusic clearId() {
@@ -62,7 +62,7 @@ public final class UnlockedMusicOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 4;</code>
+     * <code>optional uint32 id = 1;</code>
      * @return the id
      */
     public int getId() {
@@ -70,7 +70,7 @@ public final class UnlockedMusicOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 4;</code>
+     * <code>optional uint32 id = 1;</code>
      * @param value the id to set
      * @return this
      */
@@ -81,7 +81,7 @@ public final class UnlockedMusicOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 10;</code>
+     * <code>optional uint32 group_id = 2;</code>
      * @return whether the groupId field is set
      */
     public boolean hasGroupId() {
@@ -89,7 +89,7 @@ public final class UnlockedMusicOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 10;</code>
+     * <code>optional uint32 group_id = 2;</code>
      * @return this
      */
     public UnlockedMusic clearGroupId() {
@@ -99,7 +99,7 @@ public final class UnlockedMusicOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 10;</code>
+     * <code>optional uint32 group_id = 2;</code>
      * @return the groupId
      */
     public int getGroupId() {
@@ -107,7 +107,7 @@ public final class UnlockedMusicOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 10;</code>
+     * <code>optional uint32 group_id = 2;</code>
      * @param value the groupId to set
      * @return this
      */
@@ -118,7 +118,7 @@ public final class UnlockedMusicOuterClass {
     }
 
     /**
-     * <code>optional bool unkbool = 3;</code>
+     * <code>optional bool unkbool = 13;</code>
      * @return whether the unkbool field is set
      */
     public boolean hasUnkbool() {
@@ -126,7 +126,7 @@ public final class UnlockedMusicOuterClass {
     }
 
     /**
-     * <code>optional bool unkbool = 3;</code>
+     * <code>optional bool unkbool = 13;</code>
      * @return this
      */
     public UnlockedMusic clearUnkbool() {
@@ -136,7 +136,7 @@ public final class UnlockedMusicOuterClass {
     }
 
     /**
-     * <code>optional bool unkbool = 3;</code>
+     * <code>optional bool unkbool = 13;</code>
      * @return the unkbool
      */
     public boolean getUnkbool() {
@@ -144,7 +144,7 @@ public final class UnlockedMusicOuterClass {
     }
 
     /**
-     * <code>optional bool unkbool = 3;</code>
+     * <code>optional bool unkbool = 13;</code>
      * @param value the unkbool to set
      * @return this
      */
@@ -225,15 +225,15 @@ public final class UnlockedMusicOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(id);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(groupId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 104);
         output.writeBoolNoTag(unkbool);
       }
     }
@@ -260,25 +260,25 @@ public final class UnlockedMusicOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 32: {
+          case 8: {
             // id
             id = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 80) {
+            if (tag != 16) {
               break;
             }
           }
-          case 80: {
+          case 16: {
             // groupId
             groupId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 24) {
+            if (tag != 104) {
               break;
             }
           }
-          case 24: {
+          case 104: {
             // unkbool
             unkbool = input.readBool();
             bitField0_ |= 0x00000004;

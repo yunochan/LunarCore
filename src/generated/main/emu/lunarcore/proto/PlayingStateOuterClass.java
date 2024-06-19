@@ -37,7 +37,17 @@ public final class PlayingStateOuterClass {
     /**
      * <code>PLAYING_CHALLENGE_STORY = 5;</code>
      */
-    PLAYING_CHALLENGE_STORY("PLAYING_CHALLENGE_STORY", 5);
+    PLAYING_CHALLENGE_STORY("PLAYING_CHALLENGE_STORY", 5),
+
+    /**
+     * <code>PLAYING_CHALLENGE_BOSS = 6;</code>
+     */
+    PLAYING_CHALLENGE_BOSS("PLAYING_CHALLENGE_BOSS", 6),
+
+    /**
+     * <code>PLAYING_ROGUE_TOURN = 7;</code>
+     */
+    PLAYING_ROGUE_TOURN("PLAYING_ROGUE_TOURN", 7);
 
     /**
      * <code>PLAYING_STATE_NONE = 0;</code>
@@ -68,6 +78,16 @@ public final class PlayingStateOuterClass {
      * <code>PLAYING_CHALLENGE_STORY = 5;</code>
      */
     public static final int PLAYING_CHALLENGE_STORY_VALUE = 5;
+
+    /**
+     * <code>PLAYING_CHALLENGE_BOSS = 6;</code>
+     */
+    public static final int PLAYING_CHALLENGE_BOSS_VALUE = 6;
+
+    /**
+     * <code>PLAYING_ROGUE_TOURN = 7;</code>
+     */
+    public static final int PLAYING_ROGUE_TOURN_VALUE = 7;
 
     private final String name;
 
@@ -122,7 +142,7 @@ public final class PlayingStateOuterClass {
     enum PlayingStateConverter implements ProtoEnum.EnumConverter<PlayingState> {
       INSTANCE;
 
-      private static final PlayingState[] lookup = new PlayingState[6];
+      private static final PlayingState[] lookup = new PlayingState[8];
 
       static {
         lookup[0] = PLAYING_STATE_NONE;
@@ -131,6 +151,8 @@ public final class PlayingStateOuterClass {
         lookup[3] = PLAYING_ROGUE_CHESS_NOUS;
         lookup[4] = PLAYING_CHALLENGE_MEMORY;
         lookup[5] = PLAYING_CHALLENGE_STORY;
+        lookup[6] = PLAYING_CHALLENGE_BOSS;
+        lookup[7] = PLAYING_ROGUE_TOURN;
       }
 
       @Override
@@ -154,11 +176,20 @@ public final class PlayingStateOuterClass {
             if (ProtoUtil.isEqual("PLAYING_ROGUE_CHESS", value)) {
               return PLAYING_ROGUE_CHESS;
             }
+            if (ProtoUtil.isEqual("PLAYING_ROGUE_TOURN", value)) {
+              return PLAYING_ROGUE_TOURN;
+            }
             break;
           }
           case 20: {
             if (ProtoUtil.isEqual("PLAYING_ROGUE_COSMOS", value)) {
               return PLAYING_ROGUE_COSMOS;
+            }
+            break;
+          }
+          case 22: {
+            if (ProtoUtil.isEqual("PLAYING_CHALLENGE_BOSS", value)) {
+              return PLAYING_CHALLENGE_BOSS;
             }
             break;
           }

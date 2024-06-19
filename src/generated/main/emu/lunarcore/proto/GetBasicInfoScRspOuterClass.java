@@ -19,42 +19,42 @@ public final class GetBasicInfoScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional int64 last_set_nickname_time = 10;</code>
-     */
-    private long lastSetNicknameTime;
-
-    /**
-     * <code>optional int64 next_recover_time = 15;</code>
+     * <code>optional int64 next_recover_time = 4;</code>
      */
     private long nextRecoverTime;
 
     /**
-     * <code>optional uint32 gameplay_birthday = 2;</code>
+     * <code>optional int64 last_set_nickname_time = 14;</code>
      */
-    private int gameplayBirthday;
+    private long lastSetNicknameTime;
 
     /**
-     * <code>optional uint32 cur_day = 3;</code>
-     */
-    private int curDay;
-
-    /**
-     * <code>optional uint32 retcode = 7;</code>
-     */
-    private int retcode;
-
-    /**
-     * <code>optional uint32 exchange_times = 8;</code>
-     */
-    private int exchangeTimes;
-
-    /**
-     * <code>optional uint32 week_cocoon_finished_count = 11;</code>
+     * <code>optional uint32 week_cocoon_finished_count = 1;</code>
      */
     private int weekCocoonFinishedCount;
 
     /**
-     * <code>optional .PlayerSettingInfo player_setting_info = 12;</code>
+     * <code>optional uint32 exchange_times = 2;</code>
+     */
+    private int exchangeTimes;
+
+    /**
+     * <code>optional uint32 retcode = 6;</code>
+     */
+    private int retcode;
+
+    /**
+     * <code>optional uint32 gameplay_birthday = 13;</code>
+     */
+    private int gameplayBirthday;
+
+    /**
+     * <code>optional uint32 cur_day = 15;</code>
+     */
+    private int curDay;
+
+    /**
+     * <code>optional .PlayerSettingInfo player_setting_info = 11;</code>
      */
     private final PlayerSettingInfoOuterClass.PlayerSettingInfo playerSettingInfo = PlayerSettingInfoOuterClass.PlayerSettingInfo.newInstance();
 
@@ -69,62 +69,25 @@ public final class GetBasicInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional int64 last_set_nickname_time = 10;</code>
-     * @return whether the lastSetNicknameTime field is set
+     * <code>optional int64 next_recover_time = 4;</code>
+     * @return whether the nextRecoverTime field is set
      */
-    public boolean hasLastSetNicknameTime() {
+    public boolean hasNextRecoverTime() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional int64 last_set_nickname_time = 10;</code>
-     * @return this
-     */
-    public GetBasicInfoScRsp clearLastSetNicknameTime() {
-      bitField0_ &= ~0x00000001;
-      lastSetNicknameTime = 0L;
-      return this;
-    }
-
-    /**
-     * <code>optional int64 last_set_nickname_time = 10;</code>
-     * @return the lastSetNicknameTime
-     */
-    public long getLastSetNicknameTime() {
-      return lastSetNicknameTime;
-    }
-
-    /**
-     * <code>optional int64 last_set_nickname_time = 10;</code>
-     * @param value the lastSetNicknameTime to set
-     * @return this
-     */
-    public GetBasicInfoScRsp setLastSetNicknameTime(final long value) {
-      bitField0_ |= 0x00000001;
-      lastSetNicknameTime = value;
-      return this;
-    }
-
-    /**
-     * <code>optional int64 next_recover_time = 15;</code>
-     * @return whether the nextRecoverTime field is set
-     */
-    public boolean hasNextRecoverTime() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional int64 next_recover_time = 15;</code>
+     * <code>optional int64 next_recover_time = 4;</code>
      * @return this
      */
     public GetBasicInfoScRsp clearNextRecoverTime() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       nextRecoverTime = 0L;
       return this;
     }
 
     /**
-     * <code>optional int64 next_recover_time = 15;</code>
+     * <code>optional int64 next_recover_time = 4;</code>
      * @return the nextRecoverTime
      */
     public long getNextRecoverTime() {
@@ -132,92 +95,129 @@ public final class GetBasicInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional int64 next_recover_time = 15;</code>
+     * <code>optional int64 next_recover_time = 4;</code>
      * @param value the nextRecoverTime to set
      * @return this
      */
     public GetBasicInfoScRsp setNextRecoverTime(final long value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       nextRecoverTime = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 gameplay_birthday = 2;</code>
-     * @return whether the gameplayBirthday field is set
+     * <code>optional int64 last_set_nickname_time = 14;</code>
+     * @return whether the lastSetNicknameTime field is set
      */
-    public boolean hasGameplayBirthday() {
+    public boolean hasLastSetNicknameTime() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional int64 last_set_nickname_time = 14;</code>
+     * @return this
+     */
+    public GetBasicInfoScRsp clearLastSetNicknameTime() {
+      bitField0_ &= ~0x00000002;
+      lastSetNicknameTime = 0L;
+      return this;
+    }
+
+    /**
+     * <code>optional int64 last_set_nickname_time = 14;</code>
+     * @return the lastSetNicknameTime
+     */
+    public long getLastSetNicknameTime() {
+      return lastSetNicknameTime;
+    }
+
+    /**
+     * <code>optional int64 last_set_nickname_time = 14;</code>
+     * @param value the lastSetNicknameTime to set
+     * @return this
+     */
+    public GetBasicInfoScRsp setLastSetNicknameTime(final long value) {
+      bitField0_ |= 0x00000002;
+      lastSetNicknameTime = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 week_cocoon_finished_count = 1;</code>
+     * @return whether the weekCocoonFinishedCount field is set
+     */
+    public boolean hasWeekCocoonFinishedCount() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 gameplay_birthday = 2;</code>
+     * <code>optional uint32 week_cocoon_finished_count = 1;</code>
      * @return this
      */
-    public GetBasicInfoScRsp clearGameplayBirthday() {
+    public GetBasicInfoScRsp clearWeekCocoonFinishedCount() {
       bitField0_ &= ~0x00000004;
-      gameplayBirthday = 0;
+      weekCocoonFinishedCount = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 gameplay_birthday = 2;</code>
-     * @return the gameplayBirthday
+     * <code>optional uint32 week_cocoon_finished_count = 1;</code>
+     * @return the weekCocoonFinishedCount
      */
-    public int getGameplayBirthday() {
-      return gameplayBirthday;
+    public int getWeekCocoonFinishedCount() {
+      return weekCocoonFinishedCount;
     }
 
     /**
-     * <code>optional uint32 gameplay_birthday = 2;</code>
-     * @param value the gameplayBirthday to set
+     * <code>optional uint32 week_cocoon_finished_count = 1;</code>
+     * @param value the weekCocoonFinishedCount to set
      * @return this
      */
-    public GetBasicInfoScRsp setGameplayBirthday(final int value) {
+    public GetBasicInfoScRsp setWeekCocoonFinishedCount(final int value) {
       bitField0_ |= 0x00000004;
-      gameplayBirthday = value;
+      weekCocoonFinishedCount = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 cur_day = 3;</code>
-     * @return whether the curDay field is set
+     * <code>optional uint32 exchange_times = 2;</code>
+     * @return whether the exchangeTimes field is set
      */
-    public boolean hasCurDay() {
+    public boolean hasExchangeTimes() {
       return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
-     * <code>optional uint32 cur_day = 3;</code>
+     * <code>optional uint32 exchange_times = 2;</code>
      * @return this
      */
-    public GetBasicInfoScRsp clearCurDay() {
+    public GetBasicInfoScRsp clearExchangeTimes() {
       bitField0_ &= ~0x00000008;
-      curDay = 0;
+      exchangeTimes = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 cur_day = 3;</code>
-     * @return the curDay
+     * <code>optional uint32 exchange_times = 2;</code>
+     * @return the exchangeTimes
      */
-    public int getCurDay() {
-      return curDay;
+    public int getExchangeTimes() {
+      return exchangeTimes;
     }
 
     /**
-     * <code>optional uint32 cur_day = 3;</code>
-     * @param value the curDay to set
+     * <code>optional uint32 exchange_times = 2;</code>
+     * @param value the exchangeTimes to set
      * @return this
      */
-    public GetBasicInfoScRsp setCurDay(final int value) {
+    public GetBasicInfoScRsp setExchangeTimes(final int value) {
       bitField0_ |= 0x00000008;
-      curDay = value;
+      exchangeTimes = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 6;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -225,7 +225,7 @@ public final class GetBasicInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 6;</code>
      * @return this
      */
     public GetBasicInfoScRsp clearRetcode() {
@@ -235,7 +235,7 @@ public final class GetBasicInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 6;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -243,7 +243,7 @@ public final class GetBasicInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 6;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -254,81 +254,81 @@ public final class GetBasicInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 exchange_times = 8;</code>
-     * @return whether the exchangeTimes field is set
+     * <code>optional uint32 gameplay_birthday = 13;</code>
+     * @return whether the gameplayBirthday field is set
      */
-    public boolean hasExchangeTimes() {
+    public boolean hasGameplayBirthday() {
       return (bitField0_ & 0x00000020) != 0;
     }
 
     /**
-     * <code>optional uint32 exchange_times = 8;</code>
+     * <code>optional uint32 gameplay_birthday = 13;</code>
      * @return this
      */
-    public GetBasicInfoScRsp clearExchangeTimes() {
+    public GetBasicInfoScRsp clearGameplayBirthday() {
       bitField0_ &= ~0x00000020;
-      exchangeTimes = 0;
+      gameplayBirthday = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 exchange_times = 8;</code>
-     * @return the exchangeTimes
+     * <code>optional uint32 gameplay_birthday = 13;</code>
+     * @return the gameplayBirthday
      */
-    public int getExchangeTimes() {
-      return exchangeTimes;
+    public int getGameplayBirthday() {
+      return gameplayBirthday;
     }
 
     /**
-     * <code>optional uint32 exchange_times = 8;</code>
-     * @param value the exchangeTimes to set
+     * <code>optional uint32 gameplay_birthday = 13;</code>
+     * @param value the gameplayBirthday to set
      * @return this
      */
-    public GetBasicInfoScRsp setExchangeTimes(final int value) {
+    public GetBasicInfoScRsp setGameplayBirthday(final int value) {
       bitField0_ |= 0x00000020;
-      exchangeTimes = value;
+      gameplayBirthday = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 week_cocoon_finished_count = 11;</code>
-     * @return whether the weekCocoonFinishedCount field is set
+     * <code>optional uint32 cur_day = 15;</code>
+     * @return whether the curDay field is set
      */
-    public boolean hasWeekCocoonFinishedCount() {
+    public boolean hasCurDay() {
       return (bitField0_ & 0x00000040) != 0;
     }
 
     /**
-     * <code>optional uint32 week_cocoon_finished_count = 11;</code>
+     * <code>optional uint32 cur_day = 15;</code>
      * @return this
      */
-    public GetBasicInfoScRsp clearWeekCocoonFinishedCount() {
+    public GetBasicInfoScRsp clearCurDay() {
       bitField0_ &= ~0x00000040;
-      weekCocoonFinishedCount = 0;
+      curDay = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 week_cocoon_finished_count = 11;</code>
-     * @return the weekCocoonFinishedCount
+     * <code>optional uint32 cur_day = 15;</code>
+     * @return the curDay
      */
-    public int getWeekCocoonFinishedCount() {
-      return weekCocoonFinishedCount;
+    public int getCurDay() {
+      return curDay;
     }
 
     /**
-     * <code>optional uint32 week_cocoon_finished_count = 11;</code>
-     * @param value the weekCocoonFinishedCount to set
+     * <code>optional uint32 cur_day = 15;</code>
+     * @param value the curDay to set
      * @return this
      */
-    public GetBasicInfoScRsp setWeekCocoonFinishedCount(final int value) {
+    public GetBasicInfoScRsp setCurDay(final int value) {
       bitField0_ |= 0x00000040;
-      weekCocoonFinishedCount = value;
+      curDay = value;
       return this;
     }
 
     /**
-     * <code>optional .PlayerSettingInfo player_setting_info = 12;</code>
+     * <code>optional .PlayerSettingInfo player_setting_info = 11;</code>
      * @return whether the playerSettingInfo field is set
      */
     public boolean hasPlayerSettingInfo() {
@@ -336,7 +336,7 @@ public final class GetBasicInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional .PlayerSettingInfo player_setting_info = 12;</code>
+     * <code>optional .PlayerSettingInfo player_setting_info = 11;</code>
      * @return this
      */
     public GetBasicInfoScRsp clearPlayerSettingInfo() {
@@ -346,7 +346,7 @@ public final class GetBasicInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional .PlayerSettingInfo player_setting_info = 12;</code>
+     * <code>optional .PlayerSettingInfo player_setting_info = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -360,7 +360,7 @@ public final class GetBasicInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional .PlayerSettingInfo player_setting_info = 12;</code>
+     * <code>optional .PlayerSettingInfo player_setting_info = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -374,7 +374,7 @@ public final class GetBasicInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional .PlayerSettingInfo player_setting_info = 12;</code>
+     * <code>optional .PlayerSettingInfo player_setting_info = 11;</code>
      * @param value the playerSettingInfo to set
      * @return this
      */
@@ -390,13 +390,13 @@ public final class GetBasicInfoScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        lastSetNicknameTime = other.lastSetNicknameTime;
         nextRecoverTime = other.nextRecoverTime;
+        lastSetNicknameTime = other.lastSetNicknameTime;
+        weekCocoonFinishedCount = other.weekCocoonFinishedCount;
+        exchangeTimes = other.exchangeTimes;
+        retcode = other.retcode;
         gameplayBirthday = other.gameplayBirthday;
         curDay = other.curDay;
-        retcode = other.retcode;
-        exchangeTimes = other.exchangeTimes;
-        weekCocoonFinishedCount = other.weekCocoonFinishedCount;
         playerSettingInfo.copyFrom(other.playerSettingInfo);
       }
       return this;
@@ -408,26 +408,26 @@ public final class GetBasicInfoScRspOuterClass {
         return this;
       }
       cachedSize = -1;
+      if (other.hasNextRecoverTime()) {
+        setNextRecoverTime(other.nextRecoverTime);
+      }
       if (other.hasLastSetNicknameTime()) {
         setLastSetNicknameTime(other.lastSetNicknameTime);
       }
-      if (other.hasNextRecoverTime()) {
-        setNextRecoverTime(other.nextRecoverTime);
+      if (other.hasWeekCocoonFinishedCount()) {
+        setWeekCocoonFinishedCount(other.weekCocoonFinishedCount);
+      }
+      if (other.hasExchangeTimes()) {
+        setExchangeTimes(other.exchangeTimes);
+      }
+      if (other.hasRetcode()) {
+        setRetcode(other.retcode);
       }
       if (other.hasGameplayBirthday()) {
         setGameplayBirthday(other.gameplayBirthday);
       }
       if (other.hasCurDay()) {
         setCurDay(other.curDay);
-      }
-      if (other.hasRetcode()) {
-        setRetcode(other.retcode);
-      }
-      if (other.hasExchangeTimes()) {
-        setExchangeTimes(other.exchangeTimes);
-      }
-      if (other.hasWeekCocoonFinishedCount()) {
-        setWeekCocoonFinishedCount(other.weekCocoonFinishedCount);
       }
       if (other.hasPlayerSettingInfo()) {
         getMutablePlayerSettingInfo().mergeFrom(other.playerSettingInfo);
@@ -442,13 +442,13 @@ public final class GetBasicInfoScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      lastSetNicknameTime = 0L;
       nextRecoverTime = 0L;
+      lastSetNicknameTime = 0L;
+      weekCocoonFinishedCount = 0;
+      exchangeTimes = 0;
+      retcode = 0;
       gameplayBirthday = 0;
       curDay = 0;
-      retcode = 0;
-      exchangeTimes = 0;
-      weekCocoonFinishedCount = 0;
       playerSettingInfo.clear();
       return this;
     }
@@ -474,48 +474,48 @@ public final class GetBasicInfoScRspOuterClass {
       }
       GetBasicInfoScRsp other = (GetBasicInfoScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasLastSetNicknameTime() || lastSetNicknameTime == other.lastSetNicknameTime)
         && (!hasNextRecoverTime() || nextRecoverTime == other.nextRecoverTime)
+        && (!hasLastSetNicknameTime() || lastSetNicknameTime == other.lastSetNicknameTime)
+        && (!hasWeekCocoonFinishedCount() || weekCocoonFinishedCount == other.weekCocoonFinishedCount)
+        && (!hasExchangeTimes() || exchangeTimes == other.exchangeTimes)
+        && (!hasRetcode() || retcode == other.retcode)
         && (!hasGameplayBirthday() || gameplayBirthday == other.gameplayBirthday)
         && (!hasCurDay() || curDay == other.curDay)
-        && (!hasRetcode() || retcode == other.retcode)
-        && (!hasExchangeTimes() || exchangeTimes == other.exchangeTimes)
-        && (!hasWeekCocoonFinishedCount() || weekCocoonFinishedCount == other.weekCocoonFinishedCount)
         && (!hasPlayerSettingInfo() || playerSettingInfo.equals(other.playerSettingInfo));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
-        output.writeInt64NoTag(lastSetNicknameTime);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 32);
         output.writeInt64NoTag(nextRecoverTime);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 112);
+        output.writeInt64NoTag(lastSetNicknameTime);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 16);
-        output.writeUInt32NoTag(gameplayBirthday);
+        output.writeRawByte((byte) 8);
+        output.writeUInt32NoTag(weekCocoonFinishedCount);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 24);
-        output.writeUInt32NoTag(curDay);
+        output.writeRawByte((byte) 16);
+        output.writeUInt32NoTag(exchangeTimes);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRawByte((byte) 64);
-        output.writeUInt32NoTag(exchangeTimes);
+        output.writeRawByte((byte) 104);
+        output.writeUInt32NoTag(gameplayBirthday);
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        output.writeRawByte((byte) 88);
-        output.writeUInt32NoTag(weekCocoonFinishedCount);
+        output.writeRawByte((byte) 120);
+        output.writeUInt32NoTag(curDay);
       }
       if ((bitField0_ & 0x00000080) != 0) {
-        output.writeRawByte((byte) 98);
+        output.writeRawByte((byte) 90);
         output.writeMessageNoTag(playerSettingInfo);
       }
     }
@@ -524,25 +524,25 @@ public final class GetBasicInfoScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeInt64SizeNoTag(lastSetNicknameTime);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeInt64SizeNoTag(nextRecoverTime);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        size += 1 + ProtoSink.computeInt64SizeNoTag(lastSetNicknameTime);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(gameplayBirthday);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(weekCocoonFinishedCount);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(curDay);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(exchangeTimes);
       }
       if ((bitField0_ & 0x00000010) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(exchangeTimes);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(gameplayBirthday);
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(weekCocoonFinishedCount);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(curDay);
       }
       if ((bitField0_ & 0x00000080) != 0) {
         size += 1 + ProtoSink.computeMessageSizeNoTag(playerSettingInfo);
@@ -557,70 +557,70 @@ public final class GetBasicInfoScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
-            // lastSetNicknameTime
-            lastSetNicknameTime = input.readInt64();
+          case 32: {
+            // nextRecoverTime
+            nextRecoverTime = input.readInt64();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 112) {
               break;
             }
           }
-          case 120: {
-            // nextRecoverTime
-            nextRecoverTime = input.readInt64();
+          case 112: {
+            // lastSetNicknameTime
+            lastSetNicknameTime = input.readInt64();
             bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 8) {
+              break;
+            }
+          }
+          case 8: {
+            // weekCocoonFinishedCount
+            weekCocoonFinishedCount = input.readUInt32();
+            bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 16) {
               break;
             }
           }
           case 16: {
-            // gameplayBirthday
-            gameplayBirthday = input.readUInt32();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 24) {
-              break;
-            }
-          }
-          case 24: {
-            // curDay
-            curDay = input.readUInt32();
+            // exchangeTimes
+            exchangeTimes = input.readUInt32();
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 48) {
               break;
             }
           }
-          case 56: {
+          case 48: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000010;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 104) {
               break;
             }
           }
-          case 64: {
-            // exchangeTimes
-            exchangeTimes = input.readUInt32();
+          case 104: {
+            // gameplayBirthday
+            gameplayBirthday = input.readUInt32();
             bitField0_ |= 0x00000020;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 120) {
               break;
             }
           }
-          case 88: {
-            // weekCocoonFinishedCount
-            weekCocoonFinishedCount = input.readUInt32();
+          case 120: {
+            // curDay
+            curDay = input.readUInt32();
             bitField0_ |= 0x00000040;
             tag = input.readTag();
-            if (tag != 98) {
+            if (tag != 90) {
               break;
             }
           }
-          case 98: {
+          case 90: {
             // playerSettingInfo
             input.readMessage(playerSettingInfo);
             bitField0_ |= 0x00000080;
@@ -647,25 +647,25 @@ public final class GetBasicInfoScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeInt64(FieldNames.lastSetNicknameTime, lastSetNicknameTime);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeInt64(FieldNames.nextRecoverTime, nextRecoverTime);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeInt64(FieldNames.lastSetNicknameTime, lastSetNicknameTime);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.gameplayBirthday, gameplayBirthday);
+        output.writeUInt32(FieldNames.weekCocoonFinishedCount, weekCocoonFinishedCount);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.curDay, curDay);
+        output.writeUInt32(FieldNames.exchangeTimes, exchangeTimes);
       }
       if ((bitField0_ & 0x00000010) != 0) {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeUInt32(FieldNames.exchangeTimes, exchangeTimes);
+        output.writeUInt32(FieldNames.gameplayBirthday, gameplayBirthday);
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        output.writeUInt32(FieldNames.weekCocoonFinishedCount, weekCocoonFinishedCount);
+        output.writeUInt32(FieldNames.curDay, curDay);
       }
       if ((bitField0_ & 0x00000080) != 0) {
         output.writeMessage(FieldNames.playerSettingInfo, playerSettingInfo);
@@ -680,11 +680,11 @@ public final class GetBasicInfoScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 1278606439:
-          case 400029048: {
-            if (input.isAtField(FieldNames.lastSetNicknameTime)) {
+          case -1964148386:
+          case 394600084: {
+            if (input.isAtField(FieldNames.nextRecoverTime)) {
               if (!input.trySkipNullValue()) {
-                lastSetNicknameTime = input.readInt64();
+                nextRecoverTime = input.readInt64();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -692,11 +692,11 @@ public final class GetBasicInfoScRspOuterClass {
             }
             break;
           }
-          case -1964148386:
-          case 394600084: {
-            if (input.isAtField(FieldNames.nextRecoverTime)) {
+          case 1278606439:
+          case 400029048: {
+            if (input.isAtField(FieldNames.lastSetNicknameTime)) {
               if (!input.trySkipNullValue()) {
-                nextRecoverTime = input.readInt64();
+                lastSetNicknameTime = input.readInt64();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -704,11 +704,11 @@ public final class GetBasicInfoScRspOuterClass {
             }
             break;
           }
-          case 686542531:
-          case 172986486: {
-            if (input.isAtField(FieldNames.gameplayBirthday)) {
+          case 1387396786:
+          case 668486783: {
+            if (input.isAtField(FieldNames.weekCocoonFinishedCount)) {
               if (!input.trySkipNullValue()) {
-                gameplayBirthday = input.readUInt32();
+                weekCocoonFinishedCount = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -716,11 +716,11 @@ public final class GetBasicInfoScRspOuterClass {
             }
             break;
           }
-          case -1349164740:
-          case 1126372637: {
-            if (input.isAtField(FieldNames.curDay)) {
+          case 1371137763:
+          case -119434710: {
+            if (input.isAtField(FieldNames.exchangeTimes)) {
               if (!input.trySkipNullValue()) {
-                curDay = input.readUInt32();
+                exchangeTimes = input.readUInt32();
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -739,11 +739,11 @@ public final class GetBasicInfoScRspOuterClass {
             }
             break;
           }
-          case 1371137763:
-          case -119434710: {
-            if (input.isAtField(FieldNames.exchangeTimes)) {
+          case 686542531:
+          case 172986486: {
+            if (input.isAtField(FieldNames.gameplayBirthday)) {
               if (!input.trySkipNullValue()) {
-                exchangeTimes = input.readUInt32();
+                gameplayBirthday = input.readUInt32();
                 bitField0_ |= 0x00000020;
               }
             } else {
@@ -751,11 +751,11 @@ public final class GetBasicInfoScRspOuterClass {
             }
             break;
           }
-          case 1387396786:
-          case 668486783: {
-            if (input.isAtField(FieldNames.weekCocoonFinishedCount)) {
+          case -1349164740:
+          case 1126372637: {
+            if (input.isAtField(FieldNames.curDay)) {
               if (!input.trySkipNullValue()) {
-                weekCocoonFinishedCount = input.readUInt32();
+                curDay = input.readUInt32();
                 bitField0_ |= 0x00000040;
               }
             } else {
@@ -828,19 +828,19 @@ public final class GetBasicInfoScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
+      static final FieldName nextRecoverTime = FieldName.forField("nextRecoverTime", "next_recover_time");
+
       static final FieldName lastSetNicknameTime = FieldName.forField("lastSetNicknameTime", "last_set_nickname_time");
 
-      static final FieldName nextRecoverTime = FieldName.forField("nextRecoverTime", "next_recover_time");
+      static final FieldName weekCocoonFinishedCount = FieldName.forField("weekCocoonFinishedCount", "week_cocoon_finished_count");
+
+      static final FieldName exchangeTimes = FieldName.forField("exchangeTimes", "exchange_times");
+
+      static final FieldName retcode = FieldName.forField("retcode");
 
       static final FieldName gameplayBirthday = FieldName.forField("gameplayBirthday", "gameplay_birthday");
 
       static final FieldName curDay = FieldName.forField("curDay", "cur_day");
-
-      static final FieldName retcode = FieldName.forField("retcode");
-
-      static final FieldName exchangeTimes = FieldName.forField("exchangeTimes", "exchange_times");
-
-      static final FieldName weekCocoonFinishedCount = FieldName.forField("weekCocoonFinishedCount", "week_cocoon_finished_count");
 
       static final FieldName playerSettingInfo = FieldName.forField("playerSettingInfo", "player_setting_info");
     }

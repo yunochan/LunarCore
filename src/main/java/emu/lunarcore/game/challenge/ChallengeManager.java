@@ -1,6 +1,7 @@
 package emu.lunarcore.game.challenge;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -14,26 +15,42 @@ import emu.lunarcore.game.player.BasePlayerManager;
 import emu.lunarcore.game.player.Player;
 import emu.lunarcore.game.player.lineup.PlayerLineup;
 import emu.lunarcore.proto.ExtraLineupTypeOuterClass.ExtraLineupType;
-import emu.lunarcore.proto.StartChallengeStoryBuffInfoOuterClass.StartChallengeStoryBuffInfo;
 import emu.lunarcore.proto.TakenChallengeRewardInfoOuterClass.TakenChallengeRewardInfo;
 import emu.lunarcore.server.packet.Retcode;
 import emu.lunarcore.server.packet.send.PacketStartChallengeScRsp;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import lombok.Getter;
+import us.hebi.quickbuf.RepeatedInt;
 
 @Getter
 public class ChallengeManager extends BasePlayerManager {
     private Int2ObjectMap<ChallengeHistory> history;
     private Int2ObjectMap<ChallengeGroupReward> takenRewards;
+
+    private RepeatedInt latest_lineup1;
+    private RepeatedInt latest_lineup2;
+    private int latest_firstHalfBuff;
+    private int latest_secondHalfBuff;
     
     public ChallengeManager(Player player) {
         super(player);
         this.history = new Int2ObjectOpenHashMap<>();
         this.takenRewards = new Int2ObjectOpenHashMap<>();
+        this.latest_lineup1 = RepeatedInt.newEmptyInstance();
+        this.latest_lineup2 = RepeatedInt.newEmptyInstance();
+        this.latest_firstHalfBuff = 0;
+        this.latest_secondHalfBuff = 0;
     }
-    
-    public void startChallenge(int challengeId, StartChallengeStoryBuffInfo storyBuffs) {
+
+    public void startChallenge(int challengeId, RepeatedInt lineup1, RepeatedInt lineup2, int firstHalfBuff, int secondHalfBuff) {
+
+        // temp, will change later
+        this.latest_lineup1 = lineup1;
+        this.latest_lineup2 = lineup2;
+        this.latest_firstHalfBuff = firstHalfBuff;
+        this.latest_secondHalfBuff = secondHalfBuff;
+
         // Get challenge excel
         ChallengeExcel excel = GameData.getChallengeExcelMap().get(challengeId);
         if (excel == null) {
@@ -45,6 +62,8 @@ public class ChallengeManager extends BasePlayerManager {
         if (excel.getStageNum() >= 1) {
             // Get lineup
             PlayerLineup lineup = getPlayer().getLineupManager().getExtraLineupByType(ExtraLineupType.LINEUP_CHALLENGE_VALUE);
+            // Set lineup
+            lineup.replace(Arrays.stream(lineup1.array()).boxed().toList());
             // Make sure this lineup has avatars set
             if (lineup.getAvatars().size() == 0) {
                 getPlayer().sendPacket(new PacketStartChallengeScRsp(Retcode.CHALLENGE_LINEUP_EMPTY));
@@ -62,6 +81,8 @@ public class ChallengeManager extends BasePlayerManager {
         if (excel.getStageNum() >= 2) {
             // Get lineup
             PlayerLineup lineup = getPlayer().getLineupManager().getExtraLineupByType(ExtraLineupType.LINEUP_CHALLENGE_2_VALUE);
+            // Set lineup
+            lineup.replace(Arrays.stream(lineup2.array()).boxed().toList());
             // Make sure this lineup has avatars set
             if (lineup.getAvatars().size() == 0) {
                 getPlayer().sendPacket(new PacketStartChallengeScRsp(Retcode.CHALLENGE_LINEUP_EMPTY));
@@ -100,21 +121,29 @@ public class ChallengeManager extends BasePlayerManager {
         instance.setSavedMp(getPlayer().getCurrentLineup().getMp());
         
         // Set story buffs
-        if (excel.isStory() && storyBuffs != null) {
-            instance.addStoryBuff(storyBuffs.getStoryBuffOne());
-            instance.addStoryBuff(storyBuffs.getStoryBuffTwo());
+        if (excel.getType() != ChallengeType.MEMORY && (firstHalfBuff != 0 || secondHalfBuff != 0)) {
+            // TODO: set story buffs for each stage individually
+            if (firstHalfBuff != 0)
+                instance.addBuff(firstHalfBuff);
+            if (secondHalfBuff != 0)
+                instance.addBuff(secondHalfBuff);
         }
 
         // Send packet
-        getPlayer().sendPacket(new PacketStartChallengeScRsp(getPlayer(), challengeId));
+        getPlayer().sendPacket(new PacketStartChallengeScRsp(getPlayer(), challengeId, lineup1, lineup2));
     }
     
-    public synchronized void addHistory(int challengeId, int stars, int score) {
+    public synchronized void addHistory(int challengeId, int stars, int score, boolean createExtraData) {
         // Dont write challenge history if the player didnt get any stars
         if (stars <= 0) return;
         
         // Get history info
         var info = this.getHistory().computeIfAbsent(challengeId, id -> new ChallengeHistory(getPlayer(), id));
+        
+        // Create extra data
+        if (createExtraData) {
+            info.getExtraData(); // Temporary solution TODO
+        }
 
         // Set
         info.setStars(stars);

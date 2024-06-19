@@ -140,7 +140,7 @@ public class BattleService extends BaseGameService {
             if (castingAvatar != null) {
                 // Add elemental weakness debuff to enemies
                 MazeBuff buff = battle.addBuff(castingAvatar.getExcel().getDamageType().getEnterBattleBuff(), battle.getLineup().getLeader());
-                if (buff != null) {
+                if (buff != null && castedSkill != null) {
                     buff.addTargetIndex(battle.getLineup().getLeader());
                     buff.addDynamicValue("SkillIndex", castedSkill.getIndex());
                 }

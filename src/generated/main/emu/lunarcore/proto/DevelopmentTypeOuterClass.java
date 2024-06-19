@@ -57,7 +57,22 @@ public final class DevelopmentTypeOuterClass {
     /**
      * <code>DEVELOPMENT_ACTIVITY_END = 9;</code>
      */
-    DEVELOPMENT_ACTIVITY_END("DEVELOPMENT_ACTIVITY_END", 9);
+    DEVELOPMENT_ACTIVITY_END("DEVELOPMENT_ACTIVITY_END", 9),
+
+    /**
+     * <code>DEVELOPMENT_BOSS_CHALLENGE = 10;</code>
+     */
+    DEVELOPMENT_BOSS_CHALLENGE("DEVELOPMENT_BOSS_CHALLENGE", 10),
+
+    /**
+     * <code>DEVELOPMENT_ROGUE_TOURN = 11;</code>
+     */
+    DEVELOPMENT_ROGUE_TOURN("DEVELOPMENT_ROGUE_TOURN", 11),
+
+    /**
+     * <code>DEVELOPMENT_ROGUE_TOURN_WEEK = 12;</code>
+     */
+    DEVELOPMENT_ROGUE_TOURN_WEEK("DEVELOPMENT_ROGUE_TOURN_WEEK", 12);
 
     /**
      * <code>DEVELOPMENT_NONE = 0;</code>
@@ -108,6 +123,21 @@ public final class DevelopmentTypeOuterClass {
      * <code>DEVELOPMENT_ACTIVITY_END = 9;</code>
      */
     public static final int DEVELOPMENT_ACTIVITY_END_VALUE = 9;
+
+    /**
+     * <code>DEVELOPMENT_BOSS_CHALLENGE = 10;</code>
+     */
+    public static final int DEVELOPMENT_BOSS_CHALLENGE_VALUE = 10;
+
+    /**
+     * <code>DEVELOPMENT_ROGUE_TOURN = 11;</code>
+     */
+    public static final int DEVELOPMENT_ROGUE_TOURN_VALUE = 11;
+
+    /**
+     * <code>DEVELOPMENT_ROGUE_TOURN_WEEK = 12;</code>
+     */
+    public static final int DEVELOPMENT_ROGUE_TOURN_WEEK_VALUE = 12;
 
     private final String name;
 
@@ -162,7 +192,7 @@ public final class DevelopmentTypeOuterClass {
     enum DevelopmentTypeConverter implements ProtoEnum.EnumConverter<DevelopmentType> {
       INSTANCE;
 
-      private static final DevelopmentType[] lookup = new DevelopmentType[10];
+      private static final DevelopmentType[] lookup = new DevelopmentType[13];
 
       static {
         lookup[0] = DEVELOPMENT_NONE;
@@ -175,6 +205,9 @@ public final class DevelopmentTypeOuterClass {
         lookup[7] = DEVELOPMENT_UNLOCK_EQUIPMENT;
         lookup[8] = DEVELOPMENT_ACTIVITY_START;
         lookup[9] = DEVELOPMENT_ACTIVITY_END;
+        lookup[10] = DEVELOPMENT_BOSS_CHALLENGE;
+        lookup[11] = DEVELOPMENT_ROGUE_TOURN;
+        lookup[12] = DEVELOPMENT_ROGUE_TOURN_WEEK;
       }
 
       @Override
@@ -198,6 +231,9 @@ public final class DevelopmentTypeOuterClass {
             if (ProtoUtil.isEqual("DEVELOPMENT_ROGUE_CHESS", value)) {
               return DEVELOPMENT_ROGUE_CHESS;
             }
+            if (ProtoUtil.isEqual("DEVELOPMENT_ROGUE_TOURN", value)) {
+              return DEVELOPMENT_ROGUE_TOURN;
+            }
             break;
           }
           case 24: {
@@ -219,6 +255,9 @@ public final class DevelopmentTypeOuterClass {
             if (ProtoUtil.isEqual("DEVELOPMENT_ACTIVITY_START", value)) {
               return DEVELOPMENT_ACTIVITY_START;
             }
+            if (ProtoUtil.isEqual("DEVELOPMENT_BOSS_CHALLENGE", value)) {
+              return DEVELOPMENT_BOSS_CHALLENGE;
+            }
             break;
           }
           case 27: {
@@ -236,6 +275,9 @@ public final class DevelopmentTypeOuterClass {
             }
             if (ProtoUtil.isEqual("DEVELOPMENT_UNLOCK_EQUIPMENT", value)) {
               return DEVELOPMENT_UNLOCK_EQUIPMENT;
+            }
+            if (ProtoUtil.isEqual("DEVELOPMENT_ROGUE_TOURN_WEEK", value)) {
+              return DEVELOPMENT_ROGUE_TOURN_WEEK;
             }
             break;
           }

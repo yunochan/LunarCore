@@ -20,29 +20,29 @@ public final class RogueMiracleDataInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 miracle_id = 7;</code>
+     * <code>optional uint32 JFIPNOAJNJM = 1;</code>
+     */
+    private int jFIPNOAJNJM;
+
+    /**
+     * <code>optional uint32 IKPLEKFLPFF = 6;</code>
+     */
+    private int iKPLEKFLPFF;
+
+    /**
+     * <code>optional uint32 ODFNOGMKDOA = 9;</code>
+     */
+    private int oDFNOGMKDOA;
+
+    /**
+     * <code>optional uint32 miracle_id = 12;</code>
      */
     private int miracleId;
 
     /**
-     * <code>optional uint32 MMFONFFPNJM = 8;</code>
+     * <code>repeated .RogueMiracleDataInfo.DFKPIBCLGOPEntry DFKPIBCLGOP = 14;</code>
      */
-    private int mMFONFFPNJM;
-
-    /**
-     * <code>optional uint32 NKBEHFHLPEF = 11;</code>
-     */
-    private int nKBEHFHLPEF;
-
-    /**
-     * <code>optional uint32 DCLABPANBJG = 12;</code>
-     */
-    private int dCLABPANBJG;
-
-    /**
-     * <code>repeated .RogueMiracleDataInfo.KONAGCDHKKHEntry KONAGCDHKKH = 15;</code>
-     */
-    private final RepeatedMessage<KONAGCDHKKHEntry> kONAGCDHKKH = RepeatedMessage.newEmptyInstance(KONAGCDHKKHEntry.getFactory());
+    private final RepeatedMessage<DFKPIBCLGOPEntry> dFKPIBCLGOP = RepeatedMessage.newEmptyInstance(DFKPIBCLGOPEntry.getFactory());
 
     private RogueMiracleDataInfo() {
     }
@@ -55,25 +55,136 @@ public final class RogueMiracleDataInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 miracle_id = 7;</code>
-     * @return whether the miracleId field is set
+     * <code>optional uint32 JFIPNOAJNJM = 1;</code>
+     * @return whether the jFIPNOAJNJM field is set
      */
-    public boolean hasMiracleId() {
+    public boolean hasJFIPNOAJNJM() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 miracle_id = 7;</code>
+     * <code>optional uint32 JFIPNOAJNJM = 1;</code>
+     * @return this
+     */
+    public RogueMiracleDataInfo clearJFIPNOAJNJM() {
+      bitField0_ &= ~0x00000001;
+      jFIPNOAJNJM = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 JFIPNOAJNJM = 1;</code>
+     * @return the jFIPNOAJNJM
+     */
+    public int getJFIPNOAJNJM() {
+      return jFIPNOAJNJM;
+    }
+
+    /**
+     * <code>optional uint32 JFIPNOAJNJM = 1;</code>
+     * @param value the jFIPNOAJNJM to set
+     * @return this
+     */
+    public RogueMiracleDataInfo setJFIPNOAJNJM(final int value) {
+      bitField0_ |= 0x00000001;
+      jFIPNOAJNJM = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 IKPLEKFLPFF = 6;</code>
+     * @return whether the iKPLEKFLPFF field is set
+     */
+    public boolean hasIKPLEKFLPFF() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 IKPLEKFLPFF = 6;</code>
+     * @return this
+     */
+    public RogueMiracleDataInfo clearIKPLEKFLPFF() {
+      bitField0_ &= ~0x00000002;
+      iKPLEKFLPFF = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 IKPLEKFLPFF = 6;</code>
+     * @return the iKPLEKFLPFF
+     */
+    public int getIKPLEKFLPFF() {
+      return iKPLEKFLPFF;
+    }
+
+    /**
+     * <code>optional uint32 IKPLEKFLPFF = 6;</code>
+     * @param value the iKPLEKFLPFF to set
+     * @return this
+     */
+    public RogueMiracleDataInfo setIKPLEKFLPFF(final int value) {
+      bitField0_ |= 0x00000002;
+      iKPLEKFLPFF = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 ODFNOGMKDOA = 9;</code>
+     * @return whether the oDFNOGMKDOA field is set
+     */
+    public boolean hasODFNOGMKDOA() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 ODFNOGMKDOA = 9;</code>
+     * @return this
+     */
+    public RogueMiracleDataInfo clearODFNOGMKDOA() {
+      bitField0_ &= ~0x00000004;
+      oDFNOGMKDOA = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 ODFNOGMKDOA = 9;</code>
+     * @return the oDFNOGMKDOA
+     */
+    public int getODFNOGMKDOA() {
+      return oDFNOGMKDOA;
+    }
+
+    /**
+     * <code>optional uint32 ODFNOGMKDOA = 9;</code>
+     * @param value the oDFNOGMKDOA to set
+     * @return this
+     */
+    public RogueMiracleDataInfo setODFNOGMKDOA(final int value) {
+      bitField0_ |= 0x00000004;
+      oDFNOGMKDOA = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 miracle_id = 12;</code>
+     * @return whether the miracleId field is set
+     */
+    public boolean hasMiracleId() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>optional uint32 miracle_id = 12;</code>
      * @return this
      */
     public RogueMiracleDataInfo clearMiracleId() {
-      bitField0_ &= ~0x00000001;
+      bitField0_ &= ~0x00000008;
       miracleId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 miracle_id = 7;</code>
+     * <code>optional uint32 miracle_id = 12;</code>
      * @return the miracleId
      */
     public int getMiracleId() {
@@ -81,161 +192,50 @@ public final class RogueMiracleDataInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 miracle_id = 7;</code>
+     * <code>optional uint32 miracle_id = 12;</code>
      * @param value the miracleId to set
      * @return this
      */
     public RogueMiracleDataInfo setMiracleId(final int value) {
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000008;
       miracleId = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 MMFONFFPNJM = 8;</code>
-     * @return whether the mMFONFFPNJM field is set
+     * <code>repeated .RogueMiracleDataInfo.DFKPIBCLGOPEntry DFKPIBCLGOP = 14;</code>
+     * @return whether the dFKPIBCLGOP field is set
      */
-    public boolean hasMMFONFFPNJM() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 MMFONFFPNJM = 8;</code>
-     * @return this
-     */
-    public RogueMiracleDataInfo clearMMFONFFPNJM() {
-      bitField0_ &= ~0x00000002;
-      mMFONFFPNJM = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 MMFONFFPNJM = 8;</code>
-     * @return the mMFONFFPNJM
-     */
-    public int getMMFONFFPNJM() {
-      return mMFONFFPNJM;
-    }
-
-    /**
-     * <code>optional uint32 MMFONFFPNJM = 8;</code>
-     * @param value the mMFONFFPNJM to set
-     * @return this
-     */
-    public RogueMiracleDataInfo setMMFONFFPNJM(final int value) {
-      bitField0_ |= 0x00000002;
-      mMFONFFPNJM = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 NKBEHFHLPEF = 11;</code>
-     * @return whether the nKBEHFHLPEF field is set
-     */
-    public boolean hasNKBEHFHLPEF() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 NKBEHFHLPEF = 11;</code>
-     * @return this
-     */
-    public RogueMiracleDataInfo clearNKBEHFHLPEF() {
-      bitField0_ &= ~0x00000004;
-      nKBEHFHLPEF = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 NKBEHFHLPEF = 11;</code>
-     * @return the nKBEHFHLPEF
-     */
-    public int getNKBEHFHLPEF() {
-      return nKBEHFHLPEF;
-    }
-
-    /**
-     * <code>optional uint32 NKBEHFHLPEF = 11;</code>
-     * @param value the nKBEHFHLPEF to set
-     * @return this
-     */
-    public RogueMiracleDataInfo setNKBEHFHLPEF(final int value) {
-      bitField0_ |= 0x00000004;
-      nKBEHFHLPEF = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 DCLABPANBJG = 12;</code>
-     * @return whether the dCLABPANBJG field is set
-     */
-    public boolean hasDCLABPANBJG() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional uint32 DCLABPANBJG = 12;</code>
-     * @return this
-     */
-    public RogueMiracleDataInfo clearDCLABPANBJG() {
-      bitField0_ &= ~0x00000008;
-      dCLABPANBJG = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 DCLABPANBJG = 12;</code>
-     * @return the dCLABPANBJG
-     */
-    public int getDCLABPANBJG() {
-      return dCLABPANBJG;
-    }
-
-    /**
-     * <code>optional uint32 DCLABPANBJG = 12;</code>
-     * @param value the dCLABPANBJG to set
-     * @return this
-     */
-    public RogueMiracleDataInfo setDCLABPANBJG(final int value) {
-      bitField0_ |= 0x00000008;
-      dCLABPANBJG = value;
-      return this;
-    }
-
-    /**
-     * <code>repeated .RogueMiracleDataInfo.KONAGCDHKKHEntry KONAGCDHKKH = 15;</code>
-     * @return whether the kONAGCDHKKH field is set
-     */
-    public boolean hasKONAGCDHKKH() {
+    public boolean hasDFKPIBCLGOP() {
       return (bitField0_ & 0x00000010) != 0;
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo.KONAGCDHKKHEntry KONAGCDHKKH = 15;</code>
+     * <code>repeated .RogueMiracleDataInfo.DFKPIBCLGOPEntry DFKPIBCLGOP = 14;</code>
      * @return this
      */
-    public RogueMiracleDataInfo clearKONAGCDHKKH() {
+    public RogueMiracleDataInfo clearDFKPIBCLGOP() {
       bitField0_ &= ~0x00000010;
-      kONAGCDHKKH.clear();
+      dFKPIBCLGOP.clear();
       return this;
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo.KONAGCDHKKHEntry KONAGCDHKKH = 15;</code>
+     * <code>repeated .RogueMiracleDataInfo.DFKPIBCLGOPEntry DFKPIBCLGOP = 14;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
      *
-     * Use {@link #getMutableKONAGCDHKKH()} if you want to modify it.
+     * Use {@link #getMutableDFKPIBCLGOP()} if you want to modify it.
      *
      * @return internal storage object for reading
      */
-    public RepeatedMessage<KONAGCDHKKHEntry> getKONAGCDHKKH() {
-      return kONAGCDHKKH;
+    public RepeatedMessage<DFKPIBCLGOPEntry> getDFKPIBCLGOP() {
+      return dFKPIBCLGOP;
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo.KONAGCDHKKHEntry KONAGCDHKKH = 15;</code>
+     * <code>repeated .RogueMiracleDataInfo.DFKPIBCLGOPEntry DFKPIBCLGOP = 14;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -243,30 +243,30 @@ public final class RogueMiracleDataInfoOuterClass {
      *
      * @return internal storage object for modifications
      */
-    public RepeatedMessage<KONAGCDHKKHEntry> getMutableKONAGCDHKKH() {
+    public RepeatedMessage<DFKPIBCLGOPEntry> getMutableDFKPIBCLGOP() {
       bitField0_ |= 0x00000010;
-      return kONAGCDHKKH;
+      return dFKPIBCLGOP;
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo.KONAGCDHKKHEntry KONAGCDHKKH = 15;</code>
-     * @param value the kONAGCDHKKH to add
+     * <code>repeated .RogueMiracleDataInfo.DFKPIBCLGOPEntry DFKPIBCLGOP = 14;</code>
+     * @param value the dFKPIBCLGOP to add
      * @return this
      */
-    public RogueMiracleDataInfo addKONAGCDHKKH(final KONAGCDHKKHEntry value) {
+    public RogueMiracleDataInfo addDFKPIBCLGOP(final DFKPIBCLGOPEntry value) {
       bitField0_ |= 0x00000010;
-      kONAGCDHKKH.add(value);
+      dFKPIBCLGOP.add(value);
       return this;
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo.KONAGCDHKKHEntry KONAGCDHKKH = 15;</code>
-     * @param values the kONAGCDHKKH to add
+     * <code>repeated .RogueMiracleDataInfo.DFKPIBCLGOPEntry DFKPIBCLGOP = 14;</code>
+     * @param values the dFKPIBCLGOP to add
      * @return this
      */
-    public RogueMiracleDataInfo addAllKONAGCDHKKH(final KONAGCDHKKHEntry... values) {
+    public RogueMiracleDataInfo addAllDFKPIBCLGOP(final DFKPIBCLGOPEntry... values) {
       bitField0_ |= 0x00000010;
-      kONAGCDHKKH.addAll(values);
+      dFKPIBCLGOP.addAll(values);
       return this;
     }
 
@@ -275,11 +275,11 @@ public final class RogueMiracleDataInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
+        jFIPNOAJNJM = other.jFIPNOAJNJM;
+        iKPLEKFLPFF = other.iKPLEKFLPFF;
+        oDFNOGMKDOA = other.oDFNOGMKDOA;
         miracleId = other.miracleId;
-        mMFONFFPNJM = other.mMFONFFPNJM;
-        nKBEHFHLPEF = other.nKBEHFHLPEF;
-        dCLABPANBJG = other.dCLABPANBJG;
-        kONAGCDHKKH.copyFrom(other.kONAGCDHKKH);
+        dFKPIBCLGOP.copyFrom(other.dFKPIBCLGOP);
       }
       return this;
     }
@@ -290,20 +290,20 @@ public final class RogueMiracleDataInfoOuterClass {
         return this;
       }
       cachedSize = -1;
+      if (other.hasJFIPNOAJNJM()) {
+        setJFIPNOAJNJM(other.jFIPNOAJNJM);
+      }
+      if (other.hasIKPLEKFLPFF()) {
+        setIKPLEKFLPFF(other.iKPLEKFLPFF);
+      }
+      if (other.hasODFNOGMKDOA()) {
+        setODFNOGMKDOA(other.oDFNOGMKDOA);
+      }
       if (other.hasMiracleId()) {
         setMiracleId(other.miracleId);
       }
-      if (other.hasMMFONFFPNJM()) {
-        setMMFONFFPNJM(other.mMFONFFPNJM);
-      }
-      if (other.hasNKBEHFHLPEF()) {
-        setNKBEHFHLPEF(other.nKBEHFHLPEF);
-      }
-      if (other.hasDCLABPANBJG()) {
-        setDCLABPANBJG(other.dCLABPANBJG);
-      }
-      if (other.hasKONAGCDHKKH()) {
-        getMutableKONAGCDHKKH().addAll(other.kONAGCDHKKH);
+      if (other.hasDFKPIBCLGOP()) {
+        getMutableDFKPIBCLGOP().addAll(other.dFKPIBCLGOP);
       }
       return this;
     }
@@ -315,11 +315,11 @@ public final class RogueMiracleDataInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
+      jFIPNOAJNJM = 0;
+      iKPLEKFLPFF = 0;
+      oDFNOGMKDOA = 0;
       miracleId = 0;
-      mMFONFFPNJM = 0;
-      nKBEHFHLPEF = 0;
-      dCLABPANBJG = 0;
-      kONAGCDHKKH.clear();
+      dFKPIBCLGOP.clear();
       return this;
     }
 
@@ -330,7 +330,7 @@ public final class RogueMiracleDataInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      kONAGCDHKKH.clearQuick();
+      dFKPIBCLGOP.clearQuick();
       return this;
     }
 
@@ -344,35 +344,35 @@ public final class RogueMiracleDataInfoOuterClass {
       }
       RogueMiracleDataInfo other = (RogueMiracleDataInfo) o;
       return bitField0_ == other.bitField0_
+        && (!hasJFIPNOAJNJM() || jFIPNOAJNJM == other.jFIPNOAJNJM)
+        && (!hasIKPLEKFLPFF() || iKPLEKFLPFF == other.iKPLEKFLPFF)
+        && (!hasODFNOGMKDOA() || oDFNOGMKDOA == other.oDFNOGMKDOA)
         && (!hasMiracleId() || miracleId == other.miracleId)
-        && (!hasMMFONFFPNJM() || mMFONFFPNJM == other.mMFONFFPNJM)
-        && (!hasNKBEHFHLPEF() || nKBEHFHLPEF == other.nKBEHFHLPEF)
-        && (!hasDCLABPANBJG() || dCLABPANBJG == other.dCLABPANBJG)
-        && (!hasKONAGCDHKKH() || kONAGCDHKKH.equals(other.kONAGCDHKKH));
+        && (!hasDFKPIBCLGOP() || dFKPIBCLGOP.equals(other.dFKPIBCLGOP));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 56);
-        output.writeUInt32NoTag(miracleId);
+        output.writeRawByte((byte) 8);
+        output.writeUInt32NoTag(jFIPNOAJNJM);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 64);
-        output.writeUInt32NoTag(mMFONFFPNJM);
+        output.writeRawByte((byte) 48);
+        output.writeUInt32NoTag(iKPLEKFLPFF);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 88);
-        output.writeUInt32NoTag(nKBEHFHLPEF);
+        output.writeRawByte((byte) 72);
+        output.writeUInt32NoTag(oDFNOGMKDOA);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeRawByte((byte) 96);
-        output.writeUInt32NoTag(dCLABPANBJG);
+        output.writeUInt32NoTag(miracleId);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        for (int i = 0; i < kONAGCDHKKH.length(); i++) {
-          output.writeRawByte((byte) 122);
-          output.writeMessageNoTag(kONAGCDHKKH.get(i));
+        for (int i = 0; i < dFKPIBCLGOP.length(); i++) {
+          output.writeRawByte((byte) 114);
+          output.writeMessageNoTag(dFKPIBCLGOP.get(i));
         }
       }
     }
@@ -381,19 +381,19 @@ public final class RogueMiracleDataInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(miracleId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(jFIPNOAJNJM);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(mMFONFFPNJM);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(iKPLEKFLPFF);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(nKBEHFHLPEF);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(oDFNOGMKDOA);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(dCLABPANBJG);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(miracleId);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        size += (1 * kONAGCDHKKH.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(kONAGCDHKKH);
+        size += (1 * dFKPIBCLGOP.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(dFKPIBCLGOP);
       }
       return size;
     }
@@ -405,27 +405,27 @@ public final class RogueMiracleDataInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 56: {
-            // miracleId
-            miracleId = input.readUInt32();
+          case 8: {
+            // jFIPNOAJNJM
+            jFIPNOAJNJM = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 48) {
               break;
             }
           }
-          case 64: {
-            // mMFONFFPNJM
-            mMFONFFPNJM = input.readUInt32();
+          case 48: {
+            // iKPLEKFLPFF
+            iKPLEKFLPFF = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 72) {
               break;
             }
           }
-          case 88: {
-            // nKBEHFHLPEF
-            nKBEHFHLPEF = input.readUInt32();
+          case 72: {
+            // oDFNOGMKDOA
+            oDFNOGMKDOA = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 96) {
@@ -433,17 +433,17 @@ public final class RogueMiracleDataInfoOuterClass {
             }
           }
           case 96: {
-            // dCLABPANBJG
-            dCLABPANBJG = input.readUInt32();
+            // miracleId
+            miracleId = input.readUInt32();
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 122) {
+            if (tag != 114) {
               break;
             }
           }
-          case 122: {
-            // kONAGCDHKKH
-            tag = input.readRepeatedMessage(kONAGCDHKKH, tag);
+          case 114: {
+            // dFKPIBCLGOP
+            tag = input.readRepeatedMessage(dFKPIBCLGOP, tag);
             bitField0_ |= 0x00000010;
             if (tag != 0) {
               break;
@@ -467,19 +467,19 @@ public final class RogueMiracleDataInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.miracleId, miracleId);
+        output.writeUInt32(FieldNames.jFIPNOAJNJM, jFIPNOAJNJM);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.mMFONFFPNJM, mMFONFFPNJM);
+        output.writeUInt32(FieldNames.iKPLEKFLPFF, iKPLEKFLPFF);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.nKBEHFHLPEF, nKBEHFHLPEF);
+        output.writeUInt32(FieldNames.oDFNOGMKDOA, oDFNOGMKDOA);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.dCLABPANBJG, dCLABPANBJG);
+        output.writeUInt32(FieldNames.miracleId, miracleId);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRepeatedMessage(FieldNames.kONAGCDHKKH, kONAGCDHKKH);
+        output.writeRepeatedMessage(FieldNames.dFKPIBCLGOP, dFKPIBCLGOP);
       }
       output.endObject();
     }
@@ -491,11 +491,10 @@ public final class RogueMiracleDataInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -164571796:
-          case -806736983: {
-            if (input.isAtField(FieldNames.miracleId)) {
+          case 1019082596: {
+            if (input.isAtField(FieldNames.jFIPNOAJNJM)) {
               if (!input.trySkipNullValue()) {
-                miracleId = input.readUInt32();
+                jFIPNOAJNJM = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -503,10 +502,10 @@ public final class RogueMiracleDataInfoOuterClass {
             }
             break;
           }
-          case 1974288326: {
-            if (input.isAtField(FieldNames.mMFONFFPNJM)) {
+          case -117523130: {
+            if (input.isAtField(FieldNames.iKPLEKFLPFF)) {
               if (!input.trySkipNullValue()) {
-                mMFONFFPNJM = input.readUInt32();
+                iKPLEKFLPFF = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -514,10 +513,10 @@ public final class RogueMiracleDataInfoOuterClass {
             }
             break;
           }
-          case -2066312081: {
-            if (input.isAtField(FieldNames.nKBEHFHLPEF)) {
+          case -671364125: {
+            if (input.isAtField(FieldNames.oDFNOGMKDOA)) {
               if (!input.trySkipNullValue()) {
-                nKBEHFHLPEF = input.readUInt32();
+                oDFNOGMKDOA = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -525,10 +524,11 @@ public final class RogueMiracleDataInfoOuterClass {
             }
             break;
           }
-          case 269276528: {
-            if (input.isAtField(FieldNames.dCLABPANBJG)) {
+          case -164571796:
+          case -806736983: {
+            if (input.isAtField(FieldNames.miracleId)) {
               if (!input.trySkipNullValue()) {
-                dCLABPANBJG = input.readUInt32();
+                miracleId = input.readUInt32();
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -536,10 +536,10 @@ public final class RogueMiracleDataInfoOuterClass {
             }
             break;
           }
-          case -1329612143: {
-            if (input.isAtField(FieldNames.kONAGCDHKKH)) {
+          case -916882785: {
+            if (input.isAtField(FieldNames.dFKPIBCLGOP)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedMessage(kONAGCDHKKH);
+                input.readRepeatedMessage(dFKPIBCLGOP);
                 bitField0_ |= 0x00000010;
               }
             } else {
@@ -588,9 +588,9 @@ public final class RogueMiracleDataInfoOuterClass {
     }
 
     /**
-     * Protobuf type {@code KONAGCDHKKHEntry}
+     * Protobuf type {@code DFKPIBCLGOPEntry}
      */
-    public static final class KONAGCDHKKHEntry extends ProtoMessage<KONAGCDHKKHEntry> implements Cloneable {
+    public static final class DFKPIBCLGOPEntry extends ProtoMessage<DFKPIBCLGOPEntry> implements Cloneable {
       private static final long serialVersionUID = 0L;
 
       /**
@@ -603,14 +603,14 @@ public final class RogueMiracleDataInfoOuterClass {
        */
       private int value_;
 
-      private KONAGCDHKKHEntry() {
+      private DFKPIBCLGOPEntry() {
       }
 
       /**
-       * @return a new empty instance of {@code KONAGCDHKKHEntry}
+       * @return a new empty instance of {@code DFKPIBCLGOPEntry}
        */
-      public static KONAGCDHKKHEntry newInstance() {
-        return new KONAGCDHKKHEntry();
+      public static DFKPIBCLGOPEntry newInstance() {
+        return new DFKPIBCLGOPEntry();
       }
 
       /**
@@ -625,7 +625,7 @@ public final class RogueMiracleDataInfoOuterClass {
        * <code>optional uint32 key = 1;</code>
        * @return this
        */
-      public KONAGCDHKKHEntry clearKey() {
+      public DFKPIBCLGOPEntry clearKey() {
         bitField0_ &= ~0x00000001;
         key = 0;
         return this;
@@ -644,7 +644,7 @@ public final class RogueMiracleDataInfoOuterClass {
        * @param value the key to set
        * @return this
        */
-      public KONAGCDHKKHEntry setKey(final int value) {
+      public DFKPIBCLGOPEntry setKey(final int value) {
         bitField0_ |= 0x00000001;
         key = value;
         return this;
@@ -662,7 +662,7 @@ public final class RogueMiracleDataInfoOuterClass {
        * <code>optional uint32 value = 2;</code>
        * @return this
        */
-      public KONAGCDHKKHEntry clearValue() {
+      public DFKPIBCLGOPEntry clearValue() {
         bitField0_ &= ~0x00000002;
         value_ = 0;
         return this;
@@ -681,14 +681,14 @@ public final class RogueMiracleDataInfoOuterClass {
        * @param value the value_ to set
        * @return this
        */
-      public KONAGCDHKKHEntry setValue(final int value) {
+      public DFKPIBCLGOPEntry setValue(final int value) {
         bitField0_ |= 0x00000002;
         value_ = value;
         return this;
       }
 
       @Override
-      public KONAGCDHKKHEntry copyFrom(final KONAGCDHKKHEntry other) {
+      public DFKPIBCLGOPEntry copyFrom(final DFKPIBCLGOPEntry other) {
         cachedSize = other.cachedSize;
         if ((bitField0_ | other.bitField0_) != 0) {
           bitField0_ = other.bitField0_;
@@ -699,7 +699,7 @@ public final class RogueMiracleDataInfoOuterClass {
       }
 
       @Override
-      public KONAGCDHKKHEntry mergeFrom(final KONAGCDHKKHEntry other) {
+      public DFKPIBCLGOPEntry mergeFrom(final DFKPIBCLGOPEntry other) {
         if (other.isEmpty()) {
           return this;
         }
@@ -714,7 +714,7 @@ public final class RogueMiracleDataInfoOuterClass {
       }
 
       @Override
-      public KONAGCDHKKHEntry clear() {
+      public DFKPIBCLGOPEntry clear() {
         if (isEmpty()) {
           return this;
         }
@@ -726,7 +726,7 @@ public final class RogueMiracleDataInfoOuterClass {
       }
 
       @Override
-      public KONAGCDHKKHEntry clearQuick() {
+      public DFKPIBCLGOPEntry clearQuick() {
         if (isEmpty()) {
           return this;
         }
@@ -740,10 +740,10 @@ public final class RogueMiracleDataInfoOuterClass {
         if (o == this) {
           return true;
         }
-        if (!(o instanceof KONAGCDHKKHEntry)) {
+        if (!(o instanceof DFKPIBCLGOPEntry)) {
           return false;
         }
-        KONAGCDHKKHEntry other = (KONAGCDHKKHEntry) o;
+        DFKPIBCLGOPEntry other = (DFKPIBCLGOPEntry) o;
         return bitField0_ == other.bitField0_
           && (!hasKey() || key == other.key)
           && (!hasValue() || value_ == other.value_);
@@ -775,7 +775,7 @@ public final class RogueMiracleDataInfoOuterClass {
 
       @Override
       @SuppressWarnings("fallthrough")
-      public KONAGCDHKKHEntry mergeFrom(final ProtoSource input) throws IOException {
+      public DFKPIBCLGOPEntry mergeFrom(final ProtoSource input) throws IOException {
         // Enabled Fall-Through Optimization (QuickBuffers)
         int tag = input.readTag();
         while (true) {
@@ -825,7 +825,7 @@ public final class RogueMiracleDataInfoOuterClass {
       }
 
       @Override
-      public KONAGCDHKKHEntry mergeFrom(final JsonSource input) throws IOException {
+      public DFKPIBCLGOPEntry mergeFrom(final JsonSource input) throws IOException {
         if (!input.beginObject()) {
           return this;
         }
@@ -864,8 +864,8 @@ public final class RogueMiracleDataInfoOuterClass {
       }
 
       @Override
-      public KONAGCDHKKHEntry clone() {
-        return new KONAGCDHKKHEntry().copyFrom(this);
+      public DFKPIBCLGOPEntry clone() {
+        return new DFKPIBCLGOPEntry().copyFrom(this);
       }
 
       @Override
@@ -873,32 +873,32 @@ public final class RogueMiracleDataInfoOuterClass {
         return ((bitField0_) == 0);
       }
 
-      public static KONAGCDHKKHEntry parseFrom(final byte[] data) throws
+      public static DFKPIBCLGOPEntry parseFrom(final byte[] data) throws
           InvalidProtocolBufferException {
-        return ProtoMessage.mergeFrom(new KONAGCDHKKHEntry(), data).checkInitialized();
+        return ProtoMessage.mergeFrom(new DFKPIBCLGOPEntry(), data).checkInitialized();
       }
 
-      public static KONAGCDHKKHEntry parseFrom(final ProtoSource input) throws IOException {
-        return ProtoMessage.mergeFrom(new KONAGCDHKKHEntry(), input).checkInitialized();
+      public static DFKPIBCLGOPEntry parseFrom(final ProtoSource input) throws IOException {
+        return ProtoMessage.mergeFrom(new DFKPIBCLGOPEntry(), input).checkInitialized();
       }
 
-      public static KONAGCDHKKHEntry parseFrom(final JsonSource input) throws IOException {
-        return ProtoMessage.mergeFrom(new KONAGCDHKKHEntry(), input).checkInitialized();
+      public static DFKPIBCLGOPEntry parseFrom(final JsonSource input) throws IOException {
+        return ProtoMessage.mergeFrom(new DFKPIBCLGOPEntry(), input).checkInitialized();
       }
 
       /**
-       * @return factory for creating KONAGCDHKKHEntry messages
+       * @return factory for creating DFKPIBCLGOPEntry messages
        */
-      public static MessageFactory<KONAGCDHKKHEntry> getFactory() {
-        return KONAGCDHKKHEntryFactory.INSTANCE;
+      public static MessageFactory<DFKPIBCLGOPEntry> getFactory() {
+        return DFKPIBCLGOPEntryFactory.INSTANCE;
       }
 
-      private enum KONAGCDHKKHEntryFactory implements MessageFactory<KONAGCDHKKHEntry> {
+      private enum DFKPIBCLGOPEntryFactory implements MessageFactory<DFKPIBCLGOPEntry> {
         INSTANCE;
 
         @Override
-        public KONAGCDHKKHEntry create() {
-          return KONAGCDHKKHEntry.newInstance();
+        public DFKPIBCLGOPEntry create() {
+          return DFKPIBCLGOPEntry.newInstance();
         }
       }
 
@@ -925,15 +925,15 @@ public final class RogueMiracleDataInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
+      static final FieldName jFIPNOAJNJM = FieldName.forField("JFIPNOAJNJM");
+
+      static final FieldName iKPLEKFLPFF = FieldName.forField("IKPLEKFLPFF");
+
+      static final FieldName oDFNOGMKDOA = FieldName.forField("ODFNOGMKDOA");
+
       static final FieldName miracleId = FieldName.forField("miracleId", "miracle_id");
 
-      static final FieldName mMFONFFPNJM = FieldName.forField("MMFONFFPNJM");
-
-      static final FieldName nKBEHFHLPEF = FieldName.forField("NKBEHFHLPEF");
-
-      static final FieldName dCLABPANBJG = FieldName.forField("DCLABPANBJG");
-
-      static final FieldName kONAGCDHKKH = FieldName.forField("KONAGCDHKKH");
+      static final FieldName dFKPIBCLGOP = FieldName.forField("DFKPIBCLGOP");
     }
   }
 }

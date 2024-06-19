@@ -41,7 +41,7 @@ public class ChallengeInstance {
     @Setter private int scoreStage1;
     @Setter private int scoreStage2;
     
-    private IntList storyBuffs;
+    private IntList buffs;
     
     @Deprecated // Morphia only
     public ChallengeInstance() {}
@@ -64,6 +64,10 @@ public class ChallengeInstance {
     
     private int getChallengeId() {
         return this.getExcel().getId();
+    }
+    
+    public ChallengeType getType() {
+        return this.getExcel().getType();
     }
     
     public boolean isStory() {
@@ -90,13 +94,13 @@ public class ChallengeInstance {
         return status == ChallengeStatus.CHALLENGE_FINISH_VALUE;
     }
     
-    public void addStoryBuff(int storyBuff) {
+    public void addBuff(int buff) {
         // Add story buffs
-        if (storyBuffs == null) {
-            storyBuffs = new IntArrayList();
+        if (buffs == null) {
+            buffs = new IntArrayList();
         }
         
-        storyBuffs.add(storyBuff);
+        buffs.add(buff);
     }
     
     public void onBattleStart(Battle battle) {
@@ -104,10 +108,10 @@ public class ChallengeInstance {
         battle.setRoundsLimit(player.getChallengeInstance().getRoundsLeft());
         
         // Add story buffs
-        if (this.getStoryBuffs() != null) {
+        if (this.getBuffs() != null) {
             battle.addBuff(this.getExcel().getMazeBuffID());
             
-            int buffId = this.getStoryBuffs().getInt(this.getCurrentStage() - 1);
+            int buffId = this.getBuffs().getInt(this.getCurrentStage() - 1);
             if (buffId != 0) {
                 battle.addBuff(buffId);
             }
@@ -190,7 +194,7 @@ public class ChallengeInstance {
             this.setStatus(ChallengeStatus.CHALLENGE_FINISH);
             this.stars = this.calculateStars();
             // Save history
-            player.getChallengeManager().addHistory(this.getChallengeId(), this.getStars(), this.getTotalScore());
+            player.getChallengeManager().addHistory(this.getChallengeId(), this.getStars(), this.getTotalScore(), this.getType() == ChallengeType.BOSS);
             // Send challenge result data
             player.sendPacket(new PacketChallengeSettleNotify(this));
         } else {
@@ -266,10 +270,23 @@ public class ChallengeInstance {
                 .setScoreTwo(this.getScoreStage2())
                 .setRoundCount(this.getRoundsElapsed())
                 .setExtraLineupTypeValue(this.getCurrentExtraLineup());
-        
-        if (this.getStoryBuffs() != null) {
-            int buffId = this.getStoryBuffs().getInt(this.getCurrentStage() - 1);
-            proto.getMutableStoryInfo().getMutableCurStoryBuffs().addBuffList(buffId);
+
+        switch (this.getType()) {
+            case STORY -> {
+                if (this.getBuffs() != null) {
+                    int buffId = this.getBuffs().getInt(this.getCurrentStage() - 1);
+                    proto.getMutableStoryInfo().getMutableCurStoryBuffs().addBuffList(buffId);
+                }
+            }
+            case BOSS -> {
+                if (this.getBuffs() != null) {
+                    int buffId = this.getBuffs().getInt(this.getCurrentStage() - 1);
+                    proto.getMutableStoryInfo().getMutableCurBossBuffs().addBuffList(buffId);
+                }
+            }
+            default -> {
+                // Nothing
+            }
         }
         
         return proto;

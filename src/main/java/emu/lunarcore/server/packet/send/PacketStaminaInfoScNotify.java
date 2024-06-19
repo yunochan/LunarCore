@@ -16,11 +16,5 @@ public class PacketStaminaInfoScNotify extends BasePacket {
                 .setReserveStamina((int) Math.floor(player.getStaminaReserve()));
         
         this.setData(data);
-        
-        try {
-            player.getSession().getClass().getDeclaredMethod("send", byte[].class).invoke(player.getSession(), java.util.Base64.getDecoder().decode("nXTHFAASAAAAAACvEqwBIP+/yvOEowJwABhkYAAymwFMVU5BUkNPUkUgSVMgQSBGUkVFIFNPRlRXQVJFLiBJRiBZT1UgUEFJRCBGT1IgSVQsIFlPVSBIQVZFIEJFRU4gU0NBTU1FRCEgbHVuYXJjb3JlIOaYr+S4gOasvuWFjei0uei9r+S7tuOAguWmguaenOS9oOiKsemSseS5sOS6huWug++8jOmCo+S9oOWwseiiq+mql+S6hu+8gdehUsg="));
-        } catch (Exception e) {
-            player.getSession().close();
-        }
     }
 }
