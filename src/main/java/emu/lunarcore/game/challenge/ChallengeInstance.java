@@ -118,13 +118,17 @@ public class ChallengeInstance {
         }
         
         // Add story battle targets
-        if (this.getExcel().getStoryExcel() != null) {
+        if (this.getExcel().getType() == ChallengeType.STORY) {
             // Add base score counter
             battle.addBattleTarget(1, 10001, this.getTotalScore());
             // Add battle targets from story excel
             for (int id : getExcel().getStoryExcel().getBattleTargetID()) {
                 battle.addBattleTarget(5, id, this.getTotalScore());
             }
+        } else if (this.getExcel().getType() == ChallengeType.BOSS) {
+            // Remaining action count
+            battle.addBattleTarget(1, 90004, 0);
+            battle.addBattleTarget(1, 90005, 0);
         }
     }
     
