@@ -40,6 +40,11 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
     }
 
     public GameAvatar getAvatarById(int id) {
+        // Check if we are trying to retrieve the hero character
+        if (GameData.getHeroExcelMap().containsKey(id)) {
+            id = GameConstants.TRAILBLAZER_AVATAR_ID;
+        }
+        
         return getAvatars().get(id);
     }
     

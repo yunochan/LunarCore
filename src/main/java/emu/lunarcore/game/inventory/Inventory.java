@@ -564,7 +564,7 @@ public class Inventory extends BasePlayerManager {
     }
 
     public boolean unequipItem(int avatarId, int slot) {
-        GameAvatar avatar = getPlayer().getAvatars().getAvatarById(avatarId);
+        GameAvatar avatar = getPlayer().getAvatarById(avatarId);
 
         if (avatar != null) {
             GameItem unequipped = avatar.unequipItem(slot);

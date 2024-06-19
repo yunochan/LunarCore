@@ -328,11 +328,6 @@ public class Player implements Tickable {
     }
 
     public GameAvatar getAvatarById(int avatarId) {
-        // Check if we are trying to retrieve the hero character
-        if (GameData.getHeroExcelMap().containsKey(avatarId)) {
-            avatarId = GameConstants.TRAILBLAZER_AVATAR_ID;
-        }
-        
         return getAvatars().getAvatarById(avatarId);
     }
     
