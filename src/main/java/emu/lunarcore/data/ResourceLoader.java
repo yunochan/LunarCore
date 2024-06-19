@@ -247,6 +247,12 @@ public class ResourceLoader {
                     GroupInfo group = gson.fromJson(reader, GroupInfo.class);
                     group.setId(simpleGroup.getID());
                     
+                    // Hacky way to load only groups that arent required for main missions
+                    if (group.getOwnerMainMissionID() > 0 && group.getOwnerMainMissionID() < 2000000) {
+                        continue;
+                    }
+                    
+                    // Load groups into the floor info
                     floor.getGroupList().add(group);
                     floor.getGroups().put(simpleGroup.getID(), group);
                 } catch (Exception e) {
