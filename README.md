@@ -38,8 +38,7 @@
 ### Connecting with the client (Fiddler method)
 1. **Log in with the client to an official server and Hoyoverse account at least once to download game data.**
 2. Install and have [Fiddler Classic](https://www.telerik.com/fiddler) running.
-3. Set fiddler to decrypt https traffic. (Tools -> Options -> HTTPS -> Decrypt HTTPS traffic) Make sure `ignore server certificate errors` is checked as well.
-4. Copy and paste the following code into the Fiddlerscript tab of Fiddler Classic:
+3. Copy and paste the following code into the Fiddlerscript tab of Fiddler Classic. Remember to save the fiddler script after you copy and paste it:
 
 ```
 import System;
@@ -51,14 +50,15 @@ class Handlers
 {
     static function OnBeforeRequest(oS: Session) {
         if (oS.host.EndsWith(".starrails.com") || oS.host.EndsWith(".hoyoverse.com") || oS.host.EndsWith(".mihoyo.com") || oS.host.EndsWith(".bhsr.com")) {
+            oS.oRequest.headers.UriScheme = "http";
             oS.host = "localhost"; // This can also be replaced with another IP address.
         }
     }
 };
 ```
 
-5. If `autoCreateAccount` is set to true in the config, then you can skip this step. Otherwise, type `/account create [account name]` in the server console to create an account.
-6. Login with your account name, the password field is ignored by the server and can be set to anything.
+4. If `autoCreateAccount` is set to true in the config, then you can skip this step. Otherwise, type `/account create [account name]` in the server console to create an account.
+5. Login with your account name, the password field is ignored by the server and can be set to anything.
 
 ### Server commands
 Server commands can be run in the server console or in-game. There is a dummy user named "Server" in every player's friends list that you can message to use in-game commands.

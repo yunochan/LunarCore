@@ -18,7 +18,7 @@ public class Config {
 
     public KeystoreInfo keystore = new KeystoreInfo();
 
-    public HttpServerConfig httpServer = new HttpServerConfig(443);
+    public HttpServerConfig httpServer = new HttpServerConfig(80);
     public GameServerConfig gameServer = new GameServerConfig(23301);
     
     public ServerOptions serverOptions = new ServerOptions();
@@ -46,7 +46,7 @@ public class Config {
     @Getter
     public static class KeystoreInfo {
         public String path = "./keystore.p12";
-        public String password = "lunar";
+        public String password = "";
     }
 
     @Getter
@@ -83,7 +83,7 @@ public class Config {
     
     @Getter
     public static class HttpServerConfig extends ServerConfig {
-        public boolean useSSL = true;
+        public boolean useSSL = false;
         public long regionListRefresh = 60_000; // Time in milliseconds to wait before refreshing region list cache again
 
         public HttpServerConfig(int port) {
