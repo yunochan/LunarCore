@@ -30,12 +30,27 @@ public class PacketGetFriendListInfoScRsp extends BasePacket {
                 .setChatBubbleId(serverFriendInfo.getChatBubbleId())
                 .setOnlineStatus(FriendOnlineStatus.FRIEND_ONLINE_STATUS_ONLINE)
                 .setPlatformType(PlatformType.PC)
-                .addAssistSimpleInfo(AssistSimpleInfo.newInstance().setAvatarId(serverFriendInfo.getDisplayAvatarId()).setLevel(serverFriendInfo.getDisplayAvatarLevel()))
                 .setHeadIcon(serverFriendInfo.getHeadIcon());
+        
+        // Add server display avatars
+        if (serverFriendInfo.getDisplayAvatars() != null) {
+            for (int pos = 0; pos < serverFriendInfo.getDisplayAvatars().size(); pos++) {
+                var displayAvatar = serverFriendInfo.getDisplayAvatars().get(pos);
+                
+                var info = AssistSimpleInfo.newInstance()
+                        .setAvatarId(displayAvatar.getAvatarId())
+                        .setLevel(displayAvatar.getLevel())
+                        .setPos(pos);
+                
+                consoleFriend.addAssistSimpleInfo(info);
+            }
+        }
 
+        // Create proto and add the server console info to it
         var data = GetFriendListInfoScRsp.newInstance()
                 .addFriendList(FriendListInfo.newInstance().setSimpleInfo(consoleFriend));
         
+        // Add friend infos
         for (var friendship : friendList.getFriends().values()) {
             var friend = friendList.getServer().getPlayerByUid(friendship.getFriendUid(), true);
             if (friend == null) continue;

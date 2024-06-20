@@ -160,8 +160,18 @@ public class Config {
         public int level = 1;
         public int headIcon = 201001;
         public int chatBubbleId = 0;
-        public int displayAvatarId = 1001;
-        public int displayAvatarLevel = 1;
+        public List<ServerDisplayAvatar> displayAvatars = List.of(new ServerDisplayAvatar(1001, 1));
+        
+        @Getter
+        public static class ServerDisplayAvatar {
+            public int avatarId;
+            public int level;
+            
+            public ServerDisplayAvatar(int avatarId, int level) {
+                this.avatarId = avatarId;
+                this.level = level;
+            }
+        }
     }
     
     @Getter
