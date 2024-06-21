@@ -29,6 +29,10 @@ public class Account {
     private String dispatchToken; // Session token for dispatch server
     
     private Set<String> permissions;
+    private String banReason; 
+    private boolean isBanned; //Banned player
+	private String lastLoginIp; //Record User's IP
+    private int count; // The number of IP changes
 
     @Deprecated
     public Account() {
@@ -67,6 +71,42 @@ public class Account {
         this.save();
         return true;
     }
+
+    public String getBanReason() {
+        return banReason;
+    }
+
+    public void setBanReason(String banReason) {
+        this.banReason = banReason;
+    }
+
+    public boolean isBanned() {
+        return isBanned;
+    }
+
+    public void setBanned(boolean isBanned) {
+        this.isBanned = isBanned;
+    }
+    
+	public String getLastLoginIp() {
+        return lastLoginIp;
+    }
+
+    public void setLastLoginIp(String lastLoginIp) {
+        this.lastLoginIp = lastLoginIp;
+    }
+
+    public int getCount() {
+       return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+
+
+
 
     public static boolean permissionMatchesWildcard(String wildcard, String[] permissionParts) {
         String[] wildcardParts = wildcard.split("\\.");
