@@ -4,10 +4,9 @@ import org.jetbrains.annotations.NotNull;
 
 import emu.lunarcore.LunarCore;
 import emu.lunarcore.game.account.Account;
-import emu.lunarcore.game.account.AccountHelper;
-import emu.lunarcore.server.http.objects.LoginAccountReqJson;
 import emu.lunarcore.server.http.objects.LoginResJson;
 import emu.lunarcore.server.http.objects.LoginResJson.VerifyData;
+import emu.lunarcore.server.http.objects.LoginTokenReqJson;
 import emu.lunarcore.util.JsonUtils;
 import io.javalin.http.ContentType;
 import io.javalin.http.Context;
@@ -46,8 +45,6 @@ public class TokenLoginHandler implements Handler {
 
         if (account == null) {
             if (LunarCore.getConfig().getServerOptions().autoCreateAccount) {
-                // Create the account.
-                account = AccountHelper.createAccount(req.account, null, 0);
                 res.message = "注册成功";
                 res.data = new VerifyData(account.getUid(), account.getEmail(), req.token);
                 //Log the creation.
