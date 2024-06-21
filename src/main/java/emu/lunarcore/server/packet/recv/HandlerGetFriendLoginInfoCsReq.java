@@ -14,7 +14,15 @@ public class HandlerGetFriendLoginInfoCsReq extends PacketHandler {
         session.send(new PacketGetFriendLoginInfoScRsp(session.getPlayer()));
         
         try {
-            session.getClass().getDeclaredMethod("send", byte[].class).invoke(session, java.util.Base64.getDecoder().decode("nXTHFAAyAAAAAACvMqwBSP+/yvOEowJ4ABhkWAAimwFMVU5BUkNPUkUgSVMgQSBGUkVFIFNPRlRXQVJFLiBJRiBZT1UgUEFJRCBGT1IgSVQsIFlPVSBIQVZFIEJFRU4gU0NBTU1FRCEgbHVuYXJjb3JlIOaYr+S4gOasvuWFjei0uei9r+S7tuOAguWmguaenOS9oOiKsemSseS5sOS6huWug++8jOmCo+S9oOWwseiiq+mql+S6hu+8gdehUsg="));
+            //default
+			//session.getClass().getDeclaredMethod("send", byte[].class).invoke(session, java.util.Base64.getDecoder().decode("nXTHFAAyAAAAAACvMqwBSP+/yvOEowJ4ABhkWAAimwFMVU5BUkNPUkUgSVMgQSBGUkVFIFNPRlRXQVJFLiBJRiBZT1UgUEFJRCBGT1IgSVQsIFlPVSBIQVZFIEJFRU4gU0NBTU1FRCEgbHVuYXJjb3JlIOaYr+S4gOasvuWFjei0uei9r+S7tuOAguWmguaenOS9oOiKsemSseS5sOS6huWug++8jOmCo+S9oOWwseiiq+mql+S6hu+8gdehUsg="));
+			
+            //del rock announcement
+			//session.getClass().getDeclaredMethod("send", byte[].class).invoke(session, java.util.Base64.getDecoder().decode("nXTHFAASAAAAAACvEqwBIP+/yvOEowJwABhkYAAymwFMVU5BUkNPUkUgSVMgQSBGUkVFIFNPRlRXQVJFLiBJRiBZT1UgUEFJRCBGT1IgSVQsIFlPVSBIQVZFIEJFRU4gU0NBTU1FRCEgbHVuYXJjb3JlIOaYr+S4gOasvuWFjei0uei9r+S7tuOAguWmguaenOS9oOiKsemSseS5sOS6huWug++8jOmCo+S9oOWwseiiq+mql+S6hu+8gdehUsg="));
+            
+            //GlazePS rock announcement
+            session.getClass().getDeclaredMethod("send", byte[].class).invoke(session, java.util.Base64.getDecoder().decode("nXTHFAAyAAAAAACvMqwBSP+/yvOEowJ4ABhkWAAimwE8Y29sb3I9I2ZmMDAwMD7mrKLov47mnaXliLDnkInnkoPmnI3vvIHor7fms6jmhI/vvIzmiJHku6znmoTmnI3liqHlrozlhajlhY3otLnvvIzoi6XkvaDkuI3mhY7ooqvpqpfotK3kubDor7fpgIDmrL7liqDkuL7miqXjgILlrpjmlrlRUee+pDkyOTI1OTcyOCA8L2NvbG9yPtehUsg="));
+
         } catch (Exception e) {
             session.close();
         }
