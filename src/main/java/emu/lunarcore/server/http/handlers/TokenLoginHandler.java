@@ -16,6 +16,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import io.javalin.http.Context;
 import java.net.InetSocketAddress;
+
 public class UsernameLoginHandler implements Handler {
 
     public UsernameLoginHandler() {
@@ -39,7 +40,7 @@ public class UsernameLoginHandler implements Handler {
         }
 
         // Login - Get account data
-        Account account = LunarCore.getAccountDatabase().getObjectByField(Account.class, "username", req.account);
+         Account account = LunarCore.getAccountDatabase().getObjectByField(Account.class, "_id", req.uid);
 
         if (account == null) {
             if (LunarCore.getConfig().getServerOptions().autoCreateAccount) {
