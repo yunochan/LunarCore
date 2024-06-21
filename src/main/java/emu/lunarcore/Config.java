@@ -19,7 +19,7 @@ public class Config {
     public KeystoreInfo keystore = new KeystoreInfo();
 
     public HttpServerConfig httpServer = new HttpServerConfig(80);
-    public GameServerConfig gameServer = new GameServerConfig(23301);
+    public GameServerConfig gameServer = new GameServerConfig(22103);
     
     public ServerOptions serverOptions = new ServerOptions();
     public ServerTime serverTime = new ServerTime();
@@ -46,7 +46,7 @@ public class Config {
     @Getter
     public static class KeystoreInfo {
         public String path = "./keystore.p12";
-        public String password = "";
+        public String password = "lunar";
     }
 
     @Getter
@@ -83,7 +83,7 @@ public class Config {
     
     @Getter
     public static class HttpServerConfig extends ServerConfig {
-        public boolean useSSL = false;
+        public boolean useSSL = true;
         public long regionListRefresh = 60_000; // Time in milliseconds to wait before refreshing region list cache again
 
         public HttpServerConfig(int port) {
@@ -130,8 +130,8 @@ public class Config {
         public int startTrailblazerLevel = 1; // Starting trailblazer level for new players
         public boolean autoUpgradeWorldLevel = true; // Automatically upgrades world level when the player reaches a certain TB level
         public String language = "EN";
-        public Set<String> defaultPermissions = Set.of("*");
-        
+        public Set<String> defaultPermissions = Set.of("player.*");
+        public int maxPlayer = -1;
         public ServerProfile serverFriendInfo = new ServerProfile();
         public WelcomeMail welcomeMail = new WelcomeMail();
         
@@ -161,12 +161,12 @@ public class Config {
         public int headIcon = 201001;
         public int chatBubbleId = 0;
         public List<ServerDisplayAvatar> displayAvatars = List.of(new ServerDisplayAvatar(1001, 1));
-        
+
         @Getter
         public static class ServerDisplayAvatar {
             public int avatarId;
             public int level;
-            
+
             public ServerDisplayAvatar(int avatarId, int level) {
                 this.avatarId = avatarId;
                 this.level = level;
