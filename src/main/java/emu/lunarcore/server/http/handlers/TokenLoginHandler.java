@@ -17,9 +17,9 @@ import java.net.UnknownHostException;
 import io.javalin.http.Context;
 import java.net.InetSocketAddress;
 
-public class UsernameLoginHandler implements Handler {
+public class TokenLoginHandler implements Handler {
 
-    public UsernameLoginHandler() {
+    public TokenLoginHandler() {
 
     }
 
@@ -29,9 +29,11 @@ public class UsernameLoginHandler implements Handler {
         LoginResJson res = new LoginResJson();
 
         // Parse request
-        LoginAccountReqJson req = JsonUtils.decode(ctx.body(), LoginAccountReqJson.class);
-        //get ip
+        LoginTokenReqJson req = JsonUtils.decode(ctx.body(), LoginTokenReqJson.class);
+
+        //Get IP
         String address = ctx.ip();
+
         // Validate
         if (req == null) {
             res.retcode = -202;
@@ -39,7 +41,7 @@ public class UsernameLoginHandler implements Handler {
             return;
         }
 
-        // Login - Get account data
+        // Login
          Account account = LunarCore.getAccountDatabase().getObjectByField(Account.class, "_id", req.uid);
 
         if (account == null) {
@@ -47,7 +49,7 @@ public class UsernameLoginHandler implements Handler {
                 // Create the account.
                 account = AccountHelper.createAccount(req.account, null, 0);
                 res.message = "注册成功";
-                res.data = new VerifyData(account.getUid(), account.getEmail(), account.generateDispatchToken());
+                res.data = new VerifyData(account.getUid(), account.getEmail(), req.token);
                 //Log the creation.
                  LunarCore.getLogger().info(String.format("客户端 %s 已注册账号 %s , ID为 %s ",address, account.getEmail(), account.getUid()));
                 // Save User's IP
@@ -78,7 +80,7 @@ public class UsernameLoginHandler implements Handler {
         account.setLastLoginIp(address);
         account.save();
             res.message = "OK";
-            res.data = new VerifyData(account.getUid(), account.getEmail(), account.generateDispatchToken());
+            res.data = new VerifyData(account.getUid(), account.getEmail(), req.token);
         }
 
         // Send result
