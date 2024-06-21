@@ -300,7 +300,7 @@ public class RogueInstance {
     public synchronized RogueBuff enhanceBuff(int buffId) {
         var buff = this.getBuffs().get(buffId);
         if (buff == null) return null;
-        var cost = 100 + (buff.getExcel().getRogueBuffRarity() - 1) * 30;
+        var cost = 100 + (buff.getExcel().getRogueBuffCategory().getVal() - 1) * 30;
         if (this.getCoin() < cost) return null;
         this.removeCoin(cost);
         this.getBuffs().remove(buffId);
