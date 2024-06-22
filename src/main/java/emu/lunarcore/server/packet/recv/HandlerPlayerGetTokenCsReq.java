@@ -33,6 +33,7 @@ public class HandlerPlayerGetTokenCsReq extends PacketHandler {
         int playerCount = LunarCore.getGameServer().getPlayerCount();
         if (maxPlayers > -1 &&  playerCount >= maxPlayers) {
             session.close();
+            LunarCore.getLogger().warn(String.format("用户 %s 登录失败：服务器在线玩家已满 %s ",account.getEmail()),maxPlayers);
             return;
         }
 
