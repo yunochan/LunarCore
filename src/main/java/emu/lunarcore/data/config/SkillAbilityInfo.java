@@ -69,6 +69,8 @@ public class SkillAbilityInfo {
             actionList.add(new MazeSkillModifySP(50));
         } else if (task.getType().contains("CreateSummonUnit")) {
             skill.setTriggerBattle(false);
+        } else if (task.getType().contains("AddAdventureModifier")) {
+            skill.addAdventureModifier(task.getModifierName());
         } else if (task.getType().contains("AdventureSetAttackTargetMonsterDie")) {
             actionList.add(new MazeSkillSetAttackTargetMonsterDie());
         } else if (task.getSuccessTaskList() != null) {
