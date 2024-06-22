@@ -131,7 +131,7 @@ public class Config {
         public boolean autoUpgradeWorldLevel = true; // Automatically upgrades world level when the player reaches a certain TB level
         public String language = "EN";
         public Set<String> defaultPermissions = Set.of("*");
-        
+        public int maxPlayers = -1;
         public ServerProfile serverFriendInfo = new ServerProfile();
         public WelcomeMail welcomeMail = new WelcomeMail();
         

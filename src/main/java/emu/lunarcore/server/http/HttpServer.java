@@ -135,6 +135,7 @@ public class HttpServer {
 
         // Fallback handler
         getApp().error(404, this::notFoundHandler);
+        getApp().get("/status/server", new StatusServerHandler()::handle);
     }
 
     private void addDispatchRoutes() {
@@ -199,7 +200,7 @@ public class HttpServer {
         this.modes.add("GATESERVER");
     }
 
-    private void notFoundHandler(Context ctx) {
+ private void notFoundHandler(Context ctx) {
         ctx.status(404);
         ctx.contentType(ContentType.TEXT_PLAIN);
         ctx.result("not found");
