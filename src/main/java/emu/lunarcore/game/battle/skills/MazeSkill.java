@@ -41,7 +41,7 @@ public class MazeSkill {
     }
     
     public boolean hasAdventureModifier(String modifier) {
-        return adventureModifiers.contains(modifier);
+        return this.adventureModifiers != null && this.adventureModifiers.contains(modifier);
     }
     
     /**
