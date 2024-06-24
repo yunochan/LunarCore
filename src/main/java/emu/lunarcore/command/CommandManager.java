@@ -140,7 +140,7 @@ public class CommandManager {
             
             // Check targeted permission
             if (sender != cmdArgs.getTarget() && !this.checkTargetPermission(sender, command)) {
-                cmdArgs.sendMessage("You do not have permission to use this command on another player.");
+                cmdArgs.sendMessage("你无权对其他玩家使用该指令！");
                 return;
             }
             
