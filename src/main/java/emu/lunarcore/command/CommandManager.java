@@ -152,7 +152,7 @@ public class CommandManager {
             
             // Log
             if (sender != null && LunarCore.getConfig().getLogOptions().commands) {
-                 LunarCore.getLogger().info(String.format("[UID: %s] %s 执行指令: %s ", sender.getUid, sender.getName, message));
+                 LunarCore.getLogger().info(String.format("[UID: %s] %s 执行指令: %s ", sender.getUid(), sender.getName(), message));
             }
             
             // Run command
