@@ -64,7 +64,7 @@ public class GiveCommand implements CommandHandler {
             }
             
             // Send message
-            args.sendMessage("给予玩家[" + args.getTarget().getName() + "]" + amount + "个" + itemId);
+            args.sendMessage("给予玩家 [" + args.getTarget().getName() + "] " + amount + "个物品id: " + itemId);
         }
         
         // Add to player inventory

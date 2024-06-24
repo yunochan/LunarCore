@@ -47,7 +47,7 @@ public class SceneCommand implements CommandHandler {
         
         // Send packet
         if (success) {
-            args.sendMessage("玩家被传送到" + planeId);
+            args.sendMessage("玩家被传送到场景id: " + planeId);
         }
     }
 

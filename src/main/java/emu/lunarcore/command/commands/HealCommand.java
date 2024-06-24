@@ -17,7 +17,7 @@ public class HealCommand implements CommandHandler {
         });
         lineup.refreshLineup();
 
-        args.sendMessage("治疗玩家[" + args.getTarget().getName() +"]队伍全部角色");
+        args.sendMessage("治疗玩家 [" + args.getTarget().getName() +"] 队伍全部角色");
     }
 
 }

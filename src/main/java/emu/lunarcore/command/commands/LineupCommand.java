@@ -56,7 +56,7 @@ public class LineupCommand implements CommandHandler {
             lineup.refreshLineup();
             target.getScene().syncLineup();
             
-            args.sendMessage("玩家[" + target.getName() + "]阵容修改成功");
+            args.sendMessage("玩家 [" + target.getName() + "] 阵容修改成功");
         } else {
             args.sendMessage("无法添加角色");
         }

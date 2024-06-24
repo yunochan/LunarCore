@@ -11,7 +11,7 @@ public class RefillMPCommand implements CommandHandler {
     @Override
     public void execute(CommandArgs args) {
         args.getTarget().getCurrentLineup().addMp(GameConstants.MAX_MP);
-        args.sendMessage("给予玩家[" + args.getTarget().getName() +"]技能点补充");
+        args.sendMessage("补充玩家 [" + args.getTarget().getName() +"] 技能点");
     }
 
 }

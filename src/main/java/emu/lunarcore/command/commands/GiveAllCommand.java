@@ -49,13 +49,13 @@ public class GiveAllCommand implements CommandHandler {
                 target.getInventory().addItems(items, true);
 
                 // Send message
-                args.sendMessage("给予玩家[" + target.getName() + "]" + items.size() + "物品");
+                args.sendMessage("给予玩家 [" + target.getName() + "] 全部材料");
             }
             case "lc", "lightcones" -> {
                 // Make sure we dont go over the inventory limit
                 var tab = args.getTarget().getInventory().getTabByItemType(ItemMainType.Equipment);
                 if (tab.getSize() >= tab.getMaxCapacity()) {
-                    args.sendMessage("玩家[" + target.getName() + "]该类型物品背包已满");
+                    args.sendMessage("Error: 玩家 [" + target.getName() + "] 背包光锥已满，请先清空背包！");
                     return;
                 }
                 
@@ -74,13 +74,13 @@ public class GiveAllCommand implements CommandHandler {
                 target.getInventory().addItems(items, true);
 
                 // Send message
-                args.sendMessage("给予玩家[" + target.getName() + "]" + items.size() + "光锥");
+                args.sendMessage("给予玩家 [" + target.getName() + "] 全部光锥");
             }
             case "r", "relics" -> {
                 // Make sure we dont go over the inventory limit
                 var tab = args.getTarget().getInventory().getTabByItemType(ItemMainType.Relic);
                 if (tab.getSize() >= tab.getMaxCapacity()) {
-                    args.sendMessage("玩家["+ target.getName() + "]该类型物品背包已满");
+                    args.sendMessage("Error: 玩家 ["+ target.getName() + "] 背包遗器已满，请先清空背包！");
                     return;
                 }
                 
@@ -99,7 +99,7 @@ public class GiveAllCommand implements CommandHandler {
                 target.getInventory().addItems(items, true);
 
                 // Send message
-                args.sendMessage("给予玩家[" + target.getName() + "]" + items.size() + " 遗器");
+                args.sendMessage("给予玩家 [" + target.getName() + "] 全部遗器");
             }
             case "a", "characters", "avatars" -> {
                 // Eidolon items
@@ -145,7 +145,7 @@ public class GiveAllCommand implements CommandHandler {
                 }
 
                 // Send message
-                args.sendMessage("给予玩家[" + target.getName() + "]全部角色");
+                args.sendMessage("给予玩家 [" + target.getName() + "] 全部角色");
             }
             case "unlocks", "usables", "icons" -> {
                 // Add head icons - Duplicates are handled automatically
@@ -164,7 +164,7 @@ public class GiveAllCommand implements CommandHandler {
                 }
                 
                 // Send message
-                args.sendMessage("给予玩家[" + target.getName() + "]图标/聊天气泡/手机主题");
+                args.sendMessage("给予玩家 [" + target.getName() + "] 图标/聊天气泡/手机主题");
             }
             case "consumables", "food" -> {
                 // Get consumables
@@ -178,7 +178,7 @@ public class GiveAllCommand implements CommandHandler {
                 target.getInventory().addItems(items, true);
 
                 // Send message
-                args.sendMessage("给予玩家[" + target.getName() +"]所有消耗物品");
+                args.sendMessage("给予玩家 [" + target.getName() +"] 全部食物");
             }
         }
     }

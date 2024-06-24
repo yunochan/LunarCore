@@ -18,6 +18,6 @@ public final class KickCommand implements CommandHandler {
         args.getTarget().getSession().close();
 
         // Send message
-        args.sendMessage("玩家[" + args.getTarget().getName() + "]被踢出游戏");
+        args.sendMessage("玩家 [" + args.getTarget().getName() + "] 被踢出游戏");
     }
 }
