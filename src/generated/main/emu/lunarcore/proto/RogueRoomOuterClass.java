@@ -37,7 +37,7 @@ public final class RogueRoomOuterClass {
      * RogueRoomStatus OABFMKCFLGC = 10;
      * </pre>
      *
-     * <code>optional .RogueRoomStatus room_status = 10;</code>
+     * <code>optional .RogueRoomStatus room_status = 6;</code>
      */
     private int roomStatus;
 
@@ -146,7 +146,7 @@ public final class RogueRoomOuterClass {
      * RogueRoomStatus OABFMKCFLGC = 10;
      * </pre>
      *
-     * <code>optional .RogueRoomStatus room_status = 10;</code>
+     * <code>optional .RogueRoomStatus room_status = 6;</code>
      * @return whether the roomStatus field is set
      */
     public boolean hasRoomStatus() {
@@ -158,7 +158,7 @@ public final class RogueRoomOuterClass {
      * RogueRoomStatus OABFMKCFLGC = 10;
      * </pre>
      *
-     * <code>optional .RogueRoomStatus room_status = 10;</code>
+     * <code>optional .RogueRoomStatus room_status = 6;</code>
      * @return this
      */
     public RogueRoom clearRoomStatus() {
@@ -172,7 +172,7 @@ public final class RogueRoomOuterClass {
      * RogueRoomStatus OABFMKCFLGC = 10;
      * </pre>
      *
-     * <code>optional .RogueRoomStatus room_status = 10;</code>
+     * <code>optional .RogueRoomStatus room_status = 6;</code>
      * @return the roomStatus
      */
     public RogueRoomStatusOuterClass.RogueRoomStatus getRoomStatus() {
@@ -209,7 +209,7 @@ public final class RogueRoomOuterClass {
      * RogueRoomStatus OABFMKCFLGC = 10;
      * </pre>
      *
-     * <code>optional .RogueRoomStatus room_status = 10;</code>
+     * <code>optional .RogueRoomStatus room_status = 6;</code>
      * @param value the roomStatus to set
      * @return this
      */
@@ -298,7 +298,7 @@ public final class RogueRoomOuterClass {
         output.writeUInt32NoTag(roomId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 48);
         output.writeEnumNoTag(roomStatus);
       }
     }
@@ -339,11 +339,11 @@ public final class RogueRoomOuterClass {
             roomId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 80) {
+            if (tag != 48) {
               break;
             }
           }
-          case 80: {
+          case 48: {
             // roomStatus
             final int value = input.readInt32();
             if (RogueRoomStatusOuterClass.RogueRoomStatus.forNumber(value) != null) {

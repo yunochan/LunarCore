@@ -20,27 +20,27 @@ public final class RogueMapInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 map_id = 2;</code>
-     */
-    private int mapId;
-
-    /**
-     * <code>optional uint32 cur_room_id = 4;</code>
+     * <code>optional uint32 cur_room_id = 1;</code>
      */
     private int curRoomId;
 
     /**
-     * <code>optional uint32 cur_site_id = 11;</code>
+     * <code>optional uint32 map_id = 4;</code>
      */
-    private int curSiteId;
+    private int mapId;
 
     /**
-     * <code>optional uint32 area_id = 13;</code>
+     * <code>optional uint32 area_id = 8;</code>
      */
     private int areaId;
 
     /**
-     * <code>repeated .RogueRoom room_list = 3;</code>
+     * <code>optional uint32 cur_site_id = 13;</code>
+     */
+    private int curSiteId;
+
+    /**
+     * <code>repeated .RogueRoom room_list = 15;</code>
      */
     private final RepeatedMessage<RogueRoomOuterClass.RogueRoom> roomList = RepeatedMessage.newEmptyInstance(RogueRoomOuterClass.RogueRoom.getFactory());
 
@@ -55,62 +55,25 @@ public final class RogueMapInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 map_id = 2;</code>
-     * @return whether the mapId field is set
+     * <code>optional uint32 cur_room_id = 1;</code>
+     * @return whether the curRoomId field is set
      */
-    public boolean hasMapId() {
+    public boolean hasCurRoomId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 map_id = 2;</code>
-     * @return this
-     */
-    public RogueMapInfo clearMapId() {
-      bitField0_ &= ~0x00000001;
-      mapId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 map_id = 2;</code>
-     * @return the mapId
-     */
-    public int getMapId() {
-      return mapId;
-    }
-
-    /**
-     * <code>optional uint32 map_id = 2;</code>
-     * @param value the mapId to set
-     * @return this
-     */
-    public RogueMapInfo setMapId(final int value) {
-      bitField0_ |= 0x00000001;
-      mapId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 cur_room_id = 4;</code>
-     * @return whether the curRoomId field is set
-     */
-    public boolean hasCurRoomId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 cur_room_id = 4;</code>
+     * <code>optional uint32 cur_room_id = 1;</code>
      * @return this
      */
     public RogueMapInfo clearCurRoomId() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       curRoomId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 cur_room_id = 4;</code>
+     * <code>optional uint32 cur_room_id = 1;</code>
      * @return the curRoomId
      */
     public int getCurRoomId() {
@@ -118,73 +81,73 @@ public final class RogueMapInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 cur_room_id = 4;</code>
+     * <code>optional uint32 cur_room_id = 1;</code>
      * @param value the curRoomId to set
      * @return this
      */
     public RogueMapInfo setCurRoomId(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       curRoomId = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 cur_site_id = 11;</code>
-     * @return whether the curSiteId field is set
+     * <code>optional uint32 map_id = 4;</code>
+     * @return whether the mapId field is set
      */
-    public boolean hasCurSiteId() {
+    public boolean hasMapId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 map_id = 4;</code>
+     * @return this
+     */
+    public RogueMapInfo clearMapId() {
+      bitField0_ &= ~0x00000002;
+      mapId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 map_id = 4;</code>
+     * @return the mapId
+     */
+    public int getMapId() {
+      return mapId;
+    }
+
+    /**
+     * <code>optional uint32 map_id = 4;</code>
+     * @param value the mapId to set
+     * @return this
+     */
+    public RogueMapInfo setMapId(final int value) {
+      bitField0_ |= 0x00000002;
+      mapId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 area_id = 8;</code>
+     * @return whether the areaId field is set
+     */
+    public boolean hasAreaId() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 cur_site_id = 11;</code>
-     * @return this
-     */
-    public RogueMapInfo clearCurSiteId() {
-      bitField0_ &= ~0x00000004;
-      curSiteId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 cur_site_id = 11;</code>
-     * @return the curSiteId
-     */
-    public int getCurSiteId() {
-      return curSiteId;
-    }
-
-    /**
-     * <code>optional uint32 cur_site_id = 11;</code>
-     * @param value the curSiteId to set
-     * @return this
-     */
-    public RogueMapInfo setCurSiteId(final int value) {
-      bitField0_ |= 0x00000004;
-      curSiteId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 area_id = 13;</code>
-     * @return whether the areaId field is set
-     */
-    public boolean hasAreaId() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional uint32 area_id = 13;</code>
+     * <code>optional uint32 area_id = 8;</code>
      * @return this
      */
     public RogueMapInfo clearAreaId() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000004;
       areaId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 area_id = 13;</code>
+     * <code>optional uint32 area_id = 8;</code>
      * @return the areaId
      */
     public int getAreaId() {
@@ -192,18 +155,55 @@ public final class RogueMapInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 area_id = 13;</code>
+     * <code>optional uint32 area_id = 8;</code>
      * @param value the areaId to set
      * @return this
      */
     public RogueMapInfo setAreaId(final int value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       areaId = value;
       return this;
     }
 
     /**
-     * <code>repeated .RogueRoom room_list = 3;</code>
+     * <code>optional uint32 cur_site_id = 13;</code>
+     * @return whether the curSiteId field is set
+     */
+    public boolean hasCurSiteId() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>optional uint32 cur_site_id = 13;</code>
+     * @return this
+     */
+    public RogueMapInfo clearCurSiteId() {
+      bitField0_ &= ~0x00000008;
+      curSiteId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 cur_site_id = 13;</code>
+     * @return the curSiteId
+     */
+    public int getCurSiteId() {
+      return curSiteId;
+    }
+
+    /**
+     * <code>optional uint32 cur_site_id = 13;</code>
+     * @param value the curSiteId to set
+     * @return this
+     */
+    public RogueMapInfo setCurSiteId(final int value) {
+      bitField0_ |= 0x00000008;
+      curSiteId = value;
+      return this;
+    }
+
+    /**
+     * <code>repeated .RogueRoom room_list = 15;</code>
      * @return whether the roomList field is set
      */
     public boolean hasRoomList() {
@@ -211,7 +211,7 @@ public final class RogueMapInfoOuterClass {
     }
 
     /**
-     * <code>repeated .RogueRoom room_list = 3;</code>
+     * <code>repeated .RogueRoom room_list = 15;</code>
      * @return this
      */
     public RogueMapInfo clearRoomList() {
@@ -221,7 +221,7 @@ public final class RogueMapInfoOuterClass {
     }
 
     /**
-     * <code>repeated .RogueRoom room_list = 3;</code>
+     * <code>repeated .RogueRoom room_list = 15;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -235,7 +235,7 @@ public final class RogueMapInfoOuterClass {
     }
 
     /**
-     * <code>repeated .RogueRoom room_list = 3;</code>
+     * <code>repeated .RogueRoom room_list = 15;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -249,7 +249,7 @@ public final class RogueMapInfoOuterClass {
     }
 
     /**
-     * <code>repeated .RogueRoom room_list = 3;</code>
+     * <code>repeated .RogueRoom room_list = 15;</code>
      * @param value the roomList to add
      * @return this
      */
@@ -260,7 +260,7 @@ public final class RogueMapInfoOuterClass {
     }
 
     /**
-     * <code>repeated .RogueRoom room_list = 3;</code>
+     * <code>repeated .RogueRoom room_list = 15;</code>
      * @param values the roomList to add
      * @return this
      */
@@ -275,10 +275,10 @@ public final class RogueMapInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        mapId = other.mapId;
         curRoomId = other.curRoomId;
-        curSiteId = other.curSiteId;
+        mapId = other.mapId;
         areaId = other.areaId;
+        curSiteId = other.curSiteId;
         roomList.copyFrom(other.roomList);
       }
       return this;
@@ -290,17 +290,17 @@ public final class RogueMapInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasMapId()) {
-        setMapId(other.mapId);
-      }
       if (other.hasCurRoomId()) {
         setCurRoomId(other.curRoomId);
       }
-      if (other.hasCurSiteId()) {
-        setCurSiteId(other.curSiteId);
+      if (other.hasMapId()) {
+        setMapId(other.mapId);
       }
       if (other.hasAreaId()) {
         setAreaId(other.areaId);
+      }
+      if (other.hasCurSiteId()) {
+        setCurSiteId(other.curSiteId);
       }
       if (other.hasRoomList()) {
         getMutableRoomList().addAll(other.roomList);
@@ -315,10 +315,10 @@ public final class RogueMapInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      mapId = 0;
       curRoomId = 0;
-      curSiteId = 0;
+      mapId = 0;
       areaId = 0;
+      curSiteId = 0;
       roomList.clear();
       return this;
     }
@@ -344,34 +344,34 @@ public final class RogueMapInfoOuterClass {
       }
       RogueMapInfo other = (RogueMapInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasMapId() || mapId == other.mapId)
         && (!hasCurRoomId() || curRoomId == other.curRoomId)
-        && (!hasCurSiteId() || curSiteId == other.curSiteId)
+        && (!hasMapId() || mapId == other.mapId)
         && (!hasAreaId() || areaId == other.areaId)
+        && (!hasCurSiteId() || curSiteId == other.curSiteId)
         && (!hasRoomList() || roomList.equals(other.roomList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
-        output.writeUInt32NoTag(mapId);
+        output.writeRawByte((byte) 8);
+        output.writeUInt32NoTag(curRoomId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeRawByte((byte) 32);
-        output.writeUInt32NoTag(curRoomId);
+        output.writeUInt32NoTag(mapId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 88);
-        output.writeUInt32NoTag(curSiteId);
+        output.writeRawByte((byte) 64);
+        output.writeUInt32NoTag(areaId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeRawByte((byte) 104);
-        output.writeUInt32NoTag(areaId);
+        output.writeUInt32NoTag(curSiteId);
       }
       if ((bitField0_ & 0x00000010) != 0) {
         for (int i = 0; i < roomList.length(); i++) {
-          output.writeRawByte((byte) 26);
+          output.writeRawByte((byte) 122);
           output.writeMessageNoTag(roomList.get(i));
         }
       }
@@ -381,16 +381,16 @@ public final class RogueMapInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(mapId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(curRoomId);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(mapId);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(curSiteId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(areaId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(areaId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(curSiteId);
       }
       if ((bitField0_ & 0x00000010) != 0) {
         size += (1 * roomList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(roomList);
@@ -405,9 +405,9 @@ public final class RogueMapInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
-            // mapId
-            mapId = input.readUInt32();
+          case 8: {
+            // curRoomId
+            curRoomId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
             if (tag != 32) {
@@ -415,17 +415,17 @@ public final class RogueMapInfoOuterClass {
             }
           }
           case 32: {
-            // curRoomId
-            curRoomId = input.readUInt32();
+            // mapId
+            mapId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 64) {
               break;
             }
           }
-          case 88: {
-            // curSiteId
-            curSiteId = input.readUInt32();
+          case 64: {
+            // areaId
+            areaId = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 104) {
@@ -433,15 +433,15 @@ public final class RogueMapInfoOuterClass {
             }
           }
           case 104: {
-            // areaId
-            areaId = input.readUInt32();
+            // curSiteId
+            curSiteId = input.readUInt32();
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 26) {
+            if (tag != 122) {
               break;
             }
           }
-          case 26: {
+          case 122: {
             // roomList
             tag = input.readRepeatedMessage(roomList, tag);
             bitField0_ |= 0x00000010;
@@ -467,16 +467,16 @@ public final class RogueMapInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.mapId, mapId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.curRoomId, curRoomId);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeUInt32(FieldNames.mapId, mapId);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.curSiteId, curSiteId);
+        output.writeUInt32(FieldNames.areaId, areaId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.areaId, areaId);
+        output.writeUInt32(FieldNames.curSiteId, curSiteId);
       }
       if ((bitField0_ & 0x00000010) != 0) {
         output.writeRepeatedMessage(FieldNames.roomList, roomList);
@@ -491,11 +491,11 @@ public final class RogueMapInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 103663511:
-          case -1081377058: {
-            if (input.isAtField(FieldNames.mapId)) {
+          case -249266762:
+          case 524969984: {
+            if (input.isAtField(FieldNames.curRoomId)) {
               if (!input.trySkipNullValue()) {
-                mapId = input.readUInt32();
+                curRoomId = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -503,24 +503,12 @@ public final class RogueMapInfoOuterClass {
             }
             break;
           }
-          case -249266762:
-          case 524969984: {
-            if (input.isAtField(FieldNames.curRoomId)) {
+          case 103663511:
+          case -1081377058: {
+            if (input.isAtField(FieldNames.mapId)) {
               if (!input.trySkipNullValue()) {
-                curRoomId = input.readUInt32();
+                mapId = input.readUInt32();
                 bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -226037470:
-          case 1245078036: {
-            if (input.isAtField(FieldNames.curSiteId)) {
-              if (!input.trySkipNullValue()) {
-                curSiteId = input.readUInt32();
-                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -532,6 +520,18 @@ public final class RogueMapInfoOuterClass {
             if (input.isAtField(FieldNames.areaId)) {
               if (!input.trySkipNullValue()) {
                 areaId = input.readUInt32();
+                bitField0_ |= 0x00000004;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -226037470:
+          case 1245078036: {
+            if (input.isAtField(FieldNames.curSiteId)) {
+              if (!input.trySkipNullValue()) {
+                curSiteId = input.readUInt32();
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -603,13 +603,13 @@ public final class RogueMapInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName mapId = FieldName.forField("mapId", "map_id");
-
       static final FieldName curRoomId = FieldName.forField("curRoomId", "cur_room_id");
 
-      static final FieldName curSiteId = FieldName.forField("curSiteId", "cur_site_id");
+      static final FieldName mapId = FieldName.forField("mapId", "map_id");
 
       static final FieldName areaId = FieldName.forField("areaId", "area_id");
+
+      static final FieldName curSiteId = FieldName.forField("curSiteId", "cur_site_id");
 
       static final FieldName roomList = FieldName.forField("roomList", "room_list");
     }

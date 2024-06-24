@@ -277,7 +277,7 @@ public class RogueInstance {
         
         var data = HandleRogueCommonPendingActionScRsp.newInstance();
         data.getMutableRogueBuffSelect();
-        data.setTimes(this.actionUniqueId - 2);
+        data.setActionUniqueId(this.actionUniqueId - 2);
         this.getPlayer().sendPacket(new PacketHandleRogueCommonPendingActionScRsp(data));
         return buff;
     }
@@ -355,7 +355,7 @@ public class RogueInstance {
         
         var data = HandleRogueCommonPendingActionScRsp.newInstance();
         data.getMutableMiracleSelect();
-        data.setTimes(this.actionUniqueId - 2);
+        data.setActionUniqueId(this.actionUniqueId - 2);
         this.getPlayer().sendPacket(new PacketHandleRogueCommonPendingActionScRsp(data));
         return miracle;
     }
@@ -402,7 +402,7 @@ public class RogueInstance {
         // TODO: add event
         var data = HandleRogueCommonPendingActionScRsp.newInstance();
         data.getMutableBonusSelect();
-        data.setTimes(this.actionUniqueId - 2);
+        data.setActionUniqueId(this.actionUniqueId - 2);
         this.getPlayer().sendPacket(new PacketHandleRogueCommonPendingActionScRsp(data));
         try {
             this.onSelectDialogue(bonus.getEventId(), 0);
