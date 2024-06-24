@@ -12,7 +12,7 @@ public class AccountCommand implements CommandHandler {
     @Override
     public void execute(CommandArgs args) {
         if (args.size() < 2) {
-            args.sendMessage("Invalid amount of args");
+            args.sendMessage("参数数量无效");
             return;
         }
         
@@ -29,16 +29,17 @@ public class AccountCommand implements CommandHandler {
                 }
     
                 if (AccountHelper.createAccount(username, null, reservedUid) != null) {
-                    args.sendMessage("Account created");
+                    args.sendMessage(String.format("账号 %s 创建成功", username));
+
                 } else {
-                    args.sendMessage("Account already exists");
+                    args.sendMessage(String.format("账号 %s 已经存在，无法再创建！", username));
                 }
             }
             case "delete" -> {
                 if (AccountHelper.deleteAccount(username)) {
-                    args.sendMessage("Account deleted");
+                    args.sendMessage(String.format("账号 %s 被删除", username));
                 } else {
-                    args.sendMessage("Account doesnt exist");
+                    args.sendMessage(String.format("账号 %s 不存在", username));
                 }
             }
         }

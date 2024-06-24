@@ -11,7 +11,7 @@ import emu.lunarcore.data.excel.ItemExcel;
 import emu.lunarcore.game.inventory.GameItem;
 import emu.lunarcore.game.mail.Mail;
 
-@Command(label = "mail", aliases = {"m"}, permission = "player.mail", requireTarget = true, desc = "/mail [content]. Sends the targeted player a system mail.")
+@Command(label = "mail", aliases = {"m"}, permission = "admin.mail", requireTarget = true, desc = "/mail [content]. Sends the targeted player a system mail.")
 public class MailCommand implements CommandHandler {
 
     @Override
@@ -32,7 +32,7 @@ public class MailCommand implements CommandHandler {
         
         // Build mail
         String content = String.join(" ", args.getList());
-        Mail mail = new Mail("Test", "System Mail", content);
+        Mail mail = new Mail("管理员", "系统邮件", content);
         
         for (GameItem item : attachments) {
             mail.addAttachment(item);
@@ -41,7 +41,7 @@ public class MailCommand implements CommandHandler {
         // Send to target
         args.getTarget().getMailbox().sendMail(mail);
         
-        args.sendMessage("Sending mail to " + args.getTarget().getName());
+        args.sendMessage("发送邮件到玩家[" + args.getTarget().getName() + "]");
     }
 
 }

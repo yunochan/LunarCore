@@ -14,7 +14,7 @@ public class StopCommand implements CommandHandler {
 
     @Override
     public void execute(CommandArgs args) {
-        args.sendMessage("Stopping server");
+        args.sendMessage("停止服务器");
         System.exit(1000);
     }
 }

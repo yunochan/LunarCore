@@ -17,7 +17,7 @@ public class RefillSPCommand implements CommandHandler {
         });
         lineup.refreshLineup();
         
-        args.sendMessage("Refilled SP for " + args.getTarget().getName());
+        args.sendMessage("开启玩家" + args.getTarget().getName()+ "]无限能量");
     }
 
 }

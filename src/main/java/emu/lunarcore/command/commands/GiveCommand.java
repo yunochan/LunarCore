@@ -37,7 +37,7 @@ public class GiveCommand implements CommandHandler {
             
             ItemExcel itemData = GameData.getItemExcelMap().get(itemId);
             if (itemData == null) {
-                args.sendMessage("Item \"" + arg + "\" does not exist!");
+                args.sendMessage("物品 \"" + arg + "\" 不存在!");
                 continue;
             }
             
@@ -64,7 +64,7 @@ public class GiveCommand implements CommandHandler {
             }
             
             // Send message
-            args.sendMessage("Giving " + args.getTarget().getName() + " " + amount + " of " + itemId);
+            args.sendMessage("给予玩家[" + args.getTarget().getName() + "]" + amount + "个" + itemId);
         }
         
         // Add to player inventory

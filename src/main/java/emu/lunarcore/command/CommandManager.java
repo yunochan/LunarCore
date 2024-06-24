@@ -131,7 +131,7 @@ public class CommandManager {
             // Check if sender has permission to run the command.
             if (sender != null && !this.checkPermission(sender, command)) {
                 // We have a double null check here just in case
-                 sender.sendMessage(String.format("%s指令需要管理员权限，你无权执行该指令！", label));
+                 sender.sendMessage(String.format("%s 指令需要管理员权限，你无权执行该指令！", label));
                 return;
             }
             
@@ -140,7 +140,7 @@ public class CommandManager {
             
             // Check targeted permission
             if (sender != cmdArgs.getTarget() && !this.checkTargetPermission(sender, command)) {
-                cmdArgs.sendMessage("你无权对其他玩家使用该指令！");
+                cmdArgs.sendMessage(String.format("你无权对其他玩家使用 %s 指令！", label));
                 return;
             }
             
@@ -152,7 +152,7 @@ public class CommandManager {
             
             // Log
             if (sender != null && LunarCore.getConfig().getLogOptions().commands) {
-                LunarCore.getLogger().info("[UID: " + sender.getUid() + "] " + sender.getName() + " used command: " + message);
+                 LunarCore.getLogger().info(String.format("[UID: %s] %s 执行指令: %s ", sender.getUid, sender.getName, message));
             }
             
             // Run command

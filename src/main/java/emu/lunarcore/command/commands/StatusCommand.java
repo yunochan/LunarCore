@@ -5,7 +5,7 @@ import emu.lunarcore.command.Command;
 import emu.lunarcore.command.CommandArgs;
 import emu.lunarcore.command.CommandHandler;
 
-@Command(label = "status", aliases = {"st", "stats"}, permission = "admin.status", desc = "/status. Displays the status of the server.")
+@Command(label = "status", aliases = {"st", "stats"}, permission = "player.status", desc = "/status. Displays the status of the server.")
 public class StatusCommand implements CommandHandler {
 
     @Override
@@ -16,13 +16,13 @@ public class StatusCommand implements CommandHandler {
         }
         
         // Show status
-        args.sendMessage("Showing server status");
+        args.sendMessage("当前服务状态");
         
         args.sendMessage("Git hash: " + LunarCore.getGitHash());
-        args.sendMessage("Memory usage: " + LunarCore.getMemoryUsage() + " MB");
+        args.sendMessage("内存使用: " + LunarCore.getMemoryUsage() + " MB");
         
         if (LunarCore.getGameServer() != null) {
-            args.sendMessage("Player count: " + LunarCore.getGameServer().getPlayerCount());
+            args.sendMessage("玩家在线数量: " + LunarCore.getGameServer().getPlayerCount());
         }
     }
 }

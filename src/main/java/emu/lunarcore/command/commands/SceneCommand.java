@@ -21,7 +21,7 @@ public class SceneCommand implements CommandHandler {
         // Get maze plane
         MazePlaneExcel excel = GameData.getMazePlaneExcelMap().get(planeId);
         if (excel == null) {
-            args.sendMessage("Error: Maze plane not found");
+            args.sendMessage("Error: 迷宫未发现");
             return;
         }
         
@@ -32,13 +32,13 @@ public class SceneCommand implements CommandHandler {
         // Get floor info
         FloorInfo floor = GameData.getFloorInfo(planeId, floorId);
         if (floor == null) {
-            args.sendMessage("Error: Floor info not found");
+            args.sendMessage("Error: 楼层未发现");
             return;
         }
         
         AnchorInfo anchor = floor.getStartAnchorInfo();
         if (anchor == null) {
-            args.sendMessage("Error: Floor info not found");
+            args.sendMessage("Error: 楼层未发现");
             return;
         }
         
@@ -47,7 +47,7 @@ public class SceneCommand implements CommandHandler {
         
         // Send packet
         if (success) {
-            args.sendMessage("Teleported player to " + planeId);
+            args.sendMessage("玩家被传送到" + planeId);
         }
     }
 

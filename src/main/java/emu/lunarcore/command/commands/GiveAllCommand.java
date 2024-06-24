@@ -30,7 +30,7 @@ public class GiveAllCommand implements CommandHandler {
         String type = args.get(0).toLowerCase();
 
         switch (type) {
-            default -> args.sendMessage("Error: Invalid type");
+            default -> args.sendMessage("Error: 非法输入");
             case "m", "materials", "mats" -> {
                 List<GameItem> items = new ArrayList<>();
 
@@ -49,13 +49,13 @@ public class GiveAllCommand implements CommandHandler {
                 target.getInventory().addItems(items, true);
 
                 // Send message
-                args.sendMessage("Giving " + target.getName() + " " + items.size() + " items");
+                args.sendMessage("给予玩家[" + target.getName() + "]" + items.size() + "物品");
             }
             case "lc", "lightcones" -> {
                 // Make sure we dont go over the inventory limit
                 var tab = args.getTarget().getInventory().getTabByItemType(ItemMainType.Equipment);
                 if (tab.getSize() >= tab.getMaxCapacity()) {
-                    args.sendMessage(target.getName() + " has too many of this item type");
+                    args.sendMessage("玩家[" + target.getName() + "]该类型物品背包已满");
                     return;
                 }
                 
@@ -74,13 +74,13 @@ public class GiveAllCommand implements CommandHandler {
                 target.getInventory().addItems(items, true);
 
                 // Send message
-                args.sendMessage("Giving " + target.getName() + " " + items.size() + " light cones");
+                args.sendMessage("给予玩家[" + target.getName() + "]" + items.size() + "光锥");
             }
             case "r", "relics" -> {
                 // Make sure we dont go over the inventory limit
                 var tab = args.getTarget().getInventory().getTabByItemType(ItemMainType.Relic);
                 if (tab.getSize() >= tab.getMaxCapacity()) {
-                    args.sendMessage(target.getName() + " has too many of this item type");
+                    args.sendMessage("玩家["+ target.getName() + "]该类型物品背包已满");
                     return;
                 }
                 
@@ -99,7 +99,7 @@ public class GiveAllCommand implements CommandHandler {
                 target.getInventory().addItems(items, true);
 
                 // Send message
-                args.sendMessage("Giving " + target.getName() + " " + items.size() + " relics");
+                args.sendMessage("给予玩家[" + target.getName() + "]" + items.size() + " 遗器");
             }
             case "a", "characters", "avatars" -> {
                 // Eidolon items
@@ -145,7 +145,7 @@ public class GiveAllCommand implements CommandHandler {
                 }
 
                 // Send message
-                args.sendMessage("Giving " + target.getName() + " all avatars");
+                args.sendMessage("给予玩家[" + target.getName() + "]全部角色");
             }
             case "unlocks", "usables", "icons" -> {
                 // Add head icons - Duplicates are handled automatically
@@ -164,7 +164,7 @@ public class GiveAllCommand implements CommandHandler {
                 }
                 
                 // Send message
-                args.sendMessage("Added all icons/chat bubbles/phone themes to " + target.getName());
+                args.sendMessage("给予玩家[" + target.getName() + "]图标/聊天气泡/手机主题");
             }
             case "consumables", "food" -> {
                 // Get consumables
@@ -178,7 +178,7 @@ public class GiveAllCommand implements CommandHandler {
                 target.getInventory().addItems(items, true);
 
                 // Send message
-                args.sendMessage("Added all consumables to " + target.getName());
+                args.sendMessage("给予玩家[" + target.getName() +"]所有消耗物品");
             }
         }
     }

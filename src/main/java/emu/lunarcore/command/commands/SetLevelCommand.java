@@ -13,7 +13,7 @@ public class SetLevelCommand implements CommandHandler {
         int targetLevel = Utils.parseSafeInt(args.get(0));
         
         args.getTarget().setLevel(targetLevel);
-        args.sendMessage("Set level to " + args.getTarget().getLevel());
+        args.sendMessage("修改玩家等级" + args.getTarget().getLevel());
     }
 
 }

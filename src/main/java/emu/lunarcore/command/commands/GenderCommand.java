@@ -42,9 +42,9 @@ public class GenderCommand implements CommandHandler {
             
             // Send packet and response message
             target.sendPacket(new PacketGetHeroBasicTypeInfoScRsp(target));
-            args.sendMessage("Gender for " + target.getName() + " set successfully");
+            args.sendMessage("玩家[" + target.getName() + "]性别切换成功");
         } else {
-            args.sendMessage("Error: Invalid input");
+            args.sendMessage("Error: 无效参数");
         }
     }
 

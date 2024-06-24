@@ -66,9 +66,9 @@ public class AvatarCommand implements CommandHandler {
             // Send packet
             args.getTarget().sendPacket(new PacketPlayerSyncScNotify(changeList.toArray(GameAvatar[]::new)));
             // Send message
-            args.sendMessage("Set avatar(s) properties successfully");
+            args.sendMessage("角色数据修改成功");
         } else {
-            args.sendMessage("No avatar properties to change");
+            args.sendMessage("没有要修改的角色数据");
         }
     }
 

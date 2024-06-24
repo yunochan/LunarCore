@@ -34,7 +34,7 @@ public class SpawnCommand implements CommandHandler {
         Player target = args.getTarget();
         
         if (target.getScene() == null) {
-            args.sendMessage("Error: Target is not in scene");
+            args.sendMessage("Error: 目标不在场景中");
             return;
         }
         
@@ -55,7 +55,7 @@ public class SpawnCommand implements CommandHandler {
         
         // Enforce scene max entity limit
         if (target.getScene().getEntities().size() + amount >= LunarCore.getConfig().getServerOptions().getSceneMaxEntites()) {
-            args.sendMessage("Error: Max entities in scene reached");
+            args.sendMessage("Error: 生成实体数量已达上限");
             return;
         }
         
@@ -102,7 +102,7 @@ public class SpawnCommand implements CommandHandler {
             }
             
             if (stage == null) {
-                args.sendMessage("Error: No stage or monster waves set");
+                args.sendMessage("Error: 没有设置阶段或怪物波数");
                 return;
             }
             
@@ -125,7 +125,7 @@ public class SpawnCommand implements CommandHandler {
             }
             
             if (monsterInfo == null || groupInfo == null) {
-                args.sendMessage("Error: No existing monster config found in this scene");
+                args.sendMessage("Error: 当前场景中找不到现有的怪物配置");
                 return;
             }
             
@@ -145,7 +145,7 @@ public class SpawnCommand implements CommandHandler {
             }
             
             // Send message when done
-            args.sendMessage("Spawning " + amount + " monsters");
+            args.sendMessage("生成 " + amount + " 怪物");
             return;
         }
         
@@ -170,7 +170,7 @@ public class SpawnCommand implements CommandHandler {
             }
             
             if (propInfo == null || groupInfo == null) {
-                args.sendMessage("Error: No existing prop config found in this scene");
+                args.sendMessage("Error: 没有在场景中找到符合条件的道具配置");
                 return;
             }
             
@@ -186,11 +186,11 @@ public class SpawnCommand implements CommandHandler {
             }
             
             // Send message when done
-            args.sendMessage("Spawning " + amount + " props");
+            args.sendMessage("生成 " + amount + "道具");
             return;
         }
 
-        args.sendMessage("Error: Invalid id");
+        args.sendMessage("Error: 无效的id");
     }
 
     private int getBaseNpcMonsterId() {
