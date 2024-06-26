@@ -6,7 +6,7 @@ import emu.lunarcore.command.Command;
 import emu.lunarcore.command.CommandArgs;
 import emu.lunarcore.command.CommandHandler;
 
-@Command(label = "status", aliases = {"st", "stats"}, permission = "player.status", desc = "/status. Displays the status of the server.")
+@Command(label = "status", aliases = {"st", "stats"}, permission = "admin.status", desc = "/status. Displays the status of the server.")
 public class StatusCommand implements CommandHandler {
 
     @Override
