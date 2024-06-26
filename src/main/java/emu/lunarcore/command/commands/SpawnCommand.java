@@ -23,7 +23,7 @@ import emu.lunarcore.game.scene.entity.EntityProp;
 import emu.lunarcore.util.Position;
 import emu.lunarcore.util.Utils;
 
-@Command(label = "spawn", aliases = {"s"}, permission = "player.spawn", requireTarget = true, desc = "/spawn [npc monster id/prop id] s[stage id] x[amount] lv[level] r[radius] <battle monster ids...>. Spawns a monster or prop near the targeted player.")
+@Command(label = "spawn", aliases = {"s"}, permission = "admin.spawn", requireTarget = true, desc = "/spawn [npc monster id/prop id] s[stage id] x[amount] lv[level] r[radius] <battle monster ids...>. Spawns a monster or prop near the targeted player.")
 public class SpawnCommand implements CommandHandler {
     private static final Set<String> SEPARATORS = Set.of("/", "|", "\\");
     private int baseNpcMonsterId;
