@@ -1479,4 +1479,5 @@ public class CmdId {
     public static final int TextJoinSaveCsReq = 3861;
     public static final int UnlockHeroBasicTypeCsReq = 15;
     public static final int UnlockHeroBasicTypeScRsp = 41;
+    public static final int ClientDownloadDataScNotify = 5;
 }
