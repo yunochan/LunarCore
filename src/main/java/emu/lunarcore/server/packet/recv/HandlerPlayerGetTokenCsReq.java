@@ -54,6 +54,12 @@ public class HandlerPlayerGetTokenCsReq extends PacketHandler {
         // Set player object for session
         session.setPlayer(player);
 
+         // Checks if the player is banned
+        if (session.getAccount().isBanned()) {
+            session.setState(SessionState.ACCOUNT_BANNED);
+            return;
+        }
+
         // Load player data from database
         player.onLogin();
 
