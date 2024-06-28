@@ -133,6 +133,7 @@ public class Config {
         public Set<String> defaultPermissions = Set.of("*");
         public int maxPlayers = -1;
         public ServerProfile serverFriendInfo = new ServerProfile();
+        public WelcomeMessage welcomeMessage = new WelcomeMessage();
         public WelcomeMail welcomeMail = new WelcomeMail();
         
         public int getStaminaRecoveryRate() {
@@ -173,7 +174,13 @@ public class Config {
             }
         }
     }
-    
+
+    @Getter
+    public static class WelcomeMessage {
+        public int[] emotes = {121005, 121006, 121007, 121008};
+        public String msg = "欢迎游玩琉璃服，在此输入 “/help” 查看帮助";
+    }
+
     @Getter
     public static class WelcomeMail {
         public String title;

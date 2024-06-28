@@ -4,9 +4,11 @@ import java.util.Collection;
 
 import emu.lunarcore.GameConstants;
 import emu.lunarcore.LunarCore;
+import emu.lunarcore.Config;
 import emu.lunarcore.game.player.BasePlayerManager;
 import emu.lunarcore.game.player.Player;
 import emu.lunarcore.server.packet.send.PacketRevcMsgScNotify;
+import emu.lunarcore.util.Utils;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
@@ -40,9 +42,49 @@ public class ChatManager extends BasePlayerManager {
                 list.remove(0);
             }
         }
+                   
         // Send to client
         getPlayer().sendPacket(new PacketRevcMsgScNotify(message));
     }
+    /********************
+     * Sending messages
+     ********************/
+        public void sendPrivateMessageFromServer(int targetUid, String message) {
+        // Sanity checks.
+        if (message == null || message.length() == 0) {
+            return;
+        }
+
+        // Get target
+        Player target = getPlayer().getServer().getOnlinePlayerByUid(targetUid);
+
+        if (target == null) {
+            return;
+        }
+
+        // Create chat packet and put in history.
+        var packet = new ChatMessage(GameConstants.SERVER_CONSOLE_UID, targetUid, message);
+
+       
+        // Send
+        target.getChatManager().addChatMessage(packet);
+    }
+
+    public void sendPrivateMessageFromServer(int targetUid, int emote) {
+        // Get target
+        Player target = getPlayer().getServer().getOnlinePlayerByUid(targetUid);
+		
+        if (target == null) {
+            return;
+        }
+
+        // Create chat packet and put in history.
+        var packet = new ChatMessage(GameConstants.SERVER_CONSOLE_UID, targetUid, emote);
+		
+        // Send.
+       target.getChatManager().addChatMessage(packet);
+    }
+
 
     public void sendChat(int targetUid, String text) {
         // Sanity checks
@@ -86,5 +128,22 @@ public class ChatManager extends BasePlayerManager {
         this.addChatMessage(message);
         target.getChatManager().addChatMessage(message);
     }
-    
+
+    /********************
+     * Welcome messages
+     ********************/
+    public void sendServerWelcomeMessages(Player player) {
+        var welcomeMessage = LunarCore.getConfig().getServerOptions().getWelcomeMessage();
+        if (welcomeMessage.emotes != null && welcomeMessage.emotes.length > 0) {
+            this.sendPrivateMessageFromServer(
+                    player.getUid(),
+                    welcomeMessage.emotes[Utils.randomRange(0, welcomeMessage.emotes.length - 1)]);
+       }
+
+        
+        if (welcomeMessage.msg != null && welcomeMessage.msg.length() > 0) {
+            this.sendPrivateMessageFromServer(player.getUid(), welcomeMessage.msg);
+        }
+    }
+
 }

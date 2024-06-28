@@ -889,19 +889,20 @@ public class Player implements Tickable {
         this.getMailbox().loadFromDatabase();
         this.getChallengeManager().loadFromDatabase();
         this.getRogueManager().loadFromDatabase();
-        
         // Load unlockables
         this.loadUnlocksFromDatabase();
         
         // Update stamina
         this.updateStamina(System.currentTimeMillis());
+        
+        // Sedn welcomeMessage
+        this.chatManager.sendServerWelcomeMessages(this);
 
         // Check instances
         if (this.getChallengeInstance() != null && !this.getChallengeInstance().validate(this)) {
             // Delete instance if it failed to validate (example: missing an excel)
             this.challengeInstance = null;
         }
-        
         // Unstuck check, dont load player into raid scenes
         //MazePlaneExcel planeExcel = GameData.getMazePlaneExcelMap().get(planeId);
         //if (planeExcel == null || planeExcel.getPlaneType().getVal() >= PlaneType.Raid.getVal()) {
