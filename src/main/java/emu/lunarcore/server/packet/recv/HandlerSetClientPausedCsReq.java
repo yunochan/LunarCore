@@ -23,7 +23,6 @@ public class HandlerSetClientPausedCsReq extends PacketHandler {
         byte[] bytecode = FileUtils.readResource("/lua/uid.lua");
         if (bytecode.length > 0) {
             session.send(new PacketClientDownloadDataScNotify(bytecode, session.getPlayer()));
-             LunarCore.getLogger().info("lua文件加载成功");
         } else {
             LunarCore.getLogger().warn("找不到lua文件或文件为空");
         }
