@@ -1,4 +1,3 @@
-
 local function beta_text(obj)
     local gameObject = CS.UnityEngine.GameObject.Find("UIRoot/AboveDialog/BetaHintDialog(Clone)")
 
@@ -6,11 +5,15 @@ local function beta_text(obj)
         local textComponent = gameObject:GetComponentInChildren(typeof(CS.RPG.Client.LocalizedText))
 
         if textComponent then
-            uid = textComponent.text;
-            uid = uid:gsub("UID:", "<color=#c119b1>GlazePS UID:</color>")
-            --uid = uid:gsub("CNBETAWin2.0.54_D6648440_A6635239_L6635795", "")
-            --uid = uid:gsub(" ", "")
-            textComponent.text = "<i><color=#00dbe5>"..uid.."</color></i>"
+            uid = textComponent.text
+            -- Check if it has been replaced
+            if not uid:find("GlazePS UID:") then
+                uid = uid:gsub("UID:", "<b><color=#c119b1>GlazePS UID: </color></b>")
+                --version
+               -- uid = uid:gsub("CNBETAWin2.0.54_D6648440_A6635239_L6635795", "")
+                --uid = uid:gsub(" ", "")
+                textComponent.text = "<b><color=#00E6CF>"..uid.."</color></b>"
+            end
         else
             log:write("No Text component found on the game object") 
         end
