@@ -28,6 +28,11 @@ public final class BattleTargetOuterClass {
      */
     private int progress;
 
+    /**
+     * <code>optional uint32 total_progress = 3;</code>
+     */
+    private int totalProgress;
+
     private BattleTarget() {
     }
 
@@ -112,6 +117,43 @@ public final class BattleTargetOuterClass {
       return this;
     }
 
+    /**
+     * <code>optional uint32 total_progress = 3;</code>
+     * @return whether the totalProgress field is set
+     */
+    public boolean hasTotalProgress() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 total_progress = 3;</code>
+     * @return this
+     */
+    public BattleTarget clearTotalProgress() {
+      bitField0_ &= ~0x00000004;
+      totalProgress = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 total_progress = 3;</code>
+     * @return the totalProgress
+     */
+    public int getTotalProgress() {
+      return totalProgress;
+    }
+
+    /**
+     * <code>optional uint32 total_progress = 3;</code>
+     * @param value the totalProgress to set
+     * @return this
+     */
+    public BattleTarget setTotalProgress(final int value) {
+      bitField0_ |= 0x00000004;
+      totalProgress = value;
+      return this;
+    }
+
     @Override
     public BattleTarget copyFrom(final BattleTarget other) {
       cachedSize = other.cachedSize;
@@ -119,6 +161,7 @@ public final class BattleTargetOuterClass {
         bitField0_ = other.bitField0_;
         id = other.id;
         progress = other.progress;
+        totalProgress = other.totalProgress;
       }
       return this;
     }
@@ -135,6 +178,9 @@ public final class BattleTargetOuterClass {
       if (other.hasProgress()) {
         setProgress(other.progress);
       }
+      if (other.hasTotalProgress()) {
+        setTotalProgress(other.totalProgress);
+      }
       return this;
     }
 
@@ -147,6 +193,7 @@ public final class BattleTargetOuterClass {
       bitField0_ = 0;
       id = 0;
       progress = 0;
+      totalProgress = 0;
       return this;
     }
 
@@ -171,7 +218,8 @@ public final class BattleTargetOuterClass {
       BattleTarget other = (BattleTarget) o;
       return bitField0_ == other.bitField0_
         && (!hasId() || id == other.id)
-        && (!hasProgress() || progress == other.progress);
+        && (!hasProgress() || progress == other.progress)
+        && (!hasTotalProgress() || totalProgress == other.totalProgress);
     }
 
     @Override
@@ -184,6 +232,10 @@ public final class BattleTargetOuterClass {
         output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(progress);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 24);
+        output.writeUInt32NoTag(totalProgress);
+      }
     }
 
     @Override
@@ -194,6 +246,9 @@ public final class BattleTargetOuterClass {
       }
       if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(progress);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(totalProgress);
       }
       return size;
     }
@@ -218,6 +273,15 @@ public final class BattleTargetOuterClass {
             // progress
             progress = input.readUInt32();
             bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 24) {
+              break;
+            }
+          }
+          case 24: {
+            // totalProgress
+            totalProgress = input.readUInt32();
+            bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -246,6 +310,9 @@ public final class BattleTargetOuterClass {
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.progress, progress);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeUInt32(FieldNames.totalProgress, totalProgress);
+      }
       output.endObject();
     }
 
@@ -272,6 +339,18 @@ public final class BattleTargetOuterClass {
               if (!input.trySkipNullValue()) {
                 progress = input.readUInt32();
                 bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -974619247:
+          case -2094299960: {
+            if (input.isAtField(FieldNames.totalProgress)) {
+              if (!input.trySkipNullValue()) {
+                totalProgress = input.readUInt32();
+                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -333,6 +412,8 @@ public final class BattleTargetOuterClass {
       static final FieldName id = FieldName.forField("id");
 
       static final FieldName progress = FieldName.forField("progress");
+
+      static final FieldName totalProgress = FieldName.forField("totalProgress", "total_progress");
     }
   }
 }

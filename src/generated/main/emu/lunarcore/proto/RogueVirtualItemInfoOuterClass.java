@@ -20,10 +20,10 @@ public final class RogueVirtualItemInfoOuterClass {
 
     /**
      * <pre>
-     *  uint32 JLGAKDGCBOH = 7;
+     *  could be 5, 7 or 12
      * </pre>
      *
-     * <code>optional uint32 rogue_coin = 8;</code>
+     * <code>optional uint32 rogue_coin = 3;</code>
      */
     private int rogueCoin;
 
@@ -39,10 +39,10 @@ public final class RogueVirtualItemInfoOuterClass {
 
     /**
      * <pre>
-     *  uint32 JLGAKDGCBOH = 7;
+     *  could be 5, 7 or 12
      * </pre>
      *
-     * <code>optional uint32 rogue_coin = 8;</code>
+     * <code>optional uint32 rogue_coin = 3;</code>
      * @return whether the rogueCoin field is set
      */
     public boolean hasRogueCoin() {
@@ -51,10 +51,10 @@ public final class RogueVirtualItemInfoOuterClass {
 
     /**
      * <pre>
-     *  uint32 JLGAKDGCBOH = 7;
+     *  could be 5, 7 or 12
      * </pre>
      *
-     * <code>optional uint32 rogue_coin = 8;</code>
+     * <code>optional uint32 rogue_coin = 3;</code>
      * @return this
      */
     public RogueVirtualItemInfo clearRogueCoin() {
@@ -65,10 +65,10 @@ public final class RogueVirtualItemInfoOuterClass {
 
     /**
      * <pre>
-     *  uint32 JLGAKDGCBOH = 7;
+     *  could be 5, 7 or 12
      * </pre>
      *
-     * <code>optional uint32 rogue_coin = 8;</code>
+     * <code>optional uint32 rogue_coin = 3;</code>
      * @return the rogueCoin
      */
     public int getRogueCoin() {
@@ -77,10 +77,10 @@ public final class RogueVirtualItemInfoOuterClass {
 
     /**
      * <pre>
-     *  uint32 JLGAKDGCBOH = 7;
+     *  could be 5, 7 or 12
      * </pre>
      *
-     * <code>optional uint32 rogue_coin = 8;</code>
+     * <code>optional uint32 rogue_coin = 3;</code>
      * @param value the rogueCoin to set
      * @return this
      */
@@ -149,7 +149,7 @@ public final class RogueVirtualItemInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(rogueCoin);
       }
     }
@@ -170,7 +170,7 @@ public final class RogueVirtualItemInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 64: {
+          case 24: {
             // rogueCoin
             rogueCoin = input.readUInt32();
             bitField0_ |= 0x00000001;

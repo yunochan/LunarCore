@@ -19,17 +19,17 @@ public final class EnterSceneByServerScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .EnterSceneReason reason = 5;</code>
+     * <code>optional .EnterSceneReason reason = 1;</code>
      */
     private int reason;
 
     /**
-     * <code>optional .LineupInfo lineup = 3;</code>
+     * <code>optional .LineupInfo lineup = 7;</code>
      */
     private final LineupInfoOuterClass.LineupInfo lineup = LineupInfoOuterClass.LineupInfo.newInstance();
 
     /**
-     * <code>optional .SceneInfo scene = 8;</code>
+     * <code>optional .SceneInfo scene = 10;</code>
      */
     private final SceneInfoOuterClass.SceneInfo scene = SceneInfoOuterClass.SceneInfo.newInstance();
 
@@ -44,7 +44,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .EnterSceneReason reason = 5;</code>
+     * <code>optional .EnterSceneReason reason = 1;</code>
      * @return whether the reason field is set
      */
     public boolean hasReason() {
@@ -52,7 +52,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .EnterSceneReason reason = 5;</code>
+     * <code>optional .EnterSceneReason reason = 1;</code>
      * @return this
      */
     public EnterSceneByServerScNotify clearReason() {
@@ -62,7 +62,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .EnterSceneReason reason = 5;</code>
+     * <code>optional .EnterSceneReason reason = 1;</code>
      * @return the reason
      */
     public EnterSceneReasonOuterClass.EnterSceneReason getReason() {
@@ -95,7 +95,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .EnterSceneReason reason = 5;</code>
+     * <code>optional .EnterSceneReason reason = 1;</code>
      * @param value the reason to set
      * @return this
      */
@@ -107,7 +107,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 3;</code>
+     * <code>optional .LineupInfo lineup = 7;</code>
      * @return whether the lineup field is set
      */
     public boolean hasLineup() {
@@ -115,7 +115,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 3;</code>
+     * <code>optional .LineupInfo lineup = 7;</code>
      * @return this
      */
     public EnterSceneByServerScNotify clearLineup() {
@@ -125,7 +125,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 3;</code>
+     * <code>optional .LineupInfo lineup = 7;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -139,7 +139,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 3;</code>
+     * <code>optional .LineupInfo lineup = 7;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -153,7 +153,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 3;</code>
+     * <code>optional .LineupInfo lineup = 7;</code>
      * @param value the lineup to set
      * @return this
      */
@@ -164,7 +164,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .SceneInfo scene = 8;</code>
+     * <code>optional .SceneInfo scene = 10;</code>
      * @return whether the scene field is set
      */
     public boolean hasScene() {
@@ -172,7 +172,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .SceneInfo scene = 8;</code>
+     * <code>optional .SceneInfo scene = 10;</code>
      * @return this
      */
     public EnterSceneByServerScNotify clearScene() {
@@ -182,7 +182,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .SceneInfo scene = 8;</code>
+     * <code>optional .SceneInfo scene = 10;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -196,7 +196,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .SceneInfo scene = 8;</code>
+     * <code>optional .SceneInfo scene = 10;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -210,7 +210,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .SceneInfo scene = 8;</code>
+     * <code>optional .SceneInfo scene = 10;</code>
      * @param value the scene to set
      * @return this
      */
@@ -293,15 +293,15 @@ public final class EnterSceneByServerScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 8);
         output.writeEnumNoTag(reason);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 26);
+        output.writeRawByte((byte) 58);
         output.writeMessageNoTag(lineup);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 66);
+        output.writeRawByte((byte) 82);
         output.writeMessageNoTag(scene);
       }
     }
@@ -328,7 +328,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
+          case 8: {
             // reason
             final int value = input.readInt32();
             if (EnterSceneReasonOuterClass.EnterSceneReason.forNumber(value) != null) {
@@ -336,20 +336,20 @@ public final class EnterSceneByServerScNotifyOuterClass {
               bitField0_ |= 0x00000001;
             }
             tag = input.readTag();
-            if (tag != 26) {
+            if (tag != 58) {
               break;
             }
           }
-          case 26: {
+          case 58: {
             // lineup
             input.readMessage(lineup);
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 66) {
+            if (tag != 82) {
               break;
             }
           }
-          case 66: {
+          case 82: {
             // scene
             input.readMessage(scene);
             bitField0_ |= 0x00000004;

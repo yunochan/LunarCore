@@ -22,37 +22,37 @@ public final class BuffInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint64 add_time_ms = 1;</code>
+     * <code>optional uint64 add_time_ms = 15;</code>
      */
     private long addTimeMs;
 
     /**
-     * <code>optional float life_time = 3;</code>
+     * <code>optional float life_time = 11;</code>
      */
     private float lifeTime;
 
     /**
-     * <code>optional uint32 buff_id = 4;</code>
+     * <code>optional uint32 buff_id = 3;</code>
      */
     private int buffId;
 
     /**
-     * <code>optional uint32 base_avatar_id = 9;</code>
+     * <code>optional uint32 base_avatar_id = 5;</code>
      */
     private int baseAvatarId;
 
     /**
-     * <code>optional uint32 level = 12;</code>
+     * <code>optional uint32 level = 7;</code>
      */
     private int level;
 
     /**
-     * <code>optional uint32 count = 13;</code>
+     * <code>optional uint32 count = 8;</code>
      */
     private int count;
 
     /**
-     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 5;</code>
+     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 4;</code>
      */
     private final RepeatedMessage<DynamicValuesEntry> dynamicValues = RepeatedMessage.newEmptyInstance(DynamicValuesEntry.getFactory());
 
@@ -67,7 +67,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint64 add_time_ms = 1;</code>
+     * <code>optional uint64 add_time_ms = 15;</code>
      * @return whether the addTimeMs field is set
      */
     public boolean hasAddTimeMs() {
@@ -75,7 +75,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint64 add_time_ms = 1;</code>
+     * <code>optional uint64 add_time_ms = 15;</code>
      * @return this
      */
     public BuffInfo clearAddTimeMs() {
@@ -85,7 +85,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint64 add_time_ms = 1;</code>
+     * <code>optional uint64 add_time_ms = 15;</code>
      * @return the addTimeMs
      */
     public long getAddTimeMs() {
@@ -93,7 +93,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint64 add_time_ms = 1;</code>
+     * <code>optional uint64 add_time_ms = 15;</code>
      * @param value the addTimeMs to set
      * @return this
      */
@@ -104,7 +104,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional float life_time = 3;</code>
+     * <code>optional float life_time = 11;</code>
      * @return whether the lifeTime field is set
      */
     public boolean hasLifeTime() {
@@ -112,7 +112,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional float life_time = 3;</code>
+     * <code>optional float life_time = 11;</code>
      * @return this
      */
     public BuffInfo clearLifeTime() {
@@ -122,7 +122,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional float life_time = 3;</code>
+     * <code>optional float life_time = 11;</code>
      * @return the lifeTime
      */
     public float getLifeTime() {
@@ -130,7 +130,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional float life_time = 3;</code>
+     * <code>optional float life_time = 11;</code>
      * @param value the lifeTime to set
      * @return this
      */
@@ -141,7 +141,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 buff_id = 4;</code>
+     * <code>optional uint32 buff_id = 3;</code>
      * @return whether the buffId field is set
      */
     public boolean hasBuffId() {
@@ -149,7 +149,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 buff_id = 4;</code>
+     * <code>optional uint32 buff_id = 3;</code>
      * @return this
      */
     public BuffInfo clearBuffId() {
@@ -159,7 +159,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 buff_id = 4;</code>
+     * <code>optional uint32 buff_id = 3;</code>
      * @return the buffId
      */
     public int getBuffId() {
@@ -167,7 +167,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 buff_id = 4;</code>
+     * <code>optional uint32 buff_id = 3;</code>
      * @param value the buffId to set
      * @return this
      */
@@ -178,7 +178,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 base_avatar_id = 9;</code>
+     * <code>optional uint32 base_avatar_id = 5;</code>
      * @return whether the baseAvatarId field is set
      */
     public boolean hasBaseAvatarId() {
@@ -186,7 +186,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 base_avatar_id = 9;</code>
+     * <code>optional uint32 base_avatar_id = 5;</code>
      * @return this
      */
     public BuffInfo clearBaseAvatarId() {
@@ -196,7 +196,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 base_avatar_id = 9;</code>
+     * <code>optional uint32 base_avatar_id = 5;</code>
      * @return the baseAvatarId
      */
     public int getBaseAvatarId() {
@@ -204,7 +204,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 base_avatar_id = 9;</code>
+     * <code>optional uint32 base_avatar_id = 5;</code>
      * @param value the baseAvatarId to set
      * @return this
      */
@@ -215,7 +215,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 12;</code>
+     * <code>optional uint32 level = 7;</code>
      * @return whether the level field is set
      */
     public boolean hasLevel() {
@@ -223,7 +223,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 12;</code>
+     * <code>optional uint32 level = 7;</code>
      * @return this
      */
     public BuffInfo clearLevel() {
@@ -233,7 +233,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 12;</code>
+     * <code>optional uint32 level = 7;</code>
      * @return the level
      */
     public int getLevel() {
@@ -241,7 +241,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 12;</code>
+     * <code>optional uint32 level = 7;</code>
      * @param value the level to set
      * @return this
      */
@@ -252,7 +252,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 count = 13;</code>
+     * <code>optional uint32 count = 8;</code>
      * @return whether the count field is set
      */
     public boolean hasCount() {
@@ -260,7 +260,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 count = 13;</code>
+     * <code>optional uint32 count = 8;</code>
      * @return this
      */
     public BuffInfo clearCount() {
@@ -270,7 +270,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 count = 13;</code>
+     * <code>optional uint32 count = 8;</code>
      * @return the count
      */
     public int getCount() {
@@ -278,7 +278,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 count = 13;</code>
+     * <code>optional uint32 count = 8;</code>
      * @param value the count to set
      * @return this
      */
@@ -289,7 +289,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 5;</code>
+     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 4;</code>
      * @return whether the dynamicValues field is set
      */
     public boolean hasDynamicValues() {
@@ -297,7 +297,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 5;</code>
+     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 4;</code>
      * @return this
      */
     public BuffInfo clearDynamicValues() {
@@ -307,7 +307,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 5;</code>
+     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 4;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -321,7 +321,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 5;</code>
+     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 4;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -335,7 +335,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 5;</code>
+     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 4;</code>
      * @param value the dynamicValues to add
      * @return this
      */
@@ -346,7 +346,7 @@ public final class BuffInfoOuterClass {
     }
 
     /**
-     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 5;</code>
+     * <code>repeated .BuffInfo.DynamicValuesEntry dynamic_values = 4;</code>
      * @param values the dynamicValues to add
      * @return this
      */
@@ -452,32 +452,32 @@ public final class BuffInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 120);
         output.writeUInt64NoTag(addTimeMs);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 29);
+        output.writeRawByte((byte) 93);
         output.writeFloatNoTag(lifeTime);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(buffId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(baseAvatarId);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(level);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRawByte((byte) 104);
+        output.writeRawByte((byte) 64);
         output.writeUInt32NoTag(count);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         for (int i = 0; i < dynamicValues.length(); i++) {
-          output.writeRawByte((byte) 42);
+          output.writeRawByte((byte) 34);
           output.writeMessageNoTag(dynamicValues.get(i));
         }
       }
@@ -517,61 +517,61 @@ public final class BuffInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 120: {
             // addTimeMs
             addTimeMs = input.readUInt64();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 29) {
+            if (tag != 93) {
               break;
             }
           }
-          case 29: {
+          case 93: {
             // lifeTime
             lifeTime = input.readFloat();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 32) {
+            if (tag != 24) {
               break;
             }
           }
-          case 32: {
+          case 24: {
             // buffId
             buffId = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 72) {
+            if (tag != 40) {
               break;
             }
           }
-          case 72: {
+          case 40: {
             // baseAvatarId
             baseAvatarId = input.readUInt32();
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 96) {
+            if (tag != 56) {
               break;
             }
           }
-          case 96: {
+          case 56: {
             // level
             level = input.readUInt32();
             bitField0_ |= 0x00000010;
             tag = input.readTag();
-            if (tag != 104) {
+            if (tag != 64) {
               break;
             }
           }
-          case 104: {
+          case 64: {
             // count
             count = input.readUInt32();
             bitField0_ |= 0x00000020;
             tag = input.readTag();
-            if (tag != 42) {
+            if (tag != 34) {
               break;
             }
           }
-          case 42: {
+          case 34: {
             // dynamicValues
             tag = input.readRepeatedMessage(dynamicValues, tag);
             bitField0_ |= 0x00000040;

@@ -19,7 +19,7 @@ public final class EnterRogueMapRoomCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 room_id = 11;</code>
+     * <code>optional uint32 room_id = 1;</code>
      */
     private int roomId;
 
@@ -39,7 +39,7 @@ public final class EnterRogueMapRoomCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 room_id = 11;</code>
+     * <code>optional uint32 room_id = 1;</code>
      * @return whether the roomId field is set
      */
     public boolean hasRoomId() {
@@ -47,7 +47,7 @@ public final class EnterRogueMapRoomCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 room_id = 11;</code>
+     * <code>optional uint32 room_id = 1;</code>
      * @return this
      */
     public EnterRogueMapRoomCsReq clearRoomId() {
@@ -57,7 +57,7 @@ public final class EnterRogueMapRoomCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 room_id = 11;</code>
+     * <code>optional uint32 room_id = 1;</code>
      * @return the roomId
      */
     public int getRoomId() {
@@ -65,7 +65,7 @@ public final class EnterRogueMapRoomCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 room_id = 11;</code>
+     * <code>optional uint32 room_id = 1;</code>
      * @param value the roomId to set
      * @return this
      */
@@ -177,7 +177,7 @@ public final class EnterRogueMapRoomCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(roomId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
@@ -205,7 +205,7 @@ public final class EnterRogueMapRoomCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 88: {
+          case 8: {
             // roomId
             roomId = input.readUInt32();
             bitField0_ |= 0x00000001;

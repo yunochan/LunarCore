@@ -2,39 +2,45 @@ package emu.lunarcore.game.avatar;
 
 import java.util.Map;
 
+import org.bson.types.ObjectId;
+
 import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Id;
 import dev.morphia.annotations.Indexed;
 
 import emu.lunarcore.LunarCore;
 import emu.lunarcore.data.excel.AvatarExcel;
+import emu.lunarcore.game.enums.ItemMainType;
 import emu.lunarcore.game.player.Player;
 import emu.lunarcore.proto.AvatarSkillTreeOuterClass.AvatarSkillTree;
-import emu.lunarcore.proto.HeroBasicTypeInfoOuterClass.HeroBasicTypeInfo;
-
+import emu.lunarcore.proto.EquipRelicOuterClass.EquipRelic;
+import emu.lunarcore.proto.MultiPathAvatarInfoOuterClass.MultiPathAvatarInfo;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Entity(value = "heroPaths", useDiscriminator = false)
-public class AvatarHeroPath {
-    @Id private int id; // Equivalent to HeroBaseType
+@Entity(value = "multiPaths", useDiscriminator = false)
+public class AvatarMultiPath implements IAvatar {
+    @Id private ObjectId id;
     @Indexed private int ownerUid;
     
+    private int excelId;
     private AvatarData data;
     
+    @Setter private transient Player owner;
     @Setter private transient GameAvatar avatar;
     private transient AvatarExcel excel;
     
     @Deprecated // Morphia only!
-    public AvatarHeroPath() {
+    public AvatarMultiPath() {
         
     }
     
-    public AvatarHeroPath(Player player, AvatarExcel excel) {
+    public AvatarMultiPath(Player player, AvatarExcel excel) {
         // Set excel avatar id as id
-        this.id = excel.getId();
+        this.excelId = excel.getId();
         this.ownerUid = player.getUid();
+        this.owner = player;
         this.setExcel(excel);
     }
     
@@ -45,6 +51,7 @@ public class AvatarHeroPath {
         if (this.data == null) {
             this.data = new AvatarData(excel);
         }
+        this.data.setBaseAvatar(this);
     }
     
     public int getRank() {
@@ -55,13 +62,22 @@ public class AvatarHeroPath {
         return this.getData().getSkills();
     }
     
-    public HeroBasicTypeInfo toProto() {
-        var proto = HeroBasicTypeInfo.newInstance()
-                .setBasicTypeValue(this.getId())
+    public MultiPathAvatarInfo toProto() {
+        var proto = MultiPathAvatarInfo.newInstance()
+                .setAvatarIdValue(this.getExcelId())
+                .setPathEquipmentId(0)
                 .setRank(this.getRank());
         
         for (var skill : getSkills().entrySet()) {
-            proto.addSkillTreeList(AvatarSkillTree.newInstance().setPointId(skill.getKey()).setLevel(skill.getValue()));
+            proto.addMultiPathSkillTree(AvatarSkillTree.newInstance().setPointId(skill.getKey()).setLevel(skill.getValue()));
+        }
+        
+        for (var equip : getEquips().values()) {
+            if (equip.getItemMainType() == ItemMainType.Relic) {
+                proto.addEquipRelicList(EquipRelic.newInstance().setSlot(equip.getEquipSlot()).setRelicUniqueId(equip.getInternalUid()));
+            } else if (equip.getItemMainType() == ItemMainType.Equipment) {
+                proto.setPathEquipmentId(equip.getInternalUid());
+            }
         }
         
         return proto;

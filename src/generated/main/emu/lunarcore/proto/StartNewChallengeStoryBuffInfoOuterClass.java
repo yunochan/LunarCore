@@ -19,12 +19,12 @@ public final class StartNewChallengeStoryBuffInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 first_half = 1;</code>
+     * <code>optional uint32 first_half = 12;</code>
      */
     private int firstHalf;
 
     /**
-     * <code>optional uint32 second_half = 2;</code>
+     * <code>optional uint32 second_half = 13;</code>
      */
     private int secondHalf;
 
@@ -39,7 +39,7 @@ public final class StartNewChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 first_half = 1;</code>
+     * <code>optional uint32 first_half = 12;</code>
      * @return whether the firstHalf field is set
      */
     public boolean hasFirstHalf() {
@@ -47,7 +47,7 @@ public final class StartNewChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 first_half = 1;</code>
+     * <code>optional uint32 first_half = 12;</code>
      * @return this
      */
     public StartNewChallengeStoryBuffInfo clearFirstHalf() {
@@ -57,7 +57,7 @@ public final class StartNewChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 first_half = 1;</code>
+     * <code>optional uint32 first_half = 12;</code>
      * @return the firstHalf
      */
     public int getFirstHalf() {
@@ -65,7 +65,7 @@ public final class StartNewChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 first_half = 1;</code>
+     * <code>optional uint32 first_half = 12;</code>
      * @param value the firstHalf to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class StartNewChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 second_half = 2;</code>
+     * <code>optional uint32 second_half = 13;</code>
      * @return whether the secondHalf field is set
      */
     public boolean hasSecondHalf() {
@@ -84,7 +84,7 @@ public final class StartNewChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 second_half = 2;</code>
+     * <code>optional uint32 second_half = 13;</code>
      * @return this
      */
     public StartNewChallengeStoryBuffInfo clearSecondHalf() {
@@ -94,7 +94,7 @@ public final class StartNewChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 second_half = 2;</code>
+     * <code>optional uint32 second_half = 13;</code>
      * @return the secondHalf
      */
     public int getSecondHalf() {
@@ -102,7 +102,7 @@ public final class StartNewChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 second_half = 2;</code>
+     * <code>optional uint32 second_half = 13;</code>
      * @param value the secondHalf to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class StartNewChallengeStoryBuffInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 96);
         output.writeUInt32NoTag(firstHalf);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(secondHalf);
       }
     }
@@ -205,16 +205,16 @@ public final class StartNewChallengeStoryBuffInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 96: {
             // firstHalf
             firstHalf = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 16) {
+            if (tag != 104) {
               break;
             }
           }
-          case 16: {
+          case 104: {
             // secondHalf
             secondHalf = input.readUInt32();
             bitField0_ |= 0x00000002;

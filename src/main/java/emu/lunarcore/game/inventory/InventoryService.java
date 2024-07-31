@@ -164,9 +164,9 @@ public class InventoryService extends BaseGameService {
         player.save();
 
         // Save avatar and send packets
-        if (avatar.getHeroPath() != null) {
-            avatar.getHeroPath().save();
-            player.sendPacket(new PacketPlayerSyncScNotify(avatar.getHeroPath()));
+        if (avatar.getMultiPath() != null) {
+            avatar.getMultiPath().save();
+            player.sendPacket(new PacketPlayerSyncScNotify(avatar.getMultiPath()));
         } else {
             avatar.save();
             player.sendPacket(new PacketPlayerSyncScNotify(avatar));
@@ -195,9 +195,9 @@ public class InventoryService extends BaseGameService {
         avatar.setRank(avatar.getRank() + 1);
         
         // Save avatar and send packets
-        if (avatar.getHeroPath() != null) {
-            avatar.getHeroPath().save();
-            player.sendPacket(new PacketPlayerSyncScNotify(avatar.getHeroPath()));
+        if (avatar.getMultiPath() != null) {
+            avatar.getMultiPath().save();
+            player.sendPacket(new PacketPlayerSyncScNotify(avatar.getMultiPath()));
         } else {
             avatar.save();
             player.sendPacket(new PacketPlayerSyncScNotify(avatar));

@@ -19,17 +19,17 @@ public final class SceneEntityTeleportScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 6;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 12;</code>
      */
     private int clientPosVersion;
 
     /**
-     * <code>optional .EntityMotion entity_motion = 11;</code>
+     * <code>optional .EntityMotion entity_motion = 9;</code>
      */
     private final EntityMotionOuterClass.EntityMotion entityMotion = EntityMotionOuterClass.EntityMotion.newInstance();
 
@@ -44,7 +44,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 6;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -52,7 +52,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 6;</code>
      * @return this
      */
     public SceneEntityTeleportScRsp clearRetcode() {
@@ -62,7 +62,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 6;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -70,7 +70,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 6;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -81,7 +81,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 12;</code>
      * @return whether the clientPosVersion field is set
      */
     public boolean hasClientPosVersion() {
@@ -89,7 +89,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 12;</code>
      * @return this
      */
     public SceneEntityTeleportScRsp clearClientPosVersion() {
@@ -99,7 +99,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 12;</code>
      * @return the clientPosVersion
      */
     public int getClientPosVersion() {
@@ -107,7 +107,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_pos_version = 15;</code>
+     * <code>optional uint32 client_pos_version = 12;</code>
      * @param value the clientPosVersion to set
      * @return this
      */
@@ -118,7 +118,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional .EntityMotion entity_motion = 11;</code>
+     * <code>optional .EntityMotion entity_motion = 9;</code>
      * @return whether the entityMotion field is set
      */
     public boolean hasEntityMotion() {
@@ -126,7 +126,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional .EntityMotion entity_motion = 11;</code>
+     * <code>optional .EntityMotion entity_motion = 9;</code>
      * @return this
      */
     public SceneEntityTeleportScRsp clearEntityMotion() {
@@ -136,7 +136,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional .EntityMotion entity_motion = 11;</code>
+     * <code>optional .EntityMotion entity_motion = 9;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -150,7 +150,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional .EntityMotion entity_motion = 11;</code>
+     * <code>optional .EntityMotion entity_motion = 9;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -164,7 +164,7 @@ public final class SceneEntityTeleportScRspOuterClass {
     }
 
     /**
-     * <code>optional .EntityMotion entity_motion = 11;</code>
+     * <code>optional .EntityMotion entity_motion = 9;</code>
      * @param value the entityMotion to set
      * @return this
      */
@@ -247,15 +247,15 @@ public final class SceneEntityTeleportScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 96);
         output.writeUInt32NoTag(clientPosVersion);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 90);
+        output.writeRawByte((byte) 74);
         output.writeMessageNoTag(entityMotion);
       }
     }
@@ -282,25 +282,25 @@ public final class SceneEntityTeleportScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 112: {
+          case 48: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 96) {
               break;
             }
           }
-          case 120: {
+          case 96: {
             // clientPosVersion
             clientPosVersion = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 90) {
+            if (tag != 74) {
               break;
             }
           }
-          case 90: {
+          case 74: {
             // entityMotion
             input.readMessage(entityMotion);
             bitField0_ |= 0x00000004;

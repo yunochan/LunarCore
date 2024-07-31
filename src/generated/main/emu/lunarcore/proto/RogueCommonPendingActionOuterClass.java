@@ -19,12 +19,12 @@ public final class RogueCommonPendingActionOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 unique_id = 4;</code>
+     * <code>optional uint32 unique_id = 5;</code>
      */
     private int uniqueId;
 
     /**
-     * <code>optional .RogueAction rogue_action = 7;</code>
+     * <code>optional .RogueAction rogue_action = 12;</code>
      */
     private final RogueActionOuterClass.RogueAction rogueAction = RogueActionOuterClass.RogueAction.newInstance();
 
@@ -39,7 +39,7 @@ public final class RogueCommonPendingActionOuterClass {
     }
 
     /**
-     * <code>optional uint32 unique_id = 4;</code>
+     * <code>optional uint32 unique_id = 5;</code>
      * @return whether the uniqueId field is set
      */
     public boolean hasUniqueId() {
@@ -47,7 +47,7 @@ public final class RogueCommonPendingActionOuterClass {
     }
 
     /**
-     * <code>optional uint32 unique_id = 4;</code>
+     * <code>optional uint32 unique_id = 5;</code>
      * @return this
      */
     public RogueCommonPendingAction clearUniqueId() {
@@ -57,7 +57,7 @@ public final class RogueCommonPendingActionOuterClass {
     }
 
     /**
-     * <code>optional uint32 unique_id = 4;</code>
+     * <code>optional uint32 unique_id = 5;</code>
      * @return the uniqueId
      */
     public int getUniqueId() {
@@ -65,7 +65,7 @@ public final class RogueCommonPendingActionOuterClass {
     }
 
     /**
-     * <code>optional uint32 unique_id = 4;</code>
+     * <code>optional uint32 unique_id = 5;</code>
      * @param value the uniqueId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class RogueCommonPendingActionOuterClass {
     }
 
     /**
-     * <code>optional .RogueAction rogue_action = 7;</code>
+     * <code>optional .RogueAction rogue_action = 12;</code>
      * @return whether the rogueAction field is set
      */
     public boolean hasRogueAction() {
@@ -84,7 +84,7 @@ public final class RogueCommonPendingActionOuterClass {
     }
 
     /**
-     * <code>optional .RogueAction rogue_action = 7;</code>
+     * <code>optional .RogueAction rogue_action = 12;</code>
      * @return this
      */
     public RogueCommonPendingAction clearRogueAction() {
@@ -94,7 +94,7 @@ public final class RogueCommonPendingActionOuterClass {
     }
 
     /**
-     * <code>optional .RogueAction rogue_action = 7;</code>
+     * <code>optional .RogueAction rogue_action = 12;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -108,7 +108,7 @@ public final class RogueCommonPendingActionOuterClass {
     }
 
     /**
-     * <code>optional .RogueAction rogue_action = 7;</code>
+     * <code>optional .RogueAction rogue_action = 12;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -122,7 +122,7 @@ public final class RogueCommonPendingActionOuterClass {
     }
 
     /**
-     * <code>optional .RogueAction rogue_action = 7;</code>
+     * <code>optional .RogueAction rogue_action = 12;</code>
      * @param value the rogueAction to set
      * @return this
      */
@@ -198,11 +198,11 @@ public final class RogueCommonPendingActionOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(uniqueId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 58);
+        output.writeRawByte((byte) 98);
         output.writeMessageNoTag(rogueAction);
       }
     }
@@ -226,16 +226,16 @@ public final class RogueCommonPendingActionOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 32: {
+          case 40: {
             // uniqueId
             uniqueId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 98) {
               break;
             }
           }
-          case 58: {
+          case 98: {
             // rogueAction
             input.readMessage(rogueAction);
             bitField0_ |= 0x00000002;

@@ -25,7 +25,7 @@ public final class GetUnlockTeleportScRspOuterClass {
     private int retcode;
 
     /**
-     * <code>repeated uint32 unlocked_teleport_list = 1;</code>
+     * <code>repeated uint32 unlocked_teleport_list = 9;</code>
      */
     private final RepeatedInt unlockedTeleportList = RepeatedInt.newEmptyInstance();
 
@@ -77,7 +77,7 @@ public final class GetUnlockTeleportScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 unlocked_teleport_list = 1;</code>
+     * <code>repeated uint32 unlocked_teleport_list = 9;</code>
      * @return whether the unlockedTeleportList field is set
      */
     public boolean hasUnlockedTeleportList() {
@@ -85,7 +85,7 @@ public final class GetUnlockTeleportScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 unlocked_teleport_list = 1;</code>
+     * <code>repeated uint32 unlocked_teleport_list = 9;</code>
      * @return this
      */
     public GetUnlockTeleportScRsp clearUnlockedTeleportList() {
@@ -95,7 +95,7 @@ public final class GetUnlockTeleportScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 unlocked_teleport_list = 1;</code>
+     * <code>repeated uint32 unlocked_teleport_list = 9;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -109,7 +109,7 @@ public final class GetUnlockTeleportScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 unlocked_teleport_list = 1;</code>
+     * <code>repeated uint32 unlocked_teleport_list = 9;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -123,7 +123,7 @@ public final class GetUnlockTeleportScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 unlocked_teleport_list = 1;</code>
+     * <code>repeated uint32 unlocked_teleport_list = 9;</code>
      * @param value the unlockedTeleportList to add
      * @return this
      */
@@ -134,7 +134,7 @@ public final class GetUnlockTeleportScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 unlocked_teleport_list = 1;</code>
+     * <code>repeated uint32 unlocked_teleport_list = 9;</code>
      * @param values the unlockedTeleportList to add
      * @return this
      */
@@ -215,7 +215,7 @@ public final class GetUnlockTeleportScRspOuterClass {
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < unlockedTeleportList.length(); i++) {
-          output.writeRawByte((byte) 8);
+          output.writeRawByte((byte) 72);
           output.writeUInt32NoTag(unlockedTeleportList.array()[i]);
         }
       }
@@ -245,11 +245,11 @@ public final class GetUnlockTeleportScRspOuterClass {
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 10) {
+            if (tag != 74) {
               break;
             }
           }
-          case 10: {
+          case 74: {
             // unlockedTeleportList [packed=true]
             input.readPackedUInt32(unlockedTeleportList, tag);
             bitField0_ |= 0x00000002;
@@ -268,7 +268,7 @@ public final class GetUnlockTeleportScRspOuterClass {
             tag = input.readTag();
             break;
           }
-          case 8: {
+          case 72: {
             // unlockedTeleportList [packed=false]
             tag = input.readRepeatedUInt32(unlockedTeleportList, tag);
             bitField0_ |= 0x00000002;

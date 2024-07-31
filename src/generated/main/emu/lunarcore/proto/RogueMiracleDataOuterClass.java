@@ -19,7 +19,11 @@ public final class RogueMiracleDataOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .RogueMiracle rogue_miracle = 1;</code>
+     * <pre>
+     *  13, 2 or 6
+     * </pre>
+     *
+     * <code>optional .RogueMiracle rogue_miracle = 2;</code>
      */
     private final RogueMiracleOuterClass.RogueMiracle rogueMiracle = RogueMiracleOuterClass.RogueMiracle.newInstance();
 
@@ -34,7 +38,11 @@ public final class RogueMiracleDataOuterClass {
     }
 
     /**
-     * <code>optional .RogueMiracle rogue_miracle = 1;</code>
+     * <pre>
+     *  13, 2 or 6
+     * </pre>
+     *
+     * <code>optional .RogueMiracle rogue_miracle = 2;</code>
      * @return whether the rogueMiracle field is set
      */
     public boolean hasRogueMiracle() {
@@ -42,7 +50,11 @@ public final class RogueMiracleDataOuterClass {
     }
 
     /**
-     * <code>optional .RogueMiracle rogue_miracle = 1;</code>
+     * <pre>
+     *  13, 2 or 6
+     * </pre>
+     *
+     * <code>optional .RogueMiracle rogue_miracle = 2;</code>
      * @return this
      */
     public RogueMiracleData clearRogueMiracle() {
@@ -52,7 +64,11 @@ public final class RogueMiracleDataOuterClass {
     }
 
     /**
-     * <code>optional .RogueMiracle rogue_miracle = 1;</code>
+     * <pre>
+     *  13, 2 or 6
+     * </pre>
+     *
+     * <code>optional .RogueMiracle rogue_miracle = 2;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -66,7 +82,11 @@ public final class RogueMiracleDataOuterClass {
     }
 
     /**
-     * <code>optional .RogueMiracle rogue_miracle = 1;</code>
+     * <pre>
+     *  13, 2 or 6
+     * </pre>
+     *
+     * <code>optional .RogueMiracle rogue_miracle = 2;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -80,7 +100,11 @@ public final class RogueMiracleDataOuterClass {
     }
 
     /**
-     * <code>optional .RogueMiracle rogue_miracle = 1;</code>
+     * <pre>
+     *  13, 2 or 6
+     * </pre>
+     *
+     * <code>optional .RogueMiracle rogue_miracle = 2;</code>
      * @param value the rogueMiracle to set
      * @return this
      */
@@ -150,7 +174,7 @@ public final class RogueMiracleDataOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 10);
+        output.writeRawByte((byte) 18);
         output.writeMessageNoTag(rogueMiracle);
       }
     }
@@ -171,7 +195,7 @@ public final class RogueMiracleDataOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 10: {
+          case 18: {
             // rogueMiracle
             input.readMessage(rogueMiracle);
             bitField0_ |= 0x00000001;

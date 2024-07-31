@@ -20,17 +20,17 @@ public final class FriendListInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .PlayingState playing_state = 9;</code>
+     * <code>optional .PlayingState playing_state = 14;</code>
      */
     private int playingState;
 
     /**
-     * <code>optional bool is_marked = 7;</code>
+     * <code>optional bool is_marked = 8;</code>
      */
     private boolean isMarked;
 
     /**
-     * <code>optional .SimpleInfo simple_info = 2;</code>
+     * <code>optional .SimpleInfo simple_info = 1;</code>
      */
     private final SimpleInfoOuterClass.SimpleInfo simpleInfo = SimpleInfoOuterClass.SimpleInfo.newInstance();
 
@@ -50,7 +50,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional .PlayingState playing_state = 9;</code>
+     * <code>optional .PlayingState playing_state = 14;</code>
      * @return whether the playingState field is set
      */
     public boolean hasPlayingState() {
@@ -58,7 +58,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional .PlayingState playing_state = 9;</code>
+     * <code>optional .PlayingState playing_state = 14;</code>
      * @return this
      */
     public FriendListInfo clearPlayingState() {
@@ -68,7 +68,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional .PlayingState playing_state = 9;</code>
+     * <code>optional .PlayingState playing_state = 14;</code>
      * @return the playingState
      */
     public PlayingStateOuterClass.PlayingState getPlayingState() {
@@ -101,7 +101,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional .PlayingState playing_state = 9;</code>
+     * <code>optional .PlayingState playing_state = 14;</code>
      * @param value the playingState to set
      * @return this
      */
@@ -112,7 +112,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional bool is_marked = 7;</code>
+     * <code>optional bool is_marked = 8;</code>
      * @return whether the isMarked field is set
      */
     public boolean hasIsMarked() {
@@ -120,7 +120,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional bool is_marked = 7;</code>
+     * <code>optional bool is_marked = 8;</code>
      * @return this
      */
     public FriendListInfo clearIsMarked() {
@@ -130,7 +130,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional bool is_marked = 7;</code>
+     * <code>optional bool is_marked = 8;</code>
      * @return the isMarked
      */
     public boolean getIsMarked() {
@@ -138,7 +138,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional bool is_marked = 7;</code>
+     * <code>optional bool is_marked = 8;</code>
      * @param value the isMarked to set
      * @return this
      */
@@ -149,7 +149,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional .SimpleInfo simple_info = 2;</code>
+     * <code>optional .SimpleInfo simple_info = 1;</code>
      * @return whether the simpleInfo field is set
      */
     public boolean hasSimpleInfo() {
@@ -157,7 +157,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional .SimpleInfo simple_info = 2;</code>
+     * <code>optional .SimpleInfo simple_info = 1;</code>
      * @return this
      */
     public FriendListInfo clearSimpleInfo() {
@@ -167,7 +167,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional .SimpleInfo simple_info = 2;</code>
+     * <code>optional .SimpleInfo simple_info = 1;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -181,7 +181,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional .SimpleInfo simple_info = 2;</code>
+     * <code>optional .SimpleInfo simple_info = 1;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -195,7 +195,7 @@ public final class FriendListInfoOuterClass {
     }
 
     /**
-     * <code>optional .SimpleInfo simple_info = 2;</code>
+     * <code>optional .SimpleInfo simple_info = 1;</code>
      * @param value the simpleInfo to set
      * @return this
      */
@@ -349,15 +349,15 @@ public final class FriendListInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 112);
         output.writeEnumNoTag(playingState);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 64);
         output.writeBoolNoTag(isMarked);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 18);
+        output.writeRawByte((byte) 10);
         output.writeMessageNoTag(simpleInfo);
       }
       if ((bitField0_ & 0x00000008) != 0) {
@@ -391,7 +391,7 @@ public final class FriendListInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
+          case 112: {
             // playingState
             final int value = input.readInt32();
             if (PlayingStateOuterClass.PlayingState.forNumber(value) != null) {
@@ -399,20 +399,20 @@ public final class FriendListInfoOuterClass {
               bitField0_ |= 0x00000001;
             }
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 64) {
               break;
             }
           }
-          case 56: {
+          case 64: {
             // isMarked
             isMarked = input.readBool();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 18) {
+            if (tag != 10) {
               break;
             }
           }
-          case 18: {
+          case 10: {
             // simpleInfo
             input.readMessage(simpleInfo);
             bitField0_ |= 0x00000004;

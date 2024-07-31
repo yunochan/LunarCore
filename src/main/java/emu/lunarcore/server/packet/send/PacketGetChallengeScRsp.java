@@ -36,7 +36,7 @@ public class PacketGetChallengeScRsp extends BasePacket {
                         boss.getMutableSecondNode();
                     }
                     
-                    data.addChallengeList(proto);
+                    //data.addChallengeList(proto);
                 }
             }
         } else {

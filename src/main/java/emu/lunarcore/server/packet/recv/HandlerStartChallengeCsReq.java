@@ -17,18 +17,18 @@ public class HandlerStartChallengeCsReq extends PacketHandler {
         int firstHalfBuff = 0;
         int secondHalfBuff = 0;
 
-        if (req.getMutableStoryInfo().hasNewStoryBuffInfo()) {
-            var storyBuffs = req.getMutableStoryInfo().getMutableNewStoryBuffInfo();
+        if (req.getMutableExtInfo().hasNewStoryBuffInfo()) {
+            var storyBuffs = req.getMutableExtInfo().getMutableNewStoryBuffInfo();
             firstHalfBuff = storyBuffs.getFirstHalf();
             secondHalfBuff = storyBuffs.getSecondHalf();
-        } else if (req.getMutableStoryInfo().hasStoryBuffInfo()) {
-            var storyBuffs = req.getMutableStoryInfo().getMutableStoryBuffInfo();
+        } else if (req.getMutableExtInfo().hasStoryBuffInfo()) {
+            var storyBuffs = req.getMutableExtInfo().getMutableStoryBuffInfo();
             firstHalfBuff = storyBuffs.getStoryBuffOne();
             secondHalfBuff = storyBuffs.getStoryBuffTwo();
         }
         
         // Start challenge
-        session.getPlayer().getChallengeManager().startChallenge(req.getChallengeId(), req.getLineup1(), req.getLineup2(), firstHalfBuff, secondHalfBuff);
+        session.getPlayer().getChallengeManager().startChallenge(req.getChallengeId(), req.getFirstHalfLineup(), req.getSecondHalfLineup(), firstHalfBuff, secondHalfBuff);
     }
 
 }

@@ -19,12 +19,12 @@ public final class SyncRogueMapRoomScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 map_id = 5;</code>
+     * <code>optional uint32 map_id = 6;</code>
      */
     private int mapId;
 
     /**
-     * <code>optional .RogueRoom cur_room = 13;</code>
+     * <code>optional .RogueRoom cur_room = 8;</code>
      */
     private final RogueRoomOuterClass.RogueRoom curRoom = RogueRoomOuterClass.RogueRoom.newInstance();
 
@@ -39,7 +39,7 @@ public final class SyncRogueMapRoomScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 map_id = 5;</code>
+     * <code>optional uint32 map_id = 6;</code>
      * @return whether the mapId field is set
      */
     public boolean hasMapId() {
@@ -47,7 +47,7 @@ public final class SyncRogueMapRoomScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 map_id = 5;</code>
+     * <code>optional uint32 map_id = 6;</code>
      * @return this
      */
     public SyncRogueMapRoomScNotify clearMapId() {
@@ -57,7 +57,7 @@ public final class SyncRogueMapRoomScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 map_id = 5;</code>
+     * <code>optional uint32 map_id = 6;</code>
      * @return the mapId
      */
     public int getMapId() {
@@ -65,7 +65,7 @@ public final class SyncRogueMapRoomScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 map_id = 5;</code>
+     * <code>optional uint32 map_id = 6;</code>
      * @param value the mapId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class SyncRogueMapRoomScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueRoom cur_room = 13;</code>
+     * <code>optional .RogueRoom cur_room = 8;</code>
      * @return whether the curRoom field is set
      */
     public boolean hasCurRoom() {
@@ -84,7 +84,7 @@ public final class SyncRogueMapRoomScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueRoom cur_room = 13;</code>
+     * <code>optional .RogueRoom cur_room = 8;</code>
      * @return this
      */
     public SyncRogueMapRoomScNotify clearCurRoom() {
@@ -94,7 +94,7 @@ public final class SyncRogueMapRoomScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueRoom cur_room = 13;</code>
+     * <code>optional .RogueRoom cur_room = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -108,7 +108,7 @@ public final class SyncRogueMapRoomScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueRoom cur_room = 13;</code>
+     * <code>optional .RogueRoom cur_room = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -122,7 +122,7 @@ public final class SyncRogueMapRoomScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueRoom cur_room = 13;</code>
+     * <code>optional .RogueRoom cur_room = 8;</code>
      * @param value the curRoom to set
      * @return this
      */
@@ -198,11 +198,11 @@ public final class SyncRogueMapRoomScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(mapId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 106);
+        output.writeRawByte((byte) 66);
         output.writeMessageNoTag(curRoom);
       }
     }
@@ -226,16 +226,16 @@ public final class SyncRogueMapRoomScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
+          case 48: {
             // mapId
             mapId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 106) {
+            if (tag != 66) {
               break;
             }
           }
-          case 106: {
+          case 66: {
             // curRoom
             input.readMessage(curRoom);
             bitField0_ |= 0x00000002;

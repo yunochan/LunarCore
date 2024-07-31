@@ -20,27 +20,27 @@ public final class ChallengeBossInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional bool PPNAGBNIOAO = 10;</code>
-     */
-    private boolean pPNAGBNIOAO;
-
-    /**
      * <pre>
-     *  map<uint32, OEFEMMIAGIG> KCKMGDGIFIF = 8;
+     *  map<uint32, JBDNIEFPHLE> MPHILJEPBDD = 3;
      * </pre>
      *
-     * <code>optional .ChallengeBossSingleNodeInfo second_node = 12;</code>
+     * <code>optional bool ACGHCDLBCGD = 14;</code>
      */
-    private final ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo secondNode = ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo.newInstance();
+    private boolean aCGHCDLBCGD;
 
     /**
-     * <code>optional .ChallengeBossSingleNodeInfo first_node = 15;</code>
+     * <code>optional .ChallengeBossSingleNodeInfo first_node = 1;</code>
      */
     private final ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo firstNode = ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo.newInstance();
 
     /**
+     * <code>optional .ChallengeBossSingleNodeInfo second_node = 5;</code>
+     */
+    private final ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo secondNode = ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo.newInstance();
+
+    /**
      * <pre>
-     *  map<uint32, FMGCMMOJNPH> PADHAGKGGPB = 7;
+     *  map<uint32, BMLNHLAGLIP> GJPKHDHDCDN = 12;
      * </pre>
      *
      * <code>repeated uint32 lineup2 = 2;</code>
@@ -48,7 +48,7 @@ public final class ChallengeBossInfoOuterClass {
     private final RepeatedInt lineup2 = RepeatedInt.newEmptyInstance();
 
     /**
-     * <code>repeated uint32 lineup1 = 13;</code>
+     * <code>repeated uint32 lineup1 = 11;</code>
      */
     private final RepeatedInt lineup1 = RepeatedInt.newEmptyInstance();
 
@@ -63,141 +63,78 @@ public final class ChallengeBossInfoOuterClass {
     }
 
     /**
-     * <code>optional bool PPNAGBNIOAO = 10;</code>
-     * @return whether the pPNAGBNIOAO field is set
+     * <pre>
+     *  map<uint32, JBDNIEFPHLE> MPHILJEPBDD = 3;
+     * </pre>
+     *
+     * <code>optional bool ACGHCDLBCGD = 14;</code>
+     * @return whether the aCGHCDLBCGD field is set
      */
-    public boolean hasPPNAGBNIOAO() {
+    public boolean hasACGHCDLBCGD() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional bool PPNAGBNIOAO = 10;</code>
+     * <pre>
+     *  map<uint32, JBDNIEFPHLE> MPHILJEPBDD = 3;
+     * </pre>
+     *
+     * <code>optional bool ACGHCDLBCGD = 14;</code>
      * @return this
      */
-    public ChallengeBossInfo clearPPNAGBNIOAO() {
+    public ChallengeBossInfo clearACGHCDLBCGD() {
       bitField0_ &= ~0x00000001;
-      pPNAGBNIOAO = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool PPNAGBNIOAO = 10;</code>
-     * @return the pPNAGBNIOAO
-     */
-    public boolean getPPNAGBNIOAO() {
-      return pPNAGBNIOAO;
-    }
-
-    /**
-     * <code>optional bool PPNAGBNIOAO = 10;</code>
-     * @param value the pPNAGBNIOAO to set
-     * @return this
-     */
-    public ChallengeBossInfo setPPNAGBNIOAO(final boolean value) {
-      bitField0_ |= 0x00000001;
-      pPNAGBNIOAO = value;
+      aCGHCDLBCGD = false;
       return this;
     }
 
     /**
      * <pre>
-     *  map<uint32, OEFEMMIAGIG> KCKMGDGIFIF = 8;
+     *  map<uint32, JBDNIEFPHLE> MPHILJEPBDD = 3;
      * </pre>
      *
-     * <code>optional .ChallengeBossSingleNodeInfo second_node = 12;</code>
-     * @return whether the secondNode field is set
+     * <code>optional bool ACGHCDLBCGD = 14;</code>
+     * @return the aCGHCDLBCGD
      */
-    public boolean hasSecondNode() {
+    public boolean getACGHCDLBCGD() {
+      return aCGHCDLBCGD;
+    }
+
+    /**
+     * <pre>
+     *  map<uint32, JBDNIEFPHLE> MPHILJEPBDD = 3;
+     * </pre>
+     *
+     * <code>optional bool ACGHCDLBCGD = 14;</code>
+     * @param value the aCGHCDLBCGD to set
+     * @return this
+     */
+    public ChallengeBossInfo setACGHCDLBCGD(final boolean value) {
+      bitField0_ |= 0x00000001;
+      aCGHCDLBCGD = value;
+      return this;
+    }
+
+    /**
+     * <code>optional .ChallengeBossSingleNodeInfo first_node = 1;</code>
+     * @return whether the firstNode field is set
+     */
+    public boolean hasFirstNode() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <pre>
-     *  map<uint32, OEFEMMIAGIG> KCKMGDGIFIF = 8;
-     * </pre>
-     *
-     * <code>optional .ChallengeBossSingleNodeInfo second_node = 12;</code>
-     * @return this
-     */
-    public ChallengeBossInfo clearSecondNode() {
-      bitField0_ &= ~0x00000002;
-      secondNode.clear();
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  map<uint32, OEFEMMIAGIG> KCKMGDGIFIF = 8;
-     * </pre>
-     *
-     * <code>optional .ChallengeBossSingleNodeInfo second_node = 12;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableSecondNode()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo getSecondNode() {
-      return secondNode;
-    }
-
-    /**
-     * <pre>
-     *  map<uint32, OEFEMMIAGIG> KCKMGDGIFIF = 8;
-     * </pre>
-     *
-     * <code>optional .ChallengeBossSingleNodeInfo second_node = 12;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo getMutableSecondNode(
-        ) {
-      bitField0_ |= 0x00000002;
-      return secondNode;
-    }
-
-    /**
-     * <pre>
-     *  map<uint32, OEFEMMIAGIG> KCKMGDGIFIF = 8;
-     * </pre>
-     *
-     * <code>optional .ChallengeBossSingleNodeInfo second_node = 12;</code>
-     * @param value the secondNode to set
-     * @return this
-     */
-    public ChallengeBossInfo setSecondNode(
-        final ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo value) {
-      bitField0_ |= 0x00000002;
-      secondNode.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional .ChallengeBossSingleNodeInfo first_node = 15;</code>
-     * @return whether the firstNode field is set
-     */
-    public boolean hasFirstNode() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional .ChallengeBossSingleNodeInfo first_node = 15;</code>
+     * <code>optional .ChallengeBossSingleNodeInfo first_node = 1;</code>
      * @return this
      */
     public ChallengeBossInfo clearFirstNode() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000002;
       firstNode.clear();
       return this;
     }
 
     /**
-     * <code>optional .ChallengeBossSingleNodeInfo first_node = 15;</code>
+     * <code>optional .ChallengeBossSingleNodeInfo first_node = 1;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -211,7 +148,7 @@ public final class ChallengeBossInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChallengeBossSingleNodeInfo first_node = 15;</code>
+     * <code>optional .ChallengeBossSingleNodeInfo first_node = 1;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -220,25 +157,84 @@ public final class ChallengeBossInfoOuterClass {
      * @return internal storage object for modifications
      */
     public ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo getMutableFirstNode() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       return firstNode;
     }
 
     /**
-     * <code>optional .ChallengeBossSingleNodeInfo first_node = 15;</code>
+     * <code>optional .ChallengeBossSingleNodeInfo first_node = 1;</code>
      * @param value the firstNode to set
      * @return this
      */
     public ChallengeBossInfo setFirstNode(
         final ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       firstNode.copyFrom(value);
       return this;
     }
 
     /**
+     * <code>optional .ChallengeBossSingleNodeInfo second_node = 5;</code>
+     * @return whether the secondNode field is set
+     */
+    public boolean hasSecondNode() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional .ChallengeBossSingleNodeInfo second_node = 5;</code>
+     * @return this
+     */
+    public ChallengeBossInfo clearSecondNode() {
+      bitField0_ &= ~0x00000004;
+      secondNode.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional .ChallengeBossSingleNodeInfo second_node = 5;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableSecondNode()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo getSecondNode() {
+      return secondNode;
+    }
+
+    /**
+     * <code>optional .ChallengeBossSingleNodeInfo second_node = 5;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo getMutableSecondNode(
+        ) {
+      bitField0_ |= 0x00000004;
+      return secondNode;
+    }
+
+    /**
+     * <code>optional .ChallengeBossSingleNodeInfo second_node = 5;</code>
+     * @param value the secondNode to set
+     * @return this
+     */
+    public ChallengeBossInfo setSecondNode(
+        final ChallengeBossSingleNodeInfoOuterClass.ChallengeBossSingleNodeInfo value) {
+      bitField0_ |= 0x00000004;
+      secondNode.copyFrom(value);
+      return this;
+    }
+
+    /**
      * <pre>
-     *  map<uint32, FMGCMMOJNPH> PADHAGKGGPB = 7;
+     *  map<uint32, BMLNHLAGLIP> GJPKHDHDCDN = 12;
      * </pre>
      *
      * <code>repeated uint32 lineup2 = 2;</code>
@@ -250,7 +246,7 @@ public final class ChallengeBossInfoOuterClass {
 
     /**
      * <pre>
-     *  map<uint32, FMGCMMOJNPH> PADHAGKGGPB = 7;
+     *  map<uint32, BMLNHLAGLIP> GJPKHDHDCDN = 12;
      * </pre>
      *
      * <code>repeated uint32 lineup2 = 2;</code>
@@ -264,7 +260,7 @@ public final class ChallengeBossInfoOuterClass {
 
     /**
      * <pre>
-     *  map<uint32, FMGCMMOJNPH> PADHAGKGGPB = 7;
+     *  map<uint32, BMLNHLAGLIP> GJPKHDHDCDN = 12;
      * </pre>
      *
      * <code>repeated uint32 lineup2 = 2;</code>
@@ -282,7 +278,7 @@ public final class ChallengeBossInfoOuterClass {
 
     /**
      * <pre>
-     *  map<uint32, FMGCMMOJNPH> PADHAGKGGPB = 7;
+     *  map<uint32, BMLNHLAGLIP> GJPKHDHDCDN = 12;
      * </pre>
      *
      * <code>repeated uint32 lineup2 = 2;</code>
@@ -300,7 +296,7 @@ public final class ChallengeBossInfoOuterClass {
 
     /**
      * <pre>
-     *  map<uint32, FMGCMMOJNPH> PADHAGKGGPB = 7;
+     *  map<uint32, BMLNHLAGLIP> GJPKHDHDCDN = 12;
      * </pre>
      *
      * <code>repeated uint32 lineup2 = 2;</code>
@@ -315,7 +311,7 @@ public final class ChallengeBossInfoOuterClass {
 
     /**
      * <pre>
-     *  map<uint32, FMGCMMOJNPH> PADHAGKGGPB = 7;
+     *  map<uint32, BMLNHLAGLIP> GJPKHDHDCDN = 12;
      * </pre>
      *
      * <code>repeated uint32 lineup2 = 2;</code>
@@ -329,7 +325,7 @@ public final class ChallengeBossInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 lineup1 = 13;</code>
+     * <code>repeated uint32 lineup1 = 11;</code>
      * @return whether the lineup1 field is set
      */
     public boolean hasLineup1() {
@@ -337,7 +333,7 @@ public final class ChallengeBossInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 lineup1 = 13;</code>
+     * <code>repeated uint32 lineup1 = 11;</code>
      * @return this
      */
     public ChallengeBossInfo clearLineup1() {
@@ -347,7 +343,7 @@ public final class ChallengeBossInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 lineup1 = 13;</code>
+     * <code>repeated uint32 lineup1 = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -361,7 +357,7 @@ public final class ChallengeBossInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 lineup1 = 13;</code>
+     * <code>repeated uint32 lineup1 = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -375,7 +371,7 @@ public final class ChallengeBossInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 lineup1 = 13;</code>
+     * <code>repeated uint32 lineup1 = 11;</code>
      * @param value the lineup1 to add
      * @return this
      */
@@ -386,7 +382,7 @@ public final class ChallengeBossInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 lineup1 = 13;</code>
+     * <code>repeated uint32 lineup1 = 11;</code>
      * @param values the lineup1 to add
      * @return this
      */
@@ -401,9 +397,9 @@ public final class ChallengeBossInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        pPNAGBNIOAO = other.pPNAGBNIOAO;
-        secondNode.copyFrom(other.secondNode);
+        aCGHCDLBCGD = other.aCGHCDLBCGD;
         firstNode.copyFrom(other.firstNode);
+        secondNode.copyFrom(other.secondNode);
         lineup2.copyFrom(other.lineup2);
         lineup1.copyFrom(other.lineup1);
       }
@@ -416,14 +412,14 @@ public final class ChallengeBossInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasPPNAGBNIOAO()) {
-        setPPNAGBNIOAO(other.pPNAGBNIOAO);
-      }
-      if (other.hasSecondNode()) {
-        getMutableSecondNode().mergeFrom(other.secondNode);
+      if (other.hasACGHCDLBCGD()) {
+        setACGHCDLBCGD(other.aCGHCDLBCGD);
       }
       if (other.hasFirstNode()) {
         getMutableFirstNode().mergeFrom(other.firstNode);
+      }
+      if (other.hasSecondNode()) {
+        getMutableSecondNode().mergeFrom(other.secondNode);
       }
       if (other.hasLineup2()) {
         getMutableLineup2().addAll(other.lineup2);
@@ -441,9 +437,9 @@ public final class ChallengeBossInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      pPNAGBNIOAO = false;
-      secondNode.clear();
+      aCGHCDLBCGD = false;
       firstNode.clear();
+      secondNode.clear();
       lineup2.clear();
       lineup1.clear();
       return this;
@@ -456,8 +452,8 @@ public final class ChallengeBossInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      secondNode.clearQuick();
       firstNode.clearQuick();
+      secondNode.clearQuick();
       lineup2.clear();
       lineup1.clear();
       return this;
@@ -473,9 +469,9 @@ public final class ChallengeBossInfoOuterClass {
       }
       ChallengeBossInfo other = (ChallengeBossInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasPPNAGBNIOAO() || pPNAGBNIOAO == other.pPNAGBNIOAO)
-        && (!hasSecondNode() || secondNode.equals(other.secondNode))
+        && (!hasACGHCDLBCGD() || aCGHCDLBCGD == other.aCGHCDLBCGD)
         && (!hasFirstNode() || firstNode.equals(other.firstNode))
+        && (!hasSecondNode() || secondNode.equals(other.secondNode))
         && (!hasLineup2() || lineup2.equals(other.lineup2))
         && (!hasLineup1() || lineup1.equals(other.lineup1));
     }
@@ -483,16 +479,16 @@ public final class ChallengeBossInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
-        output.writeBoolNoTag(pPNAGBNIOAO);
+        output.writeRawByte((byte) 112);
+        output.writeBoolNoTag(aCGHCDLBCGD);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 98);
-        output.writeMessageNoTag(secondNode);
+        output.writeRawByte((byte) 10);
+        output.writeMessageNoTag(firstNode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 122);
-        output.writeMessageNoTag(firstNode);
+        output.writeRawByte((byte) 42);
+        output.writeMessageNoTag(secondNode);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         for (int i = 0; i < lineup2.length(); i++) {
@@ -502,7 +498,7 @@ public final class ChallengeBossInfoOuterClass {
       }
       if ((bitField0_ & 0x00000010) != 0) {
         for (int i = 0; i < lineup1.length(); i++) {
-          output.writeRawByte((byte) 104);
+          output.writeRawByte((byte) 88);
           output.writeUInt32NoTag(lineup1.array()[i]);
         }
       }
@@ -515,10 +511,10 @@ public final class ChallengeBossInfoOuterClass {
         size += 2;
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(secondNode);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(firstNode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(firstNode);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(secondNode);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         size += (1 * lineup2.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(lineup2);
@@ -536,27 +532,27 @@ public final class ChallengeBossInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
-            // pPNAGBNIOAO
-            pPNAGBNIOAO = input.readBool();
+          case 112: {
+            // aCGHCDLBCGD
+            aCGHCDLBCGD = input.readBool();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 98) {
+            if (tag != 10) {
               break;
             }
           }
-          case 98: {
-            // secondNode
-            input.readMessage(secondNode);
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 122) {
-              break;
-            }
-          }
-          case 122: {
+          case 10: {
             // firstNode
             input.readMessage(firstNode);
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 42) {
+              break;
+            }
+          }
+          case 42: {
+            // secondNode
+            input.readMessage(secondNode);
             bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 18) {
@@ -568,11 +564,11 @@ public final class ChallengeBossInfoOuterClass {
             input.readPackedUInt32(lineup2, tag);
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 106) {
+            if (tag != 90) {
               break;
             }
           }
-          case 106: {
+          case 90: {
             // lineup1 [packed=true]
             input.readPackedUInt32(lineup1, tag);
             bitField0_ |= 0x00000010;
@@ -597,7 +593,7 @@ public final class ChallengeBossInfoOuterClass {
             bitField0_ |= 0x00000008;
             break;
           }
-          case 104: {
+          case 88: {
             // lineup1 [packed=false]
             tag = input.readRepeatedUInt32(lineup1, tag);
             bitField0_ |= 0x00000010;
@@ -611,13 +607,13 @@ public final class ChallengeBossInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeBool(FieldNames.pPNAGBNIOAO, pPNAGBNIOAO);
+        output.writeBool(FieldNames.aCGHCDLBCGD, aCGHCDLBCGD);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeMessage(FieldNames.secondNode, secondNode);
+        output.writeMessage(FieldNames.firstNode, firstNode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeMessage(FieldNames.firstNode, firstNode);
+        output.writeMessage(FieldNames.secondNode, secondNode);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeRepeatedUInt32(FieldNames.lineup2, lineup2);
@@ -635,23 +631,11 @@ public final class ChallengeBossInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -1940308460: {
-            if (input.isAtField(FieldNames.pPNAGBNIOAO)) {
+          case 1681027462: {
+            if (input.isAtField(FieldNames.aCGHCDLBCGD)) {
               if (!input.trySkipNullValue()) {
-                pPNAGBNIOAO = input.readBool();
+                aCGHCDLBCGD = input.readBool();
                 bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 423693462:
-          case 265276141: {
-            if (input.isAtField(FieldNames.secondNode)) {
-              if (!input.trySkipNullValue()) {
-                input.readMessage(secondNode);
-                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -663,6 +647,18 @@ public final class ChallengeBossInfoOuterClass {
             if (input.isAtField(FieldNames.firstNode)) {
               if (!input.trySkipNullValue()) {
                 input.readMessage(firstNode);
+                bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 423693462:
+          case 265276141: {
+            if (input.isAtField(FieldNames.secondNode)) {
+              if (!input.trySkipNullValue()) {
+                input.readMessage(secondNode);
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -745,11 +741,11 @@ public final class ChallengeBossInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName pPNAGBNIOAO = FieldName.forField("PPNAGBNIOAO");
-
-      static final FieldName secondNode = FieldName.forField("secondNode", "second_node");
+      static final FieldName aCGHCDLBCGD = FieldName.forField("ACGHCDLBCGD");
 
       static final FieldName firstNode = FieldName.forField("firstNode", "first_node");
+
+      static final FieldName secondNode = FieldName.forField("secondNode", "second_node");
 
       static final FieldName lineup2 = FieldName.forField("lineup2");
 

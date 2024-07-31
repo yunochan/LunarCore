@@ -20,24 +20,24 @@ public final class GetBagScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 7;</code>
      */
     private int retcode;
 
     /**
-     * <code>repeated .Equipment equipment_list = 1;</code>
+     * <code>repeated .Relic relic_list = 9;</code>
      */
-    private final RepeatedMessage<EquipmentOuterClass.Equipment> equipmentList = RepeatedMessage.newEmptyInstance(EquipmentOuterClass.Equipment.getFactory());
+    private final RepeatedMessage<RelicOuterClass.Relic> relicList = RepeatedMessage.newEmptyInstance(RelicOuterClass.Relic.getFactory());
 
     /**
-     * <code>repeated .Material material_list = 2;</code>
+     * <code>repeated .Material material_list = 10;</code>
      */
     private final RepeatedMessage<MaterialOuterClass.Material> materialList = RepeatedMessage.newEmptyInstance(MaterialOuterClass.Material.getFactory());
 
     /**
-     * <code>repeated .Relic relic_list = 15;</code>
+     * <code>repeated .Equipment equipment_list = 14;</code>
      */
-    private final RepeatedMessage<RelicOuterClass.Relic> relicList = RepeatedMessage.newEmptyInstance(RelicOuterClass.Relic.getFactory());
+    private final RepeatedMessage<EquipmentOuterClass.Equipment> equipmentList = RepeatedMessage.newEmptyInstance(EquipmentOuterClass.Equipment.getFactory());
 
     private GetBagScRsp() {
     }
@@ -50,7 +50,7 @@ public final class GetBagScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 7;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -58,7 +58,7 @@ public final class GetBagScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 7;</code>
      * @return this
      */
     public GetBagScRsp clearRetcode() {
@@ -68,7 +68,7 @@ public final class GetBagScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 7;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -76,7 +76,7 @@ public final class GetBagScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 7;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -87,161 +87,25 @@ public final class GetBagScRspOuterClass {
     }
 
     /**
-     * <code>repeated .Equipment equipment_list = 1;</code>
-     * @return whether the equipmentList field is set
+     * <code>repeated .Relic relic_list = 9;</code>
+     * @return whether the relicList field is set
      */
-    public boolean hasEquipmentList() {
+    public boolean hasRelicList() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>repeated .Equipment equipment_list = 1;</code>
-     * @return this
-     */
-    public GetBagScRsp clearEquipmentList() {
-      bitField0_ &= ~0x00000002;
-      equipmentList.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated .Equipment equipment_list = 1;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableEquipmentList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedMessage<EquipmentOuterClass.Equipment> getEquipmentList() {
-      return equipmentList;
-    }
-
-    /**
-     * <code>repeated .Equipment equipment_list = 1;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedMessage<EquipmentOuterClass.Equipment> getMutableEquipmentList() {
-      bitField0_ |= 0x00000002;
-      return equipmentList;
-    }
-
-    /**
-     * <code>repeated .Equipment equipment_list = 1;</code>
-     * @param value the equipmentList to add
-     * @return this
-     */
-    public GetBagScRsp addEquipmentList(final EquipmentOuterClass.Equipment value) {
-      bitField0_ |= 0x00000002;
-      equipmentList.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated .Equipment equipment_list = 1;</code>
-     * @param values the equipmentList to add
-     * @return this
-     */
-    public GetBagScRsp addAllEquipmentList(final EquipmentOuterClass.Equipment... values) {
-      bitField0_ |= 0x00000002;
-      equipmentList.addAll(values);
-      return this;
-    }
-
-    /**
-     * <code>repeated .Material material_list = 2;</code>
-     * @return whether the materialList field is set
-     */
-    public boolean hasMaterialList() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>repeated .Material material_list = 2;</code>
-     * @return this
-     */
-    public GetBagScRsp clearMaterialList() {
-      bitField0_ &= ~0x00000004;
-      materialList.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated .Material material_list = 2;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableMaterialList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedMessage<MaterialOuterClass.Material> getMaterialList() {
-      return materialList;
-    }
-
-    /**
-     * <code>repeated .Material material_list = 2;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedMessage<MaterialOuterClass.Material> getMutableMaterialList() {
-      bitField0_ |= 0x00000004;
-      return materialList;
-    }
-
-    /**
-     * <code>repeated .Material material_list = 2;</code>
-     * @param value the materialList to add
-     * @return this
-     */
-    public GetBagScRsp addMaterialList(final MaterialOuterClass.Material value) {
-      bitField0_ |= 0x00000004;
-      materialList.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated .Material material_list = 2;</code>
-     * @param values the materialList to add
-     * @return this
-     */
-    public GetBagScRsp addAllMaterialList(final MaterialOuterClass.Material... values) {
-      bitField0_ |= 0x00000004;
-      materialList.addAll(values);
-      return this;
-    }
-
-    /**
-     * <code>repeated .Relic relic_list = 15;</code>
-     * @return whether the relicList field is set
-     */
-    public boolean hasRelicList() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>repeated .Relic relic_list = 15;</code>
+     * <code>repeated .Relic relic_list = 9;</code>
      * @return this
      */
     public GetBagScRsp clearRelicList() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000002;
       relicList.clear();
       return this;
     }
 
     /**
-     * <code>repeated .Relic relic_list = 15;</code>
+     * <code>repeated .Relic relic_list = 9;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -255,7 +119,7 @@ public final class GetBagScRspOuterClass {
     }
 
     /**
-     * <code>repeated .Relic relic_list = 15;</code>
+     * <code>repeated .Relic relic_list = 9;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -264,29 +128,165 @@ public final class GetBagScRspOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<RelicOuterClass.Relic> getMutableRelicList() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       return relicList;
     }
 
     /**
-     * <code>repeated .Relic relic_list = 15;</code>
+     * <code>repeated .Relic relic_list = 9;</code>
      * @param value the relicList to add
      * @return this
      */
     public GetBagScRsp addRelicList(final RelicOuterClass.Relic value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       relicList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated .Relic relic_list = 15;</code>
+     * <code>repeated .Relic relic_list = 9;</code>
      * @param values the relicList to add
      * @return this
      */
     public GetBagScRsp addAllRelicList(final RelicOuterClass.Relic... values) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       relicList.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated .Material material_list = 10;</code>
+     * @return whether the materialList field is set
+     */
+    public boolean hasMaterialList() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>repeated .Material material_list = 10;</code>
+     * @return this
+     */
+    public GetBagScRsp clearMaterialList() {
+      bitField0_ &= ~0x00000004;
+      materialList.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .Material material_list = 10;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableMaterialList()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<MaterialOuterClass.Material> getMaterialList() {
+      return materialList;
+    }
+
+    /**
+     * <code>repeated .Material material_list = 10;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<MaterialOuterClass.Material> getMutableMaterialList() {
+      bitField0_ |= 0x00000004;
+      return materialList;
+    }
+
+    /**
+     * <code>repeated .Material material_list = 10;</code>
+     * @param value the materialList to add
+     * @return this
+     */
+    public GetBagScRsp addMaterialList(final MaterialOuterClass.Material value) {
+      bitField0_ |= 0x00000004;
+      materialList.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .Material material_list = 10;</code>
+     * @param values the materialList to add
+     * @return this
+     */
+    public GetBagScRsp addAllMaterialList(final MaterialOuterClass.Material... values) {
+      bitField0_ |= 0x00000004;
+      materialList.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated .Equipment equipment_list = 14;</code>
+     * @return whether the equipmentList field is set
+     */
+    public boolean hasEquipmentList() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>repeated .Equipment equipment_list = 14;</code>
+     * @return this
+     */
+    public GetBagScRsp clearEquipmentList() {
+      bitField0_ &= ~0x00000008;
+      equipmentList.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .Equipment equipment_list = 14;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableEquipmentList()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<EquipmentOuterClass.Equipment> getEquipmentList() {
+      return equipmentList;
+    }
+
+    /**
+     * <code>repeated .Equipment equipment_list = 14;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<EquipmentOuterClass.Equipment> getMutableEquipmentList() {
+      bitField0_ |= 0x00000008;
+      return equipmentList;
+    }
+
+    /**
+     * <code>repeated .Equipment equipment_list = 14;</code>
+     * @param value the equipmentList to add
+     * @return this
+     */
+    public GetBagScRsp addEquipmentList(final EquipmentOuterClass.Equipment value) {
+      bitField0_ |= 0x00000008;
+      equipmentList.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .Equipment equipment_list = 14;</code>
+     * @param values the equipmentList to add
+     * @return this
+     */
+    public GetBagScRsp addAllEquipmentList(final EquipmentOuterClass.Equipment... values) {
+      bitField0_ |= 0x00000008;
+      equipmentList.addAll(values);
       return this;
     }
 
@@ -296,9 +296,9 @@ public final class GetBagScRspOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         retcode = other.retcode;
-        equipmentList.copyFrom(other.equipmentList);
-        materialList.copyFrom(other.materialList);
         relicList.copyFrom(other.relicList);
+        materialList.copyFrom(other.materialList);
+        equipmentList.copyFrom(other.equipmentList);
       }
       return this;
     }
@@ -312,14 +312,14 @@ public final class GetBagScRspOuterClass {
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
       }
-      if (other.hasEquipmentList()) {
-        getMutableEquipmentList().addAll(other.equipmentList);
+      if (other.hasRelicList()) {
+        getMutableRelicList().addAll(other.relicList);
       }
       if (other.hasMaterialList()) {
         getMutableMaterialList().addAll(other.materialList);
       }
-      if (other.hasRelicList()) {
-        getMutableRelicList().addAll(other.relicList);
+      if (other.hasEquipmentList()) {
+        getMutableEquipmentList().addAll(other.equipmentList);
       }
       return this;
     }
@@ -332,9 +332,9 @@ public final class GetBagScRspOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       retcode = 0;
-      equipmentList.clear();
-      materialList.clear();
       relicList.clear();
+      materialList.clear();
+      equipmentList.clear();
       return this;
     }
 
@@ -345,9 +345,9 @@ public final class GetBagScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      equipmentList.clearQuick();
-      materialList.clearQuick();
       relicList.clearQuick();
+      materialList.clearQuick();
+      equipmentList.clearQuick();
       return this;
     }
 
@@ -362,33 +362,33 @@ public final class GetBagScRspOuterClass {
       GetBagScRsp other = (GetBagScRsp) o;
       return bitField0_ == other.bitField0_
         && (!hasRetcode() || retcode == other.retcode)
-        && (!hasEquipmentList() || equipmentList.equals(other.equipmentList))
+        && (!hasRelicList() || relicList.equals(other.relicList))
         && (!hasMaterialList() || materialList.equals(other.materialList))
-        && (!hasRelicList() || relicList.equals(other.relicList));
+        && (!hasEquipmentList() || equipmentList.equals(other.equipmentList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        for (int i = 0; i < equipmentList.length(); i++) {
-          output.writeRawByte((byte) 10);
-          output.writeMessageNoTag(equipmentList.get(i));
+        for (int i = 0; i < relicList.length(); i++) {
+          output.writeRawByte((byte) 74);
+          output.writeMessageNoTag(relicList.get(i));
         }
       }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < materialList.length(); i++) {
-          output.writeRawByte((byte) 18);
+          output.writeRawByte((byte) 82);
           output.writeMessageNoTag(materialList.get(i));
         }
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        for (int i = 0; i < relicList.length(); i++) {
-          output.writeRawByte((byte) 122);
-          output.writeMessageNoTag(relicList.get(i));
+        for (int i = 0; i < equipmentList.length(); i++) {
+          output.writeRawByte((byte) 114);
+          output.writeMessageNoTag(equipmentList.get(i));
         }
       }
     }
@@ -400,13 +400,13 @@ public final class GetBagScRspOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += (1 * equipmentList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(equipmentList);
+        size += (1 * relicList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(relicList);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += (1 * materialList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(materialList);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += (1 * relicList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(relicList);
+        size += (1 * equipmentList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(equipmentList);
       }
       return size;
     }
@@ -418,34 +418,34 @@ public final class GetBagScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
+          case 56: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 10) {
+            if (tag != 74) {
               break;
             }
           }
-          case 10: {
-            // equipmentList
-            tag = input.readRepeatedMessage(equipmentList, tag);
+          case 74: {
+            // relicList
+            tag = input.readRepeatedMessage(relicList, tag);
             bitField0_ |= 0x00000002;
-            if (tag != 18) {
+            if (tag != 82) {
               break;
             }
           }
-          case 18: {
+          case 82: {
             // materialList
             tag = input.readRepeatedMessage(materialList, tag);
             bitField0_ |= 0x00000004;
-            if (tag != 122) {
+            if (tag != 114) {
               break;
             }
           }
-          case 122: {
-            // relicList
-            tag = input.readRepeatedMessage(relicList, tag);
+          case 114: {
+            // equipmentList
+            tag = input.readRepeatedMessage(equipmentList, tag);
             bitField0_ |= 0x00000008;
             if (tag != 0) {
               break;
@@ -472,13 +472,13 @@ public final class GetBagScRspOuterClass {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRepeatedMessage(FieldNames.equipmentList, equipmentList);
+        output.writeRepeatedMessage(FieldNames.relicList, relicList);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeRepeatedMessage(FieldNames.materialList, materialList);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRepeatedMessage(FieldNames.relicList, relicList);
+        output.writeRepeatedMessage(FieldNames.equipmentList, equipmentList);
       }
       output.endObject();
     }
@@ -501,11 +501,11 @@ public final class GetBagScRspOuterClass {
             }
             break;
           }
-          case 2007143244:
-          case 2109525167: {
-            if (input.isAtField(FieldNames.equipmentList)) {
+          case 204814001:
+          case 2071893482: {
+            if (input.isAtField(FieldNames.relicList)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedMessage(equipmentList);
+                input.readRepeatedMessage(relicList);
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -525,11 +525,11 @@ public final class GetBagScRspOuterClass {
             }
             break;
           }
-          case 204814001:
-          case 2071893482: {
-            if (input.isAtField(FieldNames.relicList)) {
+          case 2007143244:
+          case 2109525167: {
+            if (input.isAtField(FieldNames.equipmentList)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedMessage(relicList);
+                input.readRepeatedMessage(equipmentList);
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -591,11 +591,11 @@ public final class GetBagScRspOuterClass {
     static class FieldNames {
       static final FieldName retcode = FieldName.forField("retcode");
 
-      static final FieldName equipmentList = FieldName.forField("equipmentList", "equipment_list");
+      static final FieldName relicList = FieldName.forField("relicList", "relic_list");
 
       static final FieldName materialList = FieldName.forField("materialList", "material_list");
 
-      static final FieldName relicList = FieldName.forField("relicList", "relic_list");
+      static final FieldName equipmentList = FieldName.forField("equipmentList", "equipment_list");
     }
   }
 }

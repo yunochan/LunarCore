@@ -20,17 +20,17 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 rogue_version_id = 10;</code>
+     * <code>optional uint32 rogue_version_id = 7;</code>
      */
     private int rogueVersionId;
 
     /**
-     * <code>optional .RogueCommonActionResultDisplayType display_type = 9;</code>
+     * <code>optional .RogueCommonActionResultDisplayType display_type = 8;</code>
      */
     private int displayType;
 
     /**
-     * <code>repeated .RogueActionResult action_result_list = 2;</code>
+     * <code>repeated .RogueActionResult action_result_list = 5;</code>
      */
     private final RepeatedMessage<RogueActionResultOuterClass.RogueActionResult> actionResultList = RepeatedMessage.newEmptyInstance(RogueActionResultOuterClass.RogueActionResult.getFactory());
 
@@ -45,7 +45,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_version_id = 10;</code>
+     * <code>optional uint32 rogue_version_id = 7;</code>
      * @return whether the rogueVersionId field is set
      */
     public boolean hasRogueVersionId() {
@@ -53,7 +53,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_version_id = 10;</code>
+     * <code>optional uint32 rogue_version_id = 7;</code>
      * @return this
      */
     public SyncRogueCommonActionResultScNotify clearRogueVersionId() {
@@ -63,7 +63,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_version_id = 10;</code>
+     * <code>optional uint32 rogue_version_id = 7;</code>
      * @return the rogueVersionId
      */
     public int getRogueVersionId() {
@@ -71,7 +71,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 rogue_version_id = 10;</code>
+     * <code>optional uint32 rogue_version_id = 7;</code>
      * @param value the rogueVersionId to set
      * @return this
      */
@@ -82,7 +82,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueCommonActionResultDisplayType display_type = 9;</code>
+     * <code>optional .RogueCommonActionResultDisplayType display_type = 8;</code>
      * @return whether the displayType field is set
      */
     public boolean hasDisplayType() {
@@ -90,7 +90,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueCommonActionResultDisplayType display_type = 9;</code>
+     * <code>optional .RogueCommonActionResultDisplayType display_type = 8;</code>
      * @return this
      */
     public SyncRogueCommonActionResultScNotify clearDisplayType() {
@@ -100,7 +100,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueCommonActionResultDisplayType display_type = 9;</code>
+     * <code>optional .RogueCommonActionResultDisplayType display_type = 8;</code>
      * @return the displayType
      */
     public RogueCommonActionResultDisplayTypeOuterClass.RogueCommonActionResultDisplayType getDisplayType(
@@ -134,7 +134,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueCommonActionResultDisplayType display_type = 9;</code>
+     * <code>optional .RogueCommonActionResultDisplayType display_type = 8;</code>
      * @param value the displayType to set
      * @return this
      */
@@ -146,7 +146,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .RogueActionResult action_result_list = 2;</code>
+     * <code>repeated .RogueActionResult action_result_list = 5;</code>
      * @return whether the actionResultList field is set
      */
     public boolean hasActionResultList() {
@@ -154,7 +154,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .RogueActionResult action_result_list = 2;</code>
+     * <code>repeated .RogueActionResult action_result_list = 5;</code>
      * @return this
      */
     public SyncRogueCommonActionResultScNotify clearActionResultList() {
@@ -164,7 +164,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .RogueActionResult action_result_list = 2;</code>
+     * <code>repeated .RogueActionResult action_result_list = 5;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -178,7 +178,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .RogueActionResult action_result_list = 2;</code>
+     * <code>repeated .RogueActionResult action_result_list = 5;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -193,7 +193,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .RogueActionResult action_result_list = 2;</code>
+     * <code>repeated .RogueActionResult action_result_list = 5;</code>
      * @param value the actionResultList to add
      * @return this
      */
@@ -205,7 +205,7 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .RogueActionResult action_result_list = 2;</code>
+     * <code>repeated .RogueActionResult action_result_list = 5;</code>
      * @param values the actionResultList to add
      * @return this
      */
@@ -290,16 +290,16 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(rogueVersionId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 64);
         output.writeEnumNoTag(displayType);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < actionResultList.length(); i++) {
-          output.writeRawByte((byte) 18);
+          output.writeRawByte((byte) 42);
           output.writeMessageNoTag(actionResultList.get(i));
         }
       }
@@ -328,16 +328,16 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
+          case 56: {
             // rogueVersionId
             rogueVersionId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 72) {
+            if (tag != 64) {
               break;
             }
           }
-          case 72: {
+          case 64: {
             // displayType
             final int value = input.readInt32();
             if (RogueCommonActionResultDisplayTypeOuterClass.RogueCommonActionResultDisplayType.forNumber(value) != null) {
@@ -345,11 +345,11 @@ public final class SyncRogueCommonActionResultScNotifyOuterClass {
               bitField0_ |= 0x00000002;
             }
             tag = input.readTag();
-            if (tag != 18) {
+            if (tag != 42) {
               break;
             }
           }
-          case 18: {
+          case 42: {
             // actionResultList
             tag = input.readRepeatedMessage(actionResultList, tag);
             bitField0_ |= 0x00000004;

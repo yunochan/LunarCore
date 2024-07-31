@@ -19,12 +19,12 @@ public final class SceneCastSkillMpUpdateScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 mp = 8;</code>
+     * <code>optional uint32 mp = 4;</code>
      */
     private int mp;
 
     /**
-     * <code>optional uint32 attacked_group_id = 10;</code>
+     * <code>optional uint32 attacked_group_id = 5;</code>
      */
     private int attackedGroupId;
 
@@ -39,7 +39,7 @@ public final class SceneCastSkillMpUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 mp = 8;</code>
+     * <code>optional uint32 mp = 4;</code>
      * @return whether the mp field is set
      */
     public boolean hasMp() {
@@ -47,7 +47,7 @@ public final class SceneCastSkillMpUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 mp = 8;</code>
+     * <code>optional uint32 mp = 4;</code>
      * @return this
      */
     public SceneCastSkillMpUpdateScNotify clearMp() {
@@ -57,7 +57,7 @@ public final class SceneCastSkillMpUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 mp = 8;</code>
+     * <code>optional uint32 mp = 4;</code>
      * @return the mp
      */
     public int getMp() {
@@ -65,7 +65,7 @@ public final class SceneCastSkillMpUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 mp = 8;</code>
+     * <code>optional uint32 mp = 4;</code>
      * @param value the mp to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class SceneCastSkillMpUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 attacked_group_id = 10;</code>
+     * <code>optional uint32 attacked_group_id = 5;</code>
      * @return whether the attackedGroupId field is set
      */
     public boolean hasAttackedGroupId() {
@@ -84,7 +84,7 @@ public final class SceneCastSkillMpUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 attacked_group_id = 10;</code>
+     * <code>optional uint32 attacked_group_id = 5;</code>
      * @return this
      */
     public SceneCastSkillMpUpdateScNotify clearAttackedGroupId() {
@@ -94,7 +94,7 @@ public final class SceneCastSkillMpUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 attacked_group_id = 10;</code>
+     * <code>optional uint32 attacked_group_id = 5;</code>
      * @return the attackedGroupId
      */
     public int getAttackedGroupId() {
@@ -102,7 +102,7 @@ public final class SceneCastSkillMpUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 attacked_group_id = 10;</code>
+     * <code>optional uint32 attacked_group_id = 5;</code>
      * @param value the attackedGroupId to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class SceneCastSkillMpUpdateScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(mp);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(attackedGroupId);
       }
     }
@@ -205,16 +205,16 @@ public final class SceneCastSkillMpUpdateScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 64: {
+          case 32: {
             // mp
             mp = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 80) {
+            if (tag != 40) {
               break;
             }
           }
-          case 80: {
+          case 40: {
             // attackedGroupId
             attackedGroupId = input.readUInt32();
             bitField0_ |= 0x00000002;

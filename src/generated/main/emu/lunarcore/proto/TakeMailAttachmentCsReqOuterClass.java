@@ -20,12 +20,12 @@ public final class TakeMailAttachmentCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 optional_reward_id = 7;</code>
+     * <code>optional uint32 optional_reward_id = 12;</code>
      */
     private int optionalRewardId;
 
     /**
-     * <code>repeated uint32 mail_id_list = 1;</code>
+     * <code>repeated uint32 mail_id_list = 8;</code>
      */
     private final RepeatedInt mailIdList = RepeatedInt.newEmptyInstance();
 
@@ -40,7 +40,7 @@ public final class TakeMailAttachmentCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 optional_reward_id = 7;</code>
+     * <code>optional uint32 optional_reward_id = 12;</code>
      * @return whether the optionalRewardId field is set
      */
     public boolean hasOptionalRewardId() {
@@ -48,7 +48,7 @@ public final class TakeMailAttachmentCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 optional_reward_id = 7;</code>
+     * <code>optional uint32 optional_reward_id = 12;</code>
      * @return this
      */
     public TakeMailAttachmentCsReq clearOptionalRewardId() {
@@ -58,7 +58,7 @@ public final class TakeMailAttachmentCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 optional_reward_id = 7;</code>
+     * <code>optional uint32 optional_reward_id = 12;</code>
      * @return the optionalRewardId
      */
     public int getOptionalRewardId() {
@@ -66,7 +66,7 @@ public final class TakeMailAttachmentCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 optional_reward_id = 7;</code>
+     * <code>optional uint32 optional_reward_id = 12;</code>
      * @param value the optionalRewardId to set
      * @return this
      */
@@ -77,7 +77,7 @@ public final class TakeMailAttachmentCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 mail_id_list = 1;</code>
+     * <code>repeated uint32 mail_id_list = 8;</code>
      * @return whether the mailIdList field is set
      */
     public boolean hasMailIdList() {
@@ -85,7 +85,7 @@ public final class TakeMailAttachmentCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 mail_id_list = 1;</code>
+     * <code>repeated uint32 mail_id_list = 8;</code>
      * @return this
      */
     public TakeMailAttachmentCsReq clearMailIdList() {
@@ -95,7 +95,7 @@ public final class TakeMailAttachmentCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 mail_id_list = 1;</code>
+     * <code>repeated uint32 mail_id_list = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -109,7 +109,7 @@ public final class TakeMailAttachmentCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 mail_id_list = 1;</code>
+     * <code>repeated uint32 mail_id_list = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -123,7 +123,7 @@ public final class TakeMailAttachmentCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 mail_id_list = 1;</code>
+     * <code>repeated uint32 mail_id_list = 8;</code>
      * @param value the mailIdList to add
      * @return this
      */
@@ -134,7 +134,7 @@ public final class TakeMailAttachmentCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 mail_id_list = 1;</code>
+     * <code>repeated uint32 mail_id_list = 8;</code>
      * @param values the mailIdList to add
      * @return this
      */
@@ -210,12 +210,12 @@ public final class TakeMailAttachmentCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 96);
         output.writeUInt32NoTag(optionalRewardId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < mailIdList.length(); i++) {
-          output.writeRawByte((byte) 8);
+          output.writeRawByte((byte) 64);
           output.writeUInt32NoTag(mailIdList.array()[i]);
         }
       }
@@ -240,16 +240,16 @@ public final class TakeMailAttachmentCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 56: {
+          case 96: {
             // optionalRewardId
             optionalRewardId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 10) {
+            if (tag != 66) {
               break;
             }
           }
-          case 10: {
+          case 66: {
             // mailIdList [packed=true]
             input.readPackedUInt32(mailIdList, tag);
             bitField0_ |= 0x00000002;
@@ -268,7 +268,7 @@ public final class TakeMailAttachmentCsReqOuterClass {
             tag = input.readTag();
             break;
           }
-          case 8: {
+          case 64: {
             // mailIdList [packed=false]
             tag = input.readRepeatedUInt32(mailIdList, tag);
             bitField0_ |= 0x00000002;

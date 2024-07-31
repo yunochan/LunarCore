@@ -22,33 +22,15 @@ public final class MissionSyncOuterClass {
 
     /**
      * <pre>
-     *  could be also 1 or 14
+     *  could be also 10
      * </pre>
      *
-     * <code>repeated uint32 main_mission_id = 4;</code>
+     * <code>repeated uint32 main_mission_id = 1;</code>
      */
     private final RepeatedInt mainMissionId = RepeatedInt.newEmptyInstance();
 
     /**
-     * <pre>
-     *  COLOAGDIBCC
-     * </pre>
-     *
-     * <code>repeated uint32 COLOAGDIBCC = 7;</code>
-     */
-    private final RepeatedInt cOLOAGDIBCC = RepeatedInt.newEmptyInstance();
-
-    /**
-     * <pre>
-     *  LMHJAPFMKDI
-     * </pre>
-     *
-     * <code>repeated uint32 LMHJAPFMKDI = 10;</code>
-     */
-    private final RepeatedInt lMHJAPFMKDI = RepeatedInt.newEmptyInstance();
-
-    /**
-     * <code>repeated .Mission mission_list = 11;</code>
+     * <code>repeated .Mission mission_list = 3;</code>
      */
     private final RepeatedMessage<MissionOuterClass.Mission> missionList = RepeatedMessage.newEmptyInstance(MissionOuterClass.Mission.getFactory());
 
@@ -64,10 +46,10 @@ public final class MissionSyncOuterClass {
 
     /**
      * <pre>
-     *  could be also 1 or 14
+     *  could be also 10
      * </pre>
      *
-     * <code>repeated uint32 main_mission_id = 4;</code>
+     * <code>repeated uint32 main_mission_id = 1;</code>
      * @return whether the mainMissionId field is set
      */
     public boolean hasMainMissionId() {
@@ -76,10 +58,10 @@ public final class MissionSyncOuterClass {
 
     /**
      * <pre>
-     *  could be also 1 or 14
+     *  could be also 10
      * </pre>
      *
-     * <code>repeated uint32 main_mission_id = 4;</code>
+     * <code>repeated uint32 main_mission_id = 1;</code>
      * @return this
      */
     public MissionSync clearMainMissionId() {
@@ -90,10 +72,10 @@ public final class MissionSyncOuterClass {
 
     /**
      * <pre>
-     *  could be also 1 or 14
+     *  could be also 10
      * </pre>
      *
-     * <code>repeated uint32 main_mission_id = 4;</code>
+     * <code>repeated uint32 main_mission_id = 1;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -108,10 +90,10 @@ public final class MissionSyncOuterClass {
 
     /**
      * <pre>
-     *  could be also 1 or 14
+     *  could be also 10
      * </pre>
      *
-     * <code>repeated uint32 main_mission_id = 4;</code>
+     * <code>repeated uint32 main_mission_id = 1;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -126,10 +108,10 @@ public final class MissionSyncOuterClass {
 
     /**
      * <pre>
-     *  could be also 1 or 14
+     *  could be also 10
      * </pre>
      *
-     * <code>repeated uint32 main_mission_id = 4;</code>
+     * <code>repeated uint32 main_mission_id = 1;</code>
      * @param value the mainMissionId to add
      * @return this
      */
@@ -141,10 +123,10 @@ public final class MissionSyncOuterClass {
 
     /**
      * <pre>
-     *  could be also 1 or 14
+     *  could be also 10
      * </pre>
      *
-     * <code>repeated uint32 main_mission_id = 4;</code>
+     * <code>repeated uint32 main_mission_id = 1;</code>
      * @param values the mainMissionId to add
      * @return this
      */
@@ -155,209 +137,25 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <pre>
-     *  COLOAGDIBCC
-     * </pre>
-     *
-     * <code>repeated uint32 COLOAGDIBCC = 7;</code>
-     * @return whether the cOLOAGDIBCC field is set
+     * <code>repeated .Mission mission_list = 3;</code>
+     * @return whether the missionList field is set
      */
-    public boolean hasCOLOAGDIBCC() {
+    public boolean hasMissionList() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <pre>
-     *  COLOAGDIBCC
-     * </pre>
-     *
-     * <code>repeated uint32 COLOAGDIBCC = 7;</code>
-     * @return this
-     */
-    public MissionSync clearCOLOAGDIBCC() {
-      bitField0_ &= ~0x00000002;
-      cOLOAGDIBCC.clear();
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  COLOAGDIBCC
-     * </pre>
-     *
-     * <code>repeated uint32 COLOAGDIBCC = 7;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableCOLOAGDIBCC()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getCOLOAGDIBCC() {
-      return cOLOAGDIBCC;
-    }
-
-    /**
-     * <pre>
-     *  COLOAGDIBCC
-     * </pre>
-     *
-     * <code>repeated uint32 COLOAGDIBCC = 7;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableCOLOAGDIBCC() {
-      bitField0_ |= 0x00000002;
-      return cOLOAGDIBCC;
-    }
-
-    /**
-     * <pre>
-     *  COLOAGDIBCC
-     * </pre>
-     *
-     * <code>repeated uint32 COLOAGDIBCC = 7;</code>
-     * @param value the cOLOAGDIBCC to add
-     * @return this
-     */
-    public MissionSync addCOLOAGDIBCC(final int value) {
-      bitField0_ |= 0x00000002;
-      cOLOAGDIBCC.add(value);
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  COLOAGDIBCC
-     * </pre>
-     *
-     * <code>repeated uint32 COLOAGDIBCC = 7;</code>
-     * @param values the cOLOAGDIBCC to add
-     * @return this
-     */
-    public MissionSync addAllCOLOAGDIBCC(final int... values) {
-      bitField0_ |= 0x00000002;
-      cOLOAGDIBCC.addAll(values);
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  LMHJAPFMKDI
-     * </pre>
-     *
-     * <code>repeated uint32 LMHJAPFMKDI = 10;</code>
-     * @return whether the lMHJAPFMKDI field is set
-     */
-    public boolean hasLMHJAPFMKDI() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <pre>
-     *  LMHJAPFMKDI
-     * </pre>
-     *
-     * <code>repeated uint32 LMHJAPFMKDI = 10;</code>
-     * @return this
-     */
-    public MissionSync clearLMHJAPFMKDI() {
-      bitField0_ &= ~0x00000004;
-      lMHJAPFMKDI.clear();
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  LMHJAPFMKDI
-     * </pre>
-     *
-     * <code>repeated uint32 LMHJAPFMKDI = 10;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableLMHJAPFMKDI()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getLMHJAPFMKDI() {
-      return lMHJAPFMKDI;
-    }
-
-    /**
-     * <pre>
-     *  LMHJAPFMKDI
-     * </pre>
-     *
-     * <code>repeated uint32 LMHJAPFMKDI = 10;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableLMHJAPFMKDI() {
-      bitField0_ |= 0x00000004;
-      return lMHJAPFMKDI;
-    }
-
-    /**
-     * <pre>
-     *  LMHJAPFMKDI
-     * </pre>
-     *
-     * <code>repeated uint32 LMHJAPFMKDI = 10;</code>
-     * @param value the lMHJAPFMKDI to add
-     * @return this
-     */
-    public MissionSync addLMHJAPFMKDI(final int value) {
-      bitField0_ |= 0x00000004;
-      lMHJAPFMKDI.add(value);
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  LMHJAPFMKDI
-     * </pre>
-     *
-     * <code>repeated uint32 LMHJAPFMKDI = 10;</code>
-     * @param values the lMHJAPFMKDI to add
-     * @return this
-     */
-    public MissionSync addAllLMHJAPFMKDI(final int... values) {
-      bitField0_ |= 0x00000004;
-      lMHJAPFMKDI.addAll(values);
-      return this;
-    }
-
-    /**
-     * <code>repeated .Mission mission_list = 11;</code>
-     * @return whether the missionList field is set
-     */
-    public boolean hasMissionList() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>repeated .Mission mission_list = 11;</code>
+     * <code>repeated .Mission mission_list = 3;</code>
      * @return this
      */
     public MissionSync clearMissionList() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000002;
       missionList.clear();
       return this;
     }
 
     /**
-     * <code>repeated .Mission mission_list = 11;</code>
+     * <code>repeated .Mission mission_list = 3;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -371,7 +169,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated .Mission mission_list = 11;</code>
+     * <code>repeated .Mission mission_list = 3;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -380,28 +178,28 @@ public final class MissionSyncOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<MissionOuterClass.Mission> getMutableMissionList() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       return missionList;
     }
 
     /**
-     * <code>repeated .Mission mission_list = 11;</code>
+     * <code>repeated .Mission mission_list = 3;</code>
      * @param value the missionList to add
      * @return this
      */
     public MissionSync addMissionList(final MissionOuterClass.Mission value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       missionList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated .Mission mission_list = 11;</code>
+     * <code>repeated .Mission mission_list = 3;</code>
      * @param values the missionList to add
      * @return this
      */
     public MissionSync addAllMissionList(final MissionOuterClass.Mission... values) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       missionList.addAll(values);
       return this;
     }
@@ -412,8 +210,6 @@ public final class MissionSyncOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         mainMissionId.copyFrom(other.mainMissionId);
-        cOLOAGDIBCC.copyFrom(other.cOLOAGDIBCC);
-        lMHJAPFMKDI.copyFrom(other.lMHJAPFMKDI);
         missionList.copyFrom(other.missionList);
       }
       return this;
@@ -427,12 +223,6 @@ public final class MissionSyncOuterClass {
       cachedSize = -1;
       if (other.hasMainMissionId()) {
         getMutableMainMissionId().addAll(other.mainMissionId);
-      }
-      if (other.hasCOLOAGDIBCC()) {
-        getMutableCOLOAGDIBCC().addAll(other.cOLOAGDIBCC);
-      }
-      if (other.hasLMHJAPFMKDI()) {
-        getMutableLMHJAPFMKDI().addAll(other.lMHJAPFMKDI);
       }
       if (other.hasMissionList()) {
         getMutableMissionList().addAll(other.missionList);
@@ -448,8 +238,6 @@ public final class MissionSyncOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       mainMissionId.clear();
-      cOLOAGDIBCC.clear();
-      lMHJAPFMKDI.clear();
       missionList.clear();
       return this;
     }
@@ -462,8 +250,6 @@ public final class MissionSyncOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       mainMissionId.clear();
-      cOLOAGDIBCC.clear();
-      lMHJAPFMKDI.clear();
       missionList.clearQuick();
       return this;
     }
@@ -479,8 +265,6 @@ public final class MissionSyncOuterClass {
       MissionSync other = (MissionSync) o;
       return bitField0_ == other.bitField0_
         && (!hasMainMissionId() || mainMissionId.equals(other.mainMissionId))
-        && (!hasCOLOAGDIBCC() || cOLOAGDIBCC.equals(other.cOLOAGDIBCC))
-        && (!hasLMHJAPFMKDI() || lMHJAPFMKDI.equals(other.lMHJAPFMKDI))
         && (!hasMissionList() || missionList.equals(other.missionList));
     }
 
@@ -488,25 +272,13 @@ public final class MissionSyncOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         for (int i = 0; i < mainMissionId.length(); i++) {
-          output.writeRawByte((byte) 32);
+          output.writeRawByte((byte) 8);
           output.writeUInt32NoTag(mainMissionId.array()[i]);
         }
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        for (int i = 0; i < cOLOAGDIBCC.length(); i++) {
-          output.writeRawByte((byte) 56);
-          output.writeUInt32NoTag(cOLOAGDIBCC.array()[i]);
-        }
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        for (int i = 0; i < lMHJAPFMKDI.length(); i++) {
-          output.writeRawByte((byte) 80);
-          output.writeUInt32NoTag(lMHJAPFMKDI.array()[i]);
-        }
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
         for (int i = 0; i < missionList.length(); i++) {
-          output.writeRawByte((byte) 90);
+          output.writeRawByte((byte) 26);
           output.writeMessageNoTag(missionList.get(i));
         }
       }
@@ -519,12 +291,6 @@ public final class MissionSyncOuterClass {
         size += (1 * mainMissionId.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(mainMissionId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += (1 * cOLOAGDIBCC.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(cOLOAGDIBCC);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += (1 * lMHJAPFMKDI.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(lMHJAPFMKDI);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
         size += (1 * missionList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(missionList);
       }
       return size;
@@ -537,37 +303,19 @@ public final class MissionSyncOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 34: {
+          case 10: {
             // mainMissionId [packed=true]
             input.readPackedUInt32(mainMissionId, tag);
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 26) {
               break;
             }
           }
-          case 58: {
-            // cOLOAGDIBCC [packed=true]
-            input.readPackedUInt32(cOLOAGDIBCC, tag);
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 82) {
-              break;
-            }
-          }
-          case 82: {
-            // lMHJAPFMKDI [packed=true]
-            input.readPackedUInt32(lMHJAPFMKDI, tag);
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 90) {
-              break;
-            }
-          }
-          case 90: {
+          case 26: {
             // missionList
             tag = input.readRepeatedMessage(missionList, tag);
-            bitField0_ |= 0x00000008;
+            bitField0_ |= 0x00000002;
             if (tag != 0) {
               break;
             }
@@ -582,22 +330,10 @@ public final class MissionSyncOuterClass {
             tag = input.readTag();
             break;
           }
-          case 32: {
+          case 8: {
             // mainMissionId [packed=false]
             tag = input.readRepeatedUInt32(mainMissionId, tag);
             bitField0_ |= 0x00000001;
-            break;
-          }
-          case 56: {
-            // cOLOAGDIBCC [packed=false]
-            tag = input.readRepeatedUInt32(cOLOAGDIBCC, tag);
-            bitField0_ |= 0x00000002;
-            break;
-          }
-          case 80: {
-            // lMHJAPFMKDI [packed=false]
-            tag = input.readRepeatedUInt32(lMHJAPFMKDI, tag);
-            bitField0_ |= 0x00000004;
             break;
           }
         }
@@ -611,12 +347,6 @@ public final class MissionSyncOuterClass {
         output.writeRepeatedUInt32(FieldNames.mainMissionId, mainMissionId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRepeatedUInt32(FieldNames.cOLOAGDIBCC, cOLOAGDIBCC);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRepeatedUInt32(FieldNames.lMHJAPFMKDI, lMHJAPFMKDI);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
         output.writeRepeatedMessage(FieldNames.missionList, missionList);
       }
       output.endObject();
@@ -641,34 +371,12 @@ public final class MissionSyncOuterClass {
             }
             break;
           }
-          case 1490029384: {
-            if (input.isAtField(FieldNames.cOLOAGDIBCC)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(cOLOAGDIBCC);
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 1665766775: {
-            if (input.isAtField(FieldNames.lMHJAPFMKDI)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(lMHJAPFMKDI);
-                bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 1383006282:
           case -58851471: {
             if (input.isAtField(FieldNames.missionList)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedMessage(missionList);
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -728,10 +436,6 @@ public final class MissionSyncOuterClass {
      */
     static class FieldNames {
       static final FieldName mainMissionId = FieldName.forField("mainMissionId", "main_mission_id");
-
-      static final FieldName cOLOAGDIBCC = FieldName.forField("COLOAGDIBCC");
-
-      static final FieldName lMHJAPFMKDI = FieldName.forField("LMHJAPFMKDI");
 
       static final FieldName missionList = FieldName.forField("missionList", "mission_list");
     }

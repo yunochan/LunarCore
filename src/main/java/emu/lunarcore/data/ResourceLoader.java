@@ -220,10 +220,12 @@ public class ResourceLoader {
         }
 
         // Load floor infos
-        for (File file : floorDir.listFiles()) {
+        for (var excel : GameData.getMapEntranceExcelMap().values()) {
+            String name = "P" + excel.getPlaneID() + "_F" + excel.getFloorID();
+            File file = new File(LunarCore.getConfig().getResourceDir() + "/Config/LevelOutput/RuntimeFloor/" + name + ".json");
+            
             try (FileReader reader = new FileReader(file)) {
                 FloorInfo floor = gson.fromJson(reader, FloorInfo.class);
-                String name = file.getName().substring(0, file.getName().indexOf('.'));
                 GameData.getFloorInfos().put(name, floor);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -307,9 +309,11 @@ public class ResourceLoader {
         }
         
         // Notify the server owner if we are missing any files
+        /*
         if (count < GameData.getSummonUnitExcelMap().size()) {
             LunarCore.getLogger().warn("Summon unit configs are missing, please check your resources folder: {resources}/Config/ConfigSummonUnit. Character summon techniques may not work!");
         }
+        */
         
         // Reset loaded count
         count = 0;

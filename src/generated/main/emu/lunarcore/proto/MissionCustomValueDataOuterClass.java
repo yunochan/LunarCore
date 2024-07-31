@@ -19,14 +19,14 @@ public final class MissionCustomValueDataOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 index = 8;</code>
-     */
-    private int index;
-
-    /**
-     * <code>optional uint32 custom_value = 10;</code>
+     * <code>optional uint32 custom_value = 9;</code>
      */
     private int customValue;
+
+    /**
+     * <code>optional uint32 index = 15;</code>
+     */
+    private int index;
 
     private MissionCustomValueData() {
     }
@@ -39,62 +39,25 @@ public final class MissionCustomValueDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 index = 8;</code>
-     * @return whether the index field is set
+     * <code>optional uint32 custom_value = 9;</code>
+     * @return whether the customValue field is set
      */
-    public boolean hasIndex() {
+    public boolean hasCustomValue() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 index = 8;</code>
-     * @return this
-     */
-    public MissionCustomValueData clearIndex() {
-      bitField0_ &= ~0x00000001;
-      index = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 index = 8;</code>
-     * @return the index
-     */
-    public int getIndex() {
-      return index;
-    }
-
-    /**
-     * <code>optional uint32 index = 8;</code>
-     * @param value the index to set
-     * @return this
-     */
-    public MissionCustomValueData setIndex(final int value) {
-      bitField0_ |= 0x00000001;
-      index = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 custom_value = 10;</code>
-     * @return whether the customValue field is set
-     */
-    public boolean hasCustomValue() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 custom_value = 10;</code>
+     * <code>optional uint32 custom_value = 9;</code>
      * @return this
      */
     public MissionCustomValueData clearCustomValue() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       customValue = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 custom_value = 10;</code>
+     * <code>optional uint32 custom_value = 9;</code>
      * @return the customValue
      */
     public int getCustomValue() {
@@ -102,13 +65,50 @@ public final class MissionCustomValueDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 custom_value = 10;</code>
+     * <code>optional uint32 custom_value = 9;</code>
      * @param value the customValue to set
      * @return this
      */
     public MissionCustomValueData setCustomValue(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       customValue = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 index = 15;</code>
+     * @return whether the index field is set
+     */
+    public boolean hasIndex() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 index = 15;</code>
+     * @return this
+     */
+    public MissionCustomValueData clearIndex() {
+      bitField0_ &= ~0x00000002;
+      index = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 index = 15;</code>
+     * @return the index
+     */
+    public int getIndex() {
+      return index;
+    }
+
+    /**
+     * <code>optional uint32 index = 15;</code>
+     * @param value the index to set
+     * @return this
+     */
+    public MissionCustomValueData setIndex(final int value) {
+      bitField0_ |= 0x00000002;
+      index = value;
       return this;
     }
 
@@ -117,8 +117,8 @@ public final class MissionCustomValueDataOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        index = other.index;
         customValue = other.customValue;
+        index = other.index;
       }
       return this;
     }
@@ -129,11 +129,11 @@ public final class MissionCustomValueDataOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasIndex()) {
-        setIndex(other.index);
-      }
       if (other.hasCustomValue()) {
         setCustomValue(other.customValue);
+      }
+      if (other.hasIndex()) {
+        setIndex(other.index);
       }
       return this;
     }
@@ -145,8 +145,8 @@ public final class MissionCustomValueDataOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      index = 0;
       customValue = 0;
+      index = 0;
       return this;
     }
 
@@ -170,19 +170,19 @@ public final class MissionCustomValueDataOuterClass {
       }
       MissionCustomValueData other = (MissionCustomValueData) o;
       return bitField0_ == other.bitField0_
-        && (!hasIndex() || index == other.index)
-        && (!hasCustomValue() || customValue == other.customValue);
+        && (!hasCustomValue() || customValue == other.customValue)
+        && (!hasIndex() || index == other.index);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 64);
-        output.writeUInt32NoTag(index);
+        output.writeRawByte((byte) 72);
+        output.writeUInt32NoTag(customValue);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 80);
-        output.writeUInt32NoTag(customValue);
+        output.writeRawByte((byte) 120);
+        output.writeUInt32NoTag(index);
       }
     }
 
@@ -190,10 +190,10 @@ public final class MissionCustomValueDataOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(index);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(customValue);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(customValue);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(index);
       }
       return size;
     }
@@ -205,18 +205,18 @@ public final class MissionCustomValueDataOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 64: {
-            // index
-            index = input.readUInt32();
+          case 72: {
+            // customValue
+            customValue = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 80) {
+            if (tag != 120) {
               break;
             }
           }
-          case 80: {
-            // customValue
-            customValue = input.readUInt32();
+          case 120: {
+            // index
+            index = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
@@ -241,10 +241,10 @@ public final class MissionCustomValueDataOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.index, index);
+        output.writeUInt32(FieldNames.customValue, customValue);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.customValue, customValue);
+        output.writeUInt32(FieldNames.index, index);
       }
       output.endObject();
     }
@@ -256,10 +256,11 @@ public final class MissionCustomValueDataOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 100346066: {
-            if (input.isAtField(FieldNames.index)) {
+          case -1786407808:
+          case 732653347: {
+            if (input.isAtField(FieldNames.customValue)) {
               if (!input.trySkipNullValue()) {
-                index = input.readUInt32();
+                customValue = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -267,11 +268,10 @@ public final class MissionCustomValueDataOuterClass {
             }
             break;
           }
-          case -1786407808:
-          case 732653347: {
-            if (input.isAtField(FieldNames.customValue)) {
+          case 100346066: {
+            if (input.isAtField(FieldNames.index)) {
               if (!input.trySkipNullValue()) {
-                customValue = input.readUInt32();
+                index = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -332,9 +332,9 @@ public final class MissionCustomValueDataOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName index = FieldName.forField("index");
-
       static final FieldName customValue = FieldName.forField("customValue", "custom_value");
+
+      static final FieldName index = FieldName.forField("index");
     }
   }
 }

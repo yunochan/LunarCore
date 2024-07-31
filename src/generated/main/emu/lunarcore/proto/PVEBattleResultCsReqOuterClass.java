@@ -21,19 +21,19 @@ public final class PVEBattleResultCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 client_res_version = 5;</code>
+     * <code>optional uint32 battle_id = 3;</code>
      */
-    private int clientResVersion;
+    private int battleId;
 
     /**
-     * <code>optional uint32 stage_id = 8;</code>
+     * <code>optional uint32 stage_id = 6;</code>
      */
     private int stageId;
 
     /**
-     * <code>optional uint32 battle_id = 11;</code>
+     * <code>optional uint32 client_res_version = 7;</code>
      */
-    private int battleId;
+    private int clientResVersion;
 
     /**
      * <code>optional uint32 cost_time = 13;</code>
@@ -41,27 +41,27 @@ public final class PVEBattleResultCsReqOuterClass {
     private int costTime;
 
     /**
-     * <code>optional .BattleEndStatus end_status = 15;</code>
+     * <code>optional .BattleEndStatus end_status = 9;</code>
      */
     private int endStatus;
 
     /**
-     * <code>optional bool is_ai_consider_ultra_skill = 10;</code>
+     * <code>optional bool is_ai_consider_ultra_skill = 12;</code>
      */
     private boolean isAiConsiderUltraSkill;
 
     /**
-     * <code>optional .BattleStatistics stt = 14;</code>
+     * <code>optional .BattleStatistics stt = 5;</code>
      */
     private final BattleStatisticsOuterClass.BattleStatistics stt = BattleStatisticsOuterClass.BattleStatistics.newInstance();
 
     /**
-     * <code>optional bytes turn_snapshot_hash = 1;</code>
+     * <code>optional bytes turn_snapshot_hash = 11;</code>
      */
     private final RepeatedByte turnSnapshotHash = RepeatedByte.newEmptyInstance();
 
     /**
-     * <code>repeated .BattleOp op_list = 12;</code>
+     * <code>repeated .BattleOp op_list = 8;</code>
      */
     private final RepeatedMessage<BattleOpOuterClass.BattleOp> opList = RepeatedMessage.newEmptyInstance(BattleOpOuterClass.BattleOp.getFactory());
 
@@ -76,44 +76,44 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 client_res_version = 5;</code>
-     * @return whether the clientResVersion field is set
+     * <code>optional uint32 battle_id = 3;</code>
+     * @return whether the battleId field is set
      */
-    public boolean hasClientResVersion() {
+    public boolean hasBattleId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 client_res_version = 5;</code>
+     * <code>optional uint32 battle_id = 3;</code>
      * @return this
      */
-    public PVEBattleResultCsReq clearClientResVersion() {
+    public PVEBattleResultCsReq clearBattleId() {
       bitField0_ &= ~0x00000001;
-      clientResVersion = 0;
+      battleId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 client_res_version = 5;</code>
-     * @return the clientResVersion
+     * <code>optional uint32 battle_id = 3;</code>
+     * @return the battleId
      */
-    public int getClientResVersion() {
-      return clientResVersion;
+    public int getBattleId() {
+      return battleId;
     }
 
     /**
-     * <code>optional uint32 client_res_version = 5;</code>
-     * @param value the clientResVersion to set
+     * <code>optional uint32 battle_id = 3;</code>
+     * @param value the battleId to set
      * @return this
      */
-    public PVEBattleResultCsReq setClientResVersion(final int value) {
+    public PVEBattleResultCsReq setBattleId(final int value) {
       bitField0_ |= 0x00000001;
-      clientResVersion = value;
+      battleId = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 stage_id = 8;</code>
+     * <code>optional uint32 stage_id = 6;</code>
      * @return whether the stageId field is set
      */
     public boolean hasStageId() {
@@ -121,7 +121,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 stage_id = 8;</code>
+     * <code>optional uint32 stage_id = 6;</code>
      * @return this
      */
     public PVEBattleResultCsReq clearStageId() {
@@ -131,7 +131,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 stage_id = 8;</code>
+     * <code>optional uint32 stage_id = 6;</code>
      * @return the stageId
      */
     public int getStageId() {
@@ -139,7 +139,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 stage_id = 8;</code>
+     * <code>optional uint32 stage_id = 6;</code>
      * @param value the stageId to set
      * @return this
      */
@@ -150,39 +150,39 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 battle_id = 11;</code>
-     * @return whether the battleId field is set
+     * <code>optional uint32 client_res_version = 7;</code>
+     * @return whether the clientResVersion field is set
      */
-    public boolean hasBattleId() {
+    public boolean hasClientResVersion() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 battle_id = 11;</code>
+     * <code>optional uint32 client_res_version = 7;</code>
      * @return this
      */
-    public PVEBattleResultCsReq clearBattleId() {
+    public PVEBattleResultCsReq clearClientResVersion() {
       bitField0_ &= ~0x00000004;
-      battleId = 0;
+      clientResVersion = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 battle_id = 11;</code>
-     * @return the battleId
+     * <code>optional uint32 client_res_version = 7;</code>
+     * @return the clientResVersion
      */
-    public int getBattleId() {
-      return battleId;
+    public int getClientResVersion() {
+      return clientResVersion;
     }
 
     /**
-     * <code>optional uint32 battle_id = 11;</code>
-     * @param value the battleId to set
+     * <code>optional uint32 client_res_version = 7;</code>
+     * @param value the clientResVersion to set
      * @return this
      */
-    public PVEBattleResultCsReq setBattleId(final int value) {
+    public PVEBattleResultCsReq setClientResVersion(final int value) {
       bitField0_ |= 0x00000004;
-      battleId = value;
+      clientResVersion = value;
       return this;
     }
 
@@ -224,7 +224,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BattleEndStatus end_status = 15;</code>
+     * <code>optional .BattleEndStatus end_status = 9;</code>
      * @return whether the endStatus field is set
      */
     public boolean hasEndStatus() {
@@ -232,7 +232,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BattleEndStatus end_status = 15;</code>
+     * <code>optional .BattleEndStatus end_status = 9;</code>
      * @return this
      */
     public PVEBattleResultCsReq clearEndStatus() {
@@ -242,7 +242,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BattleEndStatus end_status = 15;</code>
+     * <code>optional .BattleEndStatus end_status = 9;</code>
      * @return the endStatus
      */
     public BattleEndStatusOuterClass.BattleEndStatus getEndStatus() {
@@ -275,7 +275,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BattleEndStatus end_status = 15;</code>
+     * <code>optional .BattleEndStatus end_status = 9;</code>
      * @param value the endStatus to set
      * @return this
      */
@@ -287,7 +287,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool is_ai_consider_ultra_skill = 10;</code>
+     * <code>optional bool is_ai_consider_ultra_skill = 12;</code>
      * @return whether the isAiConsiderUltraSkill field is set
      */
     public boolean hasIsAiConsiderUltraSkill() {
@@ -295,7 +295,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool is_ai_consider_ultra_skill = 10;</code>
+     * <code>optional bool is_ai_consider_ultra_skill = 12;</code>
      * @return this
      */
     public PVEBattleResultCsReq clearIsAiConsiderUltraSkill() {
@@ -305,7 +305,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool is_ai_consider_ultra_skill = 10;</code>
+     * <code>optional bool is_ai_consider_ultra_skill = 12;</code>
      * @return the isAiConsiderUltraSkill
      */
     public boolean getIsAiConsiderUltraSkill() {
@@ -313,7 +313,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool is_ai_consider_ultra_skill = 10;</code>
+     * <code>optional bool is_ai_consider_ultra_skill = 12;</code>
      * @param value the isAiConsiderUltraSkill to set
      * @return this
      */
@@ -324,7 +324,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BattleStatistics stt = 14;</code>
+     * <code>optional .BattleStatistics stt = 5;</code>
      * @return whether the stt field is set
      */
     public boolean hasStt() {
@@ -332,7 +332,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BattleStatistics stt = 14;</code>
+     * <code>optional .BattleStatistics stt = 5;</code>
      * @return this
      */
     public PVEBattleResultCsReq clearStt() {
@@ -342,7 +342,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BattleStatistics stt = 14;</code>
+     * <code>optional .BattleStatistics stt = 5;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -356,7 +356,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BattleStatistics stt = 14;</code>
+     * <code>optional .BattleStatistics stt = 5;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -370,7 +370,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BattleStatistics stt = 14;</code>
+     * <code>optional .BattleStatistics stt = 5;</code>
      * @param value the stt to set
      * @return this
      */
@@ -381,7 +381,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional bytes turn_snapshot_hash = 1;</code>
+     * <code>optional bytes turn_snapshot_hash = 11;</code>
      * @return whether the turnSnapshotHash field is set
      */
     public boolean hasTurnSnapshotHash() {
@@ -389,7 +389,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional bytes turn_snapshot_hash = 1;</code>
+     * <code>optional bytes turn_snapshot_hash = 11;</code>
      * @return this
      */
     public PVEBattleResultCsReq clearTurnSnapshotHash() {
@@ -399,7 +399,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional bytes turn_snapshot_hash = 1;</code>
+     * <code>optional bytes turn_snapshot_hash = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -413,7 +413,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional bytes turn_snapshot_hash = 1;</code>
+     * <code>optional bytes turn_snapshot_hash = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -427,7 +427,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional bytes turn_snapshot_hash = 1;</code>
+     * <code>optional bytes turn_snapshot_hash = 11;</code>
      * @param value the turnSnapshotHash to add
      * @return this
      */
@@ -438,7 +438,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional bytes turn_snapshot_hash = 1;</code>
+     * <code>optional bytes turn_snapshot_hash = 11;</code>
      * @param values the turnSnapshotHash to add
      * @return this
      */
@@ -449,7 +449,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>optional bytes turn_snapshot_hash = 1;</code>
+     * <code>optional bytes turn_snapshot_hash = 11;</code>
      * @param values the turnSnapshotHash to set
      * @return this
      */
@@ -460,7 +460,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .BattleOp op_list = 12;</code>
+     * <code>repeated .BattleOp op_list = 8;</code>
      * @return whether the opList field is set
      */
     public boolean hasOpList() {
@@ -468,7 +468,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .BattleOp op_list = 12;</code>
+     * <code>repeated .BattleOp op_list = 8;</code>
      * @return this
      */
     public PVEBattleResultCsReq clearOpList() {
@@ -478,7 +478,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .BattleOp op_list = 12;</code>
+     * <code>repeated .BattleOp op_list = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -492,7 +492,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .BattleOp op_list = 12;</code>
+     * <code>repeated .BattleOp op_list = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -506,7 +506,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .BattleOp op_list = 12;</code>
+     * <code>repeated .BattleOp op_list = 8;</code>
      * @param value the opList to add
      * @return this
      */
@@ -517,7 +517,7 @@ public final class PVEBattleResultCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .BattleOp op_list = 12;</code>
+     * <code>repeated .BattleOp op_list = 8;</code>
      * @param values the opList to add
      * @return this
      */
@@ -532,9 +532,9 @@ public final class PVEBattleResultCsReqOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        clientResVersion = other.clientResVersion;
-        stageId = other.stageId;
         battleId = other.battleId;
+        stageId = other.stageId;
+        clientResVersion = other.clientResVersion;
         costTime = other.costTime;
         endStatus = other.endStatus;
         isAiConsiderUltraSkill = other.isAiConsiderUltraSkill;
@@ -551,14 +551,14 @@ public final class PVEBattleResultCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasClientResVersion()) {
-        setClientResVersion(other.clientResVersion);
+      if (other.hasBattleId()) {
+        setBattleId(other.battleId);
       }
       if (other.hasStageId()) {
         setStageId(other.stageId);
       }
-      if (other.hasBattleId()) {
-        setBattleId(other.battleId);
+      if (other.hasClientResVersion()) {
+        setClientResVersion(other.clientResVersion);
       }
       if (other.hasCostTime()) {
         setCostTime(other.costTime);
@@ -588,9 +588,9 @@ public final class PVEBattleResultCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      clientResVersion = 0;
-      stageId = 0;
       battleId = 0;
+      stageId = 0;
+      clientResVersion = 0;
       costTime = 0;
       endStatus = 0;
       isAiConsiderUltraSkill = false;
@@ -623,9 +623,9 @@ public final class PVEBattleResultCsReqOuterClass {
       }
       PVEBattleResultCsReq other = (PVEBattleResultCsReq) o;
       return bitField0_ == other.bitField0_
-        && (!hasClientResVersion() || clientResVersion == other.clientResVersion)
-        && (!hasStageId() || stageId == other.stageId)
         && (!hasBattleId() || battleId == other.battleId)
+        && (!hasStageId() || stageId == other.stageId)
+        && (!hasClientResVersion() || clientResVersion == other.clientResVersion)
         && (!hasCostTime() || costTime == other.costTime)
         && (!hasEndStatus() || endStatus == other.endStatus)
         && (!hasIsAiConsiderUltraSkill() || isAiConsiderUltraSkill == other.isAiConsiderUltraSkill)
@@ -637,40 +637,40 @@ public final class PVEBattleResultCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 40);
-        output.writeUInt32NoTag(clientResVersion);
+        output.writeRawByte((byte) 24);
+        output.writeUInt32NoTag(battleId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(stageId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 88);
-        output.writeUInt32NoTag(battleId);
+        output.writeRawByte((byte) 56);
+        output.writeUInt32NoTag(clientResVersion);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(costTime);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 72);
         output.writeEnumNoTag(endStatus);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 96);
         output.writeBoolNoTag(isAiConsiderUltraSkill);
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        output.writeRawByte((byte) 114);
+        output.writeRawByte((byte) 42);
         output.writeMessageNoTag(stt);
       }
       if ((bitField0_ & 0x00000080) != 0) {
-        output.writeRawByte((byte) 10);
+        output.writeRawByte((byte) 90);
         output.writeBytesNoTag(turnSnapshotHash);
       }
       if ((bitField0_ & 0x00000100) != 0) {
         for (int i = 0; i < opList.length(); i++) {
-          output.writeRawByte((byte) 98);
+          output.writeRawByte((byte) 66);
           output.writeMessageNoTag(opList.get(i));
         }
       }
@@ -680,13 +680,13 @@ public final class PVEBattleResultCsReqOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(clientResVersion);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(battleId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(stageId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(battleId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(clientResVersion);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(costTime);
@@ -716,27 +716,27 @@ public final class PVEBattleResultCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
-            // clientResVersion
-            clientResVersion = input.readUInt32();
+          case 24: {
+            // battleId
+            battleId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 48) {
               break;
             }
           }
-          case 64: {
+          case 48: {
             // stageId
             stageId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 56) {
               break;
             }
           }
-          case 88: {
-            // battleId
-            battleId = input.readUInt32();
+          case 56: {
+            // clientResVersion
+            clientResVersion = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 104) {
@@ -748,11 +748,11 @@ public final class PVEBattleResultCsReqOuterClass {
             costTime = input.readUInt32();
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 72) {
               break;
             }
           }
-          case 120: {
+          case 72: {
             // endStatus
             final int value = input.readInt32();
             if (BattleEndStatusOuterClass.BattleEndStatus.forNumber(value) != null) {
@@ -760,38 +760,38 @@ public final class PVEBattleResultCsReqOuterClass {
               bitField0_ |= 0x00000010;
             }
             tag = input.readTag();
-            if (tag != 80) {
+            if (tag != 96) {
               break;
             }
           }
-          case 80: {
+          case 96: {
             // isAiConsiderUltraSkill
             isAiConsiderUltraSkill = input.readBool();
             bitField0_ |= 0x00000020;
             tag = input.readTag();
-            if (tag != 114) {
+            if (tag != 42) {
               break;
             }
           }
-          case 114: {
+          case 42: {
             // stt
             input.readMessage(stt);
             bitField0_ |= 0x00000040;
             tag = input.readTag();
-            if (tag != 10) {
+            if (tag != 90) {
               break;
             }
           }
-          case 10: {
+          case 90: {
             // turnSnapshotHash
             input.readBytes(turnSnapshotHash);
             bitField0_ |= 0x00000080;
             tag = input.readTag();
-            if (tag != 98) {
+            if (tag != 66) {
               break;
             }
           }
-          case 98: {
+          case 66: {
             // opList
             tag = input.readRepeatedMessage(opList, tag);
             bitField0_ |= 0x00000100;
@@ -817,13 +817,13 @@ public final class PVEBattleResultCsReqOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.clientResVersion, clientResVersion);
+        output.writeUInt32(FieldNames.battleId, battleId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.stageId, stageId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.battleId, battleId);
+        output.writeUInt32(FieldNames.clientResVersion, clientResVersion);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeUInt32(FieldNames.costTime, costTime);
@@ -853,11 +853,11 @@ public final class PVEBattleResultCsReqOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -2005674429:
-          case -349907515: {
-            if (input.isAtField(FieldNames.clientResVersion)) {
+          case -1678308365:
+          case -487930366: {
+            if (input.isAtField(FieldNames.battleId)) {
               if (!input.trySkipNullValue()) {
-                clientResVersion = input.readUInt32();
+                battleId = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -877,11 +877,11 @@ public final class PVEBattleResultCsReqOuterClass {
             }
             break;
           }
-          case -1678308365:
-          case -487930366: {
-            if (input.isAtField(FieldNames.battleId)) {
+          case -2005674429:
+          case -349907515: {
+            if (input.isAtField(FieldNames.clientResVersion)) {
               if (!input.trySkipNullValue()) {
-                battleId = input.readUInt32();
+                clientResVersion = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -1018,11 +1018,11 @@ public final class PVEBattleResultCsReqOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName clientResVersion = FieldName.forField("clientResVersion", "client_res_version");
+      static final FieldName battleId = FieldName.forField("battleId", "battle_id");
 
       static final FieldName stageId = FieldName.forField("stageId", "stage_id");
 
-      static final FieldName battleId = FieldName.forField("battleId", "battle_id");
+      static final FieldName clientResVersion = FieldName.forField("clientResVersion", "client_res_version");
 
       static final FieldName costTime = FieldName.forField("costTime", "cost_time");
 

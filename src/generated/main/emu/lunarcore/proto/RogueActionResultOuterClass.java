@@ -19,12 +19,12 @@ public final class RogueActionResultOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .RogueBuffSource source = 10;</code>
+     * <code>optional .RogueBuffSource source = 11;</code>
      */
     private int source;
 
     /**
-     * <code>optional .RogueActionResultData rogue_action = 5;</code>
+     * <code>optional .RogueActionResultData rogue_action = 4;</code>
      */
     private final RogueActionResultDataOuterClass.RogueActionResultData rogueAction = RogueActionResultDataOuterClass.RogueActionResultData.newInstance();
 
@@ -39,7 +39,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuffSource source = 10;</code>
+     * <code>optional .RogueBuffSource source = 11;</code>
      * @return whether the source field is set
      */
     public boolean hasSource() {
@@ -47,7 +47,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuffSource source = 10;</code>
+     * <code>optional .RogueBuffSource source = 11;</code>
      * @return this
      */
     public RogueActionResult clearSource() {
@@ -57,7 +57,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuffSource source = 10;</code>
+     * <code>optional .RogueBuffSource source = 11;</code>
      * @return the source
      */
     public RogueBuffSourceOuterClass.RogueBuffSource getSource() {
@@ -90,7 +90,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuffSource source = 10;</code>
+     * <code>optional .RogueBuffSource source = 11;</code>
      * @param value the source to set
      * @return this
      */
@@ -101,7 +101,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueActionResultData rogue_action = 5;</code>
+     * <code>optional .RogueActionResultData rogue_action = 4;</code>
      * @return whether the rogueAction field is set
      */
     public boolean hasRogueAction() {
@@ -109,7 +109,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueActionResultData rogue_action = 5;</code>
+     * <code>optional .RogueActionResultData rogue_action = 4;</code>
      * @return this
      */
     public RogueActionResult clearRogueAction() {
@@ -119,7 +119,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueActionResultData rogue_action = 5;</code>
+     * <code>optional .RogueActionResultData rogue_action = 4;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -133,7 +133,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueActionResultData rogue_action = 5;</code>
+     * <code>optional .RogueActionResultData rogue_action = 4;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -147,7 +147,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueActionResultData rogue_action = 5;</code>
+     * <code>optional .RogueActionResultData rogue_action = 4;</code>
      * @param value the rogueAction to set
      * @return this
      */
@@ -224,11 +224,11 @@ public final class RogueActionResultOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 88);
         output.writeEnumNoTag(source);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 42);
+        output.writeRawByte((byte) 34);
         output.writeMessageNoTag(rogueAction);
       }
     }
@@ -252,7 +252,7 @@ public final class RogueActionResultOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
+          case 88: {
             // source
             final int value = input.readInt32();
             if (RogueBuffSourceOuterClass.RogueBuffSource.forNumber(value) != null) {
@@ -260,11 +260,11 @@ public final class RogueActionResultOuterClass {
               bitField0_ |= 0x00000001;
             }
             tag = input.readTag();
-            if (tag != 42) {
+            if (tag != 34) {
               break;
             }
           }
-          case 42: {
+          case 34: {
             // rogueAction
             input.readMessage(rogueAction);
             bitField0_ |= 0x00000002;

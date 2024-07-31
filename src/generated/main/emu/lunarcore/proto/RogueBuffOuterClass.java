@@ -24,7 +24,7 @@ public final class RogueBuffOuterClass {
     private int buffId;
 
     /**
-     * <code>optional uint32 level = 8;</code>
+     * <code>optional uint32 level = 15;</code>
      */
     private int level;
 
@@ -76,7 +76,7 @@ public final class RogueBuffOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 8;</code>
+     * <code>optional uint32 level = 15;</code>
      * @return whether the level field is set
      */
     public boolean hasLevel() {
@@ -84,7 +84,7 @@ public final class RogueBuffOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 8;</code>
+     * <code>optional uint32 level = 15;</code>
      * @return this
      */
     public RogueBuff clearLevel() {
@@ -94,7 +94,7 @@ public final class RogueBuffOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 8;</code>
+     * <code>optional uint32 level = 15;</code>
      * @return the level
      */
     public int getLevel() {
@@ -102,7 +102,7 @@ public final class RogueBuffOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 8;</code>
+     * <code>optional uint32 level = 15;</code>
      * @param value the level to set
      * @return this
      */
@@ -181,7 +181,7 @@ public final class RogueBuffOuterClass {
         output.writeUInt32NoTag(buffId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(level);
       }
     }
@@ -210,11 +210,11 @@ public final class RogueBuffOuterClass {
             buffId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 120) {
               break;
             }
           }
-          case 64: {
+          case 120: {
             // level
             level = input.readUInt32();
             bitField0_ |= 0x00000002;

@@ -19,17 +19,17 @@ public final class EntityMotionOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 entity_id = 10;</code>
+     * <code>optional uint32 entity_id = 4;</code>
      */
     private int entityId;
 
     /**
-     * <code>optional uint32 map_layer = 14;</code>
+     * <code>optional uint32 map_layer = 6;</code>
      */
     private int mapLayer;
 
     /**
-     * <code>optional .MotionInfo motion = 4;</code>
+     * <code>optional .MotionInfo motion = 15;</code>
      */
     private final MotionInfoOuterClass.MotionInfo motion = MotionInfoOuterClass.MotionInfo.newInstance();
 
@@ -44,7 +44,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional uint32 entity_id = 10;</code>
+     * <code>optional uint32 entity_id = 4;</code>
      * @return whether the entityId field is set
      */
     public boolean hasEntityId() {
@@ -52,7 +52,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional uint32 entity_id = 10;</code>
+     * <code>optional uint32 entity_id = 4;</code>
      * @return this
      */
     public EntityMotion clearEntityId() {
@@ -62,7 +62,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional uint32 entity_id = 10;</code>
+     * <code>optional uint32 entity_id = 4;</code>
      * @return the entityId
      */
     public int getEntityId() {
@@ -70,7 +70,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional uint32 entity_id = 10;</code>
+     * <code>optional uint32 entity_id = 4;</code>
      * @param value the entityId to set
      * @return this
      */
@@ -81,7 +81,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional uint32 map_layer = 14;</code>
+     * <code>optional uint32 map_layer = 6;</code>
      * @return whether the mapLayer field is set
      */
     public boolean hasMapLayer() {
@@ -89,7 +89,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional uint32 map_layer = 14;</code>
+     * <code>optional uint32 map_layer = 6;</code>
      * @return this
      */
     public EntityMotion clearMapLayer() {
@@ -99,7 +99,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional uint32 map_layer = 14;</code>
+     * <code>optional uint32 map_layer = 6;</code>
      * @return the mapLayer
      */
     public int getMapLayer() {
@@ -107,7 +107,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional uint32 map_layer = 14;</code>
+     * <code>optional uint32 map_layer = 6;</code>
      * @param value the mapLayer to set
      * @return this
      */
@@ -118,7 +118,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional .MotionInfo motion = 4;</code>
+     * <code>optional .MotionInfo motion = 15;</code>
      * @return whether the motion field is set
      */
     public boolean hasMotion() {
@@ -126,7 +126,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional .MotionInfo motion = 4;</code>
+     * <code>optional .MotionInfo motion = 15;</code>
      * @return this
      */
     public EntityMotion clearMotion() {
@@ -136,7 +136,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional .MotionInfo motion = 4;</code>
+     * <code>optional .MotionInfo motion = 15;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -150,7 +150,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional .MotionInfo motion = 4;</code>
+     * <code>optional .MotionInfo motion = 15;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -164,7 +164,7 @@ public final class EntityMotionOuterClass {
     }
 
     /**
-     * <code>optional .MotionInfo motion = 4;</code>
+     * <code>optional .MotionInfo motion = 15;</code>
      * @param value the motion to set
      * @return this
      */
@@ -246,15 +246,15 @@ public final class EntityMotionOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(entityId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(mapLayer);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 34);
+        output.writeRawByte((byte) 122);
         output.writeMessageNoTag(motion);
       }
     }
@@ -281,25 +281,25 @@ public final class EntityMotionOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
+          case 32: {
             // entityId
             entityId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 112) {
+            if (tag != 48) {
               break;
             }
           }
-          case 112: {
+          case 48: {
             // mapLayer
             mapLayer = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 34) {
+            if (tag != 122) {
               break;
             }
           }
-          case 34: {
+          case 122: {
             // motion
             input.readMessage(motion);
             bitField0_ |= 0x00000004;

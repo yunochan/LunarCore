@@ -19,19 +19,19 @@ public final class SceneNpcMonsterInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 world_level = 6;</code>
+     * <code>optional uint32 world_level = 8;</code>
      */
     private int worldLevel;
 
     /**
-     * <code>optional uint32 event_id = 11;</code>
-     */
-    private int eventId;
-
-    /**
-     * <code>optional uint32 monster_id = 12;</code>
+     * <code>optional uint32 monster_id = 10;</code>
      */
     private int monsterId;
+
+    /**
+     * <code>optional uint32 event_id = 13;</code>
+     */
+    private int eventId;
 
     private SceneNpcMonsterInfo() {
     }
@@ -44,7 +44,7 @@ public final class SceneNpcMonsterInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 6;</code>
+     * <code>optional uint32 world_level = 8;</code>
      * @return whether the worldLevel field is set
      */
     public boolean hasWorldLevel() {
@@ -52,7 +52,7 @@ public final class SceneNpcMonsterInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 6;</code>
+     * <code>optional uint32 world_level = 8;</code>
      * @return this
      */
     public SceneNpcMonsterInfo clearWorldLevel() {
@@ -62,7 +62,7 @@ public final class SceneNpcMonsterInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 6;</code>
+     * <code>optional uint32 world_level = 8;</code>
      * @return the worldLevel
      */
     public int getWorldLevel() {
@@ -70,7 +70,7 @@ public final class SceneNpcMonsterInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 6;</code>
+     * <code>optional uint32 world_level = 8;</code>
      * @param value the worldLevel to set
      * @return this
      */
@@ -81,62 +81,25 @@ public final class SceneNpcMonsterInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 event_id = 11;</code>
-     * @return whether the eventId field is set
+     * <code>optional uint32 monster_id = 10;</code>
+     * @return whether the monsterId field is set
      */
-    public boolean hasEventId() {
+    public boolean hasMonsterId() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 event_id = 11;</code>
-     * @return this
-     */
-    public SceneNpcMonsterInfo clearEventId() {
-      bitField0_ &= ~0x00000002;
-      eventId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 event_id = 11;</code>
-     * @return the eventId
-     */
-    public int getEventId() {
-      return eventId;
-    }
-
-    /**
-     * <code>optional uint32 event_id = 11;</code>
-     * @param value the eventId to set
-     * @return this
-     */
-    public SceneNpcMonsterInfo setEventId(final int value) {
-      bitField0_ |= 0x00000002;
-      eventId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 monster_id = 12;</code>
-     * @return whether the monsterId field is set
-     */
-    public boolean hasMonsterId() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 monster_id = 12;</code>
+     * <code>optional uint32 monster_id = 10;</code>
      * @return this
      */
     public SceneNpcMonsterInfo clearMonsterId() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000002;
       monsterId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 monster_id = 12;</code>
+     * <code>optional uint32 monster_id = 10;</code>
      * @return the monsterId
      */
     public int getMonsterId() {
@@ -144,13 +107,50 @@ public final class SceneNpcMonsterInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 monster_id = 12;</code>
+     * <code>optional uint32 monster_id = 10;</code>
      * @param value the monsterId to set
      * @return this
      */
     public SceneNpcMonsterInfo setMonsterId(final int value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       monsterId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 event_id = 13;</code>
+     * @return whether the eventId field is set
+     */
+    public boolean hasEventId() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 event_id = 13;</code>
+     * @return this
+     */
+    public SceneNpcMonsterInfo clearEventId() {
+      bitField0_ &= ~0x00000004;
+      eventId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 event_id = 13;</code>
+     * @return the eventId
+     */
+    public int getEventId() {
+      return eventId;
+    }
+
+    /**
+     * <code>optional uint32 event_id = 13;</code>
+     * @param value the eventId to set
+     * @return this
+     */
+    public SceneNpcMonsterInfo setEventId(final int value) {
+      bitField0_ |= 0x00000004;
+      eventId = value;
       return this;
     }
 
@@ -160,8 +160,8 @@ public final class SceneNpcMonsterInfoOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         worldLevel = other.worldLevel;
-        eventId = other.eventId;
         monsterId = other.monsterId;
+        eventId = other.eventId;
       }
       return this;
     }
@@ -175,11 +175,11 @@ public final class SceneNpcMonsterInfoOuterClass {
       if (other.hasWorldLevel()) {
         setWorldLevel(other.worldLevel);
       }
-      if (other.hasEventId()) {
-        setEventId(other.eventId);
-      }
       if (other.hasMonsterId()) {
         setMonsterId(other.monsterId);
+      }
+      if (other.hasEventId()) {
+        setEventId(other.eventId);
       }
       return this;
     }
@@ -192,8 +192,8 @@ public final class SceneNpcMonsterInfoOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       worldLevel = 0;
-      eventId = 0;
       monsterId = 0;
+      eventId = 0;
       return this;
     }
 
@@ -218,23 +218,23 @@ public final class SceneNpcMonsterInfoOuterClass {
       SceneNpcMonsterInfo other = (SceneNpcMonsterInfo) o;
       return bitField0_ == other.bitField0_
         && (!hasWorldLevel() || worldLevel == other.worldLevel)
-        && (!hasEventId() || eventId == other.eventId)
-        && (!hasMonsterId() || monsterId == other.monsterId);
+        && (!hasMonsterId() || monsterId == other.monsterId)
+        && (!hasEventId() || eventId == other.eventId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 64);
         output.writeUInt32NoTag(worldLevel);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 88);
-        output.writeUInt32NoTag(eventId);
+        output.writeRawByte((byte) 80);
+        output.writeUInt32NoTag(monsterId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 96);
-        output.writeUInt32NoTag(monsterId);
+        output.writeRawByte((byte) 104);
+        output.writeUInt32NoTag(eventId);
       }
     }
 
@@ -245,10 +245,10 @@ public final class SceneNpcMonsterInfoOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(worldLevel);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(eventId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(monsterId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(monsterId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(eventId);
       }
       return size;
     }
@@ -260,27 +260,27 @@ public final class SceneNpcMonsterInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 48: {
+          case 64: {
             // worldLevel
             worldLevel = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 80) {
               break;
             }
           }
-          case 88: {
-            // eventId
-            eventId = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 96) {
-              break;
-            }
-          }
-          case 96: {
+          case 80: {
             // monsterId
             monsterId = input.readUInt32();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 104) {
+              break;
+            }
+          }
+          case 104: {
+            // eventId
+            eventId = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 0) {
@@ -308,10 +308,10 @@ public final class SceneNpcMonsterInfoOuterClass {
         output.writeUInt32(FieldNames.worldLevel, worldLevel);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.eventId, eventId);
+        output.writeUInt32(FieldNames.monsterId, monsterId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.monsterId, monsterId);
+        output.writeUInt32(FieldNames.eventId, eventId);
       }
       output.endObject();
     }
@@ -335,11 +335,11 @@ public final class SceneNpcMonsterInfoOuterClass {
             }
             break;
           }
-          case -1376502443:
-          case 278118624: {
-            if (input.isAtField(FieldNames.eventId)) {
+          case -1316830571:
+          case 2127946656: {
+            if (input.isAtField(FieldNames.monsterId)) {
               if (!input.trySkipNullValue()) {
-                eventId = input.readUInt32();
+                monsterId = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -347,11 +347,11 @@ public final class SceneNpcMonsterInfoOuterClass {
             }
             break;
           }
-          case -1316830571:
-          case 2127946656: {
-            if (input.isAtField(FieldNames.monsterId)) {
+          case -1376502443:
+          case 278118624: {
+            if (input.isAtField(FieldNames.eventId)) {
               if (!input.trySkipNullValue()) {
-                monsterId = input.readUInt32();
+                eventId = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -414,9 +414,9 @@ public final class SceneNpcMonsterInfoOuterClass {
     static class FieldNames {
       static final FieldName worldLevel = FieldName.forField("worldLevel", "world_level");
 
-      static final FieldName eventId = FieldName.forField("eventId", "event_id");
-
       static final FieldName monsterId = FieldName.forField("monsterId", "monster_id");
+
+      static final FieldName eventId = FieldName.forField("eventId", "event_id");
     }
   }
 }
