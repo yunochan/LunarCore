@@ -85,13 +85,6 @@ public class GameAvatar implements GameEntity, IAvatar {
         this.setExcel(excel);
     }
     
-    public GameAvatar(AvatarMultiPath path) {
-        this();
-        this.avatarId = GameConstants.TRAILBLAZER_AVATAR_ID;
-        this.timestamp = System.currentTimeMillis() / 1000;
-        this.setMultiPath(path);
-    }
-    
     @Override
     public Scene getScene() {
         return this.getOwner().getScene();
