@@ -39,6 +39,7 @@ public class Scene implements Tickable {
     private final int planeId;
     private final int floorId;
     private int entryId;
+    private int worldId;
     @Setter private int leaveEntryId;
     
     private int lastEntityId = 0;
@@ -71,6 +72,13 @@ public class Scene implements Tickable {
         
         this.healingSprings = new ObjectArrayList<>();
         this.triggers = new ObjectArrayList<>();
+        
+        // Set world id
+        if (this.getExcel().getPlaneType() == PlaneType.Train) {
+            this.worldId = player.getWorldId();
+        } else {
+            this.worldId = this.getExcel().getWorldID();
+        }
         
         // Use singleton to avoid allocating memory for a new entity loader everytime we create a scene
         this.entityLoader = getExcel().getPlaneType().getSceneEntityLoader();
@@ -391,10 +399,10 @@ public class Scene implements Tickable {
     public synchronized SceneInfo toProto() {
         // Set loaded flag
         this.loaded = true;
-        
+
         // Proto
         var proto = SceneInfo.newInstance()
-                .setWorldId(this.getExcel().getWorldID())
+                .setWorldId(this.getWorldId())
                 .setGameModeType(this.getExcel().getPlaneType().getVal())
                 .setPlaneId(this.getPlaneId())
                 .setFloorId(this.getFloorId())

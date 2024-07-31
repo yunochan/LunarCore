@@ -112,6 +112,7 @@ public class Player implements Tickable {
     private int planeId;
     private int floorId;
     private int entryId;
+    private int worldId;
     
     private long lastActiveTime;
     
@@ -800,6 +801,11 @@ public class Player implements Tickable {
             nextScene = new Scene(this, planeExcel, floorId);
         }
         
+        // Set world id
+        if (planeExcel.getPlaneType() == PlaneType.Town || planeExcel.getPlaneType() == PlaneType.Maze) {
+            this.worldId = planeExcel.getWorldID();
+        }
+        
         // Set player position
         this.getPos().set(pos);
         this.getRot().set(rot);
@@ -916,6 +922,11 @@ public class Player implements Tickable {
         if (this.getChallengeInstance() != null && !this.getChallengeInstance().validate(this)) {
             // Delete instance if it failed to validate (example: missing an excel)
             this.challengeInstance = null;
+        }
+        
+        // Set default world id if we don't have it
+        if (this.worldId == 0) {
+            this.worldId = GameConstants.DEFAULT_WORLD_ID;
         }
         
         // Unstuck check, dont load player into raid scenes
