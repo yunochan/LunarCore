@@ -483,12 +483,8 @@ public class Player implements Tickable {
         this.getCurAvatarPaths().put(excel.getBaseAvatarID(), pathId);
         
         // Sync with client
-        this.sendPacket(new PacketPlayerSyncScNotify(path));
-        for (var item : avatar.getEquips().values()) {
-            this.sendPacket(new PacketPlayerSyncScNotify(item));
-        }
-        
         this.sendPacket(new PacketAvatarPathChangedNotify(avatar, path));
+        this.sendPacket(new PacketPlayerSyncScNotify(avatar));
 
         // Success
         return pathId;

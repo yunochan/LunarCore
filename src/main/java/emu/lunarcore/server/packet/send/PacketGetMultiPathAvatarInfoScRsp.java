@@ -16,7 +16,6 @@ public class PacketGetMultiPathAvatarInfoScRsp extends BasePacket {
         
         for (AvatarMultiPath path : player.getAvatars().getMultiPaths().values()) {
             data.addMultiPathAvatarInfoList(path.toProto());
-            data.addBasicTypeIdList(path.getExcelId());
         }
         
         for (var entry : player.getCurAvatarPaths().entrySet()) {
@@ -25,6 +24,7 @@ public class PacketGetMultiPathAvatarInfoScRsp extends BasePacket {
                     .setValueValue(entry.getValue());
             
             data.addCurAvatarPath(info);
+            data.addBasicTypeIdList(entry.getValue());
         }
 
         this.setData(data);
