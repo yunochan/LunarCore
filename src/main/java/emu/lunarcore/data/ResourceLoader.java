@@ -224,6 +224,11 @@ public class ResourceLoader {
             String name = "P" + excel.getPlaneID() + "_F" + excel.getFloorID();
             File file = new File(LunarCore.getConfig().getResourceDir() + "/Config/LevelOutput/RuntimeFloor/" + name + ".json");
             
+            if (!file.exists()) {
+                LunarCore.getLogger().warn("Missing floor info: " + name);
+                continue;
+            }
+            
             try (FileReader reader = new FileReader(file)) {
                 FloorInfo floor = gson.fromJson(reader, FloorInfo.class);
                 GameData.getFloorInfos().put(name, floor);
