@@ -479,13 +479,19 @@ public class Player implements Tickable {
         // Set new avatar path
         avatar.setMultiPath(path);
         
-        // Set current avatar path
-        this.getCurAvatarPaths().put(excel.getBaseAvatarID(), pathId);
+        // Set gender if we are changing the main character
+        if (excel.getBaseAvatarID() == GameConstants.TRAILBLAZER_AVATAR_ID && excel.getGender() != null) {
+            this.gender = excel.getGender();
+        }
         
+        // Set current avatar path and save to database
+        this.getCurAvatarPaths().put(excel.getBaseAvatarID(), pathId);
+        this.save();
+
         // Sync with client
         this.sendPacket(new PacketAvatarPathChangedNotify(avatar, path));
         this.sendPacket(new PacketPlayerSyncScNotify(avatar));
-
+        
         // Success
         return pathId;
     }
