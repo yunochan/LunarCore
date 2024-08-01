@@ -279,13 +279,13 @@ public class ChallengeInstance {
             case STORY -> {
                 if (this.getBuffs() != null) {
                     int buffId = this.getBuffs().getInt(this.getCurrentStage() - 1);
-                    proto.getMutableStoryInfo().getMutableCurStoryBuffs().addBuffList(buffId);
+                    proto.getMutableExtInfo().getMutableCurStoryBuffs().addBuffList(buffId);
                 }
             }
             case BOSS -> {
                 if (this.getBuffs() != null) {
                     int buffId = this.getBuffs().getInt(this.getCurrentStage() - 1);
-                    proto.getMutableStoryInfo().getMutableCurBossBuffs().addBuffList(buffId);
+                    proto.getMutableExtInfo().getMutableCurBossBuffs().addBuffList(buffId);
                 }
             }
             default -> {

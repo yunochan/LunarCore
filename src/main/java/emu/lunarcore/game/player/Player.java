@@ -1,7 +1,9 @@
 package emu.lunarcore.game.player;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.bson.types.ObjectId;
 
@@ -24,7 +26,7 @@ import emu.lunarcore.data.excel.MazePlaneExcel;
 import emu.lunarcore.game.account.Account;
 import emu.lunarcore.game.avatar.AvatarStorage;
 import emu.lunarcore.game.avatar.GameAvatar;
-import emu.lunarcore.game.avatar.AvatarHeroPath;
+import emu.lunarcore.game.avatar.AvatarMultiPath;
 import emu.lunarcore.game.battle.Battle;
 import emu.lunarcore.game.challenge.ChallengeGroupReward;
 import emu.lunarcore.game.challenge.ChallengeHistory;
@@ -84,12 +86,12 @@ public class Player implements Tickable {
     private String name;
     private String signature;
     private int birthday;
-    private int curBasicType;
     private int headIcon;
     private int phoneTheme;
     private int chatBubble;
     private int currentBgm;
-    @Setter private PlayerGender gender;
+    private Map<Integer, Integer> curAvatarPaths;
+    private PlayerGender gender;
     
     private int level;
     private int exp; // Total exp
@@ -110,6 +112,7 @@ public class Player implements Tickable {
     private int planeId;
     private int floorId;
     private int entryId;
+    private int worldId;
     
     private long lastActiveTime;
     
@@ -145,11 +148,11 @@ public class Player implements Tickable {
     
     @Deprecated // Morphia only
     public Player() {
-        this.curBasicType = GameConstants.TRAILBLAZER_AVATAR_ID;
         this.gender = PlayerGender.GENDER_MAN;
         this.foodBuffs = new Int2ObjectOpenHashMap<>();
         this.assistAvatars = new ArrayList<>();
         this.displayAvatars = new ArrayList<>();
+        this.curAvatarPaths = new HashMap<>();
         
         this.avatars = new AvatarStorage(this);
         this.inventory = new Inventory(this);
@@ -190,7 +193,7 @@ public class Player implements Tickable {
         }
         
         // Setup hero paths
-        this.getAvatars().validateHeroPaths();
+        this.getAvatars().validateMultiPaths();
 
         // Give us the main character
         // TODO script tutorial
@@ -464,20 +467,46 @@ public class Player implements Tickable {
         return this.exp - GameData.getPlayerExpRequired(this.level);
     }
     
-    public AvatarHeroPath getCurHeroPath() {
-        return this.getAvatars().getHeroPathById(this.getCurBasicType());
+    public int getCurAvatarPathId(int baseAvatarId) {
+        return this.getCurAvatarPaths().getOrDefault(baseAvatarId, 0);
     }
     
-    public void setHeroBasicType(int heroType) {
-        AvatarHeroPath path = this.getAvatars().getHeroPathById(heroType);
-        if (path == null) return;
+    public AvatarMultiPath getCurAvatarPath(int baseAvatarId) {
+        int pathId = this.getCurAvatarPathId(baseAvatarId);
+        return this.getAvatars().getMultiPathById(pathId);
+    }
+    
+    public int setAvatarPath(int pathId) {
+        // Get excel
+        var excel = GameData.getMultiplePathAvatarExcelMap().get(pathId);
+        if (excel == null) return 0;
         
-        GameAvatar mainCharacter = this.getAvatarById(GameConstants.TRAILBLAZER_AVATAR_ID);
-        if (mainCharacter == null) return;
+        // Get path data
+        AvatarMultiPath path = this.getAvatars().getMultiPathById(pathId);
+        if (path == null) return 0;
         
-        // Set new hero and cur basic type
-        mainCharacter.setHeroPath(path);
-        this.curBasicType = heroType;
+        // Get avatar data
+        GameAvatar avatar = this.getAvatarById(excel.getBaseAvatarID());
+        if (avatar == null) return 0;
+        
+        // Set new avatar path
+        avatar.setMultiPath(path);
+        
+        // Set gender if we are changing the main character
+        if (excel.getBaseAvatarID() == GameConstants.TRAILBLAZER_AVATAR_ID && excel.getGender() != null) {
+            this.gender = excel.getGender();
+        }
+        
+        // Set current avatar path and save to database
+        this.getCurAvatarPaths().put(excel.getBaseAvatarID(), pathId);
+        this.save();
+
+        // Sync with client
+        this.sendPacket(new PacketAvatarPathChangedNotify(avatar, path));
+        this.sendPacket(new PacketPlayerSyncScNotify(avatar));
+        
+        // Success
+        return pathId;
     }
     
     public int getNextBattleId() {
@@ -784,6 +813,11 @@ public class Player implements Tickable {
             nextScene = new Scene(this, planeExcel, floorId);
         }
         
+        // Set world id
+        if (planeExcel.getPlaneType() == PlaneType.Town || planeExcel.getPlaneType() == PlaneType.Maze) {
+            this.worldId = planeExcel.getWorldID();
+        }
+        
         // Set player position
         this.getPos().set(pos);
         this.getRot().set(rot);
@@ -903,6 +937,12 @@ public class Player implements Tickable {
             // Delete instance if it failed to validate (example: missing an excel)
             this.challengeInstance = null;
         }
+        
+        // Set default world id if we don't have it
+        if (this.worldId == 0) {
+            this.worldId = GameConstants.DEFAULT_WORLD_ID;
+        }
+        
         // Unstuck check, dont load player into raid scenes
         //MazePlaneExcel planeExcel = GameData.getMazePlaneExcelMap().get(planeId);
         //if (planeExcel == null || planeExcel.getPlaneType().getVal() >= PlaneType.Raid.getVal()) {
@@ -975,7 +1015,7 @@ public class Player implements Tickable {
         datastore.getCollection(GameAvatar.class).deleteMany(filter);
         datastore.getCollection(ChallengeHistory.class).deleteMany(filter);
         datastore.getCollection(ChallengeGroupReward.class).deleteMany(filter);
-        datastore.getCollection(AvatarHeroPath.class).deleteMany(filter);
+        datastore.getCollection(AvatarMultiPath.class).deleteMany(filter);
         datastore.getCollection(GameItem.class).deleteMany(filter);
         datastore.getCollection(PlayerLineup.class).deleteMany(filter);
         datastore.getCollection(PlayerExtraLineup.class).deleteMany(filter);

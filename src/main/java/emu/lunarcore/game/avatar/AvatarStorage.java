@@ -5,11 +5,10 @@ import java.util.stream.Stream;
 
 import org.bson.types.ObjectId;
 
-import emu.lunarcore.GameConstants;
 import emu.lunarcore.LunarCore;
 import emu.lunarcore.data.GameData;
 import emu.lunarcore.data.excel.AvatarExcel;
-import emu.lunarcore.data.excel.HeroExcel;
+import emu.lunarcore.data.excel.MultiplePathAvatarExcel;
 import emu.lunarcore.game.inventory.GameItem;
 import emu.lunarcore.game.player.BasePlayerManager;
 import emu.lunarcore.game.player.Player;
@@ -26,23 +25,48 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
     private final Int2ObjectMap<GameAvatar> avatars;
     private final Object2ObjectMap<ObjectId, GameAvatar> avatarObjectIdMap;
     
-    private final Int2ObjectMap<AvatarHeroPath> heroPaths;
+    private final Int2ObjectMap<AvatarMultiPath> multiPaths;
+    private final Object2ObjectMap<ObjectId, AvatarMultiPath> multiPathsObjectIdMap;
     
     public AvatarStorage(Player player) {
         super(player);
         this.avatars = new Int2ObjectOpenHashMap<>();
         this.avatarObjectIdMap = new Object2ObjectOpenHashMap<>();
-        this.heroPaths = new Int2ObjectOpenHashMap<>();
+        this.multiPaths = new Int2ObjectOpenHashMap<>();
+        this.multiPathsObjectIdMap = new Object2ObjectOpenHashMap<>();
     }
 
     public int getAvatarCount() {
         return this.avatars.size();
     }
+    
+    // Base avatars
+    
+    public IAvatar getBaseAvatarById(int id) {
+        IAvatar baseAvatar = this.getMultiPathById(id);
+        if (baseAvatar == null) {
+            baseAvatar = this.getAvatarById(id);
+        }
+        
+        return baseAvatar;
+    }
+    
+    public IAvatar getBaseAvatarById(ObjectId id) {
+        IAvatar baseAvatar = this.getMultiPathById(id);
+        if (baseAvatar == null) {
+            baseAvatar = this.getAvatarById(id);
+        }
+        
+        return baseAvatar;
+    }
 
+    // Regular avatars
+    
     public GameAvatar getAvatarById(int id) {
-        // Check if we are trying to retrieve the hero character
-        if (GameData.getHeroExcelMap().containsKey(id)) {
-            id = GameConstants.TRAILBLAZER_AVATAR_ID;
+        // Check if we are trying to retrieve a multi path character
+        var multiPathExcel = GameData.getMultiplePathAvatarExcelMap().get(id);
+        if (multiPathExcel != null) {
+            id = multiPathExcel.getBaseAvatarID();
         }
         
         return getAvatars().get(id);
@@ -57,7 +81,7 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
     }
 
     public boolean hasAvatar(int id) {
-        return getAvatars().containsKey(id);
+        return getAvatarById(id) != null;
     }
 
     public boolean addAvatar(GameAvatar avatar) {
@@ -66,9 +90,17 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
             return false;
         }
         
-        // Dont add more than 1 main character
-        if (avatar.isHero() && this.hasAvatar(GameConstants.TRAILBLAZER_AVATAR_ID)) {
-            return false;
+        // Check if avatar has multiple paths
+        var pathExcel = GameData.getMultiplePathAvatarExcelMap().get(avatar.getAvatarId());
+        if (pathExcel != null) {
+            if (pathExcel.isDefault()) {
+                // Apply path to avatar
+                var path = this.getMultiPathById(avatar.getAvatarId());
+                avatar.setMultiPath(path);
+            } else {
+                // Skip if not a default path
+                return false;
+            }
         }
 
         // Set owner first
@@ -91,23 +123,38 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
         return true;
     }
     
-    public AvatarHeroPath getHeroPathById(int id) {
-        return getHeroPaths().get(id);
+    public AvatarMultiPath getMultiPathById(int id) {
+        return getMultiPaths().get(id);
+    }
+    
+    public AvatarMultiPath getMultiPathById(ObjectId id) {
+        return getMultiPathsObjectIdMap().get(id);
     }
     
     /**
      * Updates hero types for players. Will create hero types if they dont exist already.
      */
-    public void validateHeroPaths() {
-        for (HeroExcel heroExcel : GameData.getHeroExcelMap().values()) {
-            if (getHeroPaths().containsKey(heroExcel.getId())) continue;
+    public void validateMultiPaths() {
+        for (MultiplePathAvatarExcel pathExcel : GameData.getMultiplePathAvatarExcelMap().values()) {
+            // Create path if it doesnt exist
+            if (!getMultiPaths().containsKey(pathExcel.getId())) {
+                // Get excel
+                AvatarExcel excel = GameData.getAvatarExcelMap().get(pathExcel.getId());
+                if (excel == null) continue;
+                
+                // Create path and save
+                AvatarMultiPath path = new AvatarMultiPath(getPlayer(), excel);
+                path.save();
+                
+                // Add
+                getMultiPaths().put(path.getExcelId(), path);
+                getMultiPathsObjectIdMap().put(path.getId(), path);
+            }
             
-            AvatarExcel excel = GameData.getAvatarExcelMap().get(heroExcel.getId());
-            if (excel == null) continue;
-            
-            AvatarHeroPath path = new AvatarHeroPath(getPlayer(), excel);
-            path.save();
-            getHeroPaths().put(path.getId(), path);
+            // Make sure we have a current avatar type
+            if (pathExcel.isDefault() && this.getPlayer().getCurAvatarPathId(pathExcel.getBaseAvatarID()) == 0) {
+                this.getPlayer().getCurAvatarPaths().put(pathExcel.getBaseAvatarID(), pathExcel.getAvatarID());
+            }
         }
     }
 
@@ -119,32 +166,35 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
     // Database
 
     public void loadFromDatabase() {
-        // Load hero paths first (Important)
-        loadHeroPathsFromDatabase();
+        // Load multi paths first (Important)
+        loadMultiPathsFromDatabase();
         
         // Load avatars
         Stream<GameAvatar> stream = LunarCore.getGameDatabase().getObjects(GameAvatar.class, "ownerUid", this.getPlayer().getUid());
         stream.forEach(this::loadAvatar);
     }
     
-    private void loadHeroPathsFromDatabase() {
+    private void loadMultiPathsFromDatabase() {
         // Get stream from database
-        Stream<AvatarHeroPath> heroStream = LunarCore.getGameDatabase().getObjects(AvatarHeroPath.class, "ownerUid", this.getPlayer().getUid());
+        Stream<AvatarMultiPath> stream = LunarCore.getGameDatabase().getObjects(AvatarMultiPath.class, "ownerUid", this.getPlayer().getUid());
 
-        heroStream.forEach(heroPath -> {
+        stream.forEach(path -> {
             // Load avatar excel data
-            AvatarExcel excel = GameData.getAvatarExcelMap().get(heroPath.getId());
+            AvatarExcel excel = GameData.getAvatarExcelMap().get(path.getExcelId());
             if (excel == null) {
                 return;
             }
             
-            heroPath.setExcel(excel);
+            path.setOwner(this.getPlayer());
+            path.setExcel(excel);
             
-            this.heroPaths.put(heroPath.getId(), heroPath);
+            // Add
+            getMultiPaths().put(path.getExcelId(), path);
+            getMultiPathsObjectIdMap().put(path.getId(), path);
         });
         
         // Setup hero paths if they dont exist
-        this.validateHeroPaths();
+        this.validateMultiPaths();
     }
     
     public boolean loadAvatar(GameAvatar avatar) {
@@ -159,8 +209,8 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
         }
         
         // Set hero path
-        if (avatar.isHero()) {
-            avatar.setHeroPath(getPlayer().getCurHeroPath());
+        if (avatar.hasMultiPath()) {
+            avatar.setMultiPath(getPlayer().getCurAvatarPath(avatar.getAvatarId()));
         } else {
             // Load avatar excel data
             AvatarExcel excel = GameData.getAvatarExcelMap().get(avatar.getAvatarId());
@@ -185,8 +235,8 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
     
     public GameAvatar loadAvatarByObjectId(ObjectId id) {
         // Load hero paths first
-        if (this.getHeroPaths().size() == 0) {
-            this.loadHeroPathsFromDatabase();
+        if (this.getMultiPaths().size() == 0) {
+            this.loadMultiPathsFromDatabase();
         }
         
         // Load avatar

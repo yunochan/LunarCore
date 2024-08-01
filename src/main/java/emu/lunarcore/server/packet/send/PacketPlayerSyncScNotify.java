@@ -1,12 +1,15 @@
 package emu.lunarcore.server.packet.send;
 
 import java.util.Collection;
-
 import emu.lunarcore.game.avatar.GameAvatar;
-import emu.lunarcore.game.avatar.AvatarHeroPath;
+import emu.lunarcore.game.avatar.IAvatar;
+import emu.lunarcore.game.avatar.AvatarMultiPath;
 import emu.lunarcore.game.inventory.GameItem;
 import emu.lunarcore.game.player.Player;
 import emu.lunarcore.proto.BoardDataSyncOuterClass.BoardDataSync;
+import emu.lunarcore.proto.MissionSyncOuterClass.MissionSync;
+import emu.lunarcore.proto.MissionOuterClass.Mission;
+import emu.lunarcore.proto.MissionStatusOuterClass.MissionStatus;
 import emu.lunarcore.proto.PlayerSyncScNotifyOuterClass.PlayerSyncScNotify;
 import emu.lunarcore.server.packet.BasePacket;
 import emu.lunarcore.server.packet.CmdId;
@@ -35,16 +38,58 @@ public class PacketPlayerSyncScNotify extends BasePacket {
 
         this.setData(data);
     }
+    
+    public PacketPlayerSyncScNotify(IAvatar baseAvatar) {
+        this();
+        
+        var data = PlayerSyncScNotify.newInstance();
+        
+        if (baseAvatar instanceof GameAvatar avatar) {
+            data.getMutableAvatarSync().addAvatarList(avatar.toProto());
+            
+            // Also update multipath info
+            if (avatar.getMultiPath() != null) {
+                data.addMultiPathAvatarInfoList(avatar.getMultiPath().toProto());
+            }
+        } else if (baseAvatar instanceof AvatarMultiPath multiPath) {
+            data.addMultiPathAvatarInfoList(multiPath.toProto());
+        }
+        
+        this.setData(data);
+    }
+    
+    public PacketPlayerSyncScNotify(IAvatar baseAvatar, GameItem item) {
+        this();
+        
+        var data = PlayerSyncScNotify.newInstance();
+        
+        if (baseAvatar instanceof GameAvatar avatar) {
+            data.getMutableAvatarSync().addAvatarList(avatar.toProto());
+            
+            // Also update multipath info
+            if (avatar.getMultiPath() != null) {
+                data.addMultiPathAvatarInfoList(avatar.getMultiPath().toProto());
+            }
+        } else if (baseAvatar instanceof AvatarMultiPath multiPath) {
+            data.addMultiPathAvatarInfoList(multiPath.toProto());
+        }
+        
+        this.addItemToProto(data, item);
+        
+        this.setData(data);
+    }
 
     public PacketPlayerSyncScNotify(GameAvatar avatar) {
         this();
 
         var data = PlayerSyncScNotify.newInstance();
+        
+        // Update avatar
         data.getMutableAvatarSync().addAvatarList(avatar.toProto());
         
-        // Also update hero basic type info if were updating the main character
-        if (avatar.getHeroPath() != null) {
-            data.getMutableBasicTypeInfoList().add(avatar.getHeroPath().toProto());
+        // Also update multipath info
+        if (avatar.getMultiPath() != null) {
+            data.addMultiPathAvatarInfoList(avatar.getMultiPath().toProto());
         }
 
         this.setData(data);
@@ -54,8 +99,16 @@ public class PacketPlayerSyncScNotify extends BasePacket {
         this();
 
         var data = PlayerSyncScNotify.newInstance();
+        
+        // Update avatar
         data.getMutableAvatarSync().addAvatarList(avatar.toProto());
 
+        // Also update multipath info
+        if (avatar.getMultiPath() != null) {
+            data.addMultiPathAvatarInfoList(avatar.getMultiPath().toProto());
+        }
+        
+        // Update item
         this.addItemToProto(data, item);
 
         this.setData(data);
@@ -81,8 +134,8 @@ public class PacketPlayerSyncScNotify extends BasePacket {
             data.getMutableAvatarSync().addAvatarList(avatar.toProto());
             
             // Also update hero basic type info if were updating the main character
-            if (avatar.getHeroPath() != null) {
-                data.getMutableBasicTypeInfoList().add(avatar.getHeroPath().toProto());
+            if (avatar.getMultiPath() != null) {
+                data.addMultiPathAvatarInfoList(avatar.getMultiPath().toProto());
             }
         }
         
@@ -126,11 +179,36 @@ public class PacketPlayerSyncScNotify extends BasePacket {
         }
     }
     
-    public PacketPlayerSyncScNotify(AvatarHeroPath heroPath) {
+    public PacketPlayerSyncScNotify(AvatarMultiPath... multiPaths) {
         this();
 
+        var data = PlayerSyncScNotify.newInstance();
+        
+        for (var path : multiPaths) {
+            if (path != null) {
+                data.addMultiPathAvatarInfoList(path.toProto());
+            }
+        }
+        
+        this.setData(data);
+    }
+
+
+    public PacketPlayerSyncScNotify(int mainMissionId, int[] subMissionIds, MissionStatus missionStatus) {
+        this();
+
+        var missionSync = MissionSync.newInstance();
+
+        for (int subMissionId : subMissionIds) {
+            missionSync.addMissionList(
+                Mission.newInstance()
+                    .setId(subMissionId)
+                    .setStatus(missionStatus)
+            );
+        }
+
         var data = PlayerSyncScNotify.newInstance()
-                .addBasicTypeInfoList(heroPath.toProto());
+            .setMissionSync(missionSync);
 
         this.setData(data);
     }

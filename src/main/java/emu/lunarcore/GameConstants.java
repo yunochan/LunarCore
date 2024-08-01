@@ -6,7 +6,7 @@ import java.time.ZoneOffset;
 import emu.lunarcore.util.Position;
 
 public class GameConstants {
-    public static String VERSION = "2.3.0";
+    public static String VERSION = "2.4.0";
     
     public static final ZoneOffset CURRENT_ZONEOFFSET = ZoneOffset.systemDefault().getRules().getOffset(Instant.now());
     public static final int CURRENT_TIMEZONE = CURRENT_ZONEOFFSET.getTotalSeconds() / 3600;
@@ -14,6 +14,7 @@ public class GameConstants {
     // Game
     public static final String DEFAULT_NAME = "倒卖户口本单页，QQ群929259728";
     public static final int[] DEFAULT_HEAD_ICONS = {208001, 208002};
+    public static final int DEFAULT_WORLD_ID = 101;
     public static final int TRAILBLAZER_AVATAR_ID = 8001;
     public static final int MAX_TRAILBLAZER_LEVEL = 70;
     public static final int[] WORLD_LEVEL_UPGRADES = {0, 20, 30, 40, 50, 60, 65};

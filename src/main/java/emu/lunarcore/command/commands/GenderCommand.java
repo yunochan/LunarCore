@@ -1,12 +1,13 @@
 package emu.lunarcore.command.commands;
 
+import emu.lunarcore.GameConstants;
 import emu.lunarcore.command.Command;
 import emu.lunarcore.command.CommandArgs;
 import emu.lunarcore.command.CommandHandler;
 import emu.lunarcore.data.GameData;
 import emu.lunarcore.game.player.Player;
 import emu.lunarcore.game.player.PlayerGender;
-import emu.lunarcore.server.packet.send.PacketGetHeroBasicTypeInfoScRsp;
+import emu.lunarcore.server.packet.send.PacketGetBasicInfoScRsp;
 
 @Command(label = "gender", permission = "player.gender", requireTarget = true, desc = "/gender {male | female}. Sets the player gender.")
 public class GenderCommand implements CommandHandler {
@@ -15,37 +16,39 @@ public class GenderCommand implements CommandHandler {
     public void execute(CommandArgs args) {
         // Set world level
         Player target = args.getTarget();
-        PlayerGender playerGender = null;
         
+        // Get new gender
         String gender = args.get(0).toLowerCase();
-        switch (gender) {
-            case "m", "male", "boy", "man" -> {
-                playerGender = PlayerGender.GENDER_MAN;
-            }
-            case "f", "female", "girl", "woman" -> {
-                playerGender = PlayerGender.GENDER_WOMAN;
-            }
-        }
+        PlayerGender playerGender = switch (gender) {
+            case "m", "male", "boy", "man", "1" -> PlayerGender.GENDER_MAN;
+            case "f", "female", "girl", "woman", "2" -> PlayerGender.GENDER_WOMAN;
+            default -> null;
+        };
         
         // Change gender
         if (playerGender != null && playerGender != target.getGender()) {
-            // Set gender first
-            target.setGender(playerGender);
-            target.save();
-
             // Get first hero excel that matches our new player gender
-            var heroExcel = GameData.getHeroExcelMap().values().stream().filter(path -> path.getGender() == target.getGender()).findFirst().orElse(null);
-            if (heroExcel != null) {
-                // Set hero basic type
-                target.setHeroBasicType(heroExcel.getId());
+            var excel = GameData.getMultiplePathAvatarExcelMap().values().stream()
+                    .filter(path -> path.getBaseAvatarID() == GameConstants.TRAILBLAZER_AVATAR_ID && path.getGender() == playerGender)
+                    .findFirst()
+                    .orElse(null);
+            
+            // Sanity check. Should never happen
+            if (excel == null) {
+                args.sendMessage("Error: No avatar path was found for this gender");
+                return;
             }
             
-            // Send packet and response message
-            target.sendPacket(new PacketGetHeroBasicTypeInfoScRsp(target));
-            args.sendMessage("玩家 [" + target.getName() + "] 性别切换成功");
+            // Set our main character's path
+            target.setAvatarPath(excel.getId());
+            
+            // Send packet to update our gender
+            target.sendPacket(new PacketGetBasicInfoScRsp(target));
+            
+            // Send response message
+            args.sendMessage("玩家 [" + target.getName() + "] 性别切换成功");;
         } else {
             args.sendMessage("Error: 无效参数");
         }
     }
-
 }
