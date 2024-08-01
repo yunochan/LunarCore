@@ -208,9 +208,15 @@ public class AvatarStorage extends BasePlayerManager implements Iterable<GameAva
             return false;
         }
         
-        // Set hero path
+        // Set excel data
         if (avatar.hasMultiPath()) {
-            avatar.setMultiPath(getPlayer().getCurAvatarPath(avatar.getAvatarId()));
+            // Get avatar's current path
+            var path = getPlayer().getCurAvatarPath(avatar.getAvatarId());
+            if (path == null) {
+                return false;
+            }
+            
+            avatar.setMultiPath(path);
         } else {
             // Load avatar excel data
             AvatarExcel excel = GameData.getAvatarExcelMap().get(avatar.getAvatarId());
