@@ -128,7 +128,10 @@ public class Battle {
             var wave = new BattleMonsterWave(stage);
             wave.getMonsters().addAll(stageMonsterWave);
             
-            // Handle npc monster
+            // Add wave to battle
+            this.getWaves().add(wave);
+            
+            // Add buffs from npc monsters
             if (npcMonster != null) {
                 // Set wave custom level
                 wave.setCustomLevel(npcMonster.getCustomLevel());
@@ -136,9 +139,6 @@ public class Battle {
                 // Handle monster buffs
                 npcMonster.applyBuffs(this, this.getWaves().size());
             }
-            
-            // Finally add wave to battle
-            this.getWaves().add(wave);
         }
     }
     
@@ -247,8 +247,8 @@ public class Battle {
         }
         
         // Buffs
-        for (var entry : this.getBuffs().int2ObjectEntrySet()) {
-            proto.addBuffList(entry.getValue().toProto());
+        for (var buff : this.getBuffs().values()) {
+            proto.addBuffList(buff.toProto());
         }
         
         // Client turn snapshots
