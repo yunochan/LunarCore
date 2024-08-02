@@ -8,7 +8,7 @@ import emu.lunarcore.server.packet.BasePacket;
 
 public class PacketClientDownloadDataScNotify extends BasePacket {
     public PacketClientDownloadDataScNotify(byte[] data, Player player) {
-        super(9);
+        super(53);
         ClientDownloadDataScNotifyOuterClass.ClientDownloadDataScNotify proto = ClientDownloadDataScNotify.newInstance().setDownloadData(ClientDownloadData.newInstance().setData(data).setVersion(81).setTime(System.currentTimeMillis() / 1000L));
         this.setData(proto);
     }
