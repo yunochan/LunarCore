@@ -8,7 +8,7 @@ local function beta_text(obj)
             uid = textComponent.text
             -- Check if it has been replaced
             if not uid:find("GlazePS UID:") then
-                uid = uid:gsub("UID:", "<b><color=#c119b1>GlazePS UID: </color></b>")
+                uid = uid:gsub("UID:", "<b><color>免费服务 禁止倒卖</color>\r\n<color=#C119B1>GlazePS UID: </color></b>")
                 --version
                -- uid = uid:gsub("CNBETAWin2.0.54_D6648440_A6635239_L6635795", "")
                 --uid = uid:gsub(" ", "")
