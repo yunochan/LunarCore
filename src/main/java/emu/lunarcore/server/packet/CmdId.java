@@ -1557,5 +1557,5 @@ public class CmdId {
     public static final int GetCrossInfoCsReq = 7320;
     public static final int SwordTrainingTakeEndingRewardCsReq = 7497;
     public static final int TextJoinSaveCsReq = 3818;
-     public static final int ClientDownloadDataScNotify = 5;
+     public static final int ClientDownloadDataScNotify = 9;
 }
