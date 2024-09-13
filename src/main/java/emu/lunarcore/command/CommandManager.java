@@ -131,7 +131,7 @@ public class CommandManager {
             // Check if sender has permission to run the command.
             if (sender != null && !this.checkPermission(sender, command)) {
                 // We have a double null check here just in case
-                sender.sendMessage("You do not have permission to use this command.");
+                 sender.sendMessage(String.format("%s 指令需要管理员权限，你无权执行该指令！", label));
                 return;
             }
             
@@ -140,28 +140,28 @@ public class CommandManager {
             
             // Check targeted permission
             if (sender != cmdArgs.getTarget() && !this.checkTargetPermission(sender, command)) {
-                cmdArgs.sendMessage("You do not have permission to use this command on another player.");
+                cmdArgs.sendMessage(String.format("你无权对其他玩家使用 %s 指令！", label));
                 return;
             }
             
             // Make sure our command has a target
             if (command.requireTarget() && cmdArgs.getTarget() == null) {
-                cmdArgs.sendMessage("Error: Targeted player not found or offline");
+                cmdArgs.sendMessage("Error: 玩家未在游戏内");
                 return;
             }
             
             // Log
             if (sender != null && LunarCore.getConfig().getLogOptions().commands) {
-                LunarCore.getLogger().info("[UID: " + sender.getUid() + "] " + sender.getName() + " used command: " + message);
+                 LunarCore.getLogger().info(String.format("[UID: %s] %s 执行指令: %s ", sender.getUid(), sender.getName(), message));
             }
             
             // Run command
             handler.execute(cmdArgs);
         } else {
             if (sender != null) {
-                sender.sendMessage("Invalid Command!");
+                sender.sendMessage("未知的指令!");
             } else {
-                LunarCore.getLogger().info("Invalid Command!");
+                LunarCore.getLogger().info("未知的指令!");
             }
         }
     }

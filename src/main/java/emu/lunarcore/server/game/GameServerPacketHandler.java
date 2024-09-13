@@ -67,6 +67,9 @@ public class GameServerPacketHandler {
                     if (state != SessionState.WAITING_FOR_TOKEN) {
                         return;
                     }
+                } else if(state == SessionState.ACCOUNT_BANNED){
+                    session.close();
+                    return;
                 } else if (cmdId == CmdId.PlayerLoginCsReq) {
                     if (state != SessionState.WAITING_FOR_LOGIN) {
                         return;

@@ -1,6 +1,7 @@
 package emu.lunarcore.command.commands;
 
 import emu.lunarcore.LunarCore;
+import emu.lunarcore.GameConstants;
 import emu.lunarcore.command.Command;
 import emu.lunarcore.command.CommandArgs;
 import emu.lunarcore.command.CommandHandler;
@@ -16,13 +17,13 @@ public class StatusCommand implements CommandHandler {
         }
         
         // Show status
-        args.sendMessage("Showing server status");
+        args.sendMessage("当前服务状态");
         
-        args.sendMessage("Git hash: " + LunarCore.getGitHash());
-        args.sendMessage("Memory usage: " + LunarCore.getMemoryUsage() + " MB");
+        args.sendMessage("服务端版本: " + GameConstants.VERSION);
+        args.sendMessage("内存使用: " + LunarCore.getMemoryUsage() + " MB");
         
         if (LunarCore.getGameServer() != null) {
-            args.sendMessage("Player count: " + LunarCore.getGameServer().getPlayerCount());
+            args.sendMessage(String.format("玩家在线数量: %d/%d", LunarCore.getGameServer().getPlayerCount(), LunarCore.getConfig().getServerOptions().maxPlayers));
         }
     }
 }

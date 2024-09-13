@@ -1579,4 +1579,5 @@ public class CmdId {
     public static final int RogueArcadeLeaveScRsp = 7667;
     public static final int GetCrossInfoCsReq = 7308;
     public static final int TextJoinSaveCsReq = 3868;
+    public static final int ClientDownloadDataScNotify = 13;
 }

@@ -120,6 +120,8 @@ public class Config {
     
     @Getter
     public static class ServerOptions {
+        public boolean enableAnnounce = false;
+        public boolean useWindy = false;
         public boolean autoCreateAccount = true;
         public int sceneMaxEntites = 500;
         public int maxCustomRelicLevel = 15; // Maximum level of a relic that the player can create with the /give command
@@ -133,6 +135,7 @@ public class Config {
         public Set<String> defaultPermissions = Set.of("*");
         public int maxPlayers = -1;
         public ServerProfile serverFriendInfo = new ServerProfile();
+        public WelcomeMessage welcomeMessage = new WelcomeMessage();
         public WelcomeMail welcomeMail = new WelcomeMail();
         
         public int getStaminaRecoveryRate() {
@@ -173,7 +176,13 @@ public class Config {
             }
         }
     }
-    
+
+    @Getter
+    public static class WelcomeMessage {
+        public int[] emotes = {121005, 121006, 121007, 121008};
+        public String msg = "Welcome to a LunarCore server";
+    }
+
     @Getter
     public static class WelcomeMail {
         public String title;

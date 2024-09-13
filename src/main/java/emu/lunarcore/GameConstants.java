@@ -6,13 +6,13 @@ import java.time.ZoneOffset;
 import emu.lunarcore.util.Position;
 
 public class GameConstants {
-    public static String VERSION = "2.5.0";
+    public static String VERSION = "2.4.0";
     
     public static final ZoneOffset CURRENT_ZONEOFFSET = ZoneOffset.systemDefault().getRules().getOffset(Instant.now());
     public static final int CURRENT_TIMEZONE = CURRENT_ZONEOFFSET.getTotalSeconds() / 3600;
 
     // Game
-    public static final String DEFAULT_NAME = "A Nameless";
+    public static final String DEFAULT_NAME = "开拓者";
     public static final int[] DEFAULT_HEAD_ICONS = {208001, 208002};
     public static final int DEFAULT_WORLD_ID = 101;
     public static final int TRAILBLAZER_AVATAR_ID = 8001;

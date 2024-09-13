@@ -17,7 +17,7 @@ public class WorldLevelCommand implements CommandHandler {
         args.getTarget().setWorldLevel(level);
         
         // Done
-        args.sendMessage("Set world level to " + level);
+        args.sendMessage("设置世界等级" + level);
     }
 
 }

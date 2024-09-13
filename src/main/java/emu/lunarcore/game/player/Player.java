@@ -933,10 +933,10 @@ public class Player implements Tickable, Syncable {
         }
         
         // Unstuck check, dont load player into raid scenes
-        MazePlaneExcel planeExcel = GameData.getMazePlaneExcelMap().get(planeId);
-        if (planeExcel == null || planeExcel.getPlaneType().getVal() >= PlaneType.Raid.getVal()) {
+        //MazePlaneExcel planeExcel = GameData.getMazePlaneExcelMap().get(planeId);
+        //if (planeExcel == null || planeExcel.getPlaneType().getVal() >= PlaneType.Raid.getVal()) {
             this.resetPosition();
-        }
+        //}
         
         // Load into saved scene (should happen after everything else loads)
         this.loadScene(planeId, floorId, entryId, this.getPos(), this.getRot(), false);
