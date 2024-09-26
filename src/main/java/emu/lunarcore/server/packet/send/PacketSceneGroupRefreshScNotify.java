@@ -15,14 +15,14 @@ public class PacketSceneGroupRefreshScNotify extends BasePacket {
     public PacketSceneGroupRefreshScNotify(GameEntity toAdd, GameEntity toRemove) {
         super(CmdId.SceneGroupRefreshScNotify);
 
-        var group = SceneGroupRefreshInfo.newInstance();
+        var group = SceneGroupRefreshInfo.newInstance()
+                .setGroupRefreshType(SceneGroupRefreshType.SCENE_GROUP_REFRESH_TYPE_LOADED);
 
         if (toAdd != null) {
             group.setGroupId(toAdd.getGroupId());
             group.addRefreshEntity(SceneEntityRefreshInfo.newInstance().setAddEntity(toAdd.toSceneEntityProto()));
         } else if (toRemove != null) {
             group.setGroupId(toRemove.getGroupId());
-            group.setGroupRefreshType(SceneGroupRefreshType.SCENE_GROUP_REFRESH_TYPE_UNLOAD);
             group.addRefreshEntity(SceneEntityRefreshInfo.newInstance().setDelEntity(toRemove.getEntityId()));
         }
 
@@ -35,7 +35,8 @@ public class PacketSceneGroupRefreshScNotify extends BasePacket {
     public PacketSceneGroupRefreshScNotify(Collection<? extends GameEntity> toAdd, Collection<? extends GameEntity> toRemove) {
         super(CmdId.SceneGroupRefreshScNotify);
 
-        var group = SceneGroupRefreshInfo.newInstance();
+        var group = SceneGroupRefreshInfo.newInstance()
+                .setGroupRefreshType(SceneGroupRefreshType.SCENE_GROUP_REFRESH_TYPE_LOADED);
 
         if (toAdd != null) {
             for (var entity : toAdd) {

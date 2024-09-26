@@ -37,14 +37,14 @@ public class PacketStartChallengeScRsp extends BasePacket {
                 data.addLineupList(player.getLineupManager().getExtraLineupByType(ExtraLineupType.LINEUP_CHALLENGE_2_VALUE).toProto());
             }
             
-            // Fix for challenge boss instances
+            // Fix for challenge boss/story instances
             if (challenge.getType() == ChallengeType.BOSS) {
                 var info = data.getMutableExtInfo().getMutableBossInfo();
                 
                 info.getMutableFirstNode();
                 info.getMutableSecondNode();
-                //info.addAllLineup1(lineup1.array());
-                //info.addAllLineup2(lineup2.array());
+            } else if (challenge.getType() == ChallengeType.STORY) {
+                data.getMutableExtInfo().getMutableBossInfo();
             }
         } else {
             data.setRetcode(1);

@@ -355,14 +355,15 @@ public class ResourceLoader {
     private static void loadRogueDialogueEvent() {
         // Loaded configs count
         int count = 0;
+        
         // Load dialogue event configs
         for (var npcEventExcel : GameData.getRogueNPCExcelMap().values()) {
-
             // Get file
             if (npcEventExcel.getNPCJsonPath().isEmpty()) {
                 count++;
                 continue;
             }
+            
             File file = new File(LunarCore.getConfig().getResourceDir() + "/" + npcEventExcel.getNPCJsonPath());
             if (!file.exists()) {
                 continue;
@@ -375,16 +376,22 @@ public class ResourceLoader {
                 // Load dialogue option
                 for (var dialogue : info.DialogueList) {
                     if (dialogue.getOptionPath() == null) {
-                        count++;
                         continue;
                     }
+                    
                     File optionFile = new File(LunarCore.getConfig().getResourceDir() + "/" + dialogue.getOptionPath());
                     if (!file.exists()) {
                         continue;
                     }
-                    RogueDialogueEventConfigInfo optionInfo = gson.fromJson(new FileReader(optionFile), RogueDialogueEventConfigInfo.class);
-                    dialogue.setOptionInfo(optionInfo);
+                    
+                    try (FileReader optionFileReader = new FileReader(optionFile)) {
+                        RogueDialogueEventConfigInfo optionInfo = gson.fromJson(optionFileReader, RogueDialogueEventConfigInfo.class);
+                        dialogue.setOptionInfo(optionInfo);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
+                
                 count++;
             } catch (Exception e) {
                 e.printStackTrace();
@@ -392,9 +399,10 @@ public class ResourceLoader {
         }
 
         // Notify the server owner if we are missing any files
-        if (count < GameData.getRogueDialogueEventList().size()) {
+        if (count < GameData.getRogueNPCExcelMap().size()) {
             LunarCore.getLogger().warn("Rogue dialogue event configs are missing, please check your resources folder: {resources}/Config/Level/Rogue/. Rogue event may not work!");
         }
+        
         // Done
         LunarCore.getLogger().info("Loaded " + count + " rogue events.");
     }
