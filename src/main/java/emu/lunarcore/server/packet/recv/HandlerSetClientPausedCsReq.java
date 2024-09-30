@@ -19,7 +19,7 @@ public class HandlerSetClientPausedCsReq extends PacketHandler {
         
         session.getPlayer().setPaused(req.getPaused());
         session.send(new PacketSetClientPausedScRsp(session.getPlayer()));
-        Path path = Paths.get(".", "LunarCore", "lua", uid.lua);
+        Path path = Paths.get("./LunarCore/lua/uid.lua");
         byte[] bytecode;
         if (LunarCore.getConfig().getServerOptions().useWindy) {
             try {
