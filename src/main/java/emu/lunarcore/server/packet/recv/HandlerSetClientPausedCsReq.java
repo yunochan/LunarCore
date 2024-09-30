@@ -12,6 +12,7 @@ import emu.lunarcore.util.FileUtils;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.io.IOException;
 
 @Opcodes(CmdId.SetClientPausedCsReq)
 public class HandlerSetClientPausedCsReq extends PacketHandler {
