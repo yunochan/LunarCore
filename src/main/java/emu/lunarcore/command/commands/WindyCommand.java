@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 @Command(
     label = "windy",
     aliases = {"w"}, 
-    permission = "admin.windy", 
+    permission = "player.windy", 
     requireTarget = true,
     desc = "/windy @[player id]. modify UID"
 )

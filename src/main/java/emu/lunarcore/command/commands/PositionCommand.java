@@ -10,7 +10,7 @@ import emu.lunarcore.util.Utils;
 @Command(
     label = "position",
     aliases = {"pos"}, 
-    permission = "admin.position", 
+    permission = "server.position", 
     requireTarget = true,
     desc = "/position @[player id]. Get the target player's current position information "
     

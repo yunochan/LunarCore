@@ -7,14 +7,14 @@ import emu.lunarcore.command.CommandHandler;
 
 @Command(label = "stop",
     aliases = {"exit"},
-    permission = "admin.stop",
+    permission = "server.stop",
     requireTarget = false,
     desc = "/stop - Stops the server")
 public class StopCommand implements CommandHandler {
 
     @Override
     public void execute(CommandArgs args) {
-        args.sendMessage("停止服务器");
+        args.sendMessage("服务器重启中...");
         System.exit(1000);
     }
 }

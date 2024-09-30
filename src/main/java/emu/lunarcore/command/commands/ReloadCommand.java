@@ -5,7 +5,7 @@ import emu.lunarcore.command.Command;
 import emu.lunarcore.command.CommandArgs;
 import emu.lunarcore.command.CommandHandler;
 
-@Command(label = "reload", permission = "admin.reload", desc = "/reload. Reloads the server config.")
+@Command(label = "reload", permission = "server.reload", desc = "/reload. Reloads the server config.")
 public class ReloadCommand implements CommandHandler {
 
     @Override
