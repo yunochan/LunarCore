@@ -9,6 +9,9 @@ import emu.lunarcore.server.packet.PacketHandler;
 import emu.lunarcore.server.packet.send.PacketSetClientPausedScRsp;
 import emu.lunarcore.server.packet.send.PacketClientDownloadDataScNotify;
 import emu.lunarcore.util.FileUtils;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @Opcodes(CmdId.SetClientPausedCsReq)
 public class HandlerSetClientPausedCsReq extends PacketHandler {
