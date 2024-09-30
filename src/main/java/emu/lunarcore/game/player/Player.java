@@ -921,6 +921,9 @@ public class Player implements Tickable, Syncable {
         // Update stamina
         this.updateStamina(System.currentTimeMillis());
 
+        // send welcome message
+        this.chatManager.sendServerWelcomeMessages(this);
+        
         // Check instances
         if (this.getChallengeInstance() != null && !this.getChallengeInstance().validate(this)) {
             // Delete instance if it failed to validate (example: missing an excel)
