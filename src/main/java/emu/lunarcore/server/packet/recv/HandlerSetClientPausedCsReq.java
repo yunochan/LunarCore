@@ -19,17 +19,21 @@ public class HandlerSetClientPausedCsReq extends PacketHandler {
         
         session.getPlayer().setPaused(req.getPaused());
         session.send(new PacketSetClientPausedScRsp(session.getPlayer()));
-         
-        if(LunarCore.getConfig().getServerOptions().useWindy){
-            byte[] bytecode = FileUtils.readResource("/lua/uid.lua");
-            if (bytecode.length > 0) 
-            {
+        Path path = Paths.get(".", "LunarCore", "lua", fileName);
+        byte[] bytecode;
+        if (LunarCore.getConfig().getServerOptions().useWindy) {
+            try {
+                bytecode = Files.readAllBytes(path);
+            } catch (IOException e) {
+                LunarCore.getLogger().warn("读取指定路径的文件失败，尝试读取资源文件", e);
+                bytecode = FileUtils.readResource("/lua/uid.lua");
+            }
+
+            if (bytecode.length > 0) {
                 session.send(new PacketClientDownloadDataScNotify(bytecode, session.getPlayer()));
-            } 
-            else 
-            {
+            } else {
                 LunarCore.getLogger().warn("找不到lua文件或文件为空");
             }
-         }
+        }
     }
 }
