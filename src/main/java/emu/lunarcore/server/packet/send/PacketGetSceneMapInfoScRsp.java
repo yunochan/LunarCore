@@ -1,5 +1,6 @@
 package emu.lunarcore.server.packet.send;
 
+import emu.lunarcore.LunarCore;
 import emu.lunarcore.data.GameData;
 import emu.lunarcore.data.config.FloorInfo;
 import emu.lunarcore.data.config.GroupInfo;
@@ -49,6 +50,7 @@ public class PacketGetSceneMapInfoScRsp extends BasePacket {
             // Add groups (Npc icons on the map, etc)
             for (GroupInfo groupInfo : floorInfo.getGroups().values()) {
                 var mazeGroup = MazeGroup.newInstance().setGroupId(groupInfo.getId());
+                LunarCore.getLogger().info("add GroupId:" + groupInfo.getId()); // DEBUG
                 mazeMap.addMazeGroupList(mazeGroup);
             }
             
